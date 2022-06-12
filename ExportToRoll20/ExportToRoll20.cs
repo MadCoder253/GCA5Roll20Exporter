@@ -89,6 +89,14 @@ namespace ExportToRoll20
 
         public bool GenerateExport(Party Party, string TargetFilename, SheetOptionsManager Options)
         {
+            if (Party.Characters.Count > 20)
+            {
+                DialogOptions_RequestedOptions e = new DialogOptions_RequestedOptions();
+                SheetOptionsManager SOM = new GCA5Engine.SheetOptionsManager("RunSpecificOptions For " + PluginName());
+                e.RunSpecificOptions = SOM;
+                RequestRunSpecificOptions.Invoke(this, e);
+            }
+
             FileWriter fileWriter = new FileWriter();
 
             try

@@ -1,0 +1,428 @@
+{
+  "character_name": "Bartholomew Mactavish",
+  "fullname": "Bartholomew Mactavish",
+  "playername": "NPC",
+  "nickname": "Bart",
+  "race": "Human",
+  "race_ref": "",
+  "template_names": "Hill People",
+  "gender": "Male",
+  "size": 0,
+  "apply_size_modifier": false,
+  "reactions": "",
+  "campaign_tl": 9,
+  "tl": 9,
+  "tl_pts": 0,
+  "status": "0",
+  "wealth": "Average",
+  "income": 700,
+  "cost_of_living": 600,
+  "stash": 100,
+  "age": 33,
+  "height": "5' 7\"",
+  "weight": 180,
+  "appearance": 4,
+  "general_appearance": "scruffy, nerf herder.",
+  "strength_mod": 0,
+  "strength_points": 10,
+  "dexterity_mod": 0,
+  "dexterity_points": 40,
+  "intelligence_mod": 40,
+  "health_mod": 0,
+  "health_points": 10,
+  "perception_mod": 0,
+  "perception_points": 0,
+  "vision_mod": 0,
+  "hearing_mod": 0,
+  "hearing_points": 0,
+  "taste_smell_mod": 0,
+  "taste_smell_points": 0,
+  "touch_mod": 0,
+  "willpower_mod": 0,
+  "willpower_points": 0,
+  "fear_check_mod": 2,
+  "fear_check_points": 0,
+  "stun_check_mod": 0,
+  "knockdown_check_mod": 0,
+  "unconscious_check_mod": 0,
+  "unconscious_check_points": 0,
+  "death_check_mod": 0,
+  "death_check_points": 0,
+  "basic_speed_mod": 0,
+  "basic_speed_points": 0,
+  "basic_move_mod": 0,
+  "basic_move_points": 0,
+  "enhanced_ground_move_mod": 0,
+  "enhanced_ground_move_points": 0,
+  "dodge_mod": 1,
+  "lift_st_mod": 0,
+  "lift_st_points": 0,
+  "striking_st_mod": 0,
+  "striking_st_points": 0,
+  "hit_points_mod": 0,
+  "hit_points_points": 0,
+  "hit_points": 11,
+  "fatigue_points_mod": 0,
+  "fatigue_points_points": 0,
+  "fatigue_points": 11,
+  "flight_checked": false,
+  "flight_points": 0,
+  "basic_air_move_mod": 0,
+  "basic_air_move_points": 0,
+  "enhanced_air_level": 0,
+  "enhanced_air_move_points": 0,
+  "amphibious_checked": false,
+  "amphibious_points": 0,
+  "basic_water_move_mod": 0,
+  "basic_water_move_points": 0,
+  "enhanced_water_level": 0,
+  "enhanced_water_move_points": 0,
+  "super_jump_entered_level": 0,
+  "super_jump_points": 0,
+  "spell_bonus": 0,
+  "repeating_languages": [
+    {
+      "idkey": "184",
+      "name": "English",
+      "spoken": 3,
+      "written": 3,
+      "is_native": true
+    },
+    {
+      "idkey": "187",
+      "name": "Spanish",
+      "spoken": 2,
+      "written": 2,
+      "is_native": false
+    },
+    {
+      "idkey": "186",
+      "name": "Street Speach (Spoken)",
+      "spoken": 2,
+      "written": 0,
+      "is_native": false
+    }
+  ],
+  "repeating_cultures": [
+    {
+      "idkey": "",
+      "name": "Western",
+      "points": 0
+    }
+  ],
+  "repeating_traits": [
+    {
+      "idkey": "192",
+      "name": "Advanced Bionic Ear TL9",
+      "trait_level": "1",
+      "foa": "",
+      "points": 11,
+      "ref": "B44",
+      "notes": "Based On: _New Advanage\n\nDiscriminatory Hearing (Temporary Disadvantage, Electrical, -20%)[12];Protected Hearing[5];Deafness (Mitigator -70%)[-6]"
+    },
+    {
+      "idkey": "189",
+      "name": "Contact (Cybernetic Street Engineer) (Effective Skill 12)",
+      "trait_level": "1",
+      "foa": "9",
+      "points": 1,
+      "ref": "B44",
+      "notes": "Modifiers:\nFrequency: roll of 9 or less, *1\nReliability: Somewhat Reliable, *1"
+    },
+    {
+      "idkey": "147",
+      "name": "Danger Sense",
+      "trait_level": "1",
+      "foa": "",
+      "points": 15,
+      "ref": "B47",
+      "notes": ""
+    }
+  ],
+  "repeating_perks": [
+    {
+      "idkey": "129",
+      "name": "Alcohol Tolerance",
+      "foa": "",
+      "points": 1,
+      "ref": "B100, B100,PU2:13",
+      "notes": ""
+    },
+    {
+      "idkey": "204",
+      "name": "Forgettable Face",
+      "foa": "12",
+      "points": 1,
+      "ref": "PU2:4",
+      "notes": ""
+    },
+    {
+      "idkey": "205",
+      "name": "Illegal Gear - AP Bullets",
+      "foa": "",
+      "points": 1,
+      "ref": "",
+      "notes": ""
+    },
+    {
+      "idkey": "202",
+      "name": "License (Holdout Pistol)",
+      "foa": "",
+      "points": 1,
+      "ref": "PU2:18",
+      "notes": ""
+    }
+  ],
+  "repeating_quirks": [
+    {
+      "idkey": "216",
+      "name": "Avoids the spying on spouse jobs",
+      "control_rating": "12",
+      "points": -1,
+      "ref": "B163",
+      "notes": ""
+    },
+    {
+      "idkey": "217",
+      "name": "Careful",
+      "control_rating": "",
+      "points": -1,
+      "ref": "B164",
+      "notes": ""
+    },
+    {
+      "idkey": "169",
+      "name": "Will use whatever provides upper hand",
+      "control_rating": "",
+      "points": -1,
+      "ref": "B163",
+      "notes": ""
+    }
+  ],
+  "repeating_disadvantages": [
+    {
+      "idkey": "159",
+      "name": "Addiction (Alcohol) (Cheap)",
+      "trait_level": "1",
+      "control_rating": "12",
+      "points": -10,
+      "ref": "B122",
+      "notes": "Modifiers:\nEffect: Incapacitating, 10\nLegality: Legal, +5"
+    },
+    {
+      "idkey": "164",
+      "name": "Code of Honor (Professional)",
+      "trait_level": "1",
+      "control_rating": "",
+      "points": -5,
+      "ref": "B127",
+      "notes": ""
+    }
+  ],
+  "repeating_racial": [
+    {
+      "idkey": "",
+      "name": "Bad Temper",
+      "trait_level": "",
+      "control_rating": "12",
+      "points": -5,
+      "ref": "",
+      "notes": ""
+    },
+    {
+      "idkey": "",
+      "name": "Strong Will",
+      "trait_level": "1",
+      "control_rating": "",
+      "points": 5,
+      "ref": "",
+      "notes": ""
+    }
+  ],
+  "repeating_skills": [
+    {
+      "idkey": "",
+      "name": "Administration",
+      "tl": "",
+      "base": "IQ",
+      "difficulty": "A",
+      "bonus": 0,
+      "points": 1,
+      "use_wildcard_points": 0,
+      "use_normal_points": 1,
+      "wildcard_skill_points": 1,
+      "ref": "B174",
+      "skill_mod_notes": "",
+      "notes": ""
+    },
+    {
+      "idkey": "",
+      "name": "Brawling",
+      "tl": "",
+      "base": "DX",
+      "difficulty": "E",
+      "bonus": 0,
+      "points": 4,
+      "ref": "B174",
+      "skill_mod_notes": "",
+      "notes": ""
+    }
+  ],
+  "repeating_techniquesrevised": [
+    {
+      "idkey": "",
+      "name": "Elbow Punch",
+      "parent": "Brawling",
+      "base_level": 14,
+      "default": -2,
+      "max_modifier": 2,
+      "difficulty": "Hard",
+      "skill_modifier": 0,
+      "points": 2,
+      "ref": "",
+      "skill_mod_notes": "",
+      "notes": ""
+    }
+  ],
+  "repeating_defense": [
+    {
+      "idkey": "",
+      "name": "Punch",
+      "type": "Unarmed Parry",
+      "info": "",
+      "skill": 10,
+      "skill_mod": 0,
+      "defense_mod_reason": "",
+      "info_description": ""
+    },
+    {
+      "idkey": "",
+      "name": "Brawling (Punch)",
+      "type": "Unarmed Parry",
+      "info": "",
+      "skill": 10,
+      "skill_mod": 0,
+      "defense_mod_reason": "",
+      "info_description": ""
+    }
+  ],
+  "repeating_melee": [
+    {
+      "idkey": "13",
+      "name": "Bite",
+      "damage": "1d6-1",
+      "type": "cr",
+      "reach": "c",
+      "skill": 14,
+      "reason_for_mod": "",
+      "armor_divisor": 1,
+      "notes": ""
+    }
+  ],
+  "repeating_ranged": [
+    {
+      "idkey": "",
+      "name": "Holdout Pistol, 7.5mmCLP",
+      "damage": "2d6",
+      "type": "pi",
+      "acc": "1",
+      "range": "100/1200",
+      "rof": "3",
+      "shots": "18+1(3)/0.2",
+      "bulk": "-1",
+      "recoil": "2",
+      "skill": 15,
+      "reason_for_mod": "",
+      "malfunction": "17",
+      "malfunction_verify": true,
+      "malfunction_very_reliable": true,
+      "armor_divisor": 0.5,
+      "notes": ""
+    }
+  ],
+  "repeating_item": [
+    {
+      "idkey": "",
+      "name": "7mmCL Conventional Ammunition",
+      "tl": "9",
+      "legality_class": "3",
+      "ref": "UT139",
+      "count": 16,
+      "cost": 0.54,
+      "weight": 0.027,
+      "notes": ""
+    },
+    {
+      "idkey": "",
+      "name": "Antitoxin Kit",
+      "tl": "6",
+      "legality_class": "",
+      "ref": "B289",
+      "count": 1,
+      "cost": 25,
+      "weight": 0.5,
+      "notes": "Alcohol\n\nTL:6 Notes: Antidote for specific poison. 10 uses."
+    },
+    {
+      "idkey": "",
+      "name": "Cell Phone",
+      "tl": "8",
+      "legality_class": "",
+      "ref": "B288",
+      "count": 1,
+      "cost": 250,
+      "weight": 0.25,
+      "notes": "TL:8 Notes: Only works in some areas, $20/month fee. 10hrs."
+    },
+    {
+      "idkey": "",
+      "name": "Holdout Pistol, 7.5mmCLP",
+      "tl": "9",
+      "legality_class": "3",
+      "ref": "UT137",
+      "count": 1,
+      "cost": 240,
+      "weight": 1,
+      "notes": "HUD +1 ACC < 300 yards. Laser Sight +1 Skill < 1/2D Range. Recognition Grip. Diagnostic Chip +1 Repair\n\nTL:9 LC:3 Ammo:0.2 lb. Damage:2d pi Acc:1 Range:100/1200 RoF:3 Shots:18+1(3) ST:6 Bulk:-1 Rcl:2 Skill:Guns (Pistol"
+    }
+  ],
+  "repeating_spells": [
+    {
+      "idkey": "",
+      "name": "Air Jet",
+      "difficulty": "H",
+      "spell_modifier": 2,
+      "points": 2,
+      "spell_resisted_by": "",
+      "duration": "1 sec.",
+      "cost": "1 to 3/S",
+      "casttime": "1 sec.",
+      "maintain": "",
+      "spell_class": "Regular",
+      "spell_college": "Air",
+      "spell_college_secondary": "",
+      "spell_mod_notes": "",
+      "spell_notes": "Prereq Count: 3 Prerequisites: Shape Air\n\nNeeds: Shape Air, ST:Magery = 0 | PE:Charms ([Spell]) | PE:Charms (%SpellsList%) | PE:Charms (Air Jet)"
+    },
+    {
+      "idkey": "",
+      "name": "Fireball",
+      "difficulty": "H",
+      "spell_modifier": 0,
+      "points": 2,
+      "spell_resisted_by": "",
+      "duration": "Instant",
+      "cost": "1 to Magery#",
+      "casttime": "1 to 3 sec.",
+      "maintain": "",
+      "spell_class": "Missile",
+      "spell_college": "Fire",
+      "spell_college_secondary": "",
+      "spell_mod_notes": "",
+      "spell_notes": "Prereq Count: 3 Prerequisites: Magery 1, Create Fire, Shape Fire\n\nNeeds: (AD:Magery 0 | ST:Magery 0 = 1), (AD:Magery = 1, ST:Magery = 1 | ST:Magery Fire = 1), Create Fire, Shape Fire, ST:Magery = 0 | PE:Charms ([Spell]) | PE:Charms (%SpellsList%) | PE:Charms (Fireball),"
+    }
+  ],
+  "final_values": {
+    "combat_reflexes": true
+  }
+}

@@ -37,6 +37,7 @@
     <Reference Include="GCA5Engine">
       <HintPath>..\..\..\..\..\Program Files (x86)\GURPS Character Assistant 5\GCA5Engine.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
