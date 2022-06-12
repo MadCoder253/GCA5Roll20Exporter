@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <plugin xmlns="gca5plugin">
-  <author>
-
-  </author>
+  <author>MadCoder</author>
 
   <language>c#</language>
-  <output>GCA5Roll20Exporter.dll</output>
+  <output>ExportToRoll20.dll</output>
 
-  <source>GCA5Roll20Exporter.cs</source>
+  <source>ExportToRoll20.cs</source>
   <source>AssemblyInfo.cs</source>
 
   <reference>System.dll</reference>

@@ -11,6 +11,8 @@ using System.Security;
 
 using System.Linq;
 using System.Threading.Tasks;
+using System.Globalization;
+using System.Reflection;
 using GCA5.Interfaces;
 using GCA5Engine;
 using System.Drawing;
