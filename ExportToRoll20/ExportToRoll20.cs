@@ -17,6 +17,7 @@ using GCA5.Interfaces;
 using GCA5Engine;
 using System.Drawing;
 
+
 namespace ExportToRoll20
 {
     public class ExportToRoll20 : GCA5.Interfaces.IExportSheet
@@ -96,6 +97,8 @@ namespace ExportToRoll20
                 e.RunSpecificOptions = SOM;
                 RequestRunSpecificOptions.Invoke(this, e);
             }
+
+            Roll20Character character = new Roll20Character();
 
             FileWriter fileWriter = new FileWriter();
 

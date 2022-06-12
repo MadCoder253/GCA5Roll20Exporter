@@ -1,0 +1,3250 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "default": {},
+  "title": "Root Schema",
+  "required": [
+    "character_name",
+    "fullname",
+    "playername",
+    "nickname",
+    "race",
+    "race_ref",
+    "template_names",
+    "gender",
+    "size",
+    "apply_size_modifier",
+    "reactions",
+    "campaign_tl",
+    "tl",
+    "tl_pts",
+    "status",
+    "wealth",
+    "income",
+    "cost_of_living",
+    "stash",
+    "age",
+    "height",
+    "weight",
+    "appearance",
+    "general_appearance",
+    "strength_mod",
+    "strength_points",
+    "dexterity_mod",
+    "dexterity_points",
+    "intelligence_mod",
+    "health_mod",
+    "health_points",
+    "perception_mod",
+    "perception_points",
+    "vision_mod",
+    "hearing_mod",
+    "hearing_points",
+    "taste_smell_mod",
+    "taste_smell_points",
+    "touch_mod",
+    "willpower_mod",
+    "willpower_points",
+    "fear_check_mod",
+    "fear_check_points",
+    "stun_check_mod",
+    "knockdown_check_mod",
+    "unconscious_check_mod",
+    "unconscious_check_points",
+    "death_check_mod",
+    "death_check_points",
+    "basic_speed_mod",
+    "basic_speed_points",
+    "basic_move_mod",
+    "basic_move_points",
+    "enhanced_ground_move_mod",
+    "enhanced_ground_move_points",
+    "dodge_mod",
+    "lift_st_mod",
+    "lift_st_points",
+    "striking_st_mod",
+    "striking_st_points",
+    "hit_points_mod",
+    "hit_points_points",
+    "hit_points",
+    "fatigue_points_mod",
+    "fatigue_points_points",
+    "fatigue_points",
+    "flight_checked",
+    "flight_points",
+    "basic_air_move_mod",
+    "basic_air_move_points",
+    "enhanced_air_level",
+    "enhanced_air_move_points",
+    "amphibious_checked",
+    "amphibious_points",
+    "basic_water_move_mod",
+    "basic_water_move_points",
+    "enhanced_water_level",
+    "enhanced_water_move_points",
+    "super_jump_entered_level",
+    "super_jump_points",
+    "spell_bonus",
+    "repeating_languages",
+    "repeating_cultures",
+    "repeating_traits",
+    "repeating_perks",
+    "repeating_quirks",
+    "repeating_disadvantages",
+    "repeating_racial",
+    "repeating_skills",
+    "repeating_techniquesrevised",
+    "repeating_defense",
+    "repeating_melee",
+    "repeating_ranged",
+    "repeating_item",
+    "repeating_spells",
+    "final_values"
+  ],
+  "properties": {
+    "character_name": {
+      "type": "string",
+      "default": "",
+      "title": "The character_name Schema",
+      "examples": [
+        "Bartholomew Mactavish"
+      ]
+    },
+    "fullname": {
+      "type": "string",
+      "default": "",
+      "title": "The fullname Schema",
+      "examples": [
+        "Bartholomew Mactavish"
+      ]
+    },
+    "playername": {
+      "type": "string",
+      "default": "",
+      "title": "The playername Schema",
+      "examples": [
+        "NPC"
+      ]
+    },
+    "nickname": {
+      "type": "string",
+      "default": "",
+      "title": "The nickname Schema",
+      "examples": [
+        "Bart"
+      ]
+    },
+    "race": {
+      "type": "string",
+      "default": "",
+      "title": "The race Schema",
+      "examples": [
+        "Human"
+      ]
+    },
+    "race_ref": {
+      "type": "string",
+      "default": "",
+      "title": "The race_ref Schema",
+      "examples": [
+        ""
+      ]
+    },
+    "template_names": {
+      "type": "string",
+      "default": "",
+      "title": "The template_names Schema",
+      "examples": [
+        "Hill People"
+      ]
+    },
+    "gender": {
+      "type": "string",
+      "default": "",
+      "title": "The gender Schema",
+      "examples": [
+        "Male"
+      ]
+    },
+    "size": {
+      "type": "integer",
+      "default": 0,
+      "title": "The size Schema",
+      "examples": [
+        0
+      ]
+    },
+    "apply_size_modifier": {
+      "type": "boolean",
+      "default": false,
+      "title": "The apply_size_modifier Schema",
+      "examples": [
+        false
+      ]
+    },
+    "reactions": {
+      "type": "string",
+      "default": "",
+      "title": "The reactions Schema",
+      "examples": [
+        ""
+      ]
+    },
+    "campaign_tl": {
+      "type": "integer",
+      "default": 0,
+      "title": "The campaign_tl Schema",
+      "examples": [
+        9
+      ]
+    },
+    "tl": {
+      "type": "integer",
+      "default": 0,
+      "title": "The tl Schema",
+      "examples": [
+        9
+      ]
+    },
+    "tl_pts": {
+      "type": "integer",
+      "default": 0,
+      "title": "The tl_pts Schema",
+      "examples": [
+        0
+      ]
+    },
+    "status": {
+      "type": "string",
+      "default": "",
+      "title": "The status Schema",
+      "examples": [
+        "0"
+      ]
+    },
+    "wealth": {
+      "type": "string",
+      "default": "",
+      "title": "The wealth Schema",
+      "examples": [
+        "Average"
+      ]
+    },
+    "income": {
+      "type": "integer",
+      "default": 0,
+      "title": "The income Schema",
+      "examples": [
+        700
+      ]
+    },
+    "cost_of_living": {
+      "type": "integer",
+      "default": 0,
+      "title": "The cost_of_living Schema",
+      "examples": [
+        600
+      ]
+    },
+    "stash": {
+      "type": "integer",
+      "default": 0,
+      "title": "The stash Schema",
+      "examples": [
+        100
+      ]
+    },
+    "age": {
+      "type": "integer",
+      "default": 0,
+      "title": "The age Schema",
+      "examples": [
+        33
+      ]
+    },
+    "height": {
+      "type": "string",
+      "default": "",
+      "title": "The height Schema",
+      "examples": [
+        "5' 7\""
+      ]
+    },
+    "weight": {
+      "type": "integer",
+      "default": 0,
+      "title": "The weight Schema",
+      "examples": [
+        180
+      ]
+    },
+    "appearance": {
+      "type": "integer",
+      "default": 0,
+      "title": "The appearance Schema",
+      "examples": [
+        4
+      ]
+    },
+    "general_appearance": {
+      "type": "string",
+      "default": "",
+      "title": "The general_appearance Schema",
+      "examples": [
+        "scruffy, nerf herder."
+      ]
+    },
+    "strength_mod": {
+      "type": "integer",
+      "default": 0,
+      "title": "The strength_mod Schema",
+      "examples": [
+        0
+      ]
+    },
+    "strength_points": {
+      "type": "integer",
+      "default": 0,
+      "title": "The strength_points Schema",
+      "examples": [
+        10
+      ]
+    },
+    "dexterity_mod": {
+      "type": "integer",
+      "default": 0,
+      "title": "The dexterity_mod Schema",
+      "examples": [
+        0
+      ]
+    },
+    "dexterity_points": {
+      "type": "integer",
+      "default": 0,
+      "title": "The dexterity_points Schema",
+      "examples": [
+        40
+      ]
+    },
+    "intelligence_mod": {
+      "type": "integer",
+      "default": 0,
+      "title": "The intelligence_mod Schema",
+      "examples": [
+        40
+      ]
+    },
+    "health_mod": {
+      "type": "integer",
+      "default": 0,
+      "title": "The health_mod Schema",
+      "examples": [
+        0
+      ]
+    },
+    "health_points": {
+      "type": "integer",
+      "default": 0,
+      "title": "The health_points Schema",
+      "examples": [
+        10
+      ]
+    },
+    "perception_mod": {
+      "type": "integer",
+      "default": 0,
+      "title": "The perception_mod Schema",
+      "examples": [
+        0
+      ]
+    },
+    "perception_points": {
+      "type": "integer",
+      "default": 0,
+      "title": "The perception_points Schema",
+      "examples": [
+        0
+      ]
+    },
+    "vision_mod": {
+      "type": "integer",
+      "default": 0,
+      "title": "The vision_mod Schema",
+      "examples": [
+        0
+      ]
+    },
+    "hearing_mod": {
+      "type": "integer",
+      "default": 0,
+      "title": "The hearing_mod Schema",
+      "examples": [
+        0
+      ]
+    },
+    "hearing_points": {
+      "type": "integer",
+      "default": 0,
+      "title": "The hearing_points Schema",
+      "examples": [
+        0
+      ]
+    },
+    "taste_smell_mod": {
+      "type": "integer",
+      "default": 0,
+      "title": "The taste_smell_mod Schema",
+      "examples": [
+        0
+      ]
+    },
+    "taste_smell_points": {
+      "type": "integer",
+      "default": 0,
+      "title": "The taste_smell_points Schema",
+      "examples": [
+        0
+      ]
+    },
+    "touch_mod": {
+      "type": "integer",
+      "default": 0,
+      "title": "The touch_mod Schema",
+      "examples": [
+        0
+      ]
+    },
+    "willpower_mod": {
+      "type": "integer",
+      "default": 0,
+      "title": "The willpower_mod Schema",
+      "examples": [
+        0
+      ]
+    },
+    "willpower_points": {
+      "type": "integer",
+      "default": 0,
+      "title": "The willpower_points Schema",
+      "examples": [
+        0
+      ]
+    },
+    "fear_check_mod": {
+      "type": "integer",
+      "default": 0,
+      "title": "The fear_check_mod Schema",
+      "examples": [
+        2
+      ]
+    },
+    "fear_check_points": {
+      "type": "integer",
+      "default": 0,
+      "title": "The fear_check_points Schema",
+      "examples": [
+        0
+      ]
+    },
+    "stun_check_mod": {
+      "type": "integer",
+      "default": 0,
+      "title": "The stun_check_mod Schema",
+      "examples": [
+        0
+      ]
+    },
+    "knockdown_check_mod": {
+      "type": "integer",
+      "default": 0,
+      "title": "The knockdown_check_mod Schema",
+      "examples": [
+        0
+      ]
+    },
+    "unconscious_check_mod": {
+      "type": "integer",
+      "default": 0,
+      "title": "The unconscious_check_mod Schema",
+      "examples": [
+        0
+      ]
+    },
+    "unconscious_check_points": {
+      "type": "integer",
+      "default": 0,
+      "title": "The unconscious_check_points Schema",
+      "examples": [
+        0
+      ]
+    },
+    "death_check_mod": {
+      "type": "integer",
+      "default": 0,
+      "title": "The death_check_mod Schema",
+      "examples": [
+        0
+      ]
+    },
+    "death_check_points": {
+      "type": "integer",
+      "default": 0,
+      "title": "The death_check_points Schema",
+      "examples": [
+        0
+      ]
+    },
+    "basic_speed_mod": {
+      "type": "integer",
+      "default": 0,
+      "title": "The basic_speed_mod Schema",
+      "examples": [
+        0
+      ]
+    },
+    "basic_speed_points": {
+      "type": "integer",
+      "default": 0,
+      "title": "The basic_speed_points Schema",
+      "examples": [
+        0
+      ]
+    },
+    "basic_move_mod": {
+      "type": "integer",
+      "default": 0,
+      "title": "The basic_move_mod Schema",
+      "examples": [
+        0
+      ]
+    },
+    "basic_move_points": {
+      "type": "integer",
+      "default": 0,
+      "title": "The basic_move_points Schema",
+      "examples": [
+        0
+      ]
+    },
+    "enhanced_ground_move_mod": {
+      "type": "integer",
+      "default": 0,
+      "title": "The enhanced_ground_move_mod Schema",
+      "examples": [
+        0
+      ]
+    },
+    "enhanced_ground_move_points": {
+      "type": "integer",
+      "default": 0,
+      "title": "The enhanced_ground_move_points Schema",
+      "examples": [
+        0
+      ]
+    },
+    "dodge_mod": {
+      "type": "integer",
+      "default": 0,
+      "title": "The dodge_mod Schema",
+      "examples": [
+        1
+      ]
+    },
+    "lift_st_mod": {
+      "type": "integer",
+      "default": 0,
+      "title": "The lift_st_mod Schema",
+      "examples": [
+        0
+      ]
+    },
+    "lift_st_points": {
+      "type": "integer",
+      "default": 0,
+      "title": "The lift_st_points Schema",
+      "examples": [
+        0
+      ]
+    },
+    "striking_st_mod": {
+      "type": "integer",
+      "default": 0,
+      "title": "The striking_st_mod Schema",
+      "examples": [
+        0
+      ]
+    },
+    "striking_st_points": {
+      "type": "integer",
+      "default": 0,
+      "title": "The striking_st_points Schema",
+      "examples": [
+        0
+      ]
+    },
+    "hit_points_mod": {
+      "type": "integer",
+      "default": 0,
+      "title": "The hit_points_mod Schema",
+      "examples": [
+        0
+      ]
+    },
+    "hit_points_points": {
+      "type": "integer",
+      "default": 0,
+      "title": "The hit_points_points Schema",
+      "examples": [
+        0
+      ]
+    },
+    "hit_points": {
+      "type": "integer",
+      "default": 0,
+      "title": "The hit_points Schema",
+      "examples": [
+        11
+      ]
+    },
+    "fatigue_points_mod": {
+      "type": "integer",
+      "default": 0,
+      "title": "The fatigue_points_mod Schema",
+      "examples": [
+        0
+      ]
+    },
+    "fatigue_points_points": {
+      "type": "integer",
+      "default": 0,
+      "title": "The fatigue_points_points Schema",
+      "examples": [
+        0
+      ]
+    },
+    "fatigue_points": {
+      "type": "integer",
+      "default": 0,
+      "title": "The fatigue_points Schema",
+      "examples": [
+        11
+      ]
+    },
+    "flight_checked": {
+      "type": "boolean",
+      "default": false,
+      "title": "The flight_checked Schema",
+      "examples": [
+        false
+      ]
+    },
+    "flight_points": {
+      "type": "integer",
+      "default": 0,
+      "title": "The flight_points Schema",
+      "examples": [
+        0
+      ]
+    },
+    "basic_air_move_mod": {
+      "type": "integer",
+      "default": 0,
+      "title": "The basic_air_move_mod Schema",
+      "examples": [
+        0
+      ]
+    },
+    "basic_air_move_points": {
+      "type": "integer",
+      "default": 0,
+      "title": "The basic_air_move_points Schema",
+      "examples": [
+        0
+      ]
+    },
+    "enhanced_air_level": {
+      "type": "integer",
+      "default": 0,
+      "title": "The enhanced_air_level Schema",
+      "examples": [
+        0
+      ]
+    },
+    "enhanced_air_move_points": {
+      "type": "integer",
+      "default": 0,
+      "title": "The enhanced_air_move_points Schema",
+      "examples": [
+        0
+      ]
+    },
+    "amphibious_checked": {
+      "type": "boolean",
+      "default": false,
+      "title": "The amphibious_checked Schema",
+      "examples": [
+        false
+      ]
+    },
+    "amphibious_points": {
+      "type": "integer",
+      "default": 0,
+      "title": "The amphibious_points Schema",
+      "examples": [
+        0
+      ]
+    },
+    "basic_water_move_mod": {
+      "type": "integer",
+      "default": 0,
+      "title": "The basic_water_move_mod Schema",
+      "examples": [
+        0
+      ]
+    },
+    "basic_water_move_points": {
+      "type": "integer",
+      "default": 0,
+      "title": "The basic_water_move_points Schema",
+      "examples": [
+        0
+      ]
+    },
+    "enhanced_water_level": {
+      "type": "integer",
+      "default": 0,
+      "title": "The enhanced_water_level Schema",
+      "examples": [
+        0
+      ]
+    },
+    "enhanced_water_move_points": {
+      "type": "integer",
+      "default": 0,
+      "title": "The enhanced_water_move_points Schema",
+      "examples": [
+        0
+      ]
+    },
+    "super_jump_entered_level": {
+      "type": "integer",
+      "default": 0,
+      "title": "The super_jump_entered_level Schema",
+      "examples": [
+        0
+      ]
+    },
+    "super_jump_points": {
+      "type": "integer",
+      "default": 0,
+      "title": "The super_jump_points Schema",
+      "examples": [
+        0
+      ]
+    },
+    "spell_bonus": {
+      "type": "integer",
+      "default": 0,
+      "title": "The spell_bonus Schema",
+      "examples": [
+        0
+      ]
+    },
+    "repeating_languages": {
+      "type": "array",
+      "default": [],
+      "title": "The repeating_languages Schema",
+      "items": {
+        "type": "object",
+        "title": "A Schema",
+        "required": [
+          "idkey",
+          "name",
+          "spoken",
+          "written",
+          "is_native"
+        ],
+        "properties": {
+          "idkey": {
+            "type": "string",
+            "title": "The idkey Schema",
+            "examples": [
+              "184",
+              "187",
+              "186"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "title": "The name Schema",
+            "examples": [
+              "English",
+              "Spanish",
+              "Street Speach (Spoken)"
+            ]
+          },
+          "spoken": {
+            "type": "integer",
+            "title": "The spoken Schema",
+            "examples": [
+              3,
+              2
+            ]
+          },
+          "written": {
+            "type": "integer",
+            "title": "The written Schema",
+            "examples": [
+              3,
+              2,
+              0
+            ]
+          },
+          "is_native": {
+            "type": "boolean",
+            "title": "The is_native Schema",
+            "examples": [
+              true,
+              false
+            ]
+          }
+        },
+        "examples": [
+          {
+            "idkey": "184",
+            "name": "English",
+            "spoken": 3,
+            "written": 3,
+            "is_native": true
+          },
+          {
+            "idkey": "187",
+            "name": "Spanish",
+            "spoken": 2,
+            "written": 2,
+            "is_native": false
+          },
+          {
+            "idkey": "186",
+            "name": "Street Speach (Spoken)",
+            "spoken": 2,
+            "written": 0,
+            "is_native": false
+          }
+        ]
+      },
+      "examples": [
+        [
+          {
+            "idkey": "184",
+            "name": "English",
+            "spoken": 3,
+            "written": 3,
+            "is_native": true
+          },
+          {
+            "idkey": "187",
+            "name": "Spanish",
+            "spoken": 2,
+            "written": 2,
+            "is_native": false
+          },
+          {
+            "idkey": "186",
+            "name": "Street Speach (Spoken)",
+            "spoken": 2,
+            "written": 0,
+            "is_native": false
+          }
+        ]
+      ]
+    },
+    "repeating_cultures": {
+      "type": "array",
+      "default": [],
+      "title": "The repeating_cultures Schema",
+      "items": {
+        "type": "object",
+        "default": {},
+        "title": "A Schema",
+        "required": [
+          "idkey",
+          "name",
+          "points"
+        ],
+        "properties": {
+          "idkey": {
+            "type": "string",
+            "default": "",
+            "title": "The idkey Schema",
+            "examples": [
+              ""
+            ]
+          },
+          "name": {
+            "type": "string",
+            "default": "",
+            "title": "The name Schema",
+            "examples": [
+              "Western"
+            ]
+          },
+          "points": {
+            "type": "integer",
+            "default": 0,
+            "title": "The points Schema",
+            "examples": [
+              0
+            ]
+          }
+        },
+        "examples": [
+          {
+            "idkey": "",
+            "name": "Western",
+            "points": 0
+          }
+        ]
+      },
+      "examples": [
+        [
+          {
+            "idkey": "",
+            "name": "Western",
+            "points": 0
+          }
+        ]
+      ]
+    },
+    "repeating_traits": {
+      "type": "array",
+      "default": [],
+      "title": "The repeating_traits Schema",
+      "items": {
+        "type": "object",
+        "title": "A Schema",
+        "required": [
+          "idkey",
+          "name",
+          "trait_level",
+          "foa",
+          "points",
+          "ref",
+          "notes"
+        ],
+        "properties": {
+          "idkey": {
+            "type": "string",
+            "title": "The idkey Schema",
+            "examples": [
+              "192",
+              "189",
+              "147"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "title": "The name Schema",
+            "examples": [
+              "Advanced Bionic Ear TL9",
+              "Contact (Cybernetic Street Engineer) (Effective Skill 12)",
+              "Danger Sense"
+            ]
+          },
+          "trait_level": {
+            "type": "string",
+            "title": "The trait_level Schema",
+            "examples": [
+              "1"
+            ]
+          },
+          "foa": {
+            "type": "string",
+            "title": "The foa Schema",
+            "examples": [
+              "",
+              "9"
+            ]
+          },
+          "points": {
+            "type": "integer",
+            "title": "The points Schema",
+            "examples": [
+              11,
+              1,
+              15
+            ]
+          },
+          "ref": {
+            "type": "string",
+            "title": "The ref Schema",
+            "examples": [
+              "B44",
+              "B47"
+            ]
+          },
+          "notes": {
+            "type": "string",
+            "title": "The notes Schema",
+            "examples": [
+              "Based On: _New Advanage\n\nDiscriminatory Hearing (Temporary Disadvantage, Electrical, -20%)[12];Protected Hearing[5];Deafness (Mitigator -70%)[-6]",
+              "Modifiers:\nFrequency: roll of 9 or less, *1\nReliability: Somewhat Reliable, *1",
+              ""
+            ]
+          }
+        },
+        "examples": [
+          {
+            "idkey": "192",
+            "name": "Advanced Bionic Ear TL9",
+            "trait_level": "1",
+            "foa": "",
+            "points": 11,
+            "ref": "B44",
+            "notes": "Based On: _New Advanage\n\nDiscriminatory Hearing (Temporary Disadvantage, Electrical, -20%)[12];Protected Hearing[5];Deafness (Mitigator -70%)[-6]"
+          },
+          {
+            "idkey": "189",
+            "name": "Contact (Cybernetic Street Engineer) (Effective Skill 12)",
+            "trait_level": "1",
+            "foa": "9",
+            "points": 1,
+            "ref": "B44",
+            "notes": "Modifiers:\nFrequency: roll of 9 or less, *1\nReliability: Somewhat Reliable, *1"
+          },
+          {
+            "idkey": "147",
+            "name": "Danger Sense",
+            "trait_level": "1",
+            "foa": "",
+            "points": 15,
+            "ref": "B47",
+            "notes": ""
+          }
+        ]
+      },
+      "examples": [
+        [
+          {
+            "idkey": "192",
+            "name": "Advanced Bionic Ear TL9",
+            "trait_level": "1",
+            "foa": "",
+            "points": 11,
+            "ref": "B44",
+            "notes": "Based On: _New Advanage\n\nDiscriminatory Hearing (Temporary Disadvantage, Electrical, -20%)[12];Protected Hearing[5];Deafness (Mitigator -70%)[-6]"
+          },
+          {
+            "idkey": "189",
+            "name": "Contact (Cybernetic Street Engineer) (Effective Skill 12)",
+            "trait_level": "1",
+            "foa": "9",
+            "points": 1,
+            "ref": "B44",
+            "notes": "Modifiers:\nFrequency: roll of 9 or less, *1\nReliability: Somewhat Reliable, *1"
+          },
+          {
+            "idkey": "147",
+            "name": "Danger Sense",
+            "trait_level": "1",
+            "foa": "",
+            "points": 15,
+            "ref": "B47",
+            "notes": ""
+          }
+        ]
+      ]
+    },
+    "repeating_perks": {
+      "type": "array",
+      "default": [],
+      "title": "The repeating_perks Schema",
+      "items": {
+        "type": "object",
+        "title": "A Schema",
+        "required": [
+          "idkey",
+          "name",
+          "foa",
+          "points",
+          "ref",
+          "notes"
+        ],
+        "properties": {
+          "idkey": {
+            "type": "string",
+            "title": "The idkey Schema",
+            "examples": [
+              "129",
+              "204",
+              "205",
+              "202"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "title": "The name Schema",
+            "examples": [
+              "Alcohol Tolerance",
+              "Forgettable Face",
+              "Illegal Gear - AP Bullets",
+              "License (Holdout Pistol)"
+            ]
+          },
+          "foa": {
+            "type": "string",
+            "title": "The foa Schema",
+            "examples": [
+              "",
+              "12"
+            ]
+          },
+          "points": {
+            "type": "integer",
+            "title": "The points Schema",
+            "examples": [
+              1
+            ]
+          },
+          "ref": {
+            "type": "string",
+            "title": "The ref Schema",
+            "examples": [
+              "B100, B100,PU2:13",
+              "PU2:4",
+              "",
+              "PU2:18"
+            ]
+          },
+          "notes": {
+            "type": "string",
+            "title": "The notes Schema",
+            "examples": [
+              ""
+            ]
+          }
+        },
+        "examples": [
+          {
+            "idkey": "129",
+            "name": "Alcohol Tolerance",
+            "foa": "",
+            "points": 1,
+            "ref": "B100, B100,PU2:13",
+            "notes": ""
+          },
+          {
+            "idkey": "204",
+            "name": "Forgettable Face",
+            "foa": "12",
+            "points": 1,
+            "ref": "PU2:4",
+            "notes": ""
+          },
+          {
+            "idkey": "205",
+            "name": "Illegal Gear - AP Bullets",
+            "foa": "",
+            "points": 1,
+            "ref": "",
+            "notes": ""
+          },
+          {
+            "idkey": "202",
+            "name": "License (Holdout Pistol)",
+            "foa": "",
+            "points": 1,
+            "ref": "PU2:18",
+            "notes": ""
+          }
+        ]
+      },
+      "examples": [
+        [
+          {
+            "idkey": "129",
+            "name": "Alcohol Tolerance",
+            "foa": "",
+            "points": 1,
+            "ref": "B100, B100,PU2:13",
+            "notes": ""
+          },
+          {
+            "idkey": "204",
+            "name": "Forgettable Face",
+            "foa": "12",
+            "points": 1,
+            "ref": "PU2:4",
+            "notes": ""
+          },
+          {
+            "idkey": "205",
+            "name": "Illegal Gear - AP Bullets",
+            "foa": "",
+            "points": 1,
+            "ref": "",
+            "notes": ""
+          },
+          {
+            "idkey": "202",
+            "name": "License (Holdout Pistol)",
+            "foa": "",
+            "points": 1,
+            "ref": "PU2:18",
+            "notes": ""
+          }
+        ]
+      ]
+    },
+    "repeating_quirks": {
+      "type": "array",
+      "default": [],
+      "title": "The repeating_quirks Schema",
+      "items": {
+        "type": "object",
+        "title": "A Schema",
+        "required": [
+          "idkey",
+          "name",
+          "control_rating",
+          "points",
+          "ref",
+          "notes"
+        ],
+        "properties": {
+          "idkey": {
+            "type": "string",
+            "title": "The idkey Schema",
+            "examples": [
+              "216",
+              "217",
+              "169"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "title": "The name Schema",
+            "examples": [
+              "Avoids the spying on spouse jobs",
+              "Careful",
+              "Will use whatever provides upper hand"
+            ]
+          },
+          "control_rating": {
+            "type": "string",
+            "title": "The control_rating Schema",
+            "examples": [
+              "12",
+              ""
+            ]
+          },
+          "points": {
+            "type": "integer",
+            "title": "The points Schema",
+            "examples": [
+              "-",
+              1
+            ]
+          },
+          "ref": {
+            "type": "string",
+            "title": "The ref Schema",
+            "examples": [
+              "B163",
+              "B164"
+            ]
+          },
+          "notes": {
+            "type": "string",
+            "title": "The notes Schema",
+            "examples": [
+              ""
+            ]
+          }
+        },
+        "examples": [
+          {
+            "idkey": "216",
+            "name": "Avoids the spying on spouse jobs",
+            "control_rating": "12",
+            "points": "-",
+            1,
+            "ref": "B163",
+            "notes": ""
+          },
+          {
+            "idkey": "217",
+            "name": "Careful",
+            "control_rating": "",
+            "points": "-",
+            1,
+            "ref": "B164",
+            "notes": ""
+          },
+          {
+            "idkey": "169",
+            "name": "Will use whatever provides upper hand",
+            "control_rating": "",
+            "points": "-",
+            1,
+            "ref": "B163",
+            "notes": ""
+          }
+        ]
+      },
+      "examples": [
+        [
+          {
+            "idkey": "216",
+            "name": "Avoids the spying on spouse jobs",
+            "control_rating": "12",
+            "points": "-",
+            1,
+            "ref": "B163",
+            "notes": ""
+          },
+          {
+            "idkey": "217",
+            "name": "Careful",
+            "control_rating": "",
+            "points": "-",
+            1,
+            "ref": "B164",
+            "notes": ""
+          },
+          {
+            "idkey": "169",
+            "name": "Will use whatever provides upper hand",
+            "control_rating": "",
+            "points": "-",
+            1,
+            "ref": "B163",
+            "notes": ""
+          }
+        ]
+      ]
+    },
+    "repeating_disadvantages": {
+      "type": "array",
+      "default": [],
+      "title": "The repeating_disadvantages Schema",
+      "items": {
+        "type": "object",
+        "title": "A Schema",
+        "required": [
+          "idkey",
+          "name",
+          "trait_level",
+          "control_rating",
+          "points",
+          "ref",
+          "notes"
+        ],
+        "properties": {
+          "idkey": {
+            "type": "string",
+            "title": "The idkey Schema",
+            "examples": [
+              "159",
+              "164"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "title": "The name Schema",
+            "examples": [
+              "Addiction (Alcohol) (Cheap)",
+              "Code of Honor (Professional)"
+            ]
+          },
+          "trait_level": {
+            "type": "string",
+            "title": "The trait_level Schema",
+            "examples": [
+              "1"
+            ]
+          },
+          "control_rating": {
+            "type": "string",
+            "title": "The control_rating Schema",
+            "examples": [
+              "12",
+              ""
+            ]
+          },
+          "points": {
+            "type": "integer",
+            "title": "The points Schema",
+            "examples": [
+              "-",
+              10,
+              "-",
+              5
+            ]
+          },
+          "ref": {
+            "type": "string",
+            "title": "The ref Schema",
+            "examples": [
+              "B122",
+              "B127"
+            ]
+          },
+          "notes": {
+            "type": "string",
+            "title": "The notes Schema",
+            "examples": [
+              "Modifiers:\nEffect: Incapacitating, 10\nLegality: Legal, +5",
+              ""
+            ]
+          }
+        },
+        "examples": [
+          {
+            "idkey": "159",
+            "name": "Addiction (Alcohol) (Cheap)",
+            "trait_level": "1",
+            "control_rating": "12",
+            "points": "-",
+            10,
+            "ref": "B122",
+            "notes": "Modifiers:\nEffect: Incapacitating, 10\nLegality: Legal, +5"
+          },
+          {
+            "idkey": "164",
+            "name": "Code of Honor (Professional)",
+            "trait_level": "1",
+            "control_rating": "",
+            "points": "-",
+            5,
+            "ref": "B127",
+            "notes": ""
+          }
+        ]
+      },
+      "examples": [
+        [
+          {
+            "idkey": "159",
+            "name": "Addiction (Alcohol) (Cheap)",
+            "trait_level": "1",
+            "control_rating": "12",
+            "points": "-",
+            10,
+            "ref": "B122",
+            "notes": "Modifiers:\nEffect: Incapacitating, 10\nLegality: Legal, +5"
+          },
+          {
+            "idkey": "164",
+            "name": "Code of Honor (Professional)",
+            "trait_level": "1",
+            "control_rating": "",
+            "points": "-",
+            5,
+            "ref": "B127",
+            "notes": ""
+          }
+        ]
+      ]
+    },
+    "repeating_racial": {
+      "type": "array",
+      "default": [],
+      "title": "The repeating_racial Schema",
+      "items": {
+        "type": "object",
+        "title": "A Schema",
+        "required": [
+          "idkey",
+          "name",
+          "trait_level",
+          "control_rating",
+          "points",
+          "ref",
+          "notes"
+        ],
+        "properties": {
+          "idkey": {
+            "type": "string",
+            "title": "The idkey Schema",
+            "examples": [
+              ""
+            ]
+          },
+          "name": {
+            "type": "string",
+            "title": "The name Schema",
+            "examples": [
+              "Bad Temper",
+              "Strong Will"
+            ]
+          },
+          "trait_level": {
+            "type": "string",
+            "title": "The trait_level Schema",
+            "examples": [
+              "",
+              "1"
+            ]
+          },
+          "control_rating": {
+            "type": "string",
+            "title": "The control_rating Schema",
+            "examples": [
+              "12",
+              ""
+            ]
+          },
+          "points": {
+            "type": "integer",
+            "title": "The points Schema",
+            "examples": [
+              "-",
+              5,
+              5
+            ]
+          },
+          "ref": {
+            "type": "string",
+            "title": "The ref Schema",
+            "examples": [
+              ""
+            ]
+          },
+          "notes": {
+            "type": "string",
+            "title": "The notes Schema",
+            "examples": [
+              ""
+            ]
+          }
+        },
+        "examples": [
+          {
+            "idkey": "",
+            "name": "Bad Temper",
+            "trait_level": "",
+            "control_rating": "12",
+            "points": "-",
+            5,
+            "ref": "",
+            "notes": ""
+          },
+          {
+            "idkey": "",
+            "name": "Strong Will",
+            "trait_level": "1",
+            "control_rating": "",
+            "points": 5,
+            "ref": "",
+            "notes": ""
+          }
+        ]
+      },
+      "examples": [
+        [
+          {
+            "idkey": "",
+            "name": "Bad Temper",
+            "trait_level": "",
+            "control_rating": "12",
+            "points": "-",
+            5,
+            "ref": "",
+            "notes": ""
+          },
+          {
+            "idkey": "",
+            "name": "Strong Will",
+            "trait_level": "1",
+            "control_rating": "",
+            "points": 5,
+            "ref": "",
+            "notes": ""
+          }
+        ]
+      ]
+    },
+    "repeating_skills": {
+      "type": "array",
+      "default": [],
+      "title": "The repeating_skills Schema",
+      "items": {
+        "type": "object",
+        "title": "A Schema",
+        "required": [
+          "idkey",
+          "name",
+          "tl",
+          "base",
+          "difficulty",
+          "bonus",
+          "points",
+          "use_wildcard_points",
+          "use_normal_points",
+          "wildcard_skill_points",
+          "ref",
+          "skill_mod_notes",
+          "notes"
+        ],
+        "properties": {
+          "idkey": {
+            "type": "string",
+            "title": "The idkey Schema",
+            "examples": [
+              ""
+            ]
+          },
+          "name": {
+            "type": "string",
+            "title": "The name Schema",
+            "examples": [
+              "Administration",
+              "Brawling"
+            ]
+          },
+          "tl": {
+            "type": "string",
+            "title": "The tl Schema",
+            "examples": [
+              ""
+            ]
+          },
+          "base": {
+            "type": "string",
+            "title": "The base Schema",
+            "examples": [
+              "IQ",
+              "DX"
+            ]
+          },
+          "difficulty": {
+            "type": "string",
+            "title": "The difficulty Schema",
+            "examples": [
+              "A",
+              "E"
+            ]
+          },
+          "bonus": {
+            "type": "integer",
+            "title": "The bonus Schema",
+            "examples": [
+              0
+            ]
+          },
+          "points": {
+            "type": "integer",
+            "title": "The points Schema",
+            "examples": [
+              1,
+              4
+            ]
+          },
+          "use_wildcard_points": {
+            "type": "integer",
+            "default": 0,
+            "title": "The use_wildcard_points Schema",
+            "examples": [
+              0
+            ]
+          },
+          "use_normal_points": {
+            "type": "integer",
+            "default": 0,
+            "title": "The use_normal_points Schema",
+            "examples": [
+              1
+            ]
+          },
+          "wildcard_skill_points": {
+            "type": "integer",
+            "default": 0,
+            "title": "The wildcard_skill_points Schema",
+            "examples": [
+              1
+            ]
+          },
+          "ref": {
+            "type": "string",
+            "title": "The ref Schema",
+            "examples": [
+              "B174"
+            ]
+          },
+          "skill_mod_notes": {
+            "type": "string",
+            "title": "The skill_mod_notes Schema",
+            "examples": [
+              ""
+            ]
+          },
+          "notes": {
+            "type": "string",
+            "title": "The notes Schema",
+            "examples": [
+              ""
+            ]
+          }
+        },
+        "examples": [
+          {
+            "idkey": "",
+            "name": "Administration",
+            "tl": "",
+            "base": "IQ",
+            "difficulty": "A",
+            "bonus": 0,
+            "points": 1,
+            "use_wildcard_points": 0,
+            "use_normal_points": 1,
+            "wildcard_skill_points": 1,
+            "ref": "B174",
+            "skill_mod_notes": "",
+            "notes": ""
+          },
+          {
+            "idkey": "",
+            "name": "Brawling",
+            "tl": "",
+            "base": "DX",
+            "difficulty": "E",
+            "bonus": 0,
+            "points": 4,
+            "ref": "B174",
+            "skill_mod_notes": "",
+            "notes": ""
+          }
+        ]
+      },
+      "examples": [
+        [
+          {
+            "idkey": "",
+            "name": "Administration",
+            "tl": "",
+            "base": "IQ",
+            "difficulty": "A",
+            "bonus": 0,
+            "points": 1,
+            "use_wildcard_points": 0,
+            "use_normal_points": 1,
+            "wildcard_skill_points": 1,
+            "ref": "B174",
+            "skill_mod_notes": "",
+            "notes": ""
+          },
+          {
+            "idkey": "",
+            "name": "Brawling",
+            "tl": "",
+            "base": "DX",
+            "difficulty": "E",
+            "bonus": 0,
+            "points": 4,
+            "ref": "B174",
+            "skill_mod_notes": "",
+            "notes": ""
+          }
+        ]
+      ]
+    },
+    "repeating_techniquesrevised": {
+      "type": "array",
+      "default": [],
+      "title": "The repeating_techniquesrevised Schema",
+      "items": {
+        "type": "object",
+        "default": {},
+        "title": "A Schema",
+        "required": [
+          "idkey",
+          "name",
+          "parent",
+          "base_level",
+          "default",
+          "max_modifier",
+          "difficulty",
+          "skill_modifier",
+          "points",
+          "ref",
+          "skill_mod_notes",
+          "notes"
+        ],
+        "properties": {
+          "idkey": {
+            "type": "string",
+            "default": "",
+            "title": "The idkey Schema",
+            "examples": [
+              ""
+            ]
+          },
+          "name": {
+            "type": "string",
+            "default": "",
+            "title": "The name Schema",
+            "examples": [
+              "Elbow Punch"
+            ]
+          },
+          "parent": {
+            "type": "string",
+            "default": "",
+            "title": "The parent Schema",
+            "examples": [
+              "Brawling"
+            ]
+          },
+          "base_level": {
+            "type": "integer",
+            "default": 0,
+            "title": "The base_level Schema",
+            "examples": [
+              14
+            ]
+          },
+          "default": {
+            "type": "integer",
+            "default": 0,
+            "title": "The default Schema",
+            "examples": [
+              "-",
+              2
+            ]
+          },
+          "max_modifier": {
+            "type": "integer",
+            "default": 0,
+            "title": "The max_modifier Schema",
+            "examples": [
+              2
+            ]
+          },
+          "difficulty": {
+            "type": "string",
+            "default": "",
+            "title": "The difficulty Schema",
+            "examples": [
+              "Hard"
+            ]
+          },
+          "skill_modifier": {
+            "type": "integer",
+            "default": 0,
+            "title": "The skill_modifier Schema",
+            "examples": [
+              0
+            ]
+          },
+          "points": {
+            "type": "integer",
+            "default": 0,
+            "title": "The points Schema",
+            "examples": [
+              2
+            ]
+          },
+          "ref": {
+            "type": "string",
+            "default": "",
+            "title": "The ref Schema",
+            "examples": [
+              ""
+            ]
+          },
+          "skill_mod_notes": {
+            "type": "string",
+            "default": "",
+            "title": "The skill_mod_notes Schema",
+            "examples": [
+              ""
+            ]
+          },
+          "notes": {
+            "type": "string",
+            "default": "",
+            "title": "The notes Schema",
+            "examples": [
+              ""
+            ]
+          }
+        },
+        "examples": [
+          {
+            "idkey": "",
+            "name": "Elbow Punch",
+            "parent": "Brawling",
+            "base_level": 14,
+            "default": "-",
+            2,
+            "max_modifier": 2,
+            "difficulty": "Hard",
+            "skill_modifier": 0,
+            "points": 2,
+            "ref": "",
+            "skill_mod_notes": "",
+            "notes": ""
+          }
+        ]
+      },
+      "examples": [
+        [
+          {
+            "idkey": "",
+            "name": "Elbow Punch",
+            "parent": "Brawling",
+            "base_level": 14,
+            "default": "-",
+            2,
+            "max_modifier": 2,
+            "difficulty": "Hard",
+            "skill_modifier": 0,
+            "points": 2,
+            "ref": "",
+            "skill_mod_notes": "",
+            "notes": ""
+          }
+        ]
+      ]
+    },
+    "repeating_defense": {
+      "type": "array",
+      "default": [],
+      "title": "The repeating_defense Schema",
+      "items": {
+        "type": "object",
+        "title": "A Schema",
+        "required": [
+          "idkey",
+          "name",
+          "type",
+          "info",
+          "skill",
+          "skill_mod",
+          "defense_mod_reason",
+          "info_description"
+        ],
+        "properties": {
+          "idkey": {
+            "type": "string",
+            "title": "The idkey Schema",
+            "examples": [
+              ""
+            ]
+          },
+          "name": {
+            "type": "string",
+            "title": "The name Schema",
+            "examples": [
+              "Punch",
+              "Brawling (Punch)"
+            ]
+          },
+          "type": {
+            "type": "string",
+            "title": "The type Schema",
+            "examples": [
+              "Unarmed Parry"
+            ]
+          },
+          "info": {
+            "type": "string",
+            "title": "The info Schema",
+            "examples": [
+              ""
+            ]
+          },
+          "skill": {
+            "type": "integer",
+            "title": "The skill Schema",
+            "examples": [
+              10
+            ]
+          },
+          "skill_mod": {
+            "type": "integer",
+            "title": "The skill_mod Schema",
+            "examples": [
+              0
+            ]
+          },
+          "defense_mod_reason": {
+            "type": "string",
+            "title": "The defense_mod_reason Schema",
+            "examples": [
+              ""
+            ]
+          },
+          "info_description": {
+            "type": "string",
+            "title": "The info_description Schema",
+            "examples": [
+              ""
+            ]
+          }
+        },
+        "examples": [
+          {
+            "idkey": "",
+            "name": "Punch",
+            "type": "Unarmed Parry",
+            "info": "",
+            "skill": 10,
+            "skill_mod": 0,
+            "defense_mod_reason": "",
+            "info_description": ""
+          },
+          {
+            "idkey": "",
+            "name": "Brawling (Punch)",
+            "type": "Unarmed Parry",
+            "info": "",
+            "skill": 10,
+            "skill_mod": 0,
+            "defense_mod_reason": "",
+            "info_description": ""
+          }
+        ]
+      },
+      "examples": [
+        [
+          {
+            "idkey": "",
+            "name": "Punch",
+            "type": "Unarmed Parry",
+            "info": "",
+            "skill": 10,
+            "skill_mod": 0,
+            "defense_mod_reason": "",
+            "info_description": ""
+          },
+          {
+            "idkey": "",
+            "name": "Brawling (Punch)",
+            "type": "Unarmed Parry",
+            "info": "",
+            "skill": 10,
+            "skill_mod": 0,
+            "defense_mod_reason": "",
+            "info_description": ""
+          }
+        ]
+      ]
+    },
+    "repeating_melee": {
+      "type": "array",
+      "default": [],
+      "title": "The repeating_melee Schema",
+      "items": {
+        "type": "object",
+        "default": {},
+        "title": "A Schema",
+        "required": [
+          "idkey",
+          "name",
+          "damage",
+          "type",
+          "reach",
+          "skill",
+          "reason_for_mod",
+          "armor_divisor",
+          "notes"
+        ],
+        "properties": {
+          "idkey": {
+            "type": "string",
+            "default": "",
+            "title": "The idkey Schema",
+            "examples": [
+              "13"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "default": "",
+            "title": "The name Schema",
+            "examples": [
+              "Bite"
+            ]
+          },
+          "damage": {
+            "type": "string",
+            "default": "",
+            "title": "The damage Schema",
+            "examples": [
+              "1d6-1"
+            ]
+          },
+          "type": {
+            "type": "string",
+            "default": "",
+            "title": "The type Schema",
+            "examples": [
+              "cr"
+            ]
+          },
+          "reach": {
+            "type": "string",
+            "default": "",
+            "title": "The reach Schema",
+            "examples": [
+              "c"
+            ]
+          },
+          "skill": {
+            "type": "integer",
+            "default": 0,
+            "title": "The skill Schema",
+            "examples": [
+              14
+            ]
+          },
+          "reason_for_mod": {
+            "type": "string",
+            "default": "",
+            "title": "The reason_for_mod Schema",
+            "examples": [
+              ""
+            ]
+          },
+          "armor_divisor": {
+            "type": "integer",
+            "default": 0,
+            "title": "The armor_divisor Schema",
+            "examples": [
+              1
+            ]
+          },
+          "notes": {
+            "type": "string",
+            "default": "",
+            "title": "The notes Schema",
+            "examples": [
+              ""
+            ]
+          }
+        },
+        "examples": [
+          {
+            "idkey": "13",
+            "name": "Bite",
+            "damage": "1d6-1",
+            "type": "cr",
+            "reach": "c",
+            "skill": 14,
+            "reason_for_mod": "",
+            "armor_divisor": 1,
+            "notes": ""
+          }
+        ]
+      },
+      "examples": [
+        [
+          {
+            "idkey": "13",
+            "name": "Bite",
+            "damage": "1d6-1",
+            "type": "cr",
+            "reach": "c",
+            "skill": 14,
+            "reason_for_mod": "",
+            "armor_divisor": 1,
+            "notes": ""
+          }
+        ]
+      ]
+    },
+    "repeating_ranged": {
+      "type": "array",
+      "default": [],
+      "title": "The repeating_ranged Schema",
+      "items": {
+        "type": "object",
+        "default": {},
+        "title": "A Schema",
+        "required": [
+          "idkey",
+          "name",
+          "damage",
+          "type",
+          "acc",
+          "range",
+          "rof",
+          "shots",
+          "bulk",
+          "recoil",
+          "skill",
+          "reason_for_mod",
+          "malfunction",
+          "malfunction_verify",
+          "malfunction_very_reliable",
+          "armor_divisor",
+          "notes"
+        ],
+        "properties": {
+          "idkey": {
+            "type": "string",
+            "default": "",
+            "title": "The idkey Schema",
+            "examples": [
+              ""
+            ]
+          },
+          "name": {
+            "type": "string",
+            "default": "",
+            "title": "The name Schema",
+            "examples": [
+              "Holdout Pistol, 7.5mmCLP"
+            ]
+          },
+          "damage": {
+            "type": "string",
+            "default": "",
+            "title": "The damage Schema",
+            "examples": [
+              "2d6"
+            ]
+          },
+          "type": {
+            "type": "string",
+            "default": "",
+            "title": "The type Schema",
+            "examples": [
+              "pi"
+            ]
+          },
+          "acc": {
+            "type": "string",
+            "default": "",
+            "title": "The acc Schema",
+            "examples": [
+              "1"
+            ]
+          },
+          "range": {
+            "type": "string",
+            "default": "",
+            "title": "The range Schema",
+            "examples": [
+              "100/1200"
+            ]
+          },
+          "rof": {
+            "type": "string",
+            "default": "",
+            "title": "The rof Schema",
+            "examples": [
+              "3"
+            ]
+          },
+          "shots": {
+            "type": "string",
+            "default": "",
+            "title": "The shots Schema",
+            "examples": [
+              "18+1(3)/0.2"
+            ]
+          },
+          "bulk": {
+            "type": "string",
+            "default": "",
+            "title": "The bulk Schema",
+            "examples": [
+              "-1"
+            ]
+          },
+          "recoil": {
+            "type": "string",
+            "default": "",
+            "title": "The recoil Schema",
+            "examples": [
+              "2"
+            ]
+          },
+          "skill": {
+            "type": "integer",
+            "default": 0,
+            "title": "The skill Schema",
+            "examples": [
+              15
+            ]
+          },
+          "reason_for_mod": {
+            "type": "string",
+            "default": "",
+            "title": "The reason_for_mod Schema",
+            "examples": [
+              ""
+            ]
+          },
+          "malfunction": {
+            "type": "string",
+            "default": "",
+            "title": "The malfunction Schema",
+            "examples": [
+              "17"
+            ]
+          },
+          "malfunction_verify": {
+            "type": "boolean",
+            "default": false,
+            "title": "The malfunction_verify Schema",
+            "examples": [
+              true
+            ]
+          },
+          "malfunction_very_reliable": {
+            "type": "boolean",
+            "default": false,
+            "title": "The malfunction_very_reliable Schema",
+            "examples": [
+              true
+            ]
+          },
+          "armor_divisor": {
+            "type": "number",
+            "default": 0.0,
+            "title": "The armor_divisor Schema",
+            "examples": [
+              0.5
+            ]
+          },
+          "notes": {
+            "type": "string",
+            "default": "",
+            "title": "The notes Schema",
+            "examples": [
+              ""
+            ]
+          }
+        },
+        "examples": [
+          {
+            "idkey": "",
+            "name": "Holdout Pistol, 7.5mmCLP",
+            "damage": "2d6",
+            "type": "pi",
+            "acc": "1",
+            "range": "100/1200",
+            "rof": "3",
+            "shots": "18+1(3)/0.2",
+            "bulk": "-1",
+            "recoil": "2",
+            "skill": 15,
+            "reason_for_mod": "",
+            "malfunction": "17",
+            "malfunction_verify": true,
+            "malfunction_very_reliable": true,
+            "armor_divisor": 0.5,
+            "notes": ""
+          }
+        ]
+      },
+      "examples": [
+        [
+          {
+            "idkey": "",
+            "name": "Holdout Pistol, 7.5mmCLP",
+            "damage": "2d6",
+            "type": "pi",
+            "acc": "1",
+            "range": "100/1200",
+            "rof": "3",
+            "shots": "18+1(3)/0.2",
+            "bulk": "-1",
+            "recoil": "2",
+            "skill": 15,
+            "reason_for_mod": "",
+            "malfunction": "17",
+            "malfunction_verify": true,
+            "malfunction_very_reliable": true,
+            "armor_divisor": 0.5,
+            "notes": ""
+          }
+        ]
+      ]
+    },
+    "repeating_item": {
+      "type": "array",
+      "default": [],
+      "title": "The repeating_item Schema",
+      "items": {
+        "type": "object",
+        "title": "A Schema",
+        "required": [
+          "idkey",
+          "name",
+          "tl",
+          "legality_class",
+          "ref",
+          "count",
+          "cost",
+          "weight",
+          "notes"
+        ],
+        "properties": {
+          "idkey": {
+            "type": "string",
+            "title": "The idkey Schema",
+            "examples": [
+              ""
+            ]
+          },
+          "name": {
+            "type": "string",
+            "title": "The name Schema",
+            "examples": [
+              "7mmCL Conventional Ammunition",
+              "Antitoxin Kit",
+              "Cell Phone",
+              "Holdout Pistol, 7.5mmCLP"
+            ]
+          },
+          "tl": {
+            "type": "string",
+            "title": "The tl Schema",
+            "examples": [
+              "9",
+              "6",
+              "8"
+            ]
+          },
+          "legality_class": {
+            "type": "string",
+            "title": "The legality_class Schema",
+            "examples": [
+              "3",
+              ""
+            ]
+          },
+          "ref": {
+            "type": "string",
+            "title": "The ref Schema",
+            "examples": [
+              "UT139",
+              "B289",
+              "B288",
+              "UT137"
+            ]
+          },
+          "count": {
+            "type": "integer",
+            "title": "The count Schema",
+            "examples": [
+              16,
+              1
+            ]
+          },
+          "cost": {
+            "type": [
+              "number",
+              "integer"
+            ],
+            "title": "The cost Schema",
+            "examples": [
+              0.54,
+              25,
+              250,
+              240
+            ]
+          },
+          "weight": {
+            "type": [
+              "number",
+              "integer"
+            ],
+            "title": "The weight Schema",
+            "examples": [
+              0.027,
+              0.5,
+              0.25,
+              1
+            ]
+          },
+          "notes": {
+            "type": "string",
+            "title": "The notes Schema",
+            "examples": [
+              "",
+              "Alcohol\n\nTL:6 Notes: Antidote for specific poison. 10 uses.",
+              "TL:8 Notes: Only works in some areas, $20/month fee. 10hrs.",
+              "HUD +1 ACC \u003c 300 yards. Laser Sight +1 Skill \u003c 1/2D Range. Recognition Grip. Diagnostic Chip +1 Repair\n\nTL:9 LC:3 Ammo:0.2 lb. Damage:2d pi Acc:1 Range:100/1200 RoF:3 Shots:18+1(3) ST:6 Bulk:-1 Rcl:2 Skill:Guns (Pistol"
+            ]
+          }
+        },
+        "examples": [
+          {
+            "idkey": "",
+            "name": "7mmCL Conventional Ammunition",
+            "tl": "9",
+            "legality_class": "3",
+            "ref": "UT139",
+            "count": 16,
+            "cost": 0.54,
+            "weight": 0.027,
+            "notes": ""
+          },
+          {
+            "idkey": "",
+            "name": "Antitoxin Kit",
+            "tl": "6",
+            "legality_class": "",
+            "ref": "B289",
+            "count": 1,
+            "cost": 25,
+            "weight": 0.5,
+            "notes": "Alcohol\n\nTL:6 Notes: Antidote for specific poison. 10 uses."
+          },
+          {
+            "idkey": "",
+            "name": "Cell Phone",
+            "tl": "8",
+            "legality_class": "",
+            "ref": "B288",
+            "count": 1,
+            "cost": 250,
+            "weight": 0.25,
+            "notes": "TL:8 Notes: Only works in some areas, $20/month fee. 10hrs."
+          },
+          {
+            "idkey": "",
+            "name": "Holdout Pistol, 7.5mmCLP",
+            "tl": "9",
+            "legality_class": "3",
+            "ref": "UT137",
+            "count": 1,
+            "cost": 240,
+            "weight": 1,
+            "notes": "HUD +1 ACC \u003c 300 yards. Laser Sight +1 Skill \u003c 1/2D Range. Recognition Grip. Diagnostic Chip +1 Repair\n\nTL:9 LC:3 Ammo:0.2 lb. Damage:2d pi Acc:1 Range:100/1200 RoF:3 Shots:18+1(3) ST:6 Bulk:-1 Rcl:2 Skill:Guns (Pistol"
+          }
+        ]
+      },
+      "examples": [
+        [
+          {
+            "idkey": "",
+            "name": "7mmCL Conventional Ammunition",
+            "tl": "9",
+            "legality_class": "3",
+            "ref": "UT139",
+            "count": 16,
+            "cost": 0.54,
+            "weight": 0.027,
+            "notes": ""
+          },
+          {
+            "idkey": "",
+            "name": "Antitoxin Kit",
+            "tl": "6",
+            "legality_class": "",
+            "ref": "B289",
+            "count": 1,
+            "cost": 25,
+            "weight": 0.5,
+            "notes": "Alcohol\n\nTL:6 Notes: Antidote for specific poison. 10 uses."
+          },
+          {
+            "idkey": "",
+            "name": "Cell Phone",
+            "tl": "8",
+            "legality_class": "",
+            "ref": "B288",
+            "count": 1,
+            "cost": 250,
+            "weight": 0.25,
+            "notes": "TL:8 Notes: Only works in some areas, $20/month fee. 10hrs."
+          },
+          {
+            "idkey": "",
+            "name": "Holdout Pistol, 7.5mmCLP",
+            "tl": "9",
+            "legality_class": "3",
+            "ref": "UT137",
+            "count": 1,
+            "cost": 240,
+            "weight": 1,
+            "notes": "HUD +1 ACC \u003c 300 yards. Laser Sight +1 Skill \u003c 1/2D Range. Recognition Grip. Diagnostic Chip +1 Repair\n\nTL:9 LC:3 Ammo:0.2 lb. Damage:2d pi Acc:1 Range:100/1200 RoF:3 Shots:18+1(3) ST:6 Bulk:-1 Rcl:2 Skill:Guns (Pistol"
+          }
+        ]
+      ]
+    },
+    "repeating_spells": {
+      "type": "array",
+      "default": [],
+      "title": "The repeating_spells Schema",
+      "items": {
+        "type": "object",
+        "title": "A Schema",
+        "required": [
+          "idkey",
+          "name",
+          "difficulty",
+          "spell_modifier",
+          "points",
+          "spell_resisted_by",
+          "duration",
+          "cost",
+          "casttime",
+          "maintain",
+          "spell_class",
+          "spell_college",
+          "spell_college_secondary",
+          "spell_mod_notes",
+          "spell_notes"
+        ],
+        "properties": {
+          "idkey": {
+            "type": "string",
+            "title": "The idkey Schema",
+            "examples": [
+              ""
+            ]
+          },
+          "name": {
+            "type": "string",
+            "title": "The name Schema",
+            "examples": [
+              "Air Jet",
+              "Fireball"
+            ]
+          },
+          "difficulty": {
+            "type": "string",
+            "title": "The difficulty Schema",
+            "examples": [
+              "H"
+            ]
+          },
+          "spell_modifier": {
+            "type": "integer",
+            "title": "The spell_modifier Schema",
+            "examples": [
+              2,
+              0
+            ]
+          },
+          "points": {
+            "type": "integer",
+            "title": "The points Schema",
+            "examples": [
+              2
+            ]
+          },
+          "spell_resisted_by": {
+            "type": "string",
+            "title": "The spell_resisted_by Schema",
+            "examples": [
+              ""
+            ]
+          },
+          "duration": {
+            "type": "string",
+            "title": "The duration Schema",
+            "examples": [
+              "1 sec.",
+              "Instant"
+            ]
+          },
+          "cost": {
+            "type": "string",
+            "title": "The cost Schema",
+            "examples": [
+              "1 to 3/S",
+              "1 to Magery#"
+            ]
+          },
+          "casttime": {
+            "type": "string",
+            "title": "The casttime Schema",
+            "examples": [
+              "1 sec.",
+              "1 to 3 sec."
+            ]
+          },
+          "maintain": {
+            "type": "string",
+            "title": "The maintain Schema",
+            "examples": [
+              ""
+            ]
+          },
+          "spell_class": {
+            "type": "string",
+            "title": "The spell_class Schema",
+            "examples": [
+              "Regular",
+              "Missile"
+            ]
+          },
+          "spell_college": {
+            "type": "string",
+            "title": "The spell_college Schema",
+            "examples": [
+              "Air",
+              "Fire"
+            ]
+          },
+          "spell_college_secondary": {
+            "type": "string",
+            "title": "The spell_college_secondary Schema",
+            "examples": [
+              ""
+            ]
+          },
+          "spell_mod_notes": {
+            "type": "string",
+            "title": "The spell_mod_notes Schema",
+            "examples": [
+              ""
+            ]
+          },
+          "spell_notes": {
+            "type": "string",
+            "title": "The spell_notes Schema",
+            "examples": [
+              "Prereq Count: 3 Prerequisites: Shape Air\n\nNeeds: Shape Air, ST:Magery = 0 | PE:Charms ([Spell]) | PE:Charms (%SpellsList%) | PE:Charms (Air Jet)",
+              "Prereq Count: 3 Prerequisites: Magery 1, Create Fire, Shape Fire\n\nNeeds: (AD:Magery 0 | ST:Magery 0 = 1), (AD:Magery = 1, ST:Magery = 1 | ST:Magery Fire = 1), Create Fire, Shape Fire, ST:Magery = 0 | PE:Charms ([Spell]) | PE:Charms (%SpellsList%) | PE:Charms (Fireball),"
+            ]
+          }
+        },
+        "examples": [
+          {
+            "idkey": "",
+            "name": "Air Jet",
+            "difficulty": "H",
+            "spell_modifier": 2,
+            "points": 2,
+            "spell_resisted_by": "",
+            "duration": "1 sec.",
+            "cost": "1 to 3/S",
+            "casttime": "1 sec.",
+            "maintain": "",
+            "spell_class": "Regular",
+            "spell_college": "Air",
+            "spell_college_secondary": "",
+            "spell_mod_notes": "",
+            "spell_notes": "Prereq Count: 3 Prerequisites: Shape Air\n\nNeeds: Shape Air, ST:Magery = 0 | PE:Charms ([Spell]) | PE:Charms (%SpellsList%) | PE:Charms (Air Jet)"
+          },
+          {
+            "idkey": "",
+            "name": "Fireball",
+            "difficulty": "H",
+            "spell_modifier": 0,
+            "points": 2,
+            "spell_resisted_by": "",
+            "duration": "Instant",
+            "cost": "1 to Magery#",
+            "casttime": "1 to 3 sec.",
+            "maintain": "",
+            "spell_class": "Missile",
+            "spell_college": "Fire",
+            "spell_college_secondary": "",
+            "spell_mod_notes": "",
+            "spell_notes": "Prereq Count: 3 Prerequisites: Magery 1, Create Fire, Shape Fire\n\nNeeds: (AD:Magery 0 | ST:Magery 0 = 1), (AD:Magery = 1, ST:Magery = 1 | ST:Magery Fire = 1), Create Fire, Shape Fire, ST:Magery = 0 | PE:Charms ([Spell]) | PE:Charms (%SpellsList%) | PE:Charms (Fireball),"
+          }
+        ]
+      },
+      "examples": [
+        [
+          {
+            "idkey": "",
+            "name": "Air Jet",
+            "difficulty": "H",
+            "spell_modifier": 2,
+            "points": 2,
+            "spell_resisted_by": "",
+            "duration": "1 sec.",
+            "cost": "1 to 3/S",
+            "casttime": "1 sec.",
+            "maintain": "",
+            "spell_class": "Regular",
+            "spell_college": "Air",
+            "spell_college_secondary": "",
+            "spell_mod_notes": "",
+            "spell_notes": "Prereq Count: 3 Prerequisites: Shape Air\n\nNeeds: Shape Air, ST:Magery = 0 | PE:Charms ([Spell]) | PE:Charms (%SpellsList%) | PE:Charms (Air Jet)"
+          },
+          {
+            "idkey": "",
+            "name": "Fireball",
+            "difficulty": "H",
+            "spell_modifier": 0,
+            "points": 2,
+            "spell_resisted_by": "",
+            "duration": "Instant",
+            "cost": "1 to Magery#",
+            "casttime": "1 to 3 sec.",
+            "maintain": "",
+            "spell_class": "Missile",
+            "spell_college": "Fire",
+            "spell_college_secondary": "",
+            "spell_mod_notes": "",
+            "spell_notes": "Prereq Count: 3 Prerequisites: Magery 1, Create Fire, Shape Fire\n\nNeeds: (AD:Magery 0 | ST:Magery 0 = 1), (AD:Magery = 1, ST:Magery = 1 | ST:Magery Fire = 1), Create Fire, Shape Fire, ST:Magery = 0 | PE:Charms ([Spell]) | PE:Charms (%SpellsList%) | PE:Charms (Fireball),"
+          }
+        ]
+      ]
+    },
+    "final_values": {
+      "type": "object",
+      "default": {},
+      "title": "The final_values Schema",
+      "required": [
+        "combat_reflexes"
+      ],
+      "properties": {
+        "combat_reflexes": {
+          "type": "boolean",
+          "default": false,
+          "title": "The combat_reflexes Schema",
+          "examples": [
+            true
+          ]
+        }
+      },
+      "examples": [
+        {
+          "combat_reflexes": true
+        }
+      ]
+    }
+  },
+  "examples": [
+    {
+      "character_name": "Bartholomew Mactavish",
+      "fullname": "Bartholomew Mactavish",
+      "playername": "NPC",
+      "nickname": "Bart",
+      "race": "Human",
+      "race_ref": "",
+      "template_names": "Hill People",
+      "gender": "Male",
+      "size": 0,
+      "apply_size_modifier": false,
+      "reactions": "",
+      "campaign_tl": 9,
+      "tl": 9,
+      "tl_pts": 0,
+      "status": "0",
+      "wealth": "Average",
+      "income": 700,
+      "cost_of_living": 600,
+      "stash": 100,
+      "age": 33,
+      "height": "5' 7\"",
+      "weight": 180,
+      "appearance": 4,
+      "general_appearance": "scruffy, nerf herder.",
+      "strength_mod": 0,
+      "strength_points": 10,
+      "dexterity_mod": 0,
+      "dexterity_points": 40,
+      "intelligence_mod": 40,
+      "health_mod": 0,
+      "health_points": 10,
+      "perception_mod": 0,
+      "perception_points": 0,
+      "vision_mod": 0,
+      "hearing_mod": 0,
+      "hearing_points": 0,
+      "taste_smell_mod": 0,
+      "taste_smell_points": 0,
+      "touch_mod": 0,
+      "willpower_mod": 0,
+      "willpower_points": 0,
+      "fear_check_mod": 2,
+      "fear_check_points": 0,
+      "stun_check_mod": 0,
+      "knockdown_check_mod": 0,
+      "unconscious_check_mod": 0,
+      "unconscious_check_points": 0,
+      "death_check_mod": 0,
+      "death_check_points": 0,
+      "basic_speed_mod": 0,
+      "basic_speed_points": 0,
+      "basic_move_mod": 0,
+      "basic_move_points": 0,
+      "enhanced_ground_move_mod": 0,
+      "enhanced_ground_move_points": 0,
+      "dodge_mod": 1,
+      "lift_st_mod": 0,
+      "lift_st_points": 0,
+      "striking_st_mod": 0,
+      "striking_st_points": 0,
+      "hit_points_mod": 0,
+      "hit_points_points": 0,
+      "hit_points": 11,
+      "fatigue_points_mod": 0,
+      "fatigue_points_points": 0,
+      "fatigue_points": 11,
+      "flight_checked": false,
+      "flight_points": 0,
+      "basic_air_move_mod": 0,
+      "basic_air_move_points": 0,
+      "enhanced_air_level": 0,
+      "enhanced_air_move_points": 0,
+      "amphibious_checked": false,
+      "amphibious_points": 0,
+      "basic_water_move_mod": 0,
+      "basic_water_move_points": 0,
+      "enhanced_water_level": 0,
+      "enhanced_water_move_points": 0,
+      "super_jump_entered_level": 0,
+      "super_jump_points": 0,
+      "spell_bonus": 0,
+      "repeating_languages": [
+        {
+          "idkey": "184",
+          "name": "English",
+          "spoken": 3,
+          "written": 3,
+          "is_native": true
+        },
+        {
+          "idkey": "187",
+          "name": "Spanish",
+          "spoken": 2,
+          "written": 2,
+          "is_native": false
+        },
+        {
+          "idkey": "186",
+          "name": "Street Speach (Spoken)",
+          "spoken": 2,
+          "written": 0,
+          "is_native": false
+        }
+      ],
+      "repeating_cultures": [
+        {
+          "idkey": "",
+          "name": "Western",
+          "points": 0
+        }
+      ],
+      "repeating_traits": [
+        {
+          "idkey": "192",
+          "name": "Advanced Bionic Ear TL9",
+          "trait_level": "1",
+          "foa": "",
+          "points": 11,
+          "ref": "B44",
+          "notes": "Based On: _New Advanage\n\nDiscriminatory Hearing (Temporary Disadvantage, Electrical, -20%)[12];Protected Hearing[5];Deafness (Mitigator -70%)[-6]"
+        },
+        {
+          "idkey": "189",
+          "name": "Contact (Cybernetic Street Engineer) (Effective Skill 12)",
+          "trait_level": "1",
+          "foa": "9",
+          "points": 1,
+          "ref": "B44",
+          "notes": "Modifiers:\nFrequency: roll of 9 or less, *1\nReliability: Somewhat Reliable, *1"
+        },
+        {
+          "idkey": "147",
+          "name": "Danger Sense",
+          "trait_level": "1",
+          "foa": "",
+          "points": 15,
+          "ref": "B47",
+          "notes": ""
+        }
+      ],
+      "repeating_perks": [
+        {
+          "idkey": "129",
+          "name": "Alcohol Tolerance",
+          "foa": "",
+          "points": 1,
+          "ref": "B100, B100,PU2:13",
+          "notes": ""
+        },
+        {
+          "idkey": "204",
+          "name": "Forgettable Face",
+          "foa": "12",
+          "points": 1,
+          "ref": "PU2:4",
+          "notes": ""
+        },
+        {
+          "idkey": "205",
+          "name": "Illegal Gear - AP Bullets",
+          "foa": "",
+          "points": 1,
+          "ref": "",
+          "notes": ""
+        },
+        {
+          "idkey": "202",
+          "name": "License (Holdout Pistol)",
+          "foa": "",
+          "points": 1,
+          "ref": "PU2:18",
+          "notes": ""
+        }
+      ],
+      "repeating_quirks": [
+        {
+          "idkey": "216",
+          "name": "Avoids the spying on spouse jobs",
+          "control_rating": "12",
+          "points": "-",
+          1,
+          "ref": "B163",
+          "notes": ""
+        },
+        {
+          "idkey": "217",
+          "name": "Careful",
+          "control_rating": "",
+          "points": "-",
+          1,
+          "ref": "B164",
+          "notes": ""
+        },
+        {
+          "idkey": "169",
+          "name": "Will use whatever provides upper hand",
+          "control_rating": "",
+          "points": "-",
+          1,
+          "ref": "B163",
+          "notes": ""
+        }
+      ],
+      "repeating_disadvantages": [
+        {
+          "idkey": "159",
+          "name": "Addiction (Alcohol) (Cheap)",
+          "trait_level": "1",
+          "control_rating": "12",
+          "points": "-",
+          10,
+          "ref": "B122",
+          "notes": "Modifiers:\nEffect: Incapacitating, 10\nLegality: Legal, +5"
+        },
+        {
+          "idkey": "164",
+          "name": "Code of Honor (Professional)",
+          "trait_level": "1",
+          "control_rating": "",
+          "points": "-",
+          5,
+          "ref": "B127",
+          "notes": ""
+        }
+      ],
+      "repeating_racial": [
+        {
+          "idkey": "",
+          "name": "Bad Temper",
+          "trait_level": "",
+          "control_rating": "12",
+          "points": "-",
+          5,
+          "ref": "",
+          "notes": ""
+        },
+        {
+          "idkey": "",
+          "name": "Strong Will",
+          "trait_level": "1",
+          "control_rating": "",
+          "points": 5,
+          "ref": "",
+          "notes": ""
+        }
+      ],
+      "repeating_skills": [
+        {
+          "idkey": "",
+          "name": "Administration",
+          "tl": "",
+          "base": "IQ",
+          "difficulty": "A",
+          "bonus": 0,
+          "points": 1,
+          "use_wildcard_points": 0,
+          "use_normal_points": 1,
+          "wildcard_skill_points": 1,
+          "ref": "B174",
+          "skill_mod_notes": "",
+          "notes": ""
+        },
+        {
+          "idkey": "",
+          "name": "Brawling",
+          "tl": "",
+          "base": "DX",
+          "difficulty": "E",
+          "bonus": 0,
+          "points": 4,
+          "ref": "B174",
+          "skill_mod_notes": "",
+          "notes": ""
+        }
+      ],
+      "repeating_techniquesrevised": [
+        {
+          "idkey": "",
+          "name": "Elbow Punch",
+          "parent": "Brawling",
+          "base_level": 14,
+          "default": "-",
+          2,
+          "max_modifier": 2,
+          "difficulty": "Hard",
+          "skill_modifier": 0,
+          "points": 2,
+          "ref": "",
+          "skill_mod_notes": "",
+          "notes": ""
+        }
+      ],
+      "repeating_defense": [
+        {
+          "idkey": "",
+          "name": "Punch",
+          "type": "Unarmed Parry",
+          "info": "",
+          "skill": 10,
+          "skill_mod": 0,
+          "defense_mod_reason": "",
+          "info_description": ""
+        },
+        {
+          "idkey": "",
+          "name": "Brawling (Punch)",
+          "type": "Unarmed Parry",
+          "info": "",
+          "skill": 10,
+          "skill_mod": 0,
+          "defense_mod_reason": "",
+          "info_description": ""
+        }
+      ],
+      "repeating_melee": [
+        {
+          "idkey": "13",
+          "name": "Bite",
+          "damage": "1d6-1",
+          "type": "cr",
+          "reach": "c",
+          "skill": 14,
+          "reason_for_mod": "",
+          "armor_divisor": 1,
+          "notes": ""
+        }
+      ],
+      "repeating_ranged": [
+        {
+          "idkey": "",
+          "name": "Holdout Pistol, 7.5mmCLP",
+          "damage": "2d6",
+          "type": "pi",
+          "acc": "1",
+          "range": "100/1200",
+          "rof": "3",
+          "shots": "18+1(3)/0.2",
+          "bulk": "-1",
+          "recoil": "2",
+          "skill": 15,
+          "reason_for_mod": "",
+          "malfunction": "17",
+          "malfunction_verify": true,
+          "malfunction_very_reliable": true,
+          "armor_divisor": 0.5,
+          "notes": ""
+        }
+      ],
+      "repeating_item": [
+        {
+          "idkey": "",
+          "name": "7mmCL Conventional Ammunition",
+          "tl": "9",
+          "legality_class": "3",
+          "ref": "UT139",
+          "count": 16,
+          "cost": 0.54,
+          "weight": 0.027,
+          "notes": ""
+        },
+        {
+          "idkey": "",
+          "name": "Antitoxin Kit",
+          "tl": "6",
+          "legality_class": "",
+          "ref": "B289",
+          "count": 1,
+          "cost": 25,
+          "weight": 0.5,
+          "notes": "Alcohol\n\nTL:6 Notes: Antidote for specific poison. 10 uses."
+        },
+        {
+          "idkey": "",
+          "name": "Cell Phone",
+          "tl": "8",
+          "legality_class": "",
+          "ref": "B288",
+          "count": 1,
+          "cost": 250,
+          "weight": 0.25,
+          "notes": "TL:8 Notes: Only works in some areas, $20/month fee. 10hrs."
+        },
+        {
+          "idkey": "",
+          "name": "Holdout Pistol, 7.5mmCLP",
+          "tl": "9",
+          "legality_class": "3",
+          "ref": "UT137",
+          "count": 1,
+          "cost": 240,
+          "weight": 1,
+          "notes": "HUD +1 ACC \u003c 300 yards. Laser Sight +1 Skill \u003c 1/2D Range. Recognition Grip. Diagnostic Chip +1 Repair\n\nTL:9 LC:3 Ammo:0.2 lb. Damage:2d pi Acc:1 Range:100/1200 RoF:3 Shots:18+1(3) ST:6 Bulk:-1 Rcl:2 Skill:Guns (Pistol"
+        }
+      ],
+      "repeating_spells": [
+        {
+          "idkey": "",
+          "name": "Air Jet",
+          "difficulty": "H",
+          "spell_modifier": 2,
+          "points": 2,
+          "spell_resisted_by": "",
+          "duration": "1 sec.",
+          "cost": "1 to 3/S",
+          "casttime": "1 sec.",
+          "maintain": "",
+          "spell_class": "Regular",
+          "spell_college": "Air",
+          "spell_college_secondary": "",
+          "spell_mod_notes": "",
+          "spell_notes": "Prereq Count: 3 Prerequisites: Shape Air\n\nNeeds: Shape Air, ST:Magery = 0 | PE:Charms ([Spell]) | PE:Charms (%SpellsList%) | PE:Charms (Air Jet)"
+        },
+        {
+          "idkey": "",
+          "name": "Fireball",
+          "difficulty": "H",
+          "spell_modifier": 0,
+          "points": 2,
+          "spell_resisted_by": "",
+          "duration": "Instant",
+          "cost": "1 to Magery#",
+          "casttime": "1 to 3 sec.",
+          "maintain": "",
+          "spell_class": "Missile",
+          "spell_college": "Fire",
+          "spell_college_secondary": "",
+          "spell_mod_notes": "",
+          "spell_notes": "Prereq Count: 3 Prerequisites: Magery 1, Create Fire, Shape Fire\n\nNeeds: (AD:Magery 0 | ST:Magery 0 = 1), (AD:Magery = 1, ST:Magery = 1 | ST:Magery Fire = 1), Create Fire, Shape Fire, ST:Magery = 0 | PE:Charms ([Spell]) | PE:Charms (%SpellsList%) | PE:Charms (Fireball),"
+        }
+      ],
+      "final_values": {
+        "combat_reflexes": true
+      }
+    }
+  ]
+}
