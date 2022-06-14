@@ -31,10 +31,11 @@ namespace ExportToRoll20
         public void CreateOptions(SheetOptionsManager mySheetOptions)
         {
             SheetOption mySheetOption = new SheetOption();
-            SheetOptionDisplayFormat myDisplayFormat = new SheetOptionDisplayFormat();
-
-            myDisplayFormat.BackColor = SystemColors.Info;
-            myDisplayFormat.CaptionLocalBackColor = SystemColors.Info;
+            SheetOptionDisplayFormat myDisplayFormat = new SheetOptionDisplayFormat
+            {
+                BackColor = SystemColors.Info,
+                CaptionLocalBackColor = SystemColors.Info
+            };
 
             mySheetOption.Clear();
             mySheetOption.Name = "Header_Description";

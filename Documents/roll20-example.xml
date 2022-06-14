@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<roll20_character>
+  <character_name>Bartholomew Mactavish</character_name>
+  <fullname>Bartholomew Mactavish</fullname>
+  <playername>NPC</playername>
+  <nickname>Bart</nickname>
+  <race>Human</race>
+  <race_ref></race_ref>
+  <template_names>Hill People</template_names>
+  <gender>Male</gender>
+  <size>0</size>
+  <apply_size_modifier>false</apply_size_modifier>
+  <reactions></reactions>
+  <campaign_tl>9</campaign_tl>
+  <tl>9</tl>
+  <tl_pts>0</tl_pts>
+  <status>0</status>
+  <wealth>Average</wealth>
+  <income>700</income>
+  <cost_of_living>600</cost_of_living>
+  <stash>100</stash>
+  <age>33</age>
+  <height>5' 7"</height>
+  <weight>180</weight>
+  <appearance>4</appearance>
+  <general_appearance>scruffy, nerf herder.</general_appearance>
+  <strength_mod>0</strength_mod>
+  <strength_points>10</strength_points>
+  <dexterity_mod>0</dexterity_mod>
+  <dexterity_points>40</dexterity_points>
+  <intelligence_mod>40</intelligence_mod>
+  <health_mod>0</health_mod>
+  <health_points>10</health_points>
+  <perception_mod>0</perception_mod>
+  <perception_points>0</perception_points>
+  <vision_mod>0</vision_mod>
+  <hearing_mod>0</hearing_mod>
+  <hearing_points>0</hearing_points>
+  <taste_smell_mod>0</taste_smell_mod>
+  <taste_smell_points>0</taste_smell_points>
+  <touch_mod>0</touch_mod>
+  <touch_points>0</touch_points>
+  <willpower_mod>0</willpower_mod>
+  <willpower_points>0</willpower_points>
+  <fear_check_mod>2</fear_check_mod>
+  <fear_check_points>0</fear_check_points>
+  <stun_check_mod>0</stun_check_mod>
+  <knockdown_check_mod>0</knockdown_check_mod>
+  <unconscious_check_mod>0</unconscious_check_mod>
+  <unconscious_check_points>0</unconscious_check_points>
+  <death_check_mod>0</death_check_mod>
+  <death_check_points>0</death_check_points>
+  <basic_speed_mod>0</basic_speed_mod>
+  <basic_speed_points>0</basic_speed_points>
+  <basic_move_mod>0</basic_move_mod>
+  <basic_move_points>0</basic_move_points>
+  <enhanced_ground_move_mod>0</enhanced_ground_move_mod>
+  <enhanced_ground_move_points>0</enhanced_ground_move_points>
+  <dodge_mod>1</dodge_mod>
+  <lift_st_mod>0</lift_st_mod>
+  <lift_st_points>0</lift_st_points>
+  <striking_st_mod>0</striking_st_mod>
+  <striking_st_points>0</striking_st_points>
+  <hit_points_mod>0</hit_points_mod>
+  <hit_points_points>0</hit_points_points>
+  <hit_points>11</hit_points>
+  <fatigue_points_mod>0</fatigue_points_mod>
+  <fatigue_points_points>0</fatigue_points_points>
+  <fatigue_points>11</fatigue_points>
+  <flight_checked>false</flight_checked>
+  <flight_points>0</flight_points>
+  <basic_air_move_mod>0</basic_air_move_mod>
+  <basic_air_move_points>0</basic_air_move_points>
+  <enhanced_air_level>0</enhanced_air_level>
+  <enhanced_air_move_points>0</enhanced_air_move_points>
+  <amphibious_checked>false</amphibious_checked>
+  <amphibious_points>0</amphibious_points>
+  <basic_water_move_mod>0</basic_water_move_mod>
+  <basic_water_move_points>0</basic_water_move_points>
+  <enhanced_water_level>0</enhanced_water_level>
+  <enhanced_water_move_points>0</enhanced_water_move_points>
+  <super_jump_entered_level>0</super_jump_entered_level>
+  <super_jump_points>0</super_jump_points>
+  <spell_bonus>0</spell_bonus>
+  <combat_reflexes>true</combat_reflexes>
+  <repeating_languages>
+    <idkey>184</idkey>
+    <name>English</name>
+    <spoken>3</spoken>
+    <written>3</written>
+    <is_native>true</is_native>
+  </repeating_languages>
+  <repeating_languages>
+    <idkey>187</idkey>
+    <name>Spanish</name>
+    <spoken>2</spoken>
+    <written>2</written>
+    <is_native>false</is_native>
+  </repeating_languages>
+  <repeating_languages>
+    <idkey>186</idkey>
+    <name>Street Speach (Spoken)</name>
+    <spoken>2</spoken>
+    <written>0</written>
+    <is_native>false</is_native>
+  </repeating_languages>
+  <repeating_cultures>
+    <idkey></idkey>
+    <name>Western</name>
+    <points>0</points>
+  </repeating_cultures>
+  <repeating_traits>
+    <idkey>192</idkey>
+    <name>Advanced Bionic Ear TL9</name>
+    <trait_level>1</trait_level>
+    <foa></foa>
+    <points>11</points>
+    <ref>B44</ref>
+    <notes>
+      Based On: _New Advanage
+
+      Discriminatory Hearing (Temporary Disadvantage, Electrical, -20%)[12];Protected Hearing[5];Deafness (Mitigator -70%)[-6]
+    </notes>
+  </repeating_traits>
+  <repeating_traits>
+    <idkey>189</idkey>
+    <name>Contact (Cybernetic Street Engineer) (Effective Skill 12)</name>
+    <trait_level>1</trait_level>
+    <foa>9</foa>
+    <points>1</points>
+    <ref>B44</ref>
+    <notes>
+      Modifiers:
+      Frequency: roll of 9 or less, *1
+      Reliability: Somewhat Reliable, *1
+    </notes>
+  </repeating_traits>
+  <repeating_traits>
+    <idkey>147</idkey>
+    <name>Danger Sense</name>
+    <trait_level>1</trait_level>
+    <foa></foa>
+    <points>15</points>
+    <ref>B47</ref>
+    <notes></notes>
+  </repeating_traits>
+  <repeating_perks>
+    <idkey>129</idkey>
+    <name>Alcohol Tolerance</name>
+    <foa></foa>
+    <points>1</points>
+    <ref>B100, B100,PU2:13</ref>
+    <notes></notes>
+  </repeating_perks>
+  <repeating_perks>
+    <idkey>204</idkey>
+    <name>Forgettable Face</name>
+    <foa>12</foa>
+    <points>1</points>
+    <ref>PU2:4</ref>
+    <notes></notes>
+  </repeating_perks>
+  <repeating_perks>
+    <idkey>205</idkey>
+    <name>Illegal Gear - AP Bullets</name>
+    <foa></foa>
+    <points>1</points>
+    <ref></ref>
+    <notes></notes>
+  </repeating_perks>
+  <repeating_perks>
+    <idkey>202</idkey>
+    <name>License (Holdout Pistol)</name>
+    <foa></foa>
+    <points>1</points>
+    <ref>PU2:18</ref>
+    <notes></notes>
+  </repeating_perks>
+  <repeating_quirks>
+    <idkey>216</idkey>
+    <name>Avoids the spying on spouse jobs</name>
+    <control_rating>12</control_rating>
+    <points>-1</points>
+    <ref>B163</ref>
+    <notes></notes>
+  </repeating_quirks>
+  <repeating_quirks>
+    <idkey>217</idkey>
+    <name>Careful</name>
+    <control_rating></control_rating>
+    <points>-1</points>
+    <ref>B164</ref>
+    <notes></notes>
+  </repeating_quirks>
+  <repeating_quirks>
+    <idkey>169</idkey>
+    <name>Will use whatever provides upper hand</name>
+    <control_rating></control_rating>
+    <points>-1</points>
+    <ref>B163</ref>
+    <notes></notes>
+  </repeating_quirks>
+  <repeating_disadvantages>
+    <idkey>159</idkey>
+    <name>Addiction (Alcohol) (Cheap)</name>
+    <trait_level>1</trait_level>
+    <control_rating>12</control_rating>
+    <points>-10</points>
+    <ref>B122</ref>
+    <notes>
+      Modifiers:
+      Effect: Incapacitating, 10
+      Legality: Legal, +5
+    </notes>
+  </repeating_disadvantages>
+  <repeating_disadvantages>
+    <idkey>164</idkey>
+    <name>Code of Honor (Professional)</name>
+    <trait_level>1</trait_level>
+    <control_rating></control_rating>
+    <points>-5</points>
+    <ref>B127</ref>
+    <notes></notes>
+  </repeating_disadvantages>
+  <repeating_racial>
+    <idkey></idkey>
+    <name>Bad Temper</name>
+    <trait_level></trait_level>
+    <control_rating>12</control_rating>
+    <points>-5</points>
+    <ref></ref>
+    <notes></notes>
+  </repeating_racial>
+  <repeating_racial>
+    <idkey></idkey>
+    <name>Strong Will</name>
+    <trait_level>1</trait_level>
+    <control_rating></control_rating>
+    <points>5</points>
+    <ref></ref>
+    <notes></notes>
+  </repeating_racial>
+  <repeating_skills>
+    <idkey></idkey>
+    <name>Administration</name>
+    <tl></tl>
+    <base>IQ</base>
+    <difficulty>A</difficulty>
+    <bonus>0</bonus>
+    <points>1</points>
+    <skill>15</skill>
+    <ref>B174</ref>
+    <skill_mod_notes></skill_mod_notes>
+    <notes></notes>
+  </repeating_skills>
+  <repeating_skills>
+    <idkey></idkey>
+    <name>Brawling</name>
+    <tl></tl>
+    <base>DX</base>
+    <difficulty>E</difficulty>
+    <bonus>0</bonus>
+    <points>4</points>
+    <skill>15</skill>
+    <ref>B174</ref>
+    <skill_mod_notes></skill_mod_notes>
+    <notes></notes>
+  </repeating_skills>
+  <repeating_techniquesrevised>
+    <idkey></idkey>
+    <name>Elbow Punch</name>
+    <parent>Brawling</parent>
+    <base_level>14</base_level>
+    <default>-2</default>
+    <max_modifier>2</max_modifier>
+    <difficulty>Hard</difficulty>
+    <skill_modifier>0</skill_modifier>
+    <points>2</points>
+    <skill>15</skill>
+    <ref></ref>
+    <skill_mod_notes></skill_mod_notes>
+    <notes></notes>
+  </repeating_techniquesrevised>
+  <repeating_defense>
+    <idkey></idkey>
+    <name>Punch</name>
+    <type>Unarmed Parry</type>
+    <info></info>
+    <skill>10</skill>
+    <skill_mod>0</skill_mod>
+    <defense_mod_reason></defense_mod_reason>
+    <info_description></info_description>
+  </repeating_defense>
+  <repeating_defense>
+    <idkey></idkey>
+    <name>Brawling (Punch)</name>
+    <type>Unarmed Parry</type>
+    <info></info>
+    <skill>10</skill>
+    <skill_mod>0</skill_mod>
+    <defense_mod_reason></defense_mod_reason>
+    <info_description></info_description>
+  </repeating_defense>
+  <repeating_melee>
+    <idkey>13</idkey>
+    <name>Bite</name>
+    <damage>1d6-1</damage>
+    <type>cr</type>
+    <reach>c</reach>
+    <skill>14</skill>
+    <reason_for_mod></reason_for_mod>
+    <armor_divisor>1</armor_divisor>
+    <notes></notes>
+  </repeating_melee>
+  <repeating_ranged>
+    <idkey></idkey>
+    <name>Holdout Pistol, 7.5mmCLP</name>
+    <damage>2d6</damage>
+    <type>pi</type>
+    <acc>1</acc>
+    <range>100/1200</range>
+    <rof>3</rof>
+    <shots>18+1(3)/0.2</shots>
+    <bulk>-1</bulk>
+    <recoil>2</recoil>
+    <skill>15</skill>
+    <reason_for_mod></reason_for_mod>
+    <malfunction>17</malfunction>
+    <malfunction_verify>true</malfunction_verify>
+    <malfunction_very_reliable>true</malfunction_very_reliable>
+    <armor_divisor>0.5</armor_divisor>
+    <notes></notes>
+  </repeating_ranged>
+  <repeating_item>
+    <idkey></idkey>
+    <name>7mmCL Conventional Ammunition</name>
+    <tl>9</tl>
+    <legality_class>3</legality_class>
+    <ref>UT139</ref>
+    <count>16</count>
+    <cost>0.54</cost>
+    <weight>0.027</weight>
+    <notes></notes>
+  </repeating_item>
+  <repeating_item>
+    <idkey></idkey>
+    <name>Antitoxin Kit</name>
+    <tl>6</tl>
+    <legality_class></legality_class>
+    <ref>B289</ref>
+    <count>1</count>
+    <cost>25</cost>
+    <weight>0.5</weight>
+    <notes>
+      Alcohol
+
+      TL:6 Notes: Antidote for specific poison. 10 uses.
+    </notes>
+  </repeating_item>
+  <repeating_item>
+    <idkey></idkey>
+    <name>Cell Phone</name>
+    <tl>8</tl>
+    <legality_class></legality_class>
+    <ref>B288</ref>
+    <count>1</count>
+    <cost>250</cost>
+    <weight>0.25</weight>
+    <notes>TL:8 Notes: Only works in some areas, $20/month fee. 10hrs.</notes>
+  </repeating_item>
+  <repeating_item>
+    <idkey></idkey>
+    <name>Holdout Pistol, 7.5mmCLP</name>
+    <tl>9</tl>
+    <legality_class>3</legality_class>
+    <ref>UT137</ref>
+    <count>1</count>
+    <cost>240</cost>
+    <weight>1</weight>
+    <notes>
+      HUD +1 ACC &lt; 300 yards. Laser Sight +1 Skill &lt; 1/2D Range. Recognition Grip. Diagnostic Chip +1 Repair
+
+      TL:9 LC:3 Ammo:0.2 lb. Damage:2d pi Acc:1 Range:100/1200 RoF:3 Shots:18+1(3) ST:6 Bulk:-1 Rcl:2 Skill:Guns (Pistol
+    </notes>
+  </repeating_item>
+  <repeating_spells>
+    <idkey></idkey>
+    <name>Air Jet</name>
+    <difficulty>H</difficulty>
+    <spell_modifier>2</spell_modifier>
+    <points>2</points>
+    <spell_resisted_by></spell_resisted_by>
+    <duration>1 sec.</duration>
+    <cost>1 to 3/S</cost>
+    <casttime>1 sec.</casttime>
+    <maintain></maintain>
+    <spell_class>Regular</spell_class>
+    <spell_college>Air</spell_college>
+    <spell_college_secondary></spell_college_secondary>
+    <spell_mod_notes></spell_mod_notes>
+    <spell_notes>
+      Prereq Count: 3 Prerequisites: Shape Air
+
+      Needs: Shape Air, ST:Magery = 0 | PE:Charms ([Spell]) | PE:Charms (%SpellsList%) | PE:Charms (Air Jet)
+    </spell_notes>
+  </repeating_spells>
+  <repeating_spells>
+    <idkey></idkey>
+    <name>Fireball</name>
+    <difficulty>H</difficulty>
+    <spell_modifier>0</spell_modifier>
+    <points>2</points>
+    <skill>15</skill>
+    <spell_resisted_by></spell_resisted_by>
+    <duration>Instant</duration>
+    <cost>1 to Magery#</cost>
+    <casttime>1 to 3 sec.</casttime>
+    <maintain></maintain>
+    <spell_class>Missile</spell_class>
+    <spell_college>Fire</spell_college>
+    <spell_college_secondary></spell_college_secondary>
+    <spell_mod_notes></spell_mod_notes>
+    <spell_notes>
+      Prereq Count: 3 Prerequisites: Magery 1, Create Fire, Shape Fire
+
+      Needs: (AD:Magery 0 | ST:Magery 0 = 1), (AD:Magery = 1, ST:Magery = 1 | ST:Magery Fire = 1), Create Fire, Shape Fire, ST:Magery = 0 | PE:Charms ([Spell]) | PE:Charms (%SpellsList%) | PE:Charms (Fireball),
+    </spell_notes>
+  </repeating_spells>
+</roll20_character>

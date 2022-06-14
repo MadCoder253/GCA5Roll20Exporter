@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConvertToRoll20Character.cs" />
     <Compile Include="ExportToRoll20.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Roll20Character.cs" />
