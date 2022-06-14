@@ -38,6 +38,7 @@
   "taste_smell_mod": 0,
   "taste_smell_points": 0,
   "touch_mod": 0,
+  "touch_points": 0,
   "willpower_mod": 0,
   "willpower_points": 0,
   "fear_check_mod": 2,
@@ -80,6 +81,7 @@
   "super_jump_entered_level": 0,
   "super_jump_points": 0,
   "spell_bonus": 0,
+  "combat_reflexes": true,
   "repeating_languages": [
     {
       "idkey": "184",
@@ -248,9 +250,7 @@
       "difficulty": "A",
       "bonus": 0,
       "points": 1,
-      "use_wildcard_points": 0,
-      "use_normal_points": 1,
-      "wildcard_skill_points": 1,
+      "skill": 15,
       "ref": "B174",
       "skill_mod_notes": "",
       "notes": ""
@@ -263,6 +263,7 @@
       "difficulty": "E",
       "bonus": 0,
       "points": 4,
+      "skill": 15,
       "ref": "B174",
       "skill_mod_notes": "",
       "notes": ""
@@ -279,6 +280,7 @@
       "difficulty": "Hard",
       "skill_modifier": 0,
       "points": 2,
+      "skill": 15,
       "ref": "",
       "skill_mod_notes": "",
       "notes": ""
@@ -410,6 +412,7 @@
       "difficulty": "H",
       "spell_modifier": 0,
       "points": 2,
+      "skill": 15,
       "spell_resisted_by": "",
       "duration": "Instant",
       "cost": "1 to Magery#",
@@ -421,8 +424,5 @@
       "spell_mod_notes": "",
       "spell_notes": "Prereq Count: 3 Prerequisites: Magery 1, Create Fire, Shape Fire\n\nNeeds: (AD:Magery 0 | ST:Magery 0 = 1), (AD:Magery = 1, ST:Magery = 1 | ST:Magery Fire = 1), Create Fire, Shape Fire, ST:Magery = 0 | PE:Charms ([Spell]) | PE:Charms (%SpellsList%) | PE:Charms (Fireball),"
     }
-  ],
-  "final_values": {
-    "combat_reflexes": true
-  }
+  ]
 }

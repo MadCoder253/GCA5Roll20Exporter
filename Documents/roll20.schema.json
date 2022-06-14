@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "$id": "http://example.com/example.json",
+  "$id": "http://wanderingmonsters.com/gurps-roll20.json",
   "type": "object",
   "default": {},
   "title": "Root Schema",
@@ -1243,8 +1243,7 @@
             "type": "integer",
             "title": "The points Schema",
             "examples": [
-              "-",
-              1
+              "-1"
             ]
           },
           "ref": {
@@ -1268,8 +1267,7 @@
             "idkey": "216",
             "name": "Avoids the spying on spouse jobs",
             "control_rating": "12",
-            "points": "-",
-            1,
+            "points": "-1",
             "ref": "B163",
             "notes": ""
           },
@@ -1277,8 +1275,7 @@
             "idkey": "217",
             "name": "Careful",
             "control_rating": "",
-            "points": "-",
-            1,
+            "points": "-1",
             "ref": "B164",
             "notes": ""
           },
@@ -1286,8 +1283,7 @@
             "idkey": "169",
             "name": "Will use whatever provides upper hand",
             "control_rating": "",
-            "points": "-",
-            1,
+            "points": "-1",
             "ref": "B163",
             "notes": ""
           }
@@ -1299,8 +1295,7 @@
             "idkey": "216",
             "name": "Avoids the spying on spouse jobs",
             "control_rating": "12",
-            "points": "-",
-            1,
+            "points": "-1",
             "ref": "B163",
             "notes": ""
           },
@@ -1308,8 +1303,7 @@
             "idkey": "217",
             "name": "Careful",
             "control_rating": "",
-            "points": "-",
-            1,
+            "points": "-1",
             "ref": "B164",
             "notes": ""
           },
@@ -1317,8 +1311,7 @@
             "idkey": "169",
             "name": "Will use whatever provides upper hand",
             "control_rating": "",
-            "points": "-",
-            1,
+            "points": "-1",
             "ref": "B163",
             "notes": ""
           }
@@ -1377,10 +1370,8 @@
             "type": "integer",
             "title": "The points Schema",
             "examples": [
-              "-",
-              10,
-              "-",
-              5
+              "-10",
+              "-5"
             ]
           },
           "ref": {
@@ -1406,8 +1397,7 @@
             "name": "Addiction (Alcohol) (Cheap)",
             "trait_level": "1",
             "control_rating": "12",
-            "points": "-",
-            10,
+            "points": "-10",
             "ref": "B122",
             "notes": "Modifiers:\nEffect: Incapacitating, 10\nLegality: Legal, +5"
           },
@@ -1416,8 +1406,7 @@
             "name": "Code of Honor (Professional)",
             "trait_level": "1",
             "control_rating": "",
-            "points": "-",
-            5,
+            "points": "-5",
             "ref": "B127",
             "notes": ""
           }
@@ -1430,8 +1419,7 @@
             "name": "Addiction (Alcohol) (Cheap)",
             "trait_level": "1",
             "control_rating": "12",
-            "points": "-",
-            10,
+            "points": "-10",
             "ref": "B122",
             "notes": "Modifiers:\nEffect: Incapacitating, 10\nLegality: Legal, +5"
           },
@@ -1440,8 +1428,7 @@
             "name": "Code of Honor (Professional)",
             "trait_level": "1",
             "control_rating": "",
-            "points": "-",
-            5,
+            "points": "-5",
             "ref": "B127",
             "notes": ""
           }
@@ -1500,8 +1487,7 @@
             "type": "integer",
             "title": "The points Schema",
             "examples": [
-              "-",
-              5,
+              "-5",
               5
             ]
           },
@@ -1526,8 +1512,7 @@
             "name": "Bad Temper",
             "trait_level": "",
             "control_rating": "12",
-            "points": "-",
-            5,
+            "points": "-5",
             "ref": "",
             "notes": ""
           },
@@ -1549,8 +1534,7 @@
             "name": "Bad Temper",
             "trait_level": "",
             "control_rating": "12",
-            "points": "-",
-            5,
+            "points": "-5",
             "ref": "",
             "notes": ""
           },
@@ -1581,6 +1565,7 @@
           "difficulty",
           "bonus",
           "points",
+          "skill",
           "use_wildcard_points",
           "use_normal_points",
           "wildcard_skill_points",
@@ -1640,6 +1625,14 @@
             "examples": [
               1,
               4
+            ]
+          },
+          "skill": {
+            "type": "integer",
+            "title": "The skill Schema",
+            "examples": [
+              15,
+              14
             ]
           },
           "use_wildcard_points": {
@@ -1810,8 +1803,7 @@
             "default": 0,
             "title": "The default Schema",
             "examples": [
-              "-",
-              2
+              "-2"
             ]
           },
           "max_modifier": {
@@ -1877,8 +1869,7 @@
             "name": "Elbow Punch",
             "parent": "Brawling",
             "base_level": 14,
-            "default": "-",
-            2,
+            "default": "-2",
             "max_modifier": 2,
             "difficulty": "Hard",
             "skill_modifier": 0,
@@ -1896,8 +1887,7 @@
             "name": "Elbow Punch",
             "parent": "Brawling",
             "base_level": 14,
-            "default": "-",
-            2,
+            "default": "-2",
             "max_modifier": 2,
             "difficulty": "Hard",
             "skill_modifier": 0,
@@ -2991,8 +2981,7 @@
           "idkey": "216",
           "name": "Avoids the spying on spouse jobs",
           "control_rating": "12",
-          "points": "-",
-          1,
+          "points": "-1",
           "ref": "B163",
           "notes": ""
         },
@@ -3000,8 +2989,7 @@
           "idkey": "217",
           "name": "Careful",
           "control_rating": "",
-          "points": "-",
-          1,
+          "points": "-1",
           "ref": "B164",
           "notes": ""
         },
@@ -3009,8 +2997,7 @@
           "idkey": "169",
           "name": "Will use whatever provides upper hand",
           "control_rating": "",
-          "points": "-",
-          1,
+          "points": "-1",
           "ref": "B163",
           "notes": ""
         }
@@ -3021,8 +3008,7 @@
           "name": "Addiction (Alcohol) (Cheap)",
           "trait_level": "1",
           "control_rating": "12",
-          "points": "-",
-          10,
+          "points": "-10",
           "ref": "B122",
           "notes": "Modifiers:\nEffect: Incapacitating, 10\nLegality: Legal, +5"
         },
@@ -3031,8 +3017,7 @@
           "name": "Code of Honor (Professional)",
           "trait_level": "1",
           "control_rating": "",
-          "points": "-",
-          5,
+          "points": "-5",
           "ref": "B127",
           "notes": ""
         }
@@ -3043,8 +3028,7 @@
           "name": "Bad Temper",
           "trait_level": "",
           "control_rating": "12",
-          "points": "-",
-          5,
+          "points": "-5",
           "ref": "",
           "notes": ""
         },
@@ -3093,8 +3077,7 @@
           "name": "Elbow Punch",
           "parent": "Brawling",
           "base_level": 14,
-          "default": "-",
-          2,
+          "default": "-2",
           "max_modifier": 2,
           "difficulty": "Hard",
           "skill_modifier": 0,
