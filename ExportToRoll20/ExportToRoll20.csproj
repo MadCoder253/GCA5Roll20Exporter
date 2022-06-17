@@ -56,4 +56,9 @@
     <Compile Include="XmlTools.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy /Y "$(ProjectDir)$(OutDir)$(TargetFileName)" "C:\Users\kfoub\OneDrive\Documents\GURPS Character Assistant 5\plugins\ExportToRoll20\$(TargetFileName)"
+copy /Y "$(ProjectDir)$(OutDir)$(ProjectName).pdb" "C:\Users\kfoub\OneDrive\Documents\GURPS Character Assistant 5\plugins\ExportToRoll20\$(ProjectName).pdb"
+</PostBuildEvent>
+  </PropertyGroup>
 </Project>

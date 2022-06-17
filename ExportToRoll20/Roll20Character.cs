@@ -418,7 +418,7 @@ namespace ExportToRoll20
         [XmlElement(ElementName = "ref")]
         public string Ref { get; set; } = "";
 
-        [XmlElement(ElementName = "trait_level")]
+        [XmlElement(ElementName = "notes")]
         public string Notes { get; set; } = "";
     }
 
@@ -676,48 +676,62 @@ namespace ExportToRoll20
         [XmlElement(ElementName = "combat_reflexes")]
         public bool CombatReflexes { get; set; } = false;
 
-        /*[XmlElement(ElementName = "repeating_languages")]
+        [XmlArray("repeating_languages")]
+        [XmlArrayItem("language")]
         public List<RepeatingLanguage> RepeatingLanguages { get; set; } = new List<RepeatingLanguage>();
 
-        [XmlElement(ElementName = "repeating_cultures")]
+        [XmlArray("repeating_cultures")]
+        [XmlArrayItem("culture")]
         public List<RepeatingCulture> RepeatingCultures { get; set; } = new List<RepeatingCulture>();
 
-        [XmlElement(ElementName = "repeating_traits")]
+        [XmlArray("repeating_traits")]
+        [XmlArrayItem("trait")]
         public List<RepeatingTrait> RepeatingTraits { get; set; } = new List<RepeatingTrait>();
 
-        [XmlElement(ElementName = "repeating_perks")]
+        [XmlArray("repeating_perks")]
+        [XmlArrayItem("perk")]
         public List<RepeatingPerk> RepeatingPerks { get; set; } = new List<RepeatingPerk>();
 
-        [XmlElement(ElementName = "repeating_quirks")]
+        [XmlArray("repeating_quirks")]
+        [XmlArrayItem("quirk")]
         public List<RepeatingQuirk> RepeatingQuirks { get; set; } = new List<RepeatingQuirk>();
 
-        [XmlElement(ElementName = "repeating_disadvantages")]
+        [XmlArray("repeating_disadvantages")]
+        [XmlArrayItem("disadvantage")]
         public List<RepeatingDisadvantage> RepeatingDisadvantages { get; set; } = new List<RepeatingDisadvantage>();
 
-        [XmlElement(ElementName = "repeating_racial")]
+        [XmlArray("repeating_racial")]
+        [XmlArrayItem("racial_trait")]
         public List<RepeatingRacial> RepeatingRacial { get; set; } = new List<RepeatingRacial>();
 
-        [XmlElement(ElementName = "repeating_skills")]
+        [XmlArray("repeating_skills")]
+        [XmlArrayItem("skill")]
         public List<RepeatingSkill> RepeatingSkills { get; set; } = new List<RepeatingSkill>();
 
-        [XmlElement(ElementName = "repeating_techniquesrevised")]
+        [XmlArray("repeating_techniquesrevised")]
+        [XmlArrayItem("technique")]
         public List<RepeatingTechniquesrevised> RepeatingTechniquesrevised { get; set; } = new List<RepeatingTechniquesrevised>();
 
-        [XmlElement(ElementName = "repeating_defense")]
+        [XmlArray("repeating_defense")]
+        [XmlArrayItem("defense")]
         public List<RepeatingDefense> RepeatingDefense { get; set; } = new List<RepeatingDefense>();
 
-        [XmlElement(ElementName = "repeating_melee")]
+        [XmlArray("repeating_melee")]
+        [XmlArrayItem("melee")]
         public List<RepeatingMelee> RepeatingMelee { get; set; } = new List<RepeatingMelee>();
 
-        [XmlElement(ElementName = "repeating_ranged")]
+        [XmlArray("repeating_ranged")]
+        [XmlArrayItem("ranged")]
         public List<RepeatingRanged> RepeatingRanged { get; set; } = new List<RepeatingRanged>();
 
-        [XmlElement(ElementName = "repeating_item")]
+        [XmlArray("repeating_item")]
+        [XmlArrayItem("item")]
         public List<RepeatingItem> RepeatingItem { get; set; } = new List<RepeatingItem>();
 
-        [XmlElement(ElementName = "repeating_spells")]
+        [XmlArray("repeating_spells")]
+        [XmlArrayItem("spell")]
         public List<RepeatingSpell> RepeatingSpells { get; set; } = new List<RepeatingSpell>();
-*/
+
     }
 
 }
