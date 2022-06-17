@@ -10,12 +10,10 @@ namespace ExportToRoll20
 {
     public class ConvertToRoll20Character
     {
-        public Roll20Character GetCharacter(Party party)
+        public Roll20Character GetCharacter(GCACharacter currentCharacter)
         {
             Roll20Character roll20Character = new Roll20Character();
 
-            var currentCharacter = party.Current;
-            
             if (currentCharacter != null)
             {
                 roll20Character.CharacterName = currentCharacter.Name;
@@ -28,20 +26,63 @@ namespace ExportToRoll20
                 roll20Character.Gender = "";
 
                 GCATrait traitSizeMod = currentCharacter.ItemByNameAndExt("Size Modifier", (int)TraitTypes.Attributes);
-                int sizeMod = (int)traitSizeMod.Score; 
+                int sizeMod = (int)traitSizeMod.Score;
                 roll20Character.Size = sizeMod;
                 roll20Character.ApplySizeModifier = sizeMod > 0;
 
                 // TODO: Get reactions
                 roll20Character.Reactions = "";
 
-                roll20Character.CampaignTl = int.Parse( currentCharacter.TL);
-                // TODO: Use "Tech Level" attributes trait to determine characters TL and point cost
-                roll20Character.Tl = int.Parse(currentCharacter.TL);
-                roll20Character.TlPts = 0;
+                if (int.TryParse(currentCharacter.Campaign.BaseTL, out int campaignTl))
+                {
+                    roll20Character.CampaignTl = campaignTl;
+                }
+                else
+                {
+                    roll20Character.CampaignTl = 0;
+                }
 
+                roll20Character.TotalPoints = (int)currentCharacter.Campaign.BasePoints;
 
-                
+                if (int.TryParse(currentCharacter.TL, out int techLevel))
+                {
+                    roll20Character.Tl = techLevel;
+                }
+                else
+                {
+                    roll20Character.Tl = 0;
+                }
+                GCATrait traitTechLevel = currentCharacter.ItemByNameAndExt("Tech Level", (int)TraitTypes.Attributes);
+
+                roll20Character.TlPts = (int)traitTechLevel.Points;
+
+                GCATrait traitStatus = currentCharacter.ItemByNameAndExt("Status", (int)TraitTypes.Attributes);
+                roll20Character.Status = traitStatus.Score.ToString();
+
+                roll20Character.Wealth = GetWealthLevel(currentCharacter);
+
+                GCATrait traitMoney = currentCharacter.ItemByNameAndExt("Money", (int)TraitTypes.Attributes);
+                roll20Character.Stash = traitMoney.Score;
+
+                GCATrait traitMonthlyPay = currentCharacter.ItemByNameAndExt("Monthly Pay", (int)TraitTypes.Attributes);
+                roll20Character.Income = traitMonthlyPay.Score;
+
+                GCATrait traitCostOfLiving = currentCharacter.ItemByNameAndExt("Cost of Living", (int)TraitTypes.Attributes);
+                roll20Character.CostOfLiving = (int)traitCostOfLiving.Score;
+
+                roll20Character.Age = currentCharacter.Age;
+                roll20Character.Height = currentCharacter.Height;
+                if (double.TryParse(currentCharacter.Weight, out double weight))
+                {
+                    roll20Character.Weight = weight;
+                }
+                else
+                {
+                    roll20Character.Weight = 0;
+                }
+
+                roll20Character.Appearance = GetAppearanceScore(currentCharacter);
+                roll20Character.GeneralAppearance = currentCharacter.Appearance;
 
             }
 
@@ -49,19 +90,42 @@ namespace ExportToRoll20
 
         }
 
-        public string GetItemValueByName(GCACharacter myCharacter, string itemName, string defaultValue = "")
+        public string GetWealthLevel(GCACharacter currentCharacter)
         {
-            var x = myCharacter.ItemsByName(itemName, (int)TraitTypes.Attributes);
-           
-            var value = defaultValue;
-            
-            if (x.Count > 0)
+            GCATrait advantageWealth = currentCharacter.ItemByNameAndExt("Wealth", (int)TraitTypes.Advantages);
+
+            if (advantageWealth != null)
             {
-                GCATrait gCATrait = (GCATrait)x[1];
-                value = gCATrait.Score.ToString();
+                return advantageWealth.LevelName;
             }
 
-            return value;
+            GCATrait disadvantageWealth = currentCharacter.ItemByNameAndExt("Wealth", (int)TraitTypes.Disadvantages);
+
+
+            if (disadvantageWealth != null)
+            { return disadvantageWealth.LevelName; }
+
+            return "Average";
         }
+
+        public int GetAppearanceScore(GCACharacter currentCharacter)
+        {
+            GCATrait advantageAppearance = currentCharacter.ItemByNameAndExt("Appearance", (int)TraitTypes.Advantages);
+
+            if (advantageAppearance != null)
+            {
+                return (int)advantageAppearance.Score;
+            }
+
+            GCATrait disadvantageAppearance = currentCharacter.ItemByNameAndExt("Appearance", (int)TraitTypes.Disadvantages);
+
+            if (disadvantageAppearance != null)
+            {
+                return (int)disadvantageAppearance.Score;
+            }
+
+            return 0;
+        }
+
     }
 }

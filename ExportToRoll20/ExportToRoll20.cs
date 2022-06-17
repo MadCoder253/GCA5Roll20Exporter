@@ -16,7 +16,8 @@ using System.Reflection;
 using GCA5.Interfaces;
 using GCA5Engine;
 using System.Drawing;
-
+using System.IO;
+using ExtensionMethod;
 
 namespace ExportToRoll20
 {
@@ -81,7 +82,7 @@ namespace ExportToRoll20
 
         public string SupportedFileTypeFilter()
         {
-            return "JSON files (*.json)|*.json";
+            return "XML files (*.xml)|*.xml";
         }
 
         public void UpgradeOptions(SheetOptionsManager Options)
@@ -99,7 +100,11 @@ namespace ExportToRoll20
                 RequestRunSpecificOptions.Invoke(this, e);
             }
 
-            Roll20Character character = new Roll20Character();
+            ConvertToRoll20Character converter = new ConvertToRoll20Character();
+
+            Roll20Character character = converter.GetCharacter(Party.Current);
+
+            var fileData = character.ToXmlString();
 
             FileWriter fileWriter = new FileWriter();
 
@@ -107,7 +112,7 @@ namespace ExportToRoll20
             {
                 fileWriter.FileOpen(TargetFilename);
 
-                fileWriter.Write("{\"title\": \"Export to Roll20\"}");
+                fileWriter.Write(fileData);
             }
             finally
             {
@@ -116,7 +121,6 @@ namespace ExportToRoll20
             
             return true;
         }
-
 
     }
 }

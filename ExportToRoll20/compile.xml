@@ -8,6 +8,7 @@
   <source>ExportToRoll20.cs</source>
   <source>Roll20Character.cs</source>
   <source>ConvertToRoll20Character.cs</source>
+  <source>XmlTools.cs</source>
   <source>AssemblyInfo.cs</source>
 
   <reference>System.dll</reference>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<roll20_character>
+<character>
   <character_name>Bartholomew Mactavish</character_name>
   <fullname>Bartholomew Mactavish</fullname>
   <playername>NPC</playername>
@@ -12,6 +12,7 @@
   <apply_size_modifier>false</apply_size_modifier>
   <reactions></reactions>
   <campaign_tl>9</campaign_tl>
+  <total_points>200</total_points>
   <tl>9</tl>
   <tl_pts>0</tl_pts>
   <status>0</status>
@@ -426,4 +427,4 @@
       Needs: (AD:Magery 0 | ST:Magery 0 = 1), (AD:Magery = 1, ST:Magery = 1 | ST:Magery Fire = 1), Create Fire, Shape Fire, ST:Magery = 0 | PE:Charms ([Spell]) | PE:Charms (%SpellsList%) | PE:Charms (Fireball),
     </spell_notes>
   </repeating_spells>
-</roll20_character>
+</character>
