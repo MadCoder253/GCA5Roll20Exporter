@@ -84,6 +84,72 @@ namespace ExportToRoll20
                 roll20Character.Appearance = GetAppearanceScore(currentCharacter);
                 roll20Character.GeneralAppearance = currentCharacter.Appearance;
 
+                GCATrait traitStrength = currentCharacter.ItemByNameAndExt("ST", (int)TraitTypes.Attributes);
+                roll20Character.StrengthPoints = (int)traitStrength.Points;
+                // TODO: <bonuslist>+2 from 'Combat Reflexes'</bonuslist>
+                roll20Character.StrengthMod = 0;
+
+                GCATrait traitDex = currentCharacter.ItemByNameAndExt("DX", (int)TraitTypes.Attributes);
+                roll20Character.DexterityPoints = (int)traitDex.Points;
+                // TODO: <bonuslist>+2 from 'Combat Reflexes'</bonuslist>
+                roll20Character.DexterityMod = 0;
+
+                GCATrait traitIq = currentCharacter.ItemByNameAndExt("IQ", (int)TraitTypes.Attributes);
+                roll20Character.IntelligencePoints = (int)traitIq.Points;
+                // TODO: <bonuslist>+2 from 'Combat Reflexes'</bonuslist>
+                roll20Character.IntelligenceMod = 0;
+
+                GCATrait traitHealth = currentCharacter.ItemByNameAndExt("HT", (int)TraitTypes.Attributes);
+                roll20Character.HealthPoints = (int)traitHealth.Points;
+                // TODO: <bonuslist>+2 from 'Combat Reflexes'</bonuslist>
+                roll20Character.HealthMod = 0;
+
+                GCATrait traitPerception = currentCharacter.ItemByNameAndExt("Perception", (int)TraitTypes.Attributes);
+                roll20Character.PerceptionPoints = (int)traitPerception.Points;
+                // TODO: <bonuslist>+2 from 'Combat Reflexes'</bonuslist>
+                roll20Character.PerceptionMod = 0;
+
+                GCATrait traitVision = currentCharacter.ItemByNameAndExt("Vision", (int)TraitTypes.Attributes);
+                roll20Character.VisionPoints = (int)traitVision.Points;
+                // TODO: <bonuslist>+2 from 'Combat Reflexes'</bonuslist>
+                roll20Character.VisionMod = 0;
+
+                GCATrait traitHearing = currentCharacter.ItemByNameAndExt("Hearing", (int)TraitTypes.Attributes);
+                roll20Character.HearingPoints = (int)traitHearing.Points;
+                // TODO: <bonuslist>+2 from 'Combat Reflexes'</bonuslist>
+                roll20Character.HearingMod = 0;
+
+                GCATrait traitTasteSmell = currentCharacter.ItemByNameAndExt("Taste/Smell", (int)TraitTypes.Attributes);
+                roll20Character.TasteSmellPoints = (int)traitTasteSmell.Points;
+                // TODO: <bonuslist>+2 from 'Combat Reflexes'</bonuslist>
+                roll20Character.TasteSmellMod = 0;
+
+                GCATrait traitTouch = currentCharacter.ItemByNameAndExt("Touch", (int)TraitTypes.Attributes);
+                roll20Character.TouchPoints = (int)traitTouch.Points;
+                // TODO: <bonuslist>+2 from 'Combat Reflexes'</bonuslist>
+                roll20Character.TouchMod = 0;
+
+                GCATrait traitWill = currentCharacter.ItemByNameAndExt("Will", (int)TraitTypes.Attributes);
+                roll20Character.WillpowerPoints = (int)traitWill.Points;
+                // TODO: <bonuslist>+2 from 'Combat Reflexes'</bonuslist>
+                roll20Character.WillpowerMod = 0;
+
+                GCATrait traitFear = currentCharacter.ItemByNameAndExt("Fright Check", (int)TraitTypes.Attributes);
+                roll20Character.FearCheckPoints = (int)traitFear.Points;
+                // TODO: <bonuslist>+2 from 'Combat Reflexes'</bonuslist>
+                // NOTE: ignore combat reflexes that will be added automatically by roll20 checkbox
+                roll20Character.FearCheckMod = 0;
+
+                // TODO: place holder determine if there's other modifiers
+                roll20Character.StunCheckMod = 0;
+
+                GCATrait traitConsciousnessCheck = currentCharacter.ItemByNameAndExt("Consciousness Check", (int)TraitTypes.Attributes);
+                // NOTE: no need to set points, not used. advantages are used instead.
+                // TODO: <bonuslist>+1 from 'fit'</bonuslist>
+                roll20Character.UnconsciousCheckMod = 0;
+
+
+
             }
 
             return roll20Character;

@@ -514,6 +514,9 @@ namespace ExportToRoll20
         [XmlElement(ElementName = "intelligence_mod")]
         public int IntelligenceMod { get; set; } = 0;
 
+        [XmlElement(ElementName = "intelligence_points")]
+        public int IntelligencePoints { get; set; } = 0;
+
         [XmlElement(ElementName = "health_mod")]
         public int HealthMod { get; set; } = 0;
 
@@ -528,6 +531,9 @@ namespace ExportToRoll20
 
         [XmlElement(ElementName = "vision_mod")]
         public int VisionMod { get; set; } = 0;
+
+        [XmlElement(ElementName = "vision_points")]
+        public int VisionPoints { get; set; } = 0;
 
         [XmlElement(ElementName = "hearing_mod")]
         public int HearingMod { get; set; } = 0;
