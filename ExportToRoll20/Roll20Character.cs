@@ -17,7 +17,7 @@ namespace ExportToRoll20
         public string Name { get; set; } = "";
 
         [XmlElement(ElementName = "points")]
-        public int Points { get; set; } = 0;
+        public double Points { get; set; } = 0;
     }
 
     public class RepeatingDefense
@@ -35,10 +35,10 @@ namespace ExportToRoll20
         public string Info { get; set; } = "";
 
         [XmlElement(ElementName = "skill")]
-        public int Skill { get; set; } = 0;
+        public double Skill { get; set; } = 0;
 
         [XmlElement(ElementName = "skill_mod")]
-        public int SkillMod { get; set; } = 0;
+        public double SkillMod { get; set; } = 0;
 
         [XmlElement(ElementName = "defense_mod_reason")]
         public string DefenseModReason { get; set; } = "";
@@ -62,7 +62,7 @@ namespace ExportToRoll20
         public string ControlRating { get; set; } = "";
 
         [XmlElement(ElementName = "points")]
-        public int Points { get; set; } = 0;
+        public double Points { get; set; } = 0;
 
         [XmlElement(ElementName = "ref")]
         public string Ref { get; set; } = "";
@@ -89,7 +89,7 @@ namespace ExportToRoll20
         public string Ref { get; set; } = "";
 
         [XmlElement(ElementName = "count")]
-        public int Count { get; set; } = 0;
+        public double Count { get; set; } = 0;
 
         [XmlElement(ElementName = "cost")]
         public double Cost { get; set; } = 0;
@@ -110,10 +110,10 @@ namespace ExportToRoll20
         public string Name { get; set; } = "";
 
         [XmlElement(ElementName = "spoken")]
-        public int Spoken { get; set; } = 0;
+        public double Spoken { get; set; } = 0;
 
         [XmlElement(ElementName = "written")]
-        public int Written { get; set; } = 0;
+        public double Written { get; set; } = 0;
 
         [XmlElement(ElementName = "is_native")]
         public bool IsNative { get; set; } = false;
@@ -137,13 +137,13 @@ namespace ExportToRoll20
         public string Reach { get; set; } = "";
 
         [XmlElement(ElementName = "skill")]
-        public int Skill { get; set; } = 0;
+        public double Skill { get; set; } = 0;
 
         [XmlElement(ElementName = "reason_for_mod")]
         public string ReasonForMod { get; set; } = "";
 
         [XmlElement(ElementName = "armor_divisor")]
-        public int ArmorDivisor { get; set; } = 0;
+        public double ArmorDivisor { get; set; } = 0;
 
         [XmlElement(ElementName = "notes")]
         public string Notes { get; set; } = "";
@@ -161,7 +161,7 @@ namespace ExportToRoll20
         public string Foa { get; set; } = "";
 
         [XmlElement(ElementName = "points")]
-        public int Points { get; set; } = 0;
+        public double Points { get; set; } = 0;
 
         [XmlElement(ElementName = "ref")]
         public string Ref { get; set; } = "";
@@ -182,7 +182,7 @@ namespace ExportToRoll20
         public string ControlRating { get; set; } = "";
 
         [XmlElement(ElementName = "points")]
-        public int Points { get; set; } = 0;
+        public double Points { get; set; } = 0;
 
         [XmlElement(ElementName = "ref")]
         public string Ref { get; set; } = "";
@@ -206,7 +206,7 @@ namespace ExportToRoll20
         public string ControlRating { get; set; } = "";
 
         [XmlElement(ElementName = "points")]
-        public int Points { get; set; } = 0;
+        public double Points { get; set; } = 0;
 
         [XmlElement(ElementName = "ref")]
         public string Ref { get; set; } = "";
@@ -248,7 +248,7 @@ namespace ExportToRoll20
         public string Recoil { get; set; } = "";
 
         [XmlElement(ElementName = "skill")]
-        public int Skill { get; set; } = 0;
+        public double Skill { get; set; } = 0;
 
         [XmlElement(ElementName = "reason_for_mod")]
         public string ReasonForMod { get; set; } = "";
@@ -287,13 +287,13 @@ namespace ExportToRoll20
         public string Difficulty { get; set; } = "";
 
         [XmlElement(ElementName = "bonus")]
-        public int Bonus { get; set; } = 0;
+        public double Bonus { get; set; } = 0;
 
         [XmlElement(ElementName = "points")]
-        public int Points { get; set; } = 0;
+        public double Points { get; set; } = 0;
 
         [XmlElement(ElementName = "skill")]
-        public int Skill { get; set; } = 0;
+        public double Skill { get; set; } = 0;
 
         [XmlElement(ElementName = "ref")]
         public string Ref { get; set; } = "";
@@ -317,10 +317,10 @@ namespace ExportToRoll20
         public string Difficulty { get; set; } = "";
 
         [XmlElement(ElementName = "spell_modifier")]
-        public int SpellModifier { get; set; } = 0;
+        public double SpellModifier { get; set; } = 0;
 
         [XmlElement(ElementName = "points")]
-        public int Points { get; set; } = 0;
+        public double Points { get; set; } = 0;
 
         [XmlElement(ElementName = "spell_resisted_by")]
         public string SpellResistedBy { get; set; } = "";
@@ -332,7 +332,7 @@ namespace ExportToRoll20
         public string Cost { get; set; } = "";
 
         [XmlElement(ElementName = "skill")]
-        public int Skill { get; set; } = 0;
+        public double Skill { get; set; } = 0;
 
         [XmlElement(ElementName = "casttime")]
         public string Casttime { get; set; } = "";
@@ -368,25 +368,25 @@ namespace ExportToRoll20
         public string Parent { get; set; } = "";
 
         [XmlElement(ElementName = "base_level")]
-        public int BaseLevel { get; set; } = 0;
+        public double BaseLevel { get; set; } = 0;
 
         [XmlElement(ElementName = "default")]
-        public int Default { get; set; } = 0;
+        public double Default { get; set; } = 0;
 
         [XmlElement(ElementName = "max_modifier")]
-        public int MaxModifier { get; set; } = 0;
+        public double MaxModifier { get; set; } = 0;
 
         [XmlElement(ElementName = "difficulty")]
         public string Difficulty { get; set; } = "";
 
         [XmlElement(ElementName = "skill_modifier")]
-        public int SkillModifier { get; set; } = 0;
+        public double SkillModifier { get; set; } = 0;
 
         [XmlElement(ElementName = "points")]
-        public int Points { get; set; } = 0;
+        public double Points { get; set; } = 0;
 
         [XmlElement(ElementName = "skill")]
-        public int Skill { get; set; } = 0;
+        public double Skill { get; set; } = 0;
 
         [XmlElement(ElementName = "ref")]
         public string Ref { get; set; } = "";
@@ -413,7 +413,7 @@ namespace ExportToRoll20
         public string Foa { get; set; } = "";
 
         [XmlElement(ElementName = "points")]
-        public int Points { get; set; } = 0;
+        public double Points { get; set; } = 0;
 
         [XmlElement(ElementName = "ref")]
         public string Ref { get; set; } = "";
@@ -449,7 +449,7 @@ namespace ExportToRoll20
         public string Gender { get; set; } = "";
 
         [XmlElement(ElementName = "size")]
-        public int Size { get; set; } = 0;
+        public double Size { get; set; } = 0;
 
         [XmlElement(ElementName = "apply_size_modifier")]
         public bool ApplySizeModifier { get; set; } = false;
@@ -458,16 +458,16 @@ namespace ExportToRoll20
         public string Reactions { get; set; } = "";
 
         [XmlElement(ElementName = "campaign_tl")]
-        public int CampaignTl { get; set; } = 0;
+        public double CampaignTl { get; set; } = 0;
 
         [XmlElement(ElementName = "total_points")]
-        public int TotalPoints { get; set; } = 0;
+        public double TotalPoints { get; set; } = 0;
 
         [XmlElement(ElementName = "tl")]
-        public int Tl { get; set; } = 0;
+        public double Tl { get; set; } = 0;
 
         [XmlElement(ElementName = "tl_pts")]
-        public int TlPts { get; set; } = 0;
+        public double TlPts { get; set; } = 0;
 
         [XmlElement(ElementName = "status")]
         public string Status { get; set; } = "";
@@ -494,190 +494,190 @@ namespace ExportToRoll20
         public double Weight { get; set; } = 0;
 
         [XmlElement(ElementName = "appearance")]
-        public int Appearance { get; set; } = 0;
+        public double Appearance { get; set; } = 0;
 
         [XmlElement(ElementName = "general_appearance")]
         public string GeneralAppearance { get; set; } = "";
 
         [XmlElement(ElementName = "strength_mod")]
-        public int StrengthMod { get; set; } = 0;
+        public double StrengthMod { get; set; } = 0;
 
         [XmlElement(ElementName = "strength_points")]
-        public int StrengthPoints { get; set; } = 0;
+        public double StrengthPoints { get; set; } = 0;
 
         [XmlElement(ElementName = "dexterity_mod")]
-        public int DexterityMod { get; set; } = 0;
+        public double DexterityMod { get; set; } = 0;
 
         [XmlElement(ElementName = "dexterity_points")]
-        public int DexterityPoints { get; set; } = 0;
+        public double DexterityPoints { get; set; } = 0;
 
         [XmlElement(ElementName = "intelligence_mod")]
-        public int IntelligenceMod { get; set; } = 0;
+        public double IntelligenceMod { get; set; } = 0;
 
         [XmlElement(ElementName = "intelligence_points")]
-        public int IntelligencePoints { get; set; } = 0;
+        public double IntelligencePoints { get; set; } = 0;
 
         [XmlElement(ElementName = "health_mod")]
-        public int HealthMod { get; set; } = 0;
+        public double HealthMod { get; set; } = 0;
 
         [XmlElement(ElementName = "health_points")]
-        public int HealthPoints { get; set; } = 0;
+        public double HealthPoints { get; set; } = 0;
 
         [XmlElement(ElementName = "perception_mod")]
-        public int PerceptionMod { get; set; } = 0;
+        public double PerceptionMod { get; set; } = 0;
 
         [XmlElement(ElementName = "perception_points")]
-        public int PerceptionPoints { get; set; } = 0;
+        public double PerceptionPoints { get; set; } = 0;
 
         [XmlElement(ElementName = "vision_mod")]
-        public int VisionMod { get; set; } = 0;
+        public double VisionMod { get; set; } = 0;
 
         [XmlElement(ElementName = "vision_points")]
-        public int VisionPoints { get; set; } = 0;
+        public double VisionPoints { get; set; } = 0;
 
         [XmlElement(ElementName = "hearing_mod")]
-        public int HearingMod { get; set; } = 0;
+        public double HearingMod { get; set; } = 0;
 
         [XmlElement(ElementName = "hearing_points")]
-        public int HearingPoints { get; set; } = 0;
+        public double HearingPoints { get; set; } = 0;
 
         [XmlElement(ElementName = "taste_smell_mod")]
-        public int TasteSmellMod { get; set; } = 0;
+        public double TasteSmellMod { get; set; } = 0;
 
         [XmlElement(ElementName = "taste_smell_points")]
-        public int TasteSmellPoints { get; set; } = 0;
+        public double TasteSmellPoints { get; set; } = 0;
 
         [XmlElement(ElementName = "touch_mod")]
-        public int TouchMod { get; set; } = 0;
+        public double TouchMod { get; set; } = 0;
 
         [XmlElement(ElementName = "touch_points")]
-        public int TouchPoints { get; set; } = 0;
+        public double TouchPoints { get; set; } = 0;
 
         [XmlElement(ElementName = "willpower_mod")]
-        public int WillpowerMod { get; set; } = 0;
+        public double WillpowerMod { get; set; } = 0;
 
         [XmlElement(ElementName = "willpower_points")]
-        public int WillpowerPoints { get; set; } = 0;
+        public double WillpowerPoints { get; set; } = 0;
 
         [XmlElement(ElementName = "fear_check_mod")]
-        public int FearCheckMod { get; set; } = 0;
+        public double FearCheckMod { get; set; } = 0;
 
         [XmlElement(ElementName = "fear_check_points")]
-        public int FearCheckPoints { get; set; } = 0;
+        public double FearCheckPoints { get; set; } = 0;
 
         [XmlElement(ElementName = "stun_check_mod")]
-        public int StunCheckMod { get; set; } = 0;
+        public double StunCheckMod { get; set; } = 0;
 
         [XmlElement(ElementName = "knockdown_check_mod")]
-        public int KnockdownCheckMod { get; set; } = 0;
+        public double KnockdownCheckMod { get; set; } = 0;
 
         [XmlElement(ElementName = "unconscious_check_mod")]
-        public int UnconsciousCheckMod { get; set; } = 0;
+        public double UnconsciousCheckMod { get; set; } = 0;
 
         [XmlElement(ElementName = "unconscious_check_points")]
-        public int UnconsciousCheckPoints { get; set; } = 0;
+        public double UnconsciousCheckPoints { get; set; } = 0;
 
         [XmlElement(ElementName = "death_check_mod")]
-        public int DeathCheckMod { get; set; } = 0;
+        public double DeathCheckMod { get; set; } = 0;
 
         [XmlElement(ElementName = "death_check_points")]
-        public int DeathCheckPoints { get; set; } = 0;
+        public double DeathCheckPoints { get; set; } = 0;
 
         [XmlElement(ElementName = "basic_speed_mod")]
-        public int BasicSpeedMod { get; set; } = 0;
+        public double BasicSpeedMod { get; set; } = 0;
 
         [XmlElement(ElementName = "basic_speed_points")]
-        public int BasicSpeedPoints { get; set; } = 0;
+        public double BasicSpeedPoints { get; set; } = 0;
 
         [XmlElement(ElementName = "basic_move_mod")]
-        public int BasicMoveMod { get; set; } = 0;
+        public double BasicMoveMod { get; set; } = 0;
 
         [XmlElement(ElementName = "basic_move_points")]
-        public int BasicMovePoints { get; set; } = 0;
+        public double BasicMovePoints { get; set; } = 0;
 
         [XmlElement(ElementName = "enhanced_ground_move_mod")]
-        public int EnhancedGroundMoveMod { get; set; } = 0;
+        public double EnhancedGroundMoveMod { get; set; } = 0;
 
         [XmlElement(ElementName = "enhanced_ground_move_points")]
-        public int EnhancedGroundMovePoints { get; set; } = 0;
+        public double EnhancedGroundMovePoints { get; set; } = 0;
 
         [XmlElement(ElementName = "dodge_mod")]
-        public int DodgeMod { get; set; } = 0;
+        public double DodgeMod { get; set; } = 0;
 
         [XmlElement(ElementName = "lift_st_mod")]
-        public int LiftStMod { get; set; } = 0;
+        public double LiftStMod { get; set; } = 0;
 
         [XmlElement(ElementName = "lift_st_points")]
-        public int LiftStPoints { get; set; } = 0;
+        public double LiftStPoints { get; set; } = 0;
 
         [XmlElement(ElementName = "striking_st_mod")]
-        public int StrikingStMod { get; set; } = 0;
+        public double StrikingStMod { get; set; } = 0;
 
         [XmlElement(ElementName = "striking_st_points")]
-        public int StrikingStPoints { get; set; } = 0;
+        public double StrikingStPoints { get; set; } = 0;
 
         [XmlElement(ElementName = "hit_points_mod")]
-        public int HitPointsMod { get; set; } = 0;
+        public double HitPointsMod { get; set; } = 0;
 
         [XmlElement(ElementName = "hit_points_points")]
-        public int HitPointsPoints { get; set; } = 0;
+        public double HitPointsPoints { get; set; } = 0;
 
         [XmlElement(ElementName = "hit_points")]
-        public int HitPoints { get; set; } = 0;
+        public double HitPoints { get; set; } = 0;
 
         [XmlElement(ElementName = "fatigue_points_mod")]
-        public int FatiguePointsMod { get; set; } = 0;
+        public double FatiguePointsMod { get; set; } = 0;
 
         [XmlElement(ElementName = "fatigue_points_points")]
-        public int FatiguePointsPoints { get; set; } = 0;
+        public double FatiguePointsPoints { get; set; } = 0;
 
         [XmlElement(ElementName = "fatigue_points")]
-        public int FatiguePoints { get; set; } = 0;
+        public double FatiguePoints { get; set; } = 0;
 
         [XmlElement(ElementName = "flight_checked")]
         public bool FlightChecked { get; set; } = false;
 
         [XmlElement(ElementName = "flight_points")]
-        public int FlightPoints { get; set; } = 0;
+        public double FlightPoints { get; set; } = 0;
 
         [XmlElement(ElementName = "basic_air_move_mod")]
-        public int BasicAirMoveMod { get; set; } = 0;
+        public double BasicAirMoveMod { get; set; } = 0;
 
         [XmlElement(ElementName = "basic_air_move_points")]
-        public int BasicAirMovePoints { get; set; } = 0;
+        public double BasicAirMovePoints { get; set; } = 0;
 
         [XmlElement(ElementName = "enhanced_air_level")]
-        public int EnhancedAirLevel { get; set; } = 0;
+        public double EnhancedAirLevel { get; set; } = 0;
 
         [XmlElement(ElementName = "enhanced_air_move_points")]
-        public int EnhancedAirMovePoints { get; set; } = 0;
+        public double EnhancedAirMovePoints { get; set; } = 0;
 
         [XmlElement(ElementName = "amphibious_checked")]
         public bool AmphibiousChecked { get; set; } = false;
 
         [XmlElement(ElementName = "amphibious_points")]
-        public int AmphibiousPoints { get; set; } = 0;
+        public double AmphibiousPoints { get; set; } = 0;
 
         [XmlElement(ElementName = "basic_water_move_mod")]
-        public int BasicWaterMoveMod { get; set; } = 0;
+        public double BasicWaterMoveMod { get; set; } = 0;
 
         [XmlElement(ElementName = "basic_water_move_points")]
-        public int BasicWaterMovePoints { get; set; } = 0;
+        public double BasicWaterMovePoints { get; set; } = 0;
 
         [XmlElement(ElementName = "enhanced_water_level")]
-        public int EnhancedWaterLevel { get; set; } = 0;
+        public double EnhancedWaterLevel { get; set; } = 0;
 
         [XmlElement(ElementName = "enhanced_water_move_points")]
-        public int EnhancedWaterMovePoints { get; set; } = 0;
+        public double EnhancedWaterMovePoints { get; set; } = 0;
 
         [XmlElement(ElementName = "super_jump_entered_level")]
-        public int SuperJumpEnteredLevel { get; set; } = 0;
+        public double SuperJumpEnteredLevel { get; set; } = 0;
 
         [XmlElement(ElementName = "super_jump_points")]
-        public int SuperJumpPoints { get; set; } = 0;
+        public double SuperJumpPoints { get; set; } = 0;
 
         [XmlElement(ElementName = "spell_bonus")]
-        public int SpellBonus { get; set; } = 0;
+        public double SpellBonus { get; set; } = 0;
 
         [XmlElement(ElementName = "combat_reflexes")]
         public bool CombatReflexes { get; set; } = false;

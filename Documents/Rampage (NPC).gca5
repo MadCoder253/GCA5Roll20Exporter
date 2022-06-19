@@ -5,11 +5,11 @@
       <name>GURPS Character Assistant</name>
       <version>GCA5Engine, Version=5.0.187.0</version>
       <copyright>Program code is copyright © 1995-2022 by Armin D. Sykes. All data files, graphics, and other GURPS-specific content is copyright © 2005 and other years by Steve Jackson Games Incorporated. GURPS and the all-seeing pyramid are registered trademarks of Steve Jackson Games Incorporated. All rights reserved.</copyright>
-      <datecreated>Tuesday, June 14, 2022</datecreated>
+      <datecreated>Sunday, June 19, 2022</datecreated>
     </author>
     <system>
       <version>5</version>
-      <lastkey>11890</lastkey>
+      <lastkey>11898</lastkey>
     </system>
     <library>
       <name>%user%\Supers.gds</name>
@@ -176,6 +176,8 @@
       <sheetviewsheet />
       <charactersheet>GURPS 4th Edition Official Character Sheet</charactersheet>
       <exportsheet>Simple Text Export</exportsheet>
+      <altexportsheet>Simple Text Export</altexportsheet>
+      <altexportsheet>Simple Text Export</altexportsheet>
     </output>
     <vitals>
       <race>Human</race>
@@ -942,7 +944,7 @@ Body Control Talent\par
           <taboofailed>0</taboofailed>
           <symbol>BL</symbol>
           <points>0</points>
-          <score>80</score>
+          <score>168</score>
           <level>0</level>
           <calcs>
             <syslevels>0</syslevels>
@@ -950,7 +952,7 @@ Body Control Talent\par
             <maxscore>1000000</maxscore>
             <minscore>0</minscore>
             <round>@if(ST:Lifting ST::score &lt;= 7 then 0 else 1)</round>
-            <basescore>80</basescore>
+            <basescore>168.2</basescore>
           </calcs>
           <armordata />
           <ref>
@@ -1054,12 +1056,12 @@ Body Control Talent\par
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
-          <score>20</score>
+          <score>21</score>
           <level>0</level>
           <calcs>
             <syslevels>0</syslevels>
             <basevalue>ST:Striking ST</basevalue>
-            <basescore>20</basescore>
+            <basescore>21</basescore>
           </calcs>
           <armordata />
           <ref>
@@ -1077,12 +1079,12 @@ Body Control Talent\par
               <damagebasedon>ST:Bite</damagebasedon>
               <reachbasedon>ST:Neck Reach</reachbasedon>
               <charparry>No</charparry>
-              <chareffectivest>20</chareffectivest>
+              <chareffectivest>21</chareffectivest>
               <charskillscore>14</charskillscore>
               <charskillused>"SK:Brawling"</charskillused>
               <charparryscore>No</charparryscore>
               <charskillusedkey>k10753</charskillusedkey>
-              <chardamage>2d</chardamage>
+              <chardamage>2d+1</chardamage>
               <dmg>thr</dmg>
               <chardamtype>cr</chardamtype>
               <itemnotes>{Brawling (p. B182) increases all unarmed damage; Claws (p. B42) and Karate (p. B203) improve damage with punches and kicks (Claws don't affect damage with brass knuckles or boots); and Boxing (p. B182) improves punching damage.}</itemnotes>
@@ -1155,14 +1157,14 @@ Body Control Talent\par
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
-          <score>1200</score>
+          <score>2520</score>
           <level>0</level>
           <calcs>
             <syslevels>0</syslevels>
             <basevalue>15 * ST:Basic Lift</basevalue>
             <maxscore>1000000</maxscore>
             <minscore>0</minscore>
-            <basescore>1200</basescore>
+            <basescore>2520</basescore>
           </calcs>
           <armordata />
           <ref>
@@ -1233,12 +1235,12 @@ Body Control Talent\par
           <taboofailed>0</taboofailed>
           <symbol>DamageBase</symbol>
           <points>0</points>
-          <score>20</score>
+          <score>21</score>
           <level>0</level>
           <calcs>
             <syslevels>0</syslevels>
             <basevalue>ST:Striking ST</basevalue>
-            <basescore>20</basescore>
+            <basescore>21</basescore>
           </calcs>
           <armordata />
           <ref>
@@ -1634,12 +1636,12 @@ Body Control Talent\par
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
-          <score>14</score>
+          <score>13</score>
           <level>0</level>
           <calcs>
             <syslevels>2</syslevels>
             <basevalue>ST:Will</basevalue>
-            <basescore>12</basescore>
+            <basescore>11</basescore>
           </calcs>
           <armordata />
           <ref />
@@ -1671,14 +1673,14 @@ Body Control Talent\par
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
-          <score>12</score>
+          <score>11</score>
           <level>0</level>
           <calcs>
             <syslevels>0</syslevels>
             <basevalue>ST:Perception</basevalue>
             <maxscore>1000000</maxscore>
             <minscore>0</minscore>
-            <basescore>12</basescore>
+            <basescore>11</basescore>
           </calcs>
           <armordata />
           <ref />
@@ -1689,7 +1691,7 @@ Body Control Talent\par
           <taboofailed>0</taboofailed>
           <symbol>HEnc</symbol>
           <points>0</points>
-          <score>480</score>
+          <score>1008</score>
           <level>0</level>
           <calcs>
             <syslevels>0</syslevels>
@@ -1697,7 +1699,7 @@ Body Control Talent\par
             <maxscore>10000000</maxscore>
             <minscore>0</minscore>
             <round>0</round>
-            <basescore>480</basescore>
+            <basescore>1008</basescore>
           </calcs>
           <armordata />
           <ref>
@@ -1751,7 +1753,7 @@ Body Control Talent\par
           <taboofailed>0</taboofailed>
           <symbol>HP</symbol>
           <points>8</points>
-          <score>20</score>
+          <score>21</score>
           <level>4</level>
           <calcs>
             <syslevels>0</syslevels>
@@ -1763,7 +1765,7 @@ Body Control Talent\par
             <up>2</up>
             <down>-2</down>
             <step>1</step>
-            <basescore>20</basescore>
+            <basescore>21</basescore>
           </calcs>
           <armordata />
           <ref>
@@ -1840,14 +1842,15 @@ Body Control Talent\par
         </trait>
         <trait type="Attributes" idkey="10556">
           <name>IQ</name>
+          <bonuslist>-1 from 'Reduced IQ'</bonuslist>
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <symbol>IQ</symbol>
           <points>0</points>
-          <score>10</score>
+          <score>9</score>
           <level>0</level>
           <calcs>
-            <syslevels>0</syslevels>
+            <syslevels>-1</syslevels>
             <basevalue>10</basevalue>
             <maxscore>1000000</maxscore>
             <minscore>0 - me::syslevels</minscore>
@@ -1889,12 +1892,12 @@ Body Control Talent\par
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
-          <score>20</score>
+          <score>21</score>
           <level>0</level>
           <calcs>
             <syslevels>0</syslevels>
             <basevalue>ST:Striking ST</basevalue>
-            <basescore>20</basescore>
+            <basescore>21</basescore>
           </calcs>
           <armordata />
           <ref>
@@ -1913,12 +1916,12 @@ Body Control Talent\par
               <damagebasedon>ST:Kick</damagebasedon>
               <reachbasedon>ST:Leg Reach</reachbasedon>
               <charparry>No</charparry>
-              <chareffectivest>20</chareffectivest>
+              <chareffectivest>21</chareffectivest>
               <charskillscore>12</charskillscore>
               <charskillused>"SK:Brawling"-2</charskillused>
               <charparryscore>No</charparryscore>
               <charskillusedkey>k10753</charskillusedkey>
-              <chardamage>2d+1</chardamage>
+              <chardamage>2d+2</chardamage>
               <dmg>thr</dmg>
               <chardamtype>cr</chardamtype>
               <itemnotes>{Brawling (p. B182) increases all unarmed damage; Claws (p. B42) and Karate (p. B203) improve damage with punches and kicks (Claws don't affect damage with brass knuckles or boots); and Boxing (p. B182) improves punching damage.}</itemnotes>
@@ -2004,14 +2007,16 @@ Body Control Talent\par
         </trait>
         <trait type="Attributes" idkey="10561">
           <name>Lifting ST</name>
-          <bonuslist>+4 from 'Enhanced Muscle'</bonuslist>
+          <bonuslist>+3 from 'Lifting ST', +4 from 'Enhanced Muscle'</bonuslist>
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
-          <points>0</points>
-          <score>20</score>
-          <level>0</level>
+          <points>15</points>
+          <score>29</score>
+          <level>5</level>
           <calcs>
-            <syslevels>4</syslevels>
+            <syslevels>7</syslevels>
+            <basepoints>15</basepoints>
+            <premodspoints>15</premodspoints>
             <basevalue>ST:ST</basevalue>
             <maxscore>1000000</maxscore>
             <minscore>ST:ST</minscore>
@@ -2019,7 +2024,7 @@ Body Control Talent\par
             <down>0</down>
             <step>1</step>
             <round>-1</round>
-            <basescore>16</basescore>
+            <basescore>22</basescore>
           </calcs>
           <armordata />
           <ref>
@@ -2046,7 +2051,7 @@ Body Control Talent\par
           <taboofailed>0</taboofailed>
           <symbol>LEnc</symbol>
           <points>0</points>
-          <score>160</score>
+          <score>336</score>
           <level>0</level>
           <calcs>
             <syslevels>0</syslevels>
@@ -2054,7 +2059,7 @@ Body Control Talent\par
             <maxscore>10000000</maxscore>
             <minscore>0</minscore>
             <round>0</round>
-            <basescore>160</basescore>
+            <basescore>336</basescore>
           </calcs>
           <armordata />
           <ref>
@@ -2640,7 +2645,7 @@ Body Control Talent\par
           <taboofailed>0</taboofailed>
           <symbol>MEnc</symbol>
           <points>0</points>
-          <score>240</score>
+          <score>504</score>
           <level>0</level>
           <calcs>
             <syslevels>0</syslevels>
@@ -2648,7 +2653,7 @@ Body Control Talent\par
             <maxscore>10000000</maxscore>
             <minscore>0</minscore>
             <round>0</round>
-            <basescore>240</basescore>
+            <basescore>504</basescore>
           </calcs>
           <armordata />
           <ref>
@@ -2890,7 +2895,7 @@ Body Control Talent\par
           <taboofailed>0</taboofailed>
           <symbol>NEnc</symbol>
           <points>0</points>
-          <score>80</score>
+          <score>168</score>
           <level>0</level>
           <calcs>
             <syslevels>0</syslevels>
@@ -2898,7 +2903,7 @@ Body Control Talent\par
             <maxscore>10000000</maxscore>
             <minscore>0</minscore>
             <round>0</round>
-            <basescore>80</basescore>
+            <basescore>168</basescore>
           </calcs>
           <armordata />
           <ref>
@@ -2949,7 +2954,7 @@ Body Control Talent\par
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
-          <score>20</score>
+          <score>29</score>
           <level>0</level>
           <calcs>
             <syslevels>0</syslevels>
@@ -2957,7 +2962,7 @@ Body Control Talent\par
             <maxscore>1000000</maxscore>
             <minscore>0</minscore>
             <round>-1</round>
-            <basescore>20</basescore>
+            <basescore>29</basescore>
           </calcs>
           <armordata />
           <ref />
@@ -3018,7 +3023,7 @@ Body Control Talent\par
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
-          <score>20</score>
+          <score>21</score>
           <level>0</level>
           <calcs>
             <syslevels>0</syslevels>
@@ -3026,7 +3031,7 @@ Body Control Talent\par
             <maxscore>1000000</maxscore>
             <minscore>0</minscore>
             <round>-1</round>
-            <basescore>20</basescore>
+            <basescore>21</basescore>
           </calcs>
           <armordata />
           <ref />
@@ -3036,7 +3041,7 @@ Body Control Talent\par
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
-          <score>160</score>
+          <score>336</score>
           <level>0</level>
           <calcs>
             <syslevels>0</syslevels>
@@ -3044,7 +3049,7 @@ Body Control Talent\par
             <maxscore>1000000</maxscore>
             <minscore>0</minscore>
             <round>1</round>
-            <basescore>160</basescore>
+            <basescore>336</basescore>
           </calcs>
           <armordata />
           <ref>
@@ -3078,7 +3083,7 @@ Body Control Talent\par
           <taboofailed>0</taboofailed>
           <symbol>Per</symbol>
           <points>10</points>
-          <score>12</score>
+          <score>11</score>
           <level>2</level>
           <calcs>
             <syslevels>0</syslevels>
@@ -3090,7 +3095,7 @@ Body Control Talent\par
             <up>5</up>
             <down>-5</down>
             <step>1</step>
-            <basescore>12</basescore>
+            <basescore>11</basescore>
           </calcs>
           <armordata />
           <ref>
@@ -3103,13 +3108,13 @@ Body Control Talent\par
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
-          <score>0</score>
+          <score>0.5</score>
           <level>0</level>
           <hide>yes</hide>
           <calcs>
             <syslevels>0</syslevels>
             <basevalue>(ST:Will / 2) - @int(ST:Will / 2)</basevalue>
-            <basescore>0</basescore>
+            <basescore>0.5</basescore>
           </calcs>
           <armordata />
           <ref>
@@ -3158,12 +3163,12 @@ Body Control Talent\par
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
-          <score>20</score>
+          <score>21</score>
           <level>0</level>
           <calcs>
             <syslevels>0</syslevels>
             <basevalue>ST:One Arm Striking ST</basevalue>
-            <basescore>20</basescore>
+            <basescore>21</basescore>
           </calcs>
           <armordata />
           <ref>
@@ -3182,12 +3187,12 @@ Body Control Talent\par
               <damagebasedon>ST:Punch</damagebasedon>
               <reachbasedon>ST:One Arm Reach</reachbasedon>
               <charparry>0</charparry>
-              <chareffectivest>20</chareffectivest>
+              <chareffectivest>21</chareffectivest>
               <charskillscore>14</charskillscore>
               <charskillused>"SK:Brawling"</charskillused>
               <charparryscore>11</charparryscore>
               <charskillusedkey>k10753</charskillusedkey>
-              <chardamage>2d</chardamage>
+              <chardamage>2d+1</chardamage>
               <dmg>thr</dmg>
               <chardamtype>cr</chardamtype>
               <itemnotes>{Brawling (p. B182) increases all unarmed damage; Claws (p. B42) and Karate (p. B203) improve damage with punches and kicks (Claws don't affect damage with brass knuckles or boots); and Boxing (p. B182) improves punching damage.}</itemnotes>
@@ -3264,14 +3269,14 @@ Body Control Talent\par
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
-          <score>4000</score>
+          <score>8400</score>
           <level>0</level>
           <calcs>
             <syslevels>0</syslevels>
             <basevalue>50 * ST:Basic Lift</basevalue>
             <maxscore>1000000</maxscore>
             <minscore>0</minscore>
-            <basescore>4000</basescore>
+            <basescore>8400</basescore>
           </calcs>
           <armordata />
           <ref>
@@ -3284,14 +3289,14 @@ Body Control Talent\par
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
-          <score>960</score>
+          <score>2016</score>
           <level>0</level>
           <calcs>
             <syslevels>0</syslevels>
             <basevalue>12 * ST:Basic Lift</basevalue>
             <maxscore>1000000</maxscore>
             <minscore>0</minscore>
-            <basescore>960</basescore>
+            <basescore>2016</basescore>
           </calcs>
           <armordata />
           <ref>
@@ -3371,14 +3376,16 @@ Body Control Talent\par
         </trait>
         <trait type="Attributes" idkey="10621">
           <name>ST</name>
+          <bonuslist>+1 from 'Extra ST'</bonuslist>
+          <conditionallist>+3 from 'Lifting ST'</conditionallist>
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <symbol>ST</symbol>
           <points>60</points>
-          <score>16</score>
+          <score>17</score>
           <level>6</level>
           <calcs>
-            <syslevels>0</syslevels>
+            <syslevels>1</syslevels>
             <basepoints>60</basepoints>
             <premodspoints>60</premodspoints>
             <basevalue>10</basevalue>
@@ -3472,7 +3479,7 @@ Body Control Talent\par
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
-          <score>20</score>
+          <score>21</score>
           <level>0</level>
           <calcs>
             <syslevels>4</syslevels>
@@ -3483,7 +3490,7 @@ Body Control Talent\par
             <down>0</down>
             <step>1</step>
             <round>-1</round>
-            <basescore>16</basescore>
+            <basescore>17</basescore>
           </calcs>
           <armordata />
           <ref>
@@ -3563,7 +3570,7 @@ Body Control Talent\par
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
-          <score>80</score>
+          <score>168</score>
           <level>0</level>
           <hide>yes</hide>
           <calcs>
@@ -3572,7 +3579,7 @@ Body Control Talent\par
             <maxscore>1000000</maxscore>
             <minscore>0</minscore>
             <round>-1</round>
-            <basescore>80</basescore>
+            <basescore>168.2</basescore>
           </calcs>
           <armordata />
           <ref>
@@ -3586,7 +3593,7 @@ Body Control Talent\par
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
-          <score>1200</score>
+          <score>2520</score>
           <level>0</level>
           <hide>yes</hide>
           <calcs>
@@ -3594,7 +3601,7 @@ Body Control Talent\par
             <basevalue>15 * "ST:Super-Effort Basic Lift"</basevalue>
             <maxscore>1000000</maxscore>
             <minscore>0</minscore>
-            <basescore>1200</basescore>
+            <basescore>2520</basescore>
           </calcs>
           <armordata />
           <ref>
@@ -3609,7 +3616,7 @@ Body Control Talent\par
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
-          <score>20</score>
+          <score>29</score>
           <level>0</level>
           <hide>yes</hide>
           <calcs>
@@ -3617,7 +3624,7 @@ Body Control Talent\par
             <basevalue>ST:Lifting ST</basevalue>
             <maxscore>1000000</maxscore>
             <minscore>0</minscore>
-            <basescore>20</basescore>
+            <basescore>29</basescore>
           </calcs>
           <armordata />
           <ref>
@@ -3663,7 +3670,7 @@ Body Control Talent\par
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
-          <score>160</score>
+          <score>336</score>
           <level>0</level>
           <hide>yes</hide>
           <calcs>
@@ -3671,7 +3678,7 @@ Body Control Talent\par
             <basevalue>2 * "ST:Super-Effort Basic Lift"</basevalue>
             <maxscore>1000000</maxscore>
             <minscore>0</minscore>
-            <basescore>160</basescore>
+            <basescore>336</basescore>
           </calcs>
           <armordata />
           <ref>
@@ -3685,7 +3692,7 @@ Body Control Talent\par
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
-          <score>4000</score>
+          <score>8400</score>
           <level>0</level>
           <hide>yes</hide>
           <calcs>
@@ -3693,7 +3700,7 @@ Body Control Talent\par
             <basevalue>50 * "ST:Super-Effort Basic Lift"</basevalue>
             <maxscore>1000000</maxscore>
             <minscore>0</minscore>
-            <basescore>4000</basescore>
+            <basescore>8400</basescore>
           </calcs>
           <armordata />
           <ref>
@@ -3708,7 +3715,7 @@ Body Control Talent\par
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
-          <score>960</score>
+          <score>2016</score>
           <level>0</level>
           <hide>yes</hide>
           <calcs>
@@ -3716,7 +3723,7 @@ Body Control Talent\par
             <basevalue>12 * "ST:Super-Effort Basic Lift"</basevalue>
             <maxscore>1000000</maxscore>
             <minscore>0</minscore>
-            <basescore>960</basescore>
+            <basescore>2016</basescore>
           </calcs>
           <armordata />
           <ref>
@@ -3731,7 +3738,7 @@ Body Control Talent\par
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
-          <score>16</score>
+          <score>17</score>
           <level>0</level>
           <hide>yes</hide>
           <calcs>
@@ -3739,7 +3746,7 @@ Body Control Talent\par
             <basevalue>ST:ST</basevalue>
             <maxscore>1000000</maxscore>
             <minscore>0</minscore>
-            <basescore>16</basescore>
+            <basescore>17</basescore>
           </calcs>
           <armordata />
           <ref>
@@ -3786,7 +3793,7 @@ Body Control Talent\par
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
-          <score>20</score>
+          <score>21</score>
           <level>0</level>
           <hide>yes</hide>
           <calcs>
@@ -3794,7 +3801,7 @@ Body Control Talent\par
             <basevalue>ST:Striking ST</basevalue>
             <maxscore>1000000</maxscore>
             <minscore>0</minscore>
-            <basescore>20</basescore>
+            <basescore>21</basescore>
           </calcs>
           <armordata />
           <ref>
@@ -3840,7 +3847,7 @@ Body Control Talent\par
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
-          <score>640</score>
+          <score>1344</score>
           <level>0</level>
           <hide>yes</hide>
           <calcs>
@@ -3848,7 +3855,7 @@ Body Control Talent\par
             <basevalue>8 * "ST:Super-Effort Basic Lift"</basevalue>
             <maxscore>1000000</maxscore>
             <minscore>0</minscore>
-            <basescore>640</basescore>
+            <basescore>1344</basescore>
           </calcs>
           <armordata />
           <ref>
@@ -3862,14 +3869,14 @@ Body Control Talent\par
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
-          <score>12</score>
+          <score>11</score>
           <level>0</level>
           <calcs>
             <syslevels>0</syslevels>
             <basevalue>ST:Perception</basevalue>
             <maxscore>1000000</maxscore>
             <minscore>0</minscore>
-            <basescore>12</basescore>
+            <basescore>11</basescore>
           </calcs>
           <armordata />
           <ref />
@@ -4488,14 +4495,14 @@ Body Control Talent\par
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
-          <score>12</score>
+          <score>11</score>
           <level>0</level>
           <calcs>
             <syslevels>0</syslevels>
             <basevalue>ST:Perception</basevalue>
             <maxscore>1000000</maxscore>
             <minscore>0</minscore>
-            <basescore>12</basescore>
+            <basescore>11</basescore>
           </calcs>
           <armordata />
           <ref />
@@ -4525,7 +4532,7 @@ Body Control Talent\par
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
-          <score>20</score>
+          <score>29</score>
           <level>0</level>
           <calcs>
             <syslevels>0</syslevels>
@@ -4533,7 +4540,7 @@ Body Control Talent\par
             <maxscore>1000000</maxscore>
             <minscore>0</minscore>
             <round>-1</round>
-            <basescore>20</basescore>
+            <basescore>29</basescore>
           </calcs>
           <armordata />
           <ref />
@@ -4594,7 +4601,7 @@ Body Control Talent\par
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
-          <score>20</score>
+          <score>21</score>
           <level>0</level>
           <calcs>
             <syslevels>0</syslevels>
@@ -4602,7 +4609,7 @@ Body Control Talent\par
             <maxscore>1000000</maxscore>
             <minscore>0</minscore>
             <round>-1</round>
-            <basescore>20</basescore>
+            <basescore>21</basescore>
           </calcs>
           <armordata />
           <ref />
@@ -4612,7 +4619,7 @@ Body Control Talent\par
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
-          <score>640</score>
+          <score>1344</score>
           <level>0</level>
           <calcs>
             <syslevels>0</syslevels>
@@ -4620,7 +4627,7 @@ Body Control Talent\par
             <maxscore>1000000</maxscore>
             <minscore>0</minscore>
             <round>1</round>
-            <basescore>640</basescore>
+            <basescore>1344</basescore>
           </calcs>
           <armordata />
           <ref>
@@ -4651,14 +4658,14 @@ Body Control Talent\par
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
-          <score>12</score>
+          <score>11</score>
           <level>0</level>
           <calcs>
             <syslevels>0</syslevels>
             <basevalue>ST:Perception</basevalue>
             <maxscore>1000000</maxscore>
             <minscore>0</minscore>
-            <basescore>12</basescore>
+            <basescore>11</basescore>
           </calcs>
           <armordata />
           <ref />
@@ -4710,7 +4717,7 @@ Body Control Talent\par
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>10</points>
-          <score>12</score>
+          <score>11</score>
           <level>2</level>
           <calcs>
             <syslevels>0</syslevels>
@@ -4722,7 +4729,7 @@ Body Control Talent\par
             <up>5</up>
             <down>-5</down>
             <step>1</step>
-            <basescore>12</basescore>
+            <basescore>11</basescore>
           </calcs>
           <armordata />
           <ref>
@@ -4735,15 +4742,17 @@ Body Control Talent\par
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
-          <score>6</score>
+          <score>5.5</score>
           <level>0</level>
           <calcs>
             <syslevels>0</syslevels>
             <basevalue>ST:Will/2</basevalue>
-            <basescore>6</basescore>
+            <basescore>5.5</basescore>
           </calcs>
           <armordata />
-          <ref />
+          <ref>
+            <display>yes</display>
+          </ref>
         </trait>
         <trait type="Attributes" idkey="10661">
           <name>X-Heavy Encumbrance</name>
@@ -4751,7 +4760,7 @@ Body Control Talent\par
           <taboofailed>0</taboofailed>
           <symbol>XEnc</symbol>
           <points>0</points>
-          <score>800</score>
+          <score>1680</score>
           <level>0</level>
           <calcs>
             <syslevels>0</syslevels>
@@ -4759,7 +4768,7 @@ Body Control Talent\par
             <maxscore>10000000</maxscore>
             <minscore>0</minscore>
             <round>0</round>
-            <basescore>800</basescore>
+            <basescore>1680</basescore>
           </calcs>
           <armordata />
           <ref>
@@ -4891,7 +4900,7 @@ Body Control Talent\par
           </bonuses>
         </trait>
       </cultures>
-      <advantages count="20">
+      <advantages count="22">
         <trait type="Advantages" idkey="10717">
           <name>Ambidexterity</name>
           <needscheck>-1</needscheck>
@@ -4992,7 +5001,7 @@ Body Control Talent\par
             <attackmode>
               <name>Power Dodge</name>
               <skillused>ST:Basic Speed + 3</skillused>
-              <chareffectivest>20</chareffectivest>
+              <chareffectivest>21</chareffectivest>
               <charskillscore>9</charskillscore>
               <charskillused>"ST:Basic Speed"+ 3</charskillused>
               <charparryscore>No</charparryscore>
@@ -5002,7 +5011,7 @@ Body Control Talent\par
             <attackmode>
               <name>Power Block/Physical</name>
               <skillused>ST:HT÷2 + 3</skillused>
-              <chareffectivest>20</chareffectivest>
+              <chareffectivest>21</chareffectivest>
               <charskillscore>9</charskillscore>
               <charskillused>"ST:HT÷2"+ 3</charskillused>
               <charparryscore>No</charparryscore>
@@ -5012,7 +5021,7 @@ Body Control Talent\par
             <attackmode>
               <name>Power Block/Mental</name>
               <skillused>ST:Will÷2 + 3</skillused>
-              <chareffectivest>20</chareffectivest>
+              <chareffectivest>21</chareffectivest>
               <charskillscore>9</charskillscore>
               <charskillused>"ST:Will÷2"+ 3</charskillused>
               <charparryscore>No</charparryscore>
@@ -5242,7 +5251,7 @@ Body Control Talent\par
               <rof>1</rof>
               <skillused>SK:Innate Attack (Projectile), ST:DX-4, SK:Innate Attack (Beam)-2, SK:Innate Attack (Breath)-2, SK:Innate Attack (Gaze)-2, SK:Innate Attack (Projectile)-2</skillused>
               <charparry>0</charparry>
-              <chareffectivest>20</chareffectivest>
+              <chareffectivest>21</chareffectivest>
               <charskillscore>17</charskillscore>
               <charskillused>"SK:Innate Attack (Projectile)"</charskillused>
               <charparryscore>12</charparryscore>
@@ -5460,7 +5469,7 @@ Body Control Talent\par
               <shots>n/a</shots>
               <skillused>SK:Innate Attack (Projectile), ST:DX-4, SK:Innate Attack (Beam)-2, SK:Innate Attack (Breath)-2, SK:Innate Attack (Gaze)-2, SK:Innate Attack (Projectile)-2</skillused>
               <charparry>0</charparry>
-              <chareffectivest>20</chareffectivest>
+              <chareffectivest>21</chareffectivest>
               <charskillscore>17</charskillscore>
               <charskillused>"SK:Innate Attack (Projectile)"</charskillused>
               <charparryscore>12</charparryscore>
@@ -5697,7 +5706,7 @@ Body Control Talent\par
             <attackmode>
               <name />
               <radius>2</radius>
-              <chareffectivest>20</chareffectivest>
+              <chareffectivest>21</chareffectivest>
               <charskillscore>0</charskillscore>
               <charparryscore>No</charparryscore>
               <chardamage>0d</chardamage>
@@ -5707,7 +5716,7 @@ Body Control Talent\par
             <attackmode>
               <name />
               <radius>2</radius>
-              <chareffectivest>20</chareffectivest>
+              <chareffectivest>21</chareffectivest>
               <charskillscore>0</charskillscore>
               <charparryscore>No</charparryscore>
               <chardamage>0d</chardamage>
@@ -6137,6 +6146,70 @@ Body Control Talent\par
             </modifier>
           </modifiers>
         </trait>
+        <trait type="Advantages" idkey="11893">
+          <name>Extra ST</name>
+          <needscheck>-1</needscheck>
+          <taboofailed>0</taboofailed>
+          <symbol>Physical</symbol>
+          <cat>Attributes</cat>
+          <points>10</points>
+          <level>1</level>
+          <calcs>
+            <cost>10/20</cost>
+            <syslevels>0</syslevels>
+            <baselevel>1</baselevel>
+            <premodspoints>10</premodspoints>
+          </calcs>
+          <armordata />
+          <ref>
+            <page>B14</page>
+            <description>The Extra ST advantage allows you to take extra levels of the attribute which you can then apply enhancements and limitations to. The "Affects displayed score" modifier causes the Extra ST advantage to affect the displayed attribute score. If you don't wish this advantage to affect the displayed score remove that modifier.</description>
+            <mods>Extra ST, Size, No Fine Manipulators</mods>
+          </ref>
+          <modifiers count="2">
+            <modifier idkey="11894">
+              <name>Affects displayed ST score</name>
+              <group>Extra ST</group>
+              <cost>+0%</cost>
+              <level>1</level>
+              <premodsvalue>+0%</premodsvalue>
+              <value>+0%</value>
+              <valuenum>0</valuenum>
+              <gives>+Owner::Level to ST:ST</gives>
+              <shortname>Affects ST</shortname>
+              <extended count="1">
+                <extendedtag>
+                  <tagname>description</tagname>
+                  <tagvalue>This modifier causes the Extra ST advantage to affect the displayed attribute score. If you don't wish this advantage to affect the displayed score remove this modifier.</tagvalue>
+                </extendedtag>
+              </extended>
+              <bonuses count="1">
+                <bonus>
+                  <targetprefix>ST</targetprefix>
+                  <targetname>st</targetname>
+                  <targettype>Attributes</targettype>
+                  <affects>level</affects>
+                  <bonuspart>+Owner::Level</bonuspart>
+                  <bonustype>1</bonustype>
+                  <fullbonustext>+Owner::Level to ST:ST</fullbonustext>
+                  <value>1</value>
+                </bonus>
+              </bonuses>
+            </modifier>
+            <modifier idkey="11895">
+              <name>Size</name>
+              <group>Size</group>
+              <cost>-10%</cost>
+              <formula>-@if(ST:Size Modifier::score &gt; 0 THEN ST:Size Modifier::score * 10 else 0)</formula>
+              <forceformula>yes</forceformula>
+              <level>1</level>
+              <premodsvalue>+0%</premodsvalue>
+              <value>+0%</value>
+              <valuenum>0</valuenum>
+              <page>B15</page>
+            </modifier>
+          </modifiers>
+        </trait>
         <trait type="Advantages" idkey="10712">
           <name>Fit</name>
           <needscheck>-1</needscheck>
@@ -6191,6 +6264,65 @@ Body Control Talent\par
               <bonustype>1</bonustype>
               <fullbonustext>+1 to ST:HT</fullbonustext>
               <value>1</value>
+            </bonus>
+          </conditionals>
+        </trait>
+        <trait type="Advantages" idkey="11891">
+          <name>Lifting ST</name>
+          <needscheck>-1</needscheck>
+          <taboofailed>0</taboofailed>
+          <cat>Exotic, Physical, Exotic Physical</cat>
+          <points>9</points>
+          <level>3</level>
+          <calcs>
+            <cost>3/6</cost>
+            <syslevels>0</syslevels>
+            <baselevel>3</baselevel>
+            <premodspoints>9</premodspoints>
+          </calcs>
+          <armordata />
+          <ref>
+            <page>B65, P58</page>
+            <gives>+1 to ST:Lifting ST</gives>
+            <conditional>+1 to ST:ST</conditional>
+            <mods>Lifting ST, No Fine Manipulators, Size</mods>
+          </ref>
+          <modifiers count="1">
+            <modifier idkey="11892">
+              <name>Size</name>
+              <group>Size</group>
+              <cost>-10%</cost>
+              <formula>-@if(ST:Size Modifier::score &gt; 0 THEN ST:Size Modifier::score * 10 else 0)</formula>
+              <forceformula>yes</forceformula>
+              <level>1</level>
+              <premodsvalue>+0%</premodsvalue>
+              <value>+0%</value>
+              <valuenum>0</valuenum>
+              <page>B15</page>
+            </modifier>
+          </modifiers>
+          <bonuses count="1">
+            <bonus>
+              <targetprefix>ST</targetprefix>
+              <targetname>lifting st</targetname>
+              <targettype>Attributes</targettype>
+              <affects>level</affects>
+              <bonuspart>+1</bonuspart>
+              <bonustype>1</bonustype>
+              <fullbonustext>+1 to ST:Lifting ST</fullbonustext>
+              <value>3</value>
+            </bonus>
+          </bonuses>
+          <conditionals count="1">
+            <bonus>
+              <targetprefix>ST</targetprefix>
+              <targetname>st</targetname>
+              <targettype>Attributes</targettype>
+              <affects>level</affects>
+              <bonuspart>+1</bonuspart>
+              <bonustype>1</bonustype>
+              <fullbonustext>+1 to ST:ST</fullbonustext>
+              <value>3</value>
             </bonus>
           </conditionals>
         </trait>
@@ -6502,7 +6634,7 @@ Body Control Talent\par
           </ref>
         </trait>
       </perks>
-      <disadvantages count="4">
+      <disadvantages count="5">
         <trait type="Disadvantages" idkey="10758">
           <name>Bad Temper</name>
           <needscheck>-1</needscheck>
@@ -6617,6 +6749,58 @@ Body Control Talent\par
               <valuenum>1</valuenum>
               <shortname>12 or less</shortname>
               <page>B121</page>
+            </modifier>
+          </modifiers>
+        </trait>
+        <trait type="Disadvantages" idkey="11897">
+          <name>Reduced IQ</name>
+          <needscheck>-1</needscheck>
+          <taboofailed>0</taboofailed>
+          <symbol>Physical, Mental</symbol>
+          <cat>Attributes</cat>
+          <points>-20</points>
+          <level>1</level>
+          <calcs>
+            <cost>-20/-40</cost>
+            <syslevels>0</syslevels>
+            <baselevel>1</baselevel>
+            <premodspoints>-20</premodspoints>
+          </calcs>
+          <armordata />
+          <ref>
+            <page>B15</page>
+            <description>The Reduced IQ disadvantage allows you to take reduced levels of the attribute which you can then apply enhancements and limitations to. The "Affects displayed score" modifier causes the Reduced IQ advantage to affect the displayed attribute score. If you don't wish this advantage to affect the displayed score remove that modifier.</description>
+            <mods>Reduced IQ</mods>
+          </ref>
+          <modifiers count="1">
+            <modifier idkey="11898">
+              <name>Affects displayed IQ score</name>
+              <group>Reduced IQ</group>
+              <cost>+0%</cost>
+              <level>1</level>
+              <premodsvalue>+0%</premodsvalue>
+              <value>+0%</value>
+              <valuenum>0</valuenum>
+              <gives>-owner::Level to ST:IQ</gives>
+              <shortname>Affects IQ</shortname>
+              <extended count="1">
+                <extendedtag>
+                  <tagname>description</tagname>
+                  <tagvalue>This modifier causes the Reduced IQ advantage to affect the displayed attribute score. If you don't wish this advantage to affect the displayed score remove this modifier.</tagvalue>
+                </extendedtag>
+              </extended>
+              <bonuses count="1">
+                <bonus>
+                  <targetprefix>ST</targetprefix>
+                  <targetname>iq</targetname>
+                  <targettype>Attributes</targettype>
+                  <affects>level</affects>
+                  <bonuspart>-owner::Level</bonuspart>
+                  <bonustype>1</bonustype>
+                  <fullbonustext>-owner::Level to ST:IQ</fullbonustext>
+                  <value>-1</value>
+                </bonus>
+              </bonuses>
             </modifier>
           </modifiers>
         </trait>
@@ -6755,7 +6939,7 @@ Body Control Talent\par
           <type>IQ/E</type>
           <step>+1</step>
           <stepoff>IQ</stepoff>
-          <level>11</level>
+          <level>10</level>
           <calcs>
             <sd>0</sd>
             <deflevel>0</deflevel>
@@ -6763,7 +6947,7 @@ Body Control Talent\par
             <levelmult>1</levelmult>
             <syslevels>0</syslevels>
             <extralevels>0</extralevels>
-            <baselevel>11</baselevel>
+            <baselevel>10</baselevel>
             <basepoints>2</basepoints>
             <multpoints>2</multpoints>
             <apppoints>2</apppoints>
@@ -6823,12 +7007,12 @@ Body Control Talent\par
               <damagebasedon>ST:Punch</damagebasedon>
               <reachbasedon>ST:One Arm Reach</reachbasedon>
               <charparry>0</charparry>
-              <chareffectivest>20</chareffectivest>
+              <chareffectivest>21</chareffectivest>
               <charskillscore>14</charskillscore>
               <charskillused>"SK:Brawling"</charskillused>
               <charparryscore>11</charparryscore>
               <charskillusedkey>k10753</charskillusedkey>
-              <chardamage>2d</chardamage>
+              <chardamage>2d+1</chardamage>
               <dmg>thr</dmg>
               <chardamtype>cr</chardamtype>
               <charreach>C</charreach>
@@ -6843,12 +7027,12 @@ Body Control Talent\par
               <damagebasedon>ST:Bite</damagebasedon>
               <reachbasedon>ST:Neck Reach</reachbasedon>
               <charparry>No</charparry>
-              <chareffectivest>20</chareffectivest>
+              <chareffectivest>21</chareffectivest>
               <charskillscore>14</charskillscore>
               <charskillused>"SK:Brawling"</charskillused>
               <charparryscore>No</charparryscore>
               <charskillusedkey>k10753</charskillusedkey>
-              <chardamage>2d</chardamage>
+              <chardamage>2d+1</chardamage>
               <dmg>thr</dmg>
               <chardamtype>cr</chardamtype>
               <charreach>C</charreach>
@@ -6863,12 +7047,12 @@ Body Control Talent\par
               <damagebasedon>ST:Kick</damagebasedon>
               <reachbasedon>ST:Leg Reach</reachbasedon>
               <charparry>No</charparry>
-              <chareffectivest>20</chareffectivest>
+              <chareffectivest>21</chareffectivest>
               <charskillscore>12</charskillscore>
               <charskillused>"SK:Brawling"-2</charskillused>
               <charparryscore>No</charparryscore>
               <charskillusedkey>k10753</charskillusedkey>
-              <chardamage>2d+1</chardamage>
+              <chardamage>2d+2</chardamage>
               <dmg>thr</dmg>
               <chardamtype>cr</chardamtype>
               <charreach>C,1</charreach>
@@ -6957,17 +7141,17 @@ Body Control Talent\par
           <type>IQ/A</type>
           <step>+1</step>
           <stepoff>IQ</stepoff>
-          <level>11</level>
+          <level>10</level>
           <calcs>
             <sd>0</sd>
-            <deflevel>9</deflevel>
+            <deflevel>8</deflevel>
             <deffrom>Musical Instrument (Guitar)</deffrom>
             <deffromid>10778</deffromid>
             <pointmult>1</pointmult>
             <levelmult>1</levelmult>
             <syslevels>0</syslevels>
             <extralevels>0</extralevels>
-            <baselevel>11</baselevel>
+            <baselevel>10</baselevel>
             <basepoints>3</basepoints>
             <multpoints>3</multpoints>
             <apppoints>4</apppoints>
@@ -7117,7 +7301,7 @@ Body Control Talent\par
           <type>Will/A</type>
           <step>+1</step>
           <stepoff>Will</stepoff>
-          <level>13</level>
+          <level>12</level>
           <calcs>
             <sd>0</sd>
             <deflevel>0</deflevel>
@@ -7125,7 +7309,7 @@ Body Control Talent\par
             <levelmult>1</levelmult>
             <syslevels>0</syslevels>
             <extralevels>0</extralevels>
-            <baselevel>13</baselevel>
+            <baselevel>12</baselevel>
             <basepoints>4</basepoints>
             <multpoints>4</multpoints>
             <apppoints>4</apppoints>
@@ -7148,7 +7332,7 @@ Body Control Talent\par
           <type>IQ/A</type>
           <step>+3</step>
           <stepoff>IQ</stepoff>
-          <level>13</level>
+          <level>12</level>
           <calcs>
             <sd>0</sd>
             <deflevel>0</deflevel>
@@ -7156,7 +7340,7 @@ Body Control Talent\par
             <levelmult>1</levelmult>
             <syslevels>2</syslevels>
             <extralevels>2</extralevels>
-            <baselevel>11</baselevel>
+            <baselevel>10</baselevel>
             <basepoints>4</basepoints>
             <multpoints>4</multpoints>
             <apppoints>4</apppoints>
@@ -7179,7 +7363,7 @@ Body Control Talent\par
           <type>IQ/H</type>
           <step>+2</step>
           <stepoff>IQ</stepoff>
-          <level>12</level>
+          <level>11</level>
           <calcs>
             <sd>0</sd>
             <deflevel>0</deflevel>
@@ -7187,7 +7371,7 @@ Body Control Talent\par
             <levelmult>1</levelmult>
             <syslevels>0</syslevels>
             <extralevels>0</extralevels>
-            <baselevel>12</baselevel>
+            <baselevel>11</baselevel>
             <basepoints>12</basepoints>
             <multpoints>12</multpoints>
             <apppoints>12</apppoints>
@@ -7240,7 +7424,7 @@ Body Control Talent\par
           <type>IQ/A</type>
           <step>+2</step>
           <stepoff>IQ</stepoff>
-          <level>12</level>
+          <level>11</level>
           <calcs>
             <sd>0</sd>
             <deflevel>0</deflevel>
@@ -7248,7 +7432,7 @@ Body Control Talent\par
             <levelmult>1</levelmult>
             <syslevels>0</syslevels>
             <extralevels>0</extralevels>
-            <baselevel>12</baselevel>
+            <baselevel>11</baselevel>
             <basepoints>8</basepoints>
             <multpoints>8</multpoints>
             <apppoints>8</apppoints>
@@ -7514,7 +7698,7 @@ Body Control Talent\par
               <rcl>3</rcl>
               <skillused>SK:Gun!, SK:Guns (Pistol), ST:DX-4, SK:Guns (Grenade Launcher)-4, SK:Guns (Gyroc)-4, SK:Guns (Light Anti-Armor Weapon)-4, SK:Guns (Light Machine Gun)- 2, SK:Guns (Musket)-2, SK:Guns (Pistol)-2, SK:Guns (Rifle)-2, SK:Guns (Shotgun)-2, SK:Guns (Submachine Gun)-2</skillused>
               <uses>6</uses>
-              <chareffectivest>20</chareffectivest>
+              <chareffectivest>21</chareffectivest>
               <charminst>10</charminst>
               <charskillscore>15</charskillscore>
               <charskillused>"SK:Guns (Pistol)"</charskillused>
@@ -8323,7 +8507,7 @@ Body Control Talent\par
         <thbase>1</thbase>
         <thadd>-2</thadd>
         <swbase>1</swbase>
-        <swadd />
+        <swadd>0</swadd>
       </basicdamage>
       <basicdamage>
         <st>11</st>
@@ -8342,16 +8526,16 @@ Body Control Talent\par
       <basicdamage>
         <st>13</st>
         <thbase>1</thbase>
-        <thadd />
+        <thadd>0</thadd>
         <swbase>2</swbase>
         <swadd>-1</swadd>
       </basicdamage>
       <basicdamage>
         <st>14</st>
         <thbase>1</thbase>
-        <thadd />
+        <thadd>0</thadd>
         <swbase>2</swbase>
-        <swadd />
+        <swadd>0</swadd>
       </basicdamage>
       <basicdamage>
         <st>15</st>
@@ -8379,7 +8563,7 @@ Body Control Talent\par
         <thbase>1</thbase>
         <thadd>+2</thadd>
         <swbase>3</swbase>
-        <swadd />
+        <swadd>0</swadd>
       </basicdamage>
       <basicdamage>
         <st>19</st>
@@ -8398,16 +8582,16 @@ Body Control Talent\par
       <basicdamage>
         <st>21</st>
         <thbase>2</thbase>
-        <thadd />
+        <thadd>0</thadd>
         <swbase>4</swbase>
         <swadd>-1</swadd>
       </basicdamage>
       <basicdamage>
         <st>22</st>
         <thbase>2</thbase>
-        <thadd />
+        <thadd>0</thadd>
         <swbase>4</swbase>
-        <swadd />
+        <swadd>0</swadd>
       </basicdamage>
       <basicdamage>
         <st>23</st>
@@ -8435,7 +8619,7 @@ Body Control Talent\par
         <thbase>2</thbase>
         <thadd>+2</thadd>
         <swbase>5</swbase>
-        <swadd />
+        <swadd>0</swadd>
       </basicdamage>
       <basicdamage>
         <st>27</st>
@@ -8454,14 +8638,14 @@ Body Control Talent\par
       <basicdamage>
         <st>29</st>
         <thbase>3</thbase>
-        <thadd />
+        <thadd>0</thadd>
         <swbase>5</swbase>
         <swadd>+2</swadd>
       </basicdamage>
       <basicdamage>
         <st>30</st>
         <thbase>3</thbase>
-        <thadd />
+        <thadd>0</thadd>
         <swbase>5</swbase>
         <swadd>+2</swadd>
       </basicdamage>
@@ -8484,14 +8668,14 @@ Body Control Talent\par
         <thbase>3</thbase>
         <thadd>+2</thadd>
         <swbase>6</swbase>
-        <swadd />
+        <swadd>0</swadd>
       </basicdamage>
       <basicdamage>
         <st>34</st>
         <thbase>3</thbase>
         <thadd>+2</thadd>
         <swbase>6</swbase>
-        <swadd />
+        <swadd>0</swadd>
       </basicdamage>
       <basicdamage>
         <st>35</st>
@@ -8510,14 +8694,14 @@ Body Control Talent\par
       <basicdamage>
         <st>37</st>
         <thbase>4</thbase>
-        <thadd />
+        <thadd>0</thadd>
         <swbase>6</swbase>
         <swadd>+2</swadd>
       </basicdamage>
       <basicdamage>
         <st>38</st>
         <thbase>4</thbase>
-        <thadd />
+        <thadd>0</thadd>
         <swbase>6</swbase>
         <swadd>+2</swadd>
       </basicdamage>
@@ -8538,7 +8722,7 @@ Body Control Talent\par
       <basicdamage>
         <st>45</st>
         <thbase>5</thbase>
-        <thadd />
+        <thadd>0</thadd>
         <swbase>7</swbase>
         <swadd>+1</swadd>
       </basicdamage>
@@ -8552,7 +8736,7 @@ Body Control Talent\par
       <basicdamage>
         <st>55</st>
         <thbase>6</thbase>
-        <thadd />
+        <thadd>0</thadd>
         <swbase>8</swbase>
         <swadd>+1</swadd>
       </basicdamage>
@@ -8561,7 +8745,7 @@ Body Control Talent\par
         <thbase>7</thbase>
         <thadd>-1</thadd>
         <swbase>9</swbase>
-        <swadd />
+        <swadd>0</swadd>
       </basicdamage>
       <basicdamage>
         <st>65</st>
@@ -8573,9 +8757,9 @@ Body Control Talent\par
       <basicdamage>
         <st>70</st>
         <thbase>8</thbase>
-        <thadd />
+        <thadd>0</thadd>
         <swbase>10</swbase>
-        <swadd />
+        <swadd>0</swadd>
       </basicdamage>
       <basicdamage>
         <st>75</st>
@@ -8587,9 +8771,9 @@ Body Control Talent\par
       <basicdamage>
         <st>80</st>
         <thbase>9</thbase>
-        <thadd />
+        <thadd>0</thadd>
         <swbase>11</swbase>
-        <swadd />
+        <swadd>0</swadd>
       </basicdamage>
       <basicdamage>
         <st>85</st>
@@ -8601,9 +8785,9 @@ Body Control Talent\par
       <basicdamage>
         <st>90</st>
         <thbase>10</thbase>
-        <thadd />
+        <thadd>0</thadd>
         <swbase>12</swbase>
-        <swadd />
+        <swadd>0</swadd>
       </basicdamage>
       <basicdamage>
         <st>95</st>
@@ -8615,16 +8799,16 @@ Body Control Talent\par
       <basicdamage>
         <st>100</st>
         <thbase>11</thbase>
-        <thadd />
+        <thadd>0</thadd>
         <swbase>13</swbase>
-        <swadd />
+        <swadd>0</swadd>
       </basicdamage>
       <basicdamage>
         <st>0</st>
         <thbase>(@int(ST:Striking ST/10)+1)</thbase>
-        <thadd />
+        <thadd>0</thadd>
         <swbase>(@int(ST:Striking ST/10)+3)</swbase>
-        <swadd />
+        <swadd>0</swadd>
       </basicdamage>
     </basicdamages>
     <damagebreaks count="2">
@@ -27628,7 +27812,7 @@ Body Control Talent\par
         <filename>mental_16.png</filename>
         <criteria>Advantages where cat listincludes {mental}</criteria>
         <image><![CDATA[iVBORw0KGgoAAAANSUhEUgAAAA8AAAAQCAYAAADJViUEAAAABGdBTUEAALGPC/xhBQAAAAlwSFlz
-AAALEQAACxEBf2RfkQAAAAd0SU1FB+EGERIZD2I0ZEoAAAD7SURBVDhPvZI/yoNAEMU9in8KC8FK
+AAALDgAACw4BQL7hQQAAAAd0SU1FB+EGERIZD2I0ZEoAAAD7SURBVDhPvZI/yoNAEMU9in8KC8FK
 bKwttLMRQbDwCFqJCHZWVvYexs4beJtJnmaWTXaT70sTHo8dduY3zA5rkEbLspDv+9S2Lc3zTEVR
 UJ7ntO87yXVSeClJEhqGgY7jUDyOI63rKho8jktRFIlC0zQV476ua9q27WwgQMhxnLcgbFnWmW+a
 5nsYRr4sSxXmZBAEWhBGvqoqFcZY/G7P8/4PY8tcIC8ONu5lOBlO0/QZdl1XwLJt2z4BngRxlmX6
@@ -27640,7 +27824,7 @@ xg3BO+JKFy8frAAAAABJRU5ErkJggg==]]></image>
         <filename>mental_16.png</filename>
         <criteria>Disadvantages where cat listincludes {mental}</criteria>
         <image><![CDATA[iVBORw0KGgoAAAANSUhEUgAAAA8AAAAQCAYAAADJViUEAAAABGdBTUEAALGPC/xhBQAAAAlwSFlz
-AAALEQAACxEBf2RfkQAAAAd0SU1FB+EGERIZD2I0ZEoAAAD7SURBVDhPvZI/yoNAEMU9in8KC8FK
+AAALDgAACw4BQL7hQQAAAAd0SU1FB+EGERIZD2I0ZEoAAAD7SURBVDhPvZI/yoNAEMU9in8KC8FK
 bKwttLMRQbDwCFqJCHZWVvYexs4beJtJnmaWTXaT70sTHo8dduY3zA5rkEbLspDv+9S2Lc3zTEVR
 UJ7ntO87yXVSeClJEhqGgY7jUDyOI63rKho8jktRFIlC0zQV476ua9q27WwgQMhxnLcgbFnWmW+a
 5nsYRr4sSxXmZBAEWhBGvqoqFcZY/G7P8/4PY8tcIC8ONu5lOBlO0/QZdl1XwLJt2z4BngRxlmX6
@@ -27698,8 +27882,8 @@ z86dSz83cz7h/HhPTM/9CxEXbvUG9g5c9Ll4+ZL7pQt9Tn1nL9tdPnXF5srJq4yrndcsr3X0W/S3
 /2TxU/uA5UDHdavrXTesb3QPLh88M+QwdP6m681Lt7xuXbu94vbgcOjwnZHokdE77DtTd1PuvriX
 eW/h/sYH6AdFD6UeVjxSfNTws+7PbaOWo6fHXMf6Hwc/vj/OGn/2S8Yv7ycKnpCfVEyqTDZPmU2d
 mnafvvF05dOJZ+nPFmYKf5X+tfa5zvMffnP8rX82YnbiBf/Fp99LXsq/PPRq2aueuYC5R69TXy/M
-F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALEQAA
-CxEBf2RfkQAAA5NJREFUOE9lk3tM01cUx49AeUO1gFApA3mpW0JmshkTY+KGUZljsvgoGmXozHA+
+F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDgAA
+Cw4BQL7hQQAAA5NJREFUOE9lk3tM01cUx49AeUO1gFApA3mpW0JmshkTY+KGUZljsvgoGmXozHA+
 EPQvjYmIc8l0bjI25kSXKGYQH6gBFcUXY10qETtny6PwYy2dtmBJf0VaUqA5O+cuEN2anNz7uz3n
 c8/5nnvA5XKB3+8HSZJAp9OFt7W1xXg9niBEhJGXLxdsL9pmLj9YJo+Pj7/LZ+3t7YpLFy/G6PV6
 hdstA5+NjY0ByPK/H8anxpxl2dnjczMysOXBg6+cTieszvv4BQAg26GDZffdbjccPlReOTc9Ezeu
@@ -27768,8 +27952,8 @@ z86dSz83cz7h/HhPTM/9CxEXbvUG9g5c9Ll4+ZL7pQt9Tn1nL9tdPnXF5srJq4yrndcsr3X0W/S3
 /2TxU/uA5UDHdavrXTesb3QPLh88M+QwdP6m681Lt7xuXbu94vbgcOjwnZHokdE77DtTd1PuvriX
 eW/h/sYH6AdFD6UeVjxSfNTws+7PbaOWo6fHXMf6Hwc/vj/OGn/2S8Yv7ycKnpCfVEyqTDZPmU2d
 mnafvvF05dOJZ+nPFmYKf5X+tfa5zvMffnP8rX82YnbiBf/Fp99LXsq/PPRq2aueuYC5R69TXy/M
-F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALEQAA
-CxEBf2RfkQAAA5NJREFUOE9lk3tM01cUx49AeUO1gFApA3mpW0JmshkTY+KGUZljsvgoGmXozHA+
+F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDgAA
+Cw4BQL7hQQAAA5NJREFUOE9lk3tM01cUx49AeUO1gFApA3mpW0JmshkTY+KGUZljsvgoGmXozHA+
 EPQvjYmIc8l0bjI25kSXKGYQH6gBFcUXY10qETtny6PwYy2dtmBJf0VaUqA5O+cuEN2anNz7uz3n
 c8/5nnvA5XKB3+8HSZJAp9OFt7W1xXg9niBEhJGXLxdsL9pmLj9YJo+Pj7/LZ+3t7YpLFy/G6PV6
 hdstA5+NjY0ByPK/H8anxpxl2dnjczMysOXBg6+cTieszvv4BQAg26GDZffdbjccPlReOTc9Ezeu
@@ -27838,8 +28022,8 @@ z86dSz83cz7h/HhPTM/9CxEXbvUG9g5c9Ll4+ZL7pQt9Tn1nL9tdPnXF5srJq4yrndcsr3X0W/S3
 /2TxU/uA5UDHdavrXTesb3QPLh88M+QwdP6m681Lt7xuXbu94vbgcOjwnZHokdE77DtTd1PuvriX
 eW/h/sYH6AdFD6UeVjxSfNTws+7PbaOWo6fHXMf6Hwc/vj/OGn/2S8Yv7ycKnpCfVEyqTDZPmU2d
 mnafvvF05dOJZ+nPFmYKf5X+tfa5zvMffnP8rX82YnbiBf/Fp99LXsq/PPRq2aueuYC5R69TXy/M
-F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALEQAA
-CxEBf2RfkQAABTtJREFUOE9tVHlQk1cQ3xA5FPEElcOEU/A+8WprFcQCCgI61AOtovWgtv7RqZwT
+F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDgAA
+Cw4BQL7hQQAABTtJREFUOE9tVHlQk1cQ3xA5FPEElcOEU/A+8WprFcQCCgI61AOtovWgtv7RqZwT
 22o5PYvBKkJCiiYIIYQjciRMEKiOQggKigYB0TC2NlyKUa7Xfd+Mzjj2m3nzvWPf77e7v30L7W1t
 PPG1a2lV6iq3pvtNUCSXQ19vLyTGJ0ClSgVPWlth146dIBJmASEEGhoaQJgpgK6uLhgZGYYfjhyB
 iEOHQKVUMef1dfXQ0dEBXXq929Xs7DhRVtZRyLuee9uZwyGeS5aSqJ+OKaS5ucHDQ0Nmp5JToKWl
@@ -27916,8 +28100,8 @@ z86dSz83cz7h/HhPTM/9CxEXbvUG9g5c9Ll4+ZL7pQt9Tn1nL9tdPnXF5srJq4yrndcsr3X0W/S3
 /2TxU/uA5UDHdavrXTesb3QPLh88M+QwdP6m681Lt7xuXbu94vbgcOjwnZHokdE77DtTd1PuvriX
 eW/h/sYH6AdFD6UeVjxSfNTws+7PbaOWo6fHXMf6Hwc/vj/OGn/2S8Yv7ycKnpCfVEyqTDZPmU2d
 mnafvvF05dOJZ+nPFmYKf5X+tfa5zvMffnP8rX82YnbiBf/Fp99LXsq/PPRq2aueuYC5R69TXy/M
-F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALEQAA
-CxEBf2RfkQAABTtJREFUOE9tVHlQk1cQ3xA5FPEElcOEU/A+8WprFcQCCgI61AOtovWgtv7RqZwT
+F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDgAA
+Cw4BQL7hQQAABTtJREFUOE9tVHlQk1cQ3xA5FPEElcOEU/A+8WprFcQCCgI61AOtovWgtv7RqZwT
 22o5PYvBKkJCiiYIIYQjciRMEKiOQggKigYB0TC2NlyKUa7Xfd+Mzjj2m3nzvWPf77e7v30L7W1t
 PPG1a2lV6iq3pvtNUCSXQ19vLyTGJ0ClSgVPWlth146dIBJmASEEGhoaQJgpgK6uLhgZGYYfjhyB
 iEOHQKVUMef1dfXQ0dEBXXq929Xs7DhRVtZRyLuee9uZwyGeS5aSqJ+OKaS5ucHDQ0Nmp5JToKWl
@@ -27994,8 +28178,8 @@ z86dSz83cz7h/HhPTM/9CxEXbvUG9g5c9Ll4+ZL7pQt9Tn1nL9tdPnXF5srJq4yrndcsr3X0W/S3
 /2TxU/uA5UDHdavrXTesb3QPLh88M+QwdP6m681Lt7xuXbu94vbgcOjwnZHokdE77DtTd1PuvriX
 eW/h/sYH6AdFD6UeVjxSfNTws+7PbaOWo6fHXMf6Hwc/vj/OGn/2S8Yv7ycKnpCfVEyqTDZPmU2d
 mnafvvF05dOJZ+nPFmYKf5X+tfa5zvMffnP8rX82YnbiBf/Fp99LXsq/PPRq2aueuYC5R69TXy/M
-F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALEQAA
-CxEBf2RfkQAAAkFJREFUKFNj+Pr1K8P79+8Znj59ynDr1i31msqqiQmxcQdbm1tWrVm92vjZs2cM
+F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDgAA
+Cw4BQL7hQQAAAkFJREFUKFNj+Pr1K8P79+8Znj59ynDr1i31msqqiQmxcQdbm1tWrVm92vjZs2cM
 ////Z/j79y8Dw8+fP8Gcc2fPers5u/znZuf8z8vB+Z+ThfW/lpr6/9OnTlWB5P/8+cMANvnz58/m
 zg6O/xkYGP4rysj+V1VU+q8kJw/mgzQ8e/o0AKQBbGpdbe0mkISyvAIKBmkCiefn5F4EK3744IGd
 raXVfw5mlv8qCoooikF8QV6+/xoqqv+PHjniz7Bq5apiIT7+/3KSUigKYRjkHJAGoMc7GPp6e1Yw
@@ -28058,8 +28242,8 @@ z86dSz83cz7h/HhPTM/9CxEXbvUG9g5c9Ll4+ZL7pQt9Tn1nL9tdPnXF5srJq4yrndcsr3X0W/S3
 /2TxU/uA5UDHdavrXTesb3QPLh88M+QwdP6m681Lt7xuXbu94vbgcOjwnZHokdE77DtTd1PuvriX
 eW/h/sYH6AdFD6UeVjxSfNTws+7PbaOWo6fHXMf6Hwc/vj/OGn/2S8Yv7ycKnpCfVEyqTDZPmU2d
 mnafvvF05dOJZ+nPFmYKf5X+tfa5zvMffnP8rX82YnbiBf/Fp99LXsq/PPRq2aueuYC5R69TXy/M
-F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALEQAA
-CxEBf2RfkQAAAkFJREFUKFNj+Pr1K8P79+8Znj59ynDr1i31msqqiQmxcQdbm1tWrVm92vjZs2cM
+F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDgAA
+Cw4BQL7hQQAAAkFJREFUKFNj+Pr1K8P79+8Znj59ynDr1i31msqqiQmxcQdbm1tWrVm92vjZs2cM
 ////Z/j79y8Dw8+fP8Gcc2fPers5u/znZuf8z8vB+Z+ThfW/lpr6/9OnTlWB5P/8+cMANvnz58/m
 zg6O/xkYGP4rysj+V1VU+q8kJw/mgzQ8e/o0AKQBbGpdbe0mkISyvAIKBmkCiefn5F4EK3744IGd
 raXVfw5mlv8qCoooikF8QV6+/xoqqv+PHjniz7Bq5apiIT7+/3KSUigKYRjkHJAGoMc7GPp6e1Yw
@@ -28122,8 +28306,8 @@ z86dSz83cz7h/HhPTM/9CxEXbvUG9g5c9Ll4+ZL7pQt9Tn1nL9tdPnXF5srJq4yrndcsr3X0W/S3
 /2TxU/uA5UDHdavrXTesb3QPLh88M+QwdP6m681Lt7xuXbu94vbgcOjwnZHokdE77DtTd1PuvriX
 eW/h/sYH6AdFD6UeVjxSfNTws+7PbaOWo6fHXMf6Hwc/vj/OGn/2S8Yv7ycKnpCfVEyqTDZPmU2d
 mnafvvF05dOJZ+nPFmYKf5X+tfa5zvMffnP8rX82YnbiBf/Fp99LXsq/PPRq2aueuYC5R69TXy/M
-F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALEQAA
-CxEBf2RfkQAAAnhJREFUOE9VUklMk1EQHgiNIjsGEZEipZa4REiUoB6ApERD4sEFg0i8GKnVeAOR
+F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDgAA
+Cw4BQL7hQQAAAnhJREFUOE9VUklMk1EQHgiNIjsGEZEipZa4REiUoB6ApERD4sEFg0i8GKnVeAOR
 eFT04BKMtRgTPVUSXAktxBM1pUEoWKtiWaXYlcVg96bLD+ObX0U4fJl/3vu+eTPz/RCNRtchFosB
 IhIEGrX6jrq7uzzKzj6OjMDo11GASCSyChKEQiF4r9XCh4EBwRFpFYpFIjSbzY1erxfGx8YBVlZW
 VvG3MgwNDsLLzk5J2YFSPwBgXs42fPRQ0flraUm4SloDMUWdTnc8P3c7T85ISUUS3m5tnYfJiQmw
@@ -28187,8 +28371,8 @@ z86dSz83cz7h/HhPTM/9CxEXbvUG9g5c9Ll4+ZL7pQt9Tn1nL9tdPnXF5srJq4yrndcsr3X0W/S3
 /2TxU/uA5UDHdavrXTesb3QPLh88M+QwdP6m681Lt7xuXbu94vbgcOjwnZHokdE77DtTd1PuvriX
 eW/h/sYH6AdFD6UeVjxSfNTws+7PbaOWo6fHXMf6Hwc/vj/OGn/2S8Yv7ycKnpCfVEyqTDZPmU2d
 mnafvvF05dOJZ+nPFmYKf5X+tfa5zvMffnP8rX82YnbiBf/Fp99LXsq/PPRq2aueuYC5R69TXy/M
-F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALEQAA
-CxEBf2RfkQAAAnhJREFUOE9VUklMk1EQHgiNIjsGEZEipZa4REiUoB6ApERD4sEFg0i8GKnVeAOR
+F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDgAA
+Cw4BQL7hQQAAAnhJREFUOE9VUklMk1EQHgiNIjsGEZEipZa4REiUoB6ApERD4sEFg0i8GKnVeAOR
 eFT04BKMtRgTPVUSXAktxBM1pUEoWKtiWaXYlcVg96bLD+ObX0U4fJl/3vu+eTPz/RCNRtchFosB
 IhIEGrX6jrq7uzzKzj6OjMDo11GASCSyChKEQiF4r9XCh4EBwRFpFYpFIjSbzY1erxfGx8YBVlZW
 VvG3MgwNDsLLzk5J2YFSPwBgXs42fPRQ0flraUm4SloDMUWdTnc8P3c7T85ISUUS3m5tnYfJiQmw
