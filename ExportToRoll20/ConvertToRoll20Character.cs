@@ -158,11 +158,10 @@ namespace ExportToRoll20
                 roll20Character.BasicMovePoints = traitBasicMove.Points;
                 roll20Character.BasicMoveMod = GetTraitModifier(traitBasicMove);
 
-                // TODO: Find the advantage and apply points/mods
-                roll20Character.EnhancedGroundMovePoints = 0;
-                roll20Character.EnhancedGroundMoveMod = 0;
+                GCATrait traitEnhancedGround = currentCharacter.ItemByNameAndExt("Enhanced Ground Move", (int)TraitTypes.Attributes);
+                roll20Character.EnhancedGroundMoveMod = traitEnhancedGround.Score;
 
-                GCATrait traitDodge = currentCharacter.ItemByNameAndExt("Basic Move", (int)TraitTypes.Attributes);
+                GCATrait traitDodge = currentCharacter.ItemByNameAndExt("Dodge", (int)TraitTypes.Attributes);
                 roll20Character.DodgeMod = GetTraitModifier(traitDodge);
 
                 GCATrait traitLiftingST = currentCharacter.ItemByNameAndExt("Lifting ST", (int)TraitTypes.Attributes);
@@ -183,18 +182,27 @@ namespace ExportToRoll20
                 roll20Character.FatiguePointsPoints = traitFatigue.Points;
                 roll20Character.FatiguePointsMod = GetTraitModifier(traitFatigue);
 
-                // TODO: Check for flight advantage, don't worry about points, that will be placed under advantages
-                roll20Character.FlightChecked = false;
+                GCATrait traitFlight = currentCharacter.ItemByNameAndExt("Flight", (int)TraitTypes.Advantages);
+                if (traitFlight != null)
+                {
+                    roll20Character.FlightChecked = true;
+                }
 
-                // TODO: Check for basic air move mods, points will be placed under advantages
-                roll20Character.BasicAirMoveMod = 0;
+                GCATrait traitBasicAirMove = currentCharacter.ItemByNameAndExt("Basic Air Move", (int)TraitTypes.Attributes);
+                if (traitBasicAirMove != null)
+                {
+                    roll20Character.BasicAirMoveMod = GetTraitModifier(traitBasicAirMove) ;
+                }
 
-                // TODO: Check for enhanced air level
-                roll20Character.EnhancedAirLevel = 0;
+                GCATrait traitEnhancedAirMove = currentCharacter.ItemByNameAndExt("Enhanced Air Move", (int)TraitTypes.Attributes);
+                if (traitEnhancedAirMove != null)
+                {
+                    roll20Character.EnhancedAirLevel = traitEnhancedAirMove.Score;
+                }
 
                 // TODO: check for amphibious advantage
                 roll20Character.AmphibiousChecked = false;
-                roll20Character.BasicAirMoveMod = 0;
+                roll20Character.BasicWaterMoveMod = 0;
                 roll20Character.EnhancedWaterLevel = 0;
 
                 // TODO: Check for water move mods
@@ -207,7 +215,6 @@ namespace ExportToRoll20
                 // TODO: check for magery level or PI bonus
                 roll20Character.SpellBonus = 0;
 
-                // TODO: Check for combat reflexes
                 GCATrait traitCombatReflexes = currentCharacter.ItemByNameAndExt("Combat Reflexes", (int)TraitTypes.Advantages);
                 if (traitCombatReflexes != null)
                 {
