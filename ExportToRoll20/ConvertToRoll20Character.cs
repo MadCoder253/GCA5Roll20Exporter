@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -34,7 +35,16 @@ namespace ExportToRoll20
                 roll20Character.ApplySizeModifier = traitSizeMod.Score > 0;
 
                 // TODO: Get reactions
-                roll20Character.Reactions = "";
+                GCATrait traitReactions = currentCharacter.ItemByNameAndExt("Reaction", (int)TraitTypes.Attributes);
+                string reactionBonusList = GetTraitModifiersList(traitReactions);
+                string reactionConditionalList = GetTraitConditionalList(traitReactions);
+                string reactions = reactionBonusList;
+                if (reactionConditionalList.Length > 0)
+                {
+                    reactions += "\nConditional: " + reactionConditionalList;
+                }
+
+                roll20Character.Reactions = reactions;
 
                 if (int.TryParse(currentCharacter.Campaign.BaseTL, out int campaignTl))
                 {
@@ -250,6 +260,7 @@ namespace ExportToRoll20
         /// <summary>
         /// Get the final trait modifier. will ignore combat reflex bonuses
         /// since that is factpored in by the Roll20 character sheet
+        /// TODO: Future enhancement. Convert to an extension for GCACharacter object
         /// </summary>
         /// <param name="theTrait"></param>
         /// <returns></returns>
@@ -286,23 +297,56 @@ namespace ExportToRoll20
             return finalModifier;
         }
 
-        public void LogItem(string message)
+        /// <summary>
+        /// Gets a comma separated list of reasons for bonuslist items
+        /// ignores combat reflexes, which is handled by Roll20 sheet
+        /// </summary>
+        /// <param name="theTrait"></param>
+        /// <returns></returns>
+        public string GetTraitModifiersList(GCATrait theTrait)
         {
-            if (string.IsNullOrEmpty(message))
+            var reasons = new ArrayList();
+
+            if (theTrait != null)
             {
-                FileWriter fileWriter = new FileWriter();
-
-                try
+                for (int index = 1; index <= theTrait.BonusListItemsCount(); index++)
                 {
-                    fileWriter.FileOpen(this.TargetFileName + ".log");
+                    string bonusItem = theTrait.BonusListItems(index);
 
-                    fileWriter.WriteLine(message);
+                    // ignore combat reflexes bonuses, that is added on the Roll20 character sheet
+                    if (!bonusItem.Contains("combat reflexes"))
+                    {
+                        reasons.Add(bonusItem);
+
+                    }
+
                 }
-                finally
+
+            }
+
+            return string.Join(", ", reasons.ToArray());
+        }
+
+        /// <summary>
+        /// Gets a comma separated list of reasons for conditiallist items
+        /// ignores combat reflexes, which is handled by Roll20 sheet
+        /// </summary>
+        /// <param name="theTrait"></param>
+        /// <returns></returns>
+        public string GetTraitConditionalList(GCATrait theTrait)
+        {
+            var conditionalLists = new ArrayList();
+
+            if (theTrait != null)
+            {
+                for (int index = 1; index <= theTrait.ConditionalListItemsCount(); index++)
                 {
-                    fileWriter.FileClose();
+                    conditionalLists.Add(theTrait.ConditionalListItems(index));
                 }
-            };
+
+            }
+
+            return string.Join(", ", conditionalLists.ToArray());
         }
 
     }
