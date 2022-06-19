@@ -89,116 +89,89 @@ namespace ExportToRoll20
 
                 GCATrait traitStrength = currentCharacter.ItemByNameAndExt("ST", (int)TraitTypes.Attributes);
                 roll20Character.StrengthPoints = traitStrength.Points;
-                // TODO: <bonuslist>+2 from 'Combat Reflexes'</bonuslist>
                 roll20Character.StrengthMod = GetTraitModifier(traitStrength);
 
                 GCATrait traitDex = currentCharacter.ItemByNameAndExt("DX", (int)TraitTypes.Attributes);
                 roll20Character.DexterityPoints = traitDex.Points;
-                // TODO: <bonuslist>+2 from 'Combat Reflexes'</bonuslist>
-                roll20Character.DexterityMod = 0;
+                roll20Character.DexterityMod = GetTraitModifier(traitDex);
 
                 GCATrait traitIq = currentCharacter.ItemByNameAndExt("IQ", (int)TraitTypes.Attributes);
                 roll20Character.IntelligencePoints = traitIq.Points;
-                // TODO: <bonuslist>+2 from 'Combat Reflexes'</bonuslist>
-                roll20Character.IntelligenceMod = 0;
+                roll20Character.IntelligenceMod = GetTraitModifier(traitIq);
 
                 GCATrait traitHealth = currentCharacter.ItemByNameAndExt("HT", (int)TraitTypes.Attributes);
                 roll20Character.HealthPoints = traitHealth.Points;
-                // TODO: <bonuslist>+2 from 'Combat Reflexes'</bonuslist>
-                roll20Character.HealthMod = 0;
+                roll20Character.HealthMod = GetTraitModifier(traitHealth);
 
                 GCATrait traitPerception = currentCharacter.ItemByNameAndExt("Perception", (int)TraitTypes.Attributes);
                 roll20Character.PerceptionPoints = traitPerception.Points;
-                // TODO: <bonuslist>+2 from 'Combat Reflexes'</bonuslist>
-                roll20Character.PerceptionMod = 0;
+                roll20Character.PerceptionMod = GetTraitModifier(traitPerception);
 
                 GCATrait traitVision = currentCharacter.ItemByNameAndExt("Vision", (int)TraitTypes.Attributes);
                 roll20Character.VisionPoints = traitVision.Points;
-                // TODO: <bonuslist>+2 from 'Combat Reflexes'</bonuslist>
-                roll20Character.VisionMod = 0;
+                roll20Character.VisionMod = GetTraitModifier(traitVision);
 
                 GCATrait traitHearing = currentCharacter.ItemByNameAndExt("Hearing", (int)TraitTypes.Attributes);
                 roll20Character.HearingPoints = traitHearing.Points;
-                // TODO: <bonuslist>+2 from 'Combat Reflexes'</bonuslist>
-                roll20Character.HearingMod = 0;
+                roll20Character.HearingMod = GetTraitModifier(traitHearing);
 
                 GCATrait traitTasteSmell = currentCharacter.ItemByNameAndExt("Taste/Smell", (int)TraitTypes.Attributes);
                 roll20Character.TasteSmellPoints = traitTasteSmell.Points;
-                // TODO: <bonuslist>+2 from 'Combat Reflexes'</bonuslist>
-                roll20Character.TasteSmellMod = 0;
+                roll20Character.TasteSmellMod = GetTraitModifier(traitTasteSmell);
 
                 GCATrait traitTouch = currentCharacter.ItemByNameAndExt("Touch", (int)TraitTypes.Attributes);
                 roll20Character.TouchPoints = traitTouch.Points;
-                // TODO: <bonuslist>+2 from 'Combat Reflexes'</bonuslist>
-                roll20Character.TouchMod = 0;
+                roll20Character.TouchMod = GetTraitModifier(traitTouch);
 
                 GCATrait traitWill = currentCharacter.ItemByNameAndExt("Will", (int)TraitTypes.Attributes);
                 roll20Character.WillpowerPoints = traitWill.Points;
-                // TODO: <bonuslist>+2 from 'Combat Reflexes'</bonuslist>
-                roll20Character.WillpowerMod = 0;
+                roll20Character.WillpowerMod = GetTraitModifier(traitWill);
 
                 GCATrait traitFear = currentCharacter.ItemByNameAndExt("Fright Check", (int)TraitTypes.Attributes);
                 roll20Character.FearCheckPoints = traitFear.Points;
-                // TODO: <bonuslist>+2 from 'Combat Reflexes'</bonuslist>
-                // NOTE: ignore combat reflexes that will be added automatically by roll20 checkbox
-                roll20Character.FearCheckMod = 0;
+                roll20Character.FearCheckMod = GetTraitModifier(traitFear);
 
                 // TODO: place holder determine if there's other modifiers
                 roll20Character.StunCheckMod = 0;
 
                 GCATrait traitConsciousnessCheck = currentCharacter.ItemByNameAndExt("Consciousness Check", (int)TraitTypes.Attributes);
-                // NOTE: no need to set points, not used. advantages are used instead.
-                roll20Character.UnconsciousCheckPoints = 0;
-                // TODO: <bonuslist>+1 from 'fit'</bonuslist>
-                roll20Character.UnconsciousCheckMod = 0;
+                roll20Character.UnconsciousCheckMod = GetTraitModifier(traitConsciousnessCheck);
 
                 GCATrait traitDeathCheck = currentCharacter.ItemByNameAndExt("Death Check", (int)TraitTypes.Attributes);
-                // NOTE: no need to set points, not used. advantages are used instead.
-                roll20Character.DeathCheckPoints = 0;
-                // TODO: <bonuslist>+1 from 'fit'</bonuslist>
-                roll20Character.DeathCheckMod = 0;
+                roll20Character.DeathCheckMod = GetTraitModifier(traitDeathCheck);
 
                 GCATrait traitBasicSpeed = currentCharacter.ItemByNameAndExt("Basic Speed", (int)TraitTypes.Attributes);
                 roll20Character.BasicSpeedPoints = traitBasicSpeed.Points;
-                // TODO: <bonuslist>+1 from 'fit'</bonuslist>
-                roll20Character.BasicSpeedMod = 0;
+                roll20Character.BasicSpeedMod = GetTraitModifier(traitBasicSpeed);
 
                 GCATrait traitBasicMove = currentCharacter.ItemByNameAndExt("Basic Move", (int)TraitTypes.Attributes);
                 roll20Character.BasicMovePoints = traitBasicMove.Points;
-                // TODO: <bonuslist>+1 from 'fit'</bonuslist>
-                roll20Character.BasicMoveMod = 0;
+                roll20Character.BasicMoveMod = GetTraitModifier(traitBasicMove);
 
                 // TODO: Find the advantage and apply points/mods
                 roll20Character.EnhancedGroundMovePoints = 0;
                 roll20Character.EnhancedGroundMoveMod = 0;
 
                 GCATrait traitDodge = currentCharacter.ItemByNameAndExt("Basic Move", (int)TraitTypes.Attributes);
-                // TODO: <bonuslist>+1 from 'Combat Reflexes', +1 from 'Enhanced Dodge'</bonuslist>
-                // NOTE: Ignore combat reflexes
-                roll20Character.DodgeMod = 0;
+                roll20Character.DodgeMod = GetTraitModifier(traitDodge);
 
                 GCATrait traitLiftingST = currentCharacter.ItemByNameAndExt("Lifting ST", (int)TraitTypes.Attributes);
                 roll20Character.LiftStPoints = traitLiftingST.Points;
-                // TODO: <bonuslist>+4 from 'Enhanced Muscle', +3 from 'Lifting ST'</bonuslist>
-                // NOTE: the Lifting ST bonus is in addition to lifting st points!
-                roll20Character.LiftStMod = 0;
+                roll20Character.LiftStMod = GetTraitModifier(traitLiftingST);
 
                 GCATrait traitSrikingST = currentCharacter.ItemByNameAndExt("Striking ST", (int)TraitTypes.Attributes);
                 roll20Character.StrikingStPoints = traitSrikingST.Points;
-                // TODO: <bonuslist>+4 from 'Enhanced Muscle', +3 from 'String ST'</bonuslist>
-                // NOTE: the Lifting ST bonus is in addition to Striking st points!
-                roll20Character.StrikingStMod = 0;
+                roll20Character.StrikingStMod = GetTraitModifier(traitSrikingST);
 
                 GCATrait traitHitPoints = currentCharacter.ItemByNameAndExt("Hit Points", (int)TraitTypes.Attributes);
                 roll20Character.HitPoints = traitHitPoints.Score;
                 roll20Character.HitPointsPoints = traitHitPoints.Points;
-                // TODO: <bonuslist>+4 from 'Enhanced Muscle', +3 from 'String ST'</bonuslist>
-                roll20Character.HitPointsMod = 0;
+                roll20Character.HitPointsMod = GetTraitModifier(traitHitPoints);
 
                 GCATrait traitFatigue = currentCharacter.ItemByNameAndExt("Fatigue Points", (int)TraitTypes.Attributes);
                 roll20Character.FatiguePoints = traitFatigue.Score;
                 roll20Character.FatiguePointsPoints = traitFatigue.Points;
-                roll20Character.FatiguePointsMod = 0;
+                roll20Character.FatiguePointsMod = GetTraitModifier(traitFatigue);
 
                 // TODO: Check for flight advantage, don't worry about points, that will be placed under advantages
                 roll20Character.FlightChecked = false;
@@ -231,10 +204,6 @@ namespace ExportToRoll20
                     roll20Character.CombatReflexes = true;
                 }
                 
-
-
-
-
             }   
 
             return roll20Character;
