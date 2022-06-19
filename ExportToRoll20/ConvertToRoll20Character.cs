@@ -209,8 +209,8 @@ namespace ExportToRoll20
                 roll20Character.BasicWaterMoveMod = 0;
                 roll20Character.EnhancedWaterLevel = 0;
 
-                // TODO: check for super jump levels
-                roll20Character.SuperJumpEnteredLevel = 0;
+                GCATrait traitSuperJump = currentCharacter.ItemByNameAndExt("Super Jump", (int)TraitTypes.Attributes);
+                roll20Character.SuperJumpEnteredLevel = traitSuperJump.Score;
 
                 // TODO: check for magery level or PI bonus
                 roll20Character.SpellBonus = 0;
