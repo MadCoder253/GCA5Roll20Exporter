@@ -224,8 +224,30 @@ namespace ExportToRoll20
                 GCATrait traitSuperJump = currentCharacter.ItemByNameAndExt("Super Jump", (int)TraitTypes.Attributes);
                 roll20Character.SuperJumpEnteredLevel = traitSuperJump.Score;
 
-                // TODO: check for magery level or PI bonus
-                roll20Character.SpellBonus = 0;
+                GCATrait traitMagery = currentCharacter.ItemByNameAndExt("Magery", (int)TraitTypes.Attributes);
+                roll20Character.SpellBonus = traitMagery.Score;
+
+                // check for ritual magery
+                GCATrait traitRitualMagery = currentCharacter.ItemByNameAndExt("Ritual Magery", (int)TraitTypes.Advantages);
+                if(traitRitualMagery != null && traitRitualMagery.Level > roll20Character.SpellBonus)
+                {
+                    roll20Character.SpellBonus = traitRitualMagery.Level;
+                }
+
+                // get all the power investiture types. Determine if it's the highest score
+                var traitsPowerInvestitures = currentCharacter.ItemsByName("Power Investiture", (int)TraitTypes.Advantages);
+
+                if (traitsPowerInvestitures != null)
+                {
+                    foreach(GCATrait trait in traitsPowerInvestitures)
+                    {
+                        if (trait.Level > roll20Character.SpellBonus)
+                        {
+                            roll20Character.SpellBonus = trait.Level;
+                        }
+                    }
+                }
+
 
                 GCATrait traitCombatReflexes = currentCharacter.ItemByNameAndExt("Combat Reflexes", (int)TraitTypes.Advantages);
                 if (traitCombatReflexes != null)
