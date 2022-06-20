@@ -200,14 +200,26 @@ namespace ExportToRoll20
                     roll20Character.EnhancedAirLevel = traitEnhancedAirMove.Score;
                 }
 
-                // TODO: check for amphibious advantage
-                roll20Character.AmphibiousChecked = false;
-                roll20Character.BasicWaterMoveMod = 0;
-                roll20Character.EnhancedWaterLevel = 0;
+                GCATrait traitAmphibous = currentCharacter.ItemByNameAndExt("Amphibious", (int)TraitTypes.Advantages);
+                if (traitAmphibous != null)
+                {
+                    roll20Character.AmphibiousChecked = true;
+                }
 
-                // TODO: Check for water move mods
-                roll20Character.BasicWaterMoveMod = 0;
-                roll20Character.EnhancedWaterLevel = 0;
+                GCATrait traitBasicWaterMove = currentCharacter.ItemByNameAndExt("Basic Water Move", (int)TraitTypes.Attributes);
+                roll20Character.BasicWaterMoveMod = GetTraitModifier(traitBasicWaterMove);
+
+                GCATrait traitWaterMove = currentCharacter.ItemByNameAndExt("Water Move", (int)TraitTypes.Attributes);
+                if (traitWaterMove != null)
+                {
+                    roll20Character.BasicWaterMovePoints = traitWaterMove.Points;
+                }
+
+                GCATrait traitEnhancedWaterMove = currentCharacter.ItemByNameAndExt("Enhanced Water Move", (int)TraitTypes.Attributes);
+                if (traitEnhancedWaterMove != null)
+                {
+                    roll20Character.EnhancedWaterLevel = traitEnhancedWaterMove.Score;
+                }
 
                 GCATrait traitSuperJump = currentCharacter.ItemByNameAndExt("Super Jump", (int)TraitTypes.Attributes);
                 roll20Character.SuperJumpEnteredLevel = traitSuperJump.Score;
