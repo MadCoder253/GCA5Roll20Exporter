@@ -9,7 +9,7 @@
     </author>
     <system>
       <version>5</version>
-      <lastkey>12985</lastkey>
+      <lastkey>12988</lastkey>
     </system>
     <library>
       <name>%user%\Supers.gds</name>
@@ -176,6 +176,7 @@
       <sheetviewsheet />
       <charactersheet>GURPS 4th Edition Official Character Sheet</charactersheet>
       <exportsheet>Simple Text Export</exportsheet>
+      <altexportsheet>Simple Text Export</altexportsheet>
       <altexportsheet>Simple Text Export</altexportsheet>
       <altexportsheet>Simple Text Export</altexportsheet>
       <altexportsheet>Simple Text Export</altexportsheet>
@@ -4969,7 +4970,7 @@ Body Control Talent\par
           </ref>
         </trait>
       </cultures>
-      <advantages count="22">
+      <advantages count="23">
         <trait type="Advantages" idkey="10717">
           <name>Ambidexterity</name>
           <needscheck>-1</needscheck>
@@ -5283,6 +5284,54 @@ Body Control Talent\par
               <value>2</value>
             </bonus>
           </bonuses>
+        </trait>
+        <trait type="Advantages" idkey="12986">
+          <name>Contact</name>
+          <nameext>Rival Gang</nameext>
+          <needscheck>-1</needscheck>
+          <taboofailed>0</taboofailed>
+          <cat>Mundane, Social, Mundane Social</cat>
+          <points>1</points>
+          <level>1</level>
+          <calcs>
+            <cost>1/2/3/4</cost>
+            <syslevels>0</syslevels>
+            <baselevel>1</baselevel>
+            <premodspoints>1</premodspoints>
+            <upto>4</upto>
+            <levelnames>Effective Skill 12, Effective Skill 15, Effective Skill 18, Effective Skill 21</levelnames>
+          </calcs>
+          <armordata />
+          <ref>
+            <basedon>Contact</basedon>
+            <page>B44</page>
+            <usernotes>My notes here</usernotes>
+            <description>Ugly dude with twisted lips</description>
+            <mods>Contact, Frequency of Appearance, Reliability, Favor</mods>
+          </ref>
+          <modifiers count="2">
+            <modifier idkey="12988">
+              <name>Frequency: roll of  9 or less</name>
+              <nameext>Fairly often</nameext>
+              <group>Frequency of Appearance</group>
+              <cost>*1</cost>
+              <level>1</level>
+              <premodsvalue>*1</premodsvalue>
+              <value>*1</value>
+              <valuenum>1</valuenum>
+              <shortname>9 or less</shortname>
+            </modifier>
+            <modifier idkey="12987">
+              <name>Reliability: Somewhat Reliable</name>
+              <group>Reliability</group>
+              <cost>*1</cost>
+              <level>1</level>
+              <premodsvalue>*1</premodsvalue>
+              <value>*1</value>
+              <valuenum>1</valuenum>
+              <shortname>Somewhat Reliable</shortname>
+            </modifier>
+          </modifiers>
         </trait>
         <trait type="Advantages" idkey="10720">
           <name>Crossbow</name>

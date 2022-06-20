@@ -245,6 +245,8 @@ namespace ExportToRoll20
                 }
 
                 roll20Character.RepeatingCultures = GetRepeatingCultures(currentCharacter);
+
+                roll20Character.RepeatingTraits = GetRepeatingTraits(currentCharacter);
                 
             }   
 
@@ -424,6 +426,57 @@ namespace ExportToRoll20
             }
 
             return string.Join("\n", conditionalLists.ToArray());
+        }
+
+        public List<RepeatingTrait> GetRepeatingTraits(GCACharacter myCharacter)
+        {
+            List<RepeatingTrait> list = new List<RepeatingTrait>();
+
+            var advantages = myCharacter.ItemsByType[(int)TraitTypes.Advantages];
+
+            foreach (GCATrait item in advantages)
+            {
+                var listItem = new RepeatingTrait();
+
+                listItem.Idkey = item.IDKey.ToString();
+
+                listItem.Name = item.DisplayName;
+
+                listItem.TraitLevel = item.Level.ToString();
+
+                listItem.Foa = GetFrequencyOfAppearance(item);
+
+                listItem.Points = item.Points;
+
+                listItem.Ref = item.get_TagItem("page");
+
+                listItem.Notes = item.Notes;
+
+                list.Add(listItem);
+
+            }
+
+            return list;
+        }
+
+        public string GetFrequencyOfAppearance(GCATrait trait)
+        {
+            string Foa = "";
+
+            foreach(GCAModifier mod in trait.Mods)
+            {
+                if (mod.Group.Contains("Frequency of Appearance"))
+                {
+                    // <shortname>9 or less</shortname>
+                    string[] shortNameParts = mod.get_CaptionExpanded(false).Split(' ');
+
+                    Foa = shortNameParts[0];
+                    
+                }
+
+            }
+
+            return Foa;
         }
 
     }
