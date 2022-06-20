@@ -9,7 +9,7 @@
     </author>
     <system>
       <version>5</version>
-      <lastkey>11898</lastkey>
+      <lastkey>12985</lastkey>
     </system>
     <library>
       <name>%user%\Supers.gds</name>
@@ -176,6 +176,8 @@
       <sheetviewsheet />
       <charactersheet>GURPS 4th Edition Official Character Sheet</charactersheet>
       <exportsheet>Simple Text Export</exportsheet>
+      <altexportsheet>Simple Text Export</altexportsheet>
+      <altexportsheet>Simple Text Export</altexportsheet>
       <altexportsheet>Simple Text Export</altexportsheet>
       <altexportsheet>Simple Text Export</altexportsheet>
     </output>
@@ -1636,12 +1638,12 @@ Body Control Talent\par
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
-          <score>13</score>
+          <score>14</score>
           <level>0</level>
           <calcs>
             <syslevels>2</syslevels>
             <basevalue>ST:Will</basevalue>
-            <basescore>11</basescore>
+            <basescore>12</basescore>
           </calcs>
           <armordata />
           <ref />
@@ -1673,14 +1675,14 @@ Body Control Talent\par
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
-          <score>11</score>
+          <score>12</score>
           <level>0</level>
           <calcs>
             <syslevels>0</syslevels>
             <basevalue>ST:Perception</basevalue>
             <maxscore>1000000</maxscore>
             <minscore>0</minscore>
-            <basescore>11</basescore>
+            <basescore>12</basescore>
           </calcs>
           <armordata />
           <ref />
@@ -1842,15 +1844,14 @@ Body Control Talent\par
         </trait>
         <trait type="Attributes" idkey="10556">
           <name>IQ</name>
-          <bonuslist>-1 from 'Reduced IQ'</bonuslist>
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <symbol>IQ</symbol>
           <points>0</points>
-          <score>9</score>
+          <score>10</score>
           <level>0</level>
           <calcs>
-            <syslevels>-1</syslevels>
+            <syslevels>0</syslevels>
             <basevalue>10</basevalue>
             <maxscore>1000000</maxscore>
             <minscore>0 - me::syslevels</minscore>
@@ -2007,7 +2008,7 @@ Body Control Talent\par
         </trait>
         <trait type="Attributes" idkey="10561">
           <name>Lifting ST</name>
-          <bonuslist>+3 from 'Lifting ST', +4 from 'Enhanced Muscle'</bonuslist>
+          <bonuslist>+4 from 'Enhanced Muscle', +3 from 'Lifting ST'</bonuslist>
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>15</points>
@@ -2802,7 +2803,7 @@ Body Control Talent\par
         </trait>
         <trait type="Attributes" idkey="10599">
           <name>Native Cultural Familiarities</name>
-          <bonuslist>+1 from 'Western (Native)'</bonuslist>
+          <bonuslist>+1 from 'European (Native)'</bonuslist>
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
@@ -3083,7 +3084,7 @@ Body Control Talent\par
           <taboofailed>0</taboofailed>
           <symbol>Per</symbol>
           <points>10</points>
-          <score>11</score>
+          <score>12</score>
           <level>2</level>
           <calcs>
             <syslevels>0</syslevels>
@@ -3095,7 +3096,7 @@ Body Control Talent\par
             <up>5</up>
             <down>-5</down>
             <step>1</step>
-            <basescore>11</basescore>
+            <basescore>12</basescore>
           </calcs>
           <armordata />
           <ref>
@@ -3108,13 +3109,13 @@ Body Control Talent\par
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
-          <score>0.5</score>
+          <score>0</score>
           <level>0</level>
           <hide>yes</hide>
           <calcs>
             <syslevels>0</syslevels>
             <basevalue>(ST:Will / 2) - @int(ST:Will / 2)</basevalue>
-            <basescore>0.5</basescore>
+            <basescore>0</basescore>
           </calcs>
           <armordata />
           <ref>
@@ -3869,14 +3870,14 @@ Body Control Talent\par
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
-          <score>11</score>
+          <score>12</score>
           <level>0</level>
           <calcs>
             <syslevels>0</syslevels>
             <basevalue>ST:Perception</basevalue>
             <maxscore>1000000</maxscore>
             <minscore>0</minscore>
-            <basescore>11</basescore>
+            <basescore>12</basescore>
           </calcs>
           <armordata />
           <ref />
@@ -4495,14 +4496,14 @@ Body Control Talent\par
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
-          <score>11</score>
+          <score>12</score>
           <level>0</level>
           <calcs>
             <syslevels>0</syslevels>
             <basevalue>ST:Perception</basevalue>
             <maxscore>1000000</maxscore>
             <minscore>0</minscore>
-            <basescore>11</basescore>
+            <basescore>12</basescore>
           </calcs>
           <armordata />
           <ref />
@@ -4658,14 +4659,14 @@ Body Control Talent\par
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
-          <score>11</score>
+          <score>12</score>
           <level>0</level>
           <calcs>
             <syslevels>0</syslevels>
             <basevalue>ST:Perception</basevalue>
             <maxscore>1000000</maxscore>
             <minscore>0</minscore>
-            <basescore>11</basescore>
+            <basescore>12</basescore>
           </calcs>
           <armordata />
           <ref />
@@ -4717,7 +4718,7 @@ Body Control Talent\par
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>10</points>
-          <score>11</score>
+          <score>12</score>
           <level>2</level>
           <calcs>
             <syslevels>0</syslevels>
@@ -4729,7 +4730,7 @@ Body Control Talent\par
             <up>5</up>
             <down>-5</down>
             <step>1</step>
-            <basescore>11</basescore>
+            <basescore>12</basescore>
           </calcs>
           <armordata />
           <ref>
@@ -4742,12 +4743,12 @@ Body Control Talent\par
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
-          <score>5.5</score>
+          <score>6</score>
           <level>0</level>
           <calcs>
             <syslevels>0</syslevels>
             <basevalue>ST:Will/2</basevalue>
-            <basescore>5.5</basescore>
+            <basescore>6</basescore>
           </calcs>
           <armordata />
           <ref>
@@ -4797,7 +4798,7 @@ Body Control Talent\par
           </ref>
         </trait>
       </attributes>
-      <languages count="1">
+      <languages count="3">
         <trait type="Languages" idkey="10663">
           <name>English</name>
           <bonuslist>0 from 'English'</bonuslist>
@@ -4864,10 +4865,57 @@ Body Control Talent\par
             </modifier>
           </modifiers>
         </trait>
+        <trait type="Languages" idkey="12985">
+          <name>French</name>
+          <nameext>Spoken</nameext>
+          <needscheck>-1</needscheck>
+          <taboofailed>0</taboofailed>
+          <cat>Mundane, Social, Language, Language Spoken, Social Background</cat>
+          <points>1</points>
+          <level>1</level>
+          <calcs>
+            <cost>1/2</cost>
+            <syslevels>0</syslevels>
+            <baselevel>1</baselevel>
+            <premodspoints>1</premodspoints>
+            <upto>3 LimitingTotal</upto>
+            <levelnames>[None], Broken, Accented, Native</levelnames>
+          </calcs>
+          <armordata />
+          <ref>
+            <basedon>Language (Spoken)</basedon>
+            <page>B24</page>
+            <taboo>Native Languages &gt; 1</taboo>
+            <mods>Language</mods>
+          </ref>
+        </trait>
+        <trait type="Languages" idkey="12984">
+          <name>German</name>
+          <needscheck>-1</needscheck>
+          <taboofailed>0</taboofailed>
+          <cat>Mundane, Social, Language, Language Spoken, Language Written, Social Background</cat>
+          <points>2</points>
+          <level>1</level>
+          <calcs>
+            <cost>2/4</cost>
+            <syslevels>0</syslevels>
+            <baselevel>1</baselevel>
+            <premodspoints>2</premodspoints>
+            <upto>3 LimitingTotal</upto>
+            <levelnames>[None], Broken, Accented, Native</levelnames>
+          </calcs>
+          <armordata />
+          <ref>
+            <basedon>Language</basedon>
+            <page>B24</page>
+            <taboo>Native Languages &gt; 1</taboo>
+            <mods>Language</mods>
+          </ref>
+        </trait>
       </languages>
-      <cultures count="1">
-        <trait type="Cultures" idkey="10665">
-          <name>Western</name>
+      <cultures count="2">
+        <trait type="Cultures" idkey="12982">
+          <name>European</name>
           <nameext>Native</nameext>
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
@@ -4898,6 +4946,27 @@ Body Control Talent\par
               <value>1</value>
             </bonus>
           </bonuses>
+        </trait>
+        <trait type="Cultures" idkey="12983">
+          <name>Western</name>
+          <needscheck>-1</needscheck>
+          <taboofailed>0</taboofailed>
+          <cat>Mundane, Social, Cultural Familiarity, Social Background</cat>
+          <points>1</points>
+          <level>1</level>
+          <calcs>
+            <cost>1</cost>
+            <syslevels>0</syslevels>
+            <baselevel>1</baselevel>
+            <premodspoints>1</premodspoints>
+          </calcs>
+          <armordata />
+          <ref>
+            <basedon>Cultural Familiarity</basedon>
+            <page>B23</page>
+            <taboo>Native Cultural Familiarities &gt; 1</taboo>
+            <mods>Cultural Familiarity</mods>
+          </ref>
         </trait>
       </cultures>
       <advantages count="22">
@@ -6634,7 +6703,7 @@ Body Control Talent\par
           </ref>
         </trait>
       </perks>
-      <disadvantages count="5">
+      <disadvantages count="4">
         <trait type="Disadvantages" idkey="10758">
           <name>Bad Temper</name>
           <needscheck>-1</needscheck>
@@ -6749,58 +6818,6 @@ Body Control Talent\par
               <valuenum>1</valuenum>
               <shortname>12 or less</shortname>
               <page>B121</page>
-            </modifier>
-          </modifiers>
-        </trait>
-        <trait type="Disadvantages" idkey="11897">
-          <name>Reduced IQ</name>
-          <needscheck>-1</needscheck>
-          <taboofailed>0</taboofailed>
-          <symbol>Physical, Mental</symbol>
-          <cat>Attributes</cat>
-          <points>-20</points>
-          <level>1</level>
-          <calcs>
-            <cost>-20/-40</cost>
-            <syslevels>0</syslevels>
-            <baselevel>1</baselevel>
-            <premodspoints>-20</premodspoints>
-          </calcs>
-          <armordata />
-          <ref>
-            <page>B15</page>
-            <description>The Reduced IQ disadvantage allows you to take reduced levels of the attribute which you can then apply enhancements and limitations to. The "Affects displayed score" modifier causes the Reduced IQ advantage to affect the displayed attribute score. If you don't wish this advantage to affect the displayed score remove that modifier.</description>
-            <mods>Reduced IQ</mods>
-          </ref>
-          <modifiers count="1">
-            <modifier idkey="11898">
-              <name>Affects displayed IQ score</name>
-              <group>Reduced IQ</group>
-              <cost>+0%</cost>
-              <level>1</level>
-              <premodsvalue>+0%</premodsvalue>
-              <value>+0%</value>
-              <valuenum>0</valuenum>
-              <gives>-owner::Level to ST:IQ</gives>
-              <shortname>Affects IQ</shortname>
-              <extended count="1">
-                <extendedtag>
-                  <tagname>description</tagname>
-                  <tagvalue>This modifier causes the Reduced IQ advantage to affect the displayed attribute score. If you don't wish this advantage to affect the displayed score remove this modifier.</tagvalue>
-                </extendedtag>
-              </extended>
-              <bonuses count="1">
-                <bonus>
-                  <targetprefix>ST</targetprefix>
-                  <targetname>iq</targetname>
-                  <targettype>Attributes</targettype>
-                  <affects>level</affects>
-                  <bonuspart>-owner::Level</bonuspart>
-                  <bonustype>1</bonustype>
-                  <fullbonustext>-owner::Level to ST:IQ</fullbonustext>
-                  <value>-1</value>
-                </bonus>
-              </bonuses>
             </modifier>
           </modifiers>
         </trait>
@@ -6939,7 +6956,7 @@ Body Control Talent\par
           <type>IQ/E</type>
           <step>+1</step>
           <stepoff>IQ</stepoff>
-          <level>10</level>
+          <level>11</level>
           <calcs>
             <sd>0</sd>
             <deflevel>0</deflevel>
@@ -6947,7 +6964,7 @@ Body Control Talent\par
             <levelmult>1</levelmult>
             <syslevels>0</syslevels>
             <extralevels>0</extralevels>
-            <baselevel>10</baselevel>
+            <baselevel>11</baselevel>
             <basepoints>2</basepoints>
             <multpoints>2</multpoints>
             <apppoints>2</apppoints>
@@ -7141,17 +7158,17 @@ Body Control Talent\par
           <type>IQ/A</type>
           <step>+1</step>
           <stepoff>IQ</stepoff>
-          <level>10</level>
+          <level>11</level>
           <calcs>
             <sd>0</sd>
-            <deflevel>8</deflevel>
+            <deflevel>9</deflevel>
             <deffrom>Musical Instrument (Guitar)</deffrom>
             <deffromid>10778</deffromid>
             <pointmult>1</pointmult>
             <levelmult>1</levelmult>
             <syslevels>0</syslevels>
             <extralevels>0</extralevels>
-            <baselevel>10</baselevel>
+            <baselevel>11</baselevel>
             <basepoints>3</basepoints>
             <multpoints>3</multpoints>
             <apppoints>4</apppoints>
@@ -7301,7 +7318,7 @@ Body Control Talent\par
           <type>Will/A</type>
           <step>+1</step>
           <stepoff>Will</stepoff>
-          <level>12</level>
+          <level>13</level>
           <calcs>
             <sd>0</sd>
             <deflevel>0</deflevel>
@@ -7309,7 +7326,7 @@ Body Control Talent\par
             <levelmult>1</levelmult>
             <syslevels>0</syslevels>
             <extralevels>0</extralevels>
-            <baselevel>12</baselevel>
+            <baselevel>13</baselevel>
             <basepoints>4</basepoints>
             <multpoints>4</multpoints>
             <apppoints>4</apppoints>
@@ -7332,7 +7349,7 @@ Body Control Talent\par
           <type>IQ/A</type>
           <step>+3</step>
           <stepoff>IQ</stepoff>
-          <level>12</level>
+          <level>13</level>
           <calcs>
             <sd>0</sd>
             <deflevel>0</deflevel>
@@ -7340,7 +7357,7 @@ Body Control Talent\par
             <levelmult>1</levelmult>
             <syslevels>2</syslevels>
             <extralevels>2</extralevels>
-            <baselevel>10</baselevel>
+            <baselevel>11</baselevel>
             <basepoints>4</basepoints>
             <multpoints>4</multpoints>
             <apppoints>4</apppoints>
@@ -7363,7 +7380,7 @@ Body Control Talent\par
           <type>IQ/H</type>
           <step>+2</step>
           <stepoff>IQ</stepoff>
-          <level>11</level>
+          <level>12</level>
           <calcs>
             <sd>0</sd>
             <deflevel>0</deflevel>
@@ -7371,7 +7388,7 @@ Body Control Talent\par
             <levelmult>1</levelmult>
             <syslevels>0</syslevels>
             <extralevels>0</extralevels>
-            <baselevel>11</baselevel>
+            <baselevel>12</baselevel>
             <basepoints>12</basepoints>
             <multpoints>12</multpoints>
             <apppoints>12</apppoints>
@@ -7424,7 +7441,7 @@ Body Control Talent\par
           <type>IQ/A</type>
           <step>+2</step>
           <stepoff>IQ</stepoff>
-          <level>11</level>
+          <level>12</level>
           <calcs>
             <sd>0</sd>
             <deflevel>0</deflevel>
@@ -7432,7 +7449,7 @@ Body Control Talent\par
             <levelmult>1</levelmult>
             <syslevels>0</syslevels>
             <extralevels>0</extralevels>
-            <baselevel>11</baselevel>
+            <baselevel>12</baselevel>
             <basepoints>8</basepoints>
             <multpoints>8</multpoints>
             <apppoints>8</apppoints>
@@ -27812,7 +27829,7 @@ Body Control Talent\par
         <filename>mental_16.png</filename>
         <criteria>Advantages where cat listincludes {mental}</criteria>
         <image><![CDATA[iVBORw0KGgoAAAANSUhEUgAAAA8AAAAQCAYAAADJViUEAAAABGdBTUEAALGPC/xhBQAAAAlwSFlz
-AAALDgAACw4BQL7hQQAAAAd0SU1FB+EGERIZD2I0ZEoAAAD7SURBVDhPvZI/yoNAEMU9in8KC8FK
+AAALDAAACwwBP0AiyAAAAAd0SU1FB+EGERIZD2I0ZEoAAAD7SURBVDhPvZI/yoNAEMU9in8KC8FK
 bKwttLMRQbDwCFqJCHZWVvYexs4beJtJnmaWTXaT70sTHo8dduY3zA5rkEbLspDv+9S2Lc3zTEVR
 UJ7ntO87yXVSeClJEhqGgY7jUDyOI63rKho8jktRFIlC0zQV476ua9q27WwgQMhxnLcgbFnWmW+a
 5nsYRr4sSxXmZBAEWhBGvqoqFcZY/G7P8/4PY8tcIC8ONu5lOBlO0/QZdl1XwLJt2z4BngRxlmX6
@@ -27824,7 +27841,7 @@ xg3BO+JKFy8frAAAAABJRU5ErkJggg==]]></image>
         <filename>mental_16.png</filename>
         <criteria>Disadvantages where cat listincludes {mental}</criteria>
         <image><![CDATA[iVBORw0KGgoAAAANSUhEUgAAAA8AAAAQCAYAAADJViUEAAAABGdBTUEAALGPC/xhBQAAAAlwSFlz
-AAALDgAACw4BQL7hQQAAAAd0SU1FB+EGERIZD2I0ZEoAAAD7SURBVDhPvZI/yoNAEMU9in8KC8FK
+AAALDAAACwwBP0AiyAAAAAd0SU1FB+EGERIZD2I0ZEoAAAD7SURBVDhPvZI/yoNAEMU9in8KC8FK
 bKwttLMRQbDwCFqJCHZWVvYexs4beJtJnmaWTXaT70sTHo8dduY3zA5rkEbLspDv+9S2Lc3zTEVR
 UJ7ntO87yXVSeClJEhqGgY7jUDyOI63rKho8jktRFIlC0zQV476ua9q27WwgQMhxnLcgbFnWmW+a
 5nsYRr4sSxXmZBAEWhBGvqoqFcZY/G7P8/4PY8tcIC8ONu5lOBlO0/QZdl1XwLJt2z4BngRxlmX6
@@ -27882,8 +27899,8 @@ z86dSz83cz7h/HhPTM/9CxEXbvUG9g5c9Ll4+ZL7pQt9Tn1nL9tdPnXF5srJq4yrndcsr3X0W/S3
 /2TxU/uA5UDHdavrXTesb3QPLh88M+QwdP6m681Lt7xuXbu94vbgcOjwnZHokdE77DtTd1PuvriX
 eW/h/sYH6AdFD6UeVjxSfNTws+7PbaOWo6fHXMf6Hwc/vj/OGn/2S8Yv7ycKnpCfVEyqTDZPmU2d
 mnafvvF05dOJZ+nPFmYKf5X+tfa5zvMffnP8rX82YnbiBf/Fp99LXsq/PPRq2aueuYC5R69TXy/M
-F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDgAA
-Cw4BQL7hQQAAA5NJREFUOE9lk3tM01cUx49AeUO1gFApA3mpW0JmshkTY+KGUZljsvgoGmXozHA+
+F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDAAA
+CwwBP0AiyAAAA5NJREFUOE9lk3tM01cUx49AeUO1gFApA3mpW0JmshkTY+KGUZljsvgoGmXozHA+
 EPQvjYmIc8l0bjI25kSXKGYQH6gBFcUXY10qETtny6PwYy2dtmBJf0VaUqA5O+cuEN2anNz7uz3n
 c8/5nnvA5XKB3+8HSZJAp9OFt7W1xXg9niBEhJGXLxdsL9pmLj9YJo+Pj7/LZ+3t7YpLFy/G6PV6
 hdstA5+NjY0ByPK/H8anxpxl2dnjczMysOXBg6+cTieszvv4BQAg26GDZffdbjccPlReOTc9Ezeu
@@ -27952,8 +27969,8 @@ z86dSz83cz7h/HhPTM/9CxEXbvUG9g5c9Ll4+ZL7pQt9Tn1nL9tdPnXF5srJq4yrndcsr3X0W/S3
 /2TxU/uA5UDHdavrXTesb3QPLh88M+QwdP6m681Lt7xuXbu94vbgcOjwnZHokdE77DtTd1PuvriX
 eW/h/sYH6AdFD6UeVjxSfNTws+7PbaOWo6fHXMf6Hwc/vj/OGn/2S8Yv7ycKnpCfVEyqTDZPmU2d
 mnafvvF05dOJZ+nPFmYKf5X+tfa5zvMffnP8rX82YnbiBf/Fp99LXsq/PPRq2aueuYC5R69TXy/M
-F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDgAA
-Cw4BQL7hQQAAA5NJREFUOE9lk3tM01cUx49AeUO1gFApA3mpW0JmshkTY+KGUZljsvgoGmXozHA+
+F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDAAA
+CwwBP0AiyAAAA5NJREFUOE9lk3tM01cUx49AeUO1gFApA3mpW0JmshkTY+KGUZljsvgoGmXozHA+
 EPQvjYmIc8l0bjI25kSXKGYQH6gBFcUXY10qETtny6PwYy2dtmBJf0VaUqA5O+cuEN2anNz7uz3n
 c8/5nnvA5XKB3+8HSZJAp9OFt7W1xXg9niBEhJGXLxdsL9pmLj9YJo+Pj7/LZ+3t7YpLFy/G6PV6
 hdstA5+NjY0ByPK/H8anxpxl2dnjczMysOXBg6+cTieszvv4BQAg26GDZffdbjccPlReOTc9Ezeu
@@ -28022,8 +28039,8 @@ z86dSz83cz7h/HhPTM/9CxEXbvUG9g5c9Ll4+ZL7pQt9Tn1nL9tdPnXF5srJq4yrndcsr3X0W/S3
 /2TxU/uA5UDHdavrXTesb3QPLh88M+QwdP6m681Lt7xuXbu94vbgcOjwnZHokdE77DtTd1PuvriX
 eW/h/sYH6AdFD6UeVjxSfNTws+7PbaOWo6fHXMf6Hwc/vj/OGn/2S8Yv7ycKnpCfVEyqTDZPmU2d
 mnafvvF05dOJZ+nPFmYKf5X+tfa5zvMffnP8rX82YnbiBf/Fp99LXsq/PPRq2aueuYC5R69TXy/M
-F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDgAA
-Cw4BQL7hQQAABTtJREFUOE9tVHlQk1cQ3xA5FPEElcOEU/A+8WprFcQCCgI61AOtovWgtv7RqZwT
+F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDAAA
+CwwBP0AiyAAABTtJREFUOE9tVHlQk1cQ3xA5FPEElcOEU/A+8WprFcQCCgI61AOtovWgtv7RqZwT
 22o5PYvBKkJCiiYIIYQjciRMEKiOQggKigYB0TC2NlyKUa7Xfd+Mzjj2m3nzvWPf77e7v30L7W1t
 PPG1a2lV6iq3pvtNUCSXQ19vLyTGJ0ClSgVPWlth146dIBJmASEEGhoaQJgpgK6uLhgZGYYfjhyB
 iEOHQKVUMef1dfXQ0dEBXXq929Xs7DhRVtZRyLuee9uZwyGeS5aSqJ+OKaS5ucHDQ0Nmp5JToKWl
@@ -28100,8 +28117,8 @@ z86dSz83cz7h/HhPTM/9CxEXbvUG9g5c9Ll4+ZL7pQt9Tn1nL9tdPnXF5srJq4yrndcsr3X0W/S3
 /2TxU/uA5UDHdavrXTesb3QPLh88M+QwdP6m681Lt7xuXbu94vbgcOjwnZHokdE77DtTd1PuvriX
 eW/h/sYH6AdFD6UeVjxSfNTws+7PbaOWo6fHXMf6Hwc/vj/OGn/2S8Yv7ycKnpCfVEyqTDZPmU2d
 mnafvvF05dOJZ+nPFmYKf5X+tfa5zvMffnP8rX82YnbiBf/Fp99LXsq/PPRq2aueuYC5R69TXy/M
-F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDgAA
-Cw4BQL7hQQAABTtJREFUOE9tVHlQk1cQ3xA5FPEElcOEU/A+8WprFcQCCgI61AOtovWgtv7RqZwT
+F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDAAA
+CwwBP0AiyAAABTtJREFUOE9tVHlQk1cQ3xA5FPEElcOEU/A+8WprFcQCCgI61AOtovWgtv7RqZwT
 22o5PYvBKkJCiiYIIYQjciRMEKiOQggKigYB0TC2NlyKUa7Xfd+Mzjj2m3nzvWPf77e7v30L7W1t
 PPG1a2lV6iq3pvtNUCSXQ19vLyTGJ0ClSgVPWlth146dIBJmASEEGhoaQJgpgK6uLhgZGYYfjhyB
 iEOHQKVUMef1dfXQ0dEBXXq929Xs7DhRVtZRyLuee9uZwyGeS5aSqJ+OKaS5ucHDQ0Nmp5JToKWl
@@ -28178,8 +28195,8 @@ z86dSz83cz7h/HhPTM/9CxEXbvUG9g5c9Ll4+ZL7pQt9Tn1nL9tdPnXF5srJq4yrndcsr3X0W/S3
 /2TxU/uA5UDHdavrXTesb3QPLh88M+QwdP6m681Lt7xuXbu94vbgcOjwnZHokdE77DtTd1PuvriX
 eW/h/sYH6AdFD6UeVjxSfNTws+7PbaOWo6fHXMf6Hwc/vj/OGn/2S8Yv7ycKnpCfVEyqTDZPmU2d
 mnafvvF05dOJZ+nPFmYKf5X+tfa5zvMffnP8rX82YnbiBf/Fp99LXsq/PPRq2aueuYC5R69TXy/M
-F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDgAA
-Cw4BQL7hQQAAAkFJREFUKFNj+Pr1K8P79+8Znj59ynDr1i31msqqiQmxcQdbm1tWrVm92vjZs2cM
+F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDAAA
+CwwBP0AiyAAAAkFJREFUKFNj+Pr1K8P79+8Znj59ynDr1i31msqqiQmxcQdbm1tWrVm92vjZs2cM
 ////Z/j79y8Dw8+fP8Gcc2fPers5u/znZuf8z8vB+Z+ThfW/lpr6/9OnTlWB5P/8+cMANvnz58/m
 zg6O/xkYGP4rysj+V1VU+q8kJw/mgzQ8e/o0AKQBbGpdbe0mkISyvAIKBmkCiefn5F4EK3744IGd
 raXVfw5mlv8qCoooikF8QV6+/xoqqv+PHjniz7Bq5apiIT7+/3KSUigKYRjkHJAGoMc7GPp6e1Yw
@@ -28242,8 +28259,8 @@ z86dSz83cz7h/HhPTM/9CxEXbvUG9g5c9Ll4+ZL7pQt9Tn1nL9tdPnXF5srJq4yrndcsr3X0W/S3
 /2TxU/uA5UDHdavrXTesb3QPLh88M+QwdP6m681Lt7xuXbu94vbgcOjwnZHokdE77DtTd1PuvriX
 eW/h/sYH6AdFD6UeVjxSfNTws+7PbaOWo6fHXMf6Hwc/vj/OGn/2S8Yv7ycKnpCfVEyqTDZPmU2d
 mnafvvF05dOJZ+nPFmYKf5X+tfa5zvMffnP8rX82YnbiBf/Fp99LXsq/PPRq2aueuYC5R69TXy/M
-F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDgAA
-Cw4BQL7hQQAAAkFJREFUKFNj+Pr1K8P79+8Znj59ynDr1i31msqqiQmxcQdbm1tWrVm92vjZs2cM
+F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDAAA
+CwwBP0AiyAAAAkFJREFUKFNj+Pr1K8P79+8Znj59ynDr1i31msqqiQmxcQdbm1tWrVm92vjZs2cM
 ////Z/j79y8Dw8+fP8Gcc2fPers5u/znZuf8z8vB+Z+ThfW/lpr6/9OnTlWB5P/8+cMANvnz58/m
 zg6O/xkYGP4rysj+V1VU+q8kJw/mgzQ8e/o0AKQBbGpdbe0mkISyvAIKBmkCiefn5F4EK3744IGd
 raXVfw5mlv8qCoooikF8QV6+/xoqqv+PHjniz7Bq5apiIT7+/3KSUigKYRjkHJAGoMc7GPp6e1Yw
@@ -28306,8 +28323,8 @@ z86dSz83cz7h/HhPTM/9CxEXbvUG9g5c9Ll4+ZL7pQt9Tn1nL9tdPnXF5srJq4yrndcsr3X0W/S3
 /2TxU/uA5UDHdavrXTesb3QPLh88M+QwdP6m681Lt7xuXbu94vbgcOjwnZHokdE77DtTd1PuvriX
 eW/h/sYH6AdFD6UeVjxSfNTws+7PbaOWo6fHXMf6Hwc/vj/OGn/2S8Yv7ycKnpCfVEyqTDZPmU2d
 mnafvvF05dOJZ+nPFmYKf5X+tfa5zvMffnP8rX82YnbiBf/Fp99LXsq/PPRq2aueuYC5R69TXy/M
-F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDgAA
-Cw4BQL7hQQAAAnhJREFUOE9VUklMk1EQHgiNIjsGEZEipZa4REiUoB6ApERD4sEFg0i8GKnVeAOR
+F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDAAA
+CwwBP0AiyAAAAnhJREFUOE9VUklMk1EQHgiNIjsGEZEipZa4REiUoB6ApERD4sEFg0i8GKnVeAOR
 eFT04BKMtRgTPVUSXAktxBM1pUEoWKtiWaXYlcVg96bLD+ObX0U4fJl/3vu+eTPz/RCNRtchFosB
 IhIEGrX6jrq7uzzKzj6OjMDo11GASCSyChKEQiF4r9XCh4EBwRFpFYpFIjSbzY1erxfGx8YBVlZW
 VvG3MgwNDsLLzk5J2YFSPwBgXs42fPRQ0flraUm4SloDMUWdTnc8P3c7T85ISUUS3m5tnYfJiQmw
@@ -28371,8 +28388,8 @@ z86dSz83cz7h/HhPTM/9CxEXbvUG9g5c9Ll4+ZL7pQt9Tn1nL9tdPnXF5srJq4yrndcsr3X0W/S3
 /2TxU/uA5UDHdavrXTesb3QPLh88M+QwdP6m681Lt7xuXbu94vbgcOjwnZHokdE77DtTd1PuvriX
 eW/h/sYH6AdFD6UeVjxSfNTws+7PbaOWo6fHXMf6Hwc/vj/OGn/2S8Yv7ycKnpCfVEyqTDZPmU2d
 mnafvvF05dOJZ+nPFmYKf5X+tfa5zvMffnP8rX82YnbiBf/Fp99LXsq/PPRq2aueuYC5R69TXy/M
-F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDgAA
-Cw4BQL7hQQAAAnhJREFUOE9VUklMk1EQHgiNIjsGEZEipZa4REiUoB6ApERD4sEFg0i8GKnVeAOR
+F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDAAA
+CwwBP0AiyAAAAnhJREFUOE9VUklMk1EQHgiNIjsGEZEipZa4REiUoB6ApERD4sEFg0i8GKnVeAOR
 eFT04BKMtRgTPVUSXAktxBM1pUEoWKtiWaXYlcVg96bLD+ObX0U4fJl/3vu+eTPz/RCNRtchFosB
 IhIEGrX6jrq7uzzKzj6OjMDo11GASCSyChKEQiF4r9XCh4EBwRFpFYpFIjSbzY1erxfGx8YBVlZW
 VvG3MgwNDsLLzk5J2YFSPwBgXs42fPRQ0flraUm4SloDMUWdTnc8P3c7T85ISUUS3m5tnYfJiQmw

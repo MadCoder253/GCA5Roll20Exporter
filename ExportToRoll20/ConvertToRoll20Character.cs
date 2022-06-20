@@ -34,17 +34,7 @@ namespace ExportToRoll20
                 roll20Character.Size = traitSizeMod.Score;
                 roll20Character.ApplySizeModifier = traitSizeMod.Score > 0;
 
-                // TODO: Get reactions
-                GCATrait traitReactions = currentCharacter.ItemByNameAndExt("Reaction", (int)TraitTypes.Attributes);
-                string reactionBonusList = GetTraitModifiersList(traitReactions);
-                string reactionConditionalList = GetTraitConditionalList(traitReactions);
-                string reactions = reactionBonusList;
-                if (reactionConditionalList.Length > 0)
-                {
-                    reactions += "\nConditional: " + reactionConditionalList;
-                }
-
-                roll20Character.Reactions = reactions;
+                roll20Character.Reactions = GetReactions(currentCharacter);
 
                 if (int.TryParse(currentCharacter.Campaign.BaseTL, out int campaignTl))
                 {
@@ -248,17 +238,63 @@ namespace ExportToRoll20
                     }
                 }
 
-
                 GCATrait traitCombatReflexes = currentCharacter.ItemByNameAndExt("Combat Reflexes", (int)TraitTypes.Advantages);
                 if (traitCombatReflexes != null)
                 {
                     roll20Character.CombatReflexes = true;
                 }
+
+                roll20Character.RepeatingCultures = GetRepeatingCultures(currentCharacter);
                 
             }   
 
             return roll20Character;
 
+        }
+
+        public string GetReactions(GCACharacter currentCharacter)
+        {
+            GCATrait traitReactions = currentCharacter.ItemByNameAndExt("Reaction", (int)TraitTypes.Attributes);
+            
+            string reactionBonusList = GetTraitModifiersList(traitReactions);
+            
+            string reactionConditionalList = GetTraitConditionalList(traitReactions);
+            
+            string reactions = reactionBonusList;
+            
+            if (reactionConditionalList.Length > 0)
+            {
+                if (reactionBonusList.Length > 0)
+                {
+                    // add line between bonus list and conditionals
+                    reactions += "\n";
+                }
+
+                reactions += "Conditional:\n" + reactionConditionalList;
+
+            }
+
+            return reactions;
+            
+        }
+
+        public List<RepeatingCulture> GetRepeatingCultures(GCACharacter currentCharacter)
+        {
+            List<RepeatingCulture> cultures = new List<RepeatingCulture>();
+
+            var traitCultures = currentCharacter.ItemsByType[(int)TraitTypes.Cultures];
+
+            foreach (GCATrait item in traitCultures)
+            {
+                var culture = new RepeatingCulture();
+                culture.Idkey = item.IDKey.ToString();
+                culture.Name = item.DisplayName;
+                culture.Points = item.Points;
+
+                cultures.Add(culture);
+            }
+
+            return cultures;
         }
 
         public string GetWealthLevel(GCACharacter currentCharacter)
@@ -365,7 +401,7 @@ namespace ExportToRoll20
 
             }
 
-            return string.Join(", ", reasons.ToArray());
+            return string.Join("\n", reasons.ToArray());
         }
 
         /// <summary>
@@ -387,7 +423,7 @@ namespace ExportToRoll20
 
             }
 
-            return string.Join(", ", conditionalLists.ToArray());
+            return string.Join("\n", conditionalLists.ToArray());
         }
 
     }
