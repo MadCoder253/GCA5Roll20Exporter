@@ -118,7 +118,7 @@ namespace ExportToRoll20
             {
                 fileWriter.FileClose();
             }
-            
+
             return true;
         }
 

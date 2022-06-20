@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using GCA5.Interfaces;
 using GCA5Engine;
@@ -181,7 +182,7 @@ namespace ExportToRoll20
                 GCATrait traitBasicAirMove = currentCharacter.ItemByNameAndExt("Basic Air Move", (int)TraitTypes.Attributes);
                 if (traitBasicAirMove != null)
                 {
-                    roll20Character.BasicAirMoveMod = GetTraitModifier(traitBasicAirMove) ;
+                    roll20Character.BasicAirMoveMod = GetTraitModifier(traitBasicAirMove);
                 }
 
                 GCATrait traitEnhancedAirMove = currentCharacter.ItemByNameAndExt("Enhanced Air Move", (int)TraitTypes.Attributes);
@@ -219,7 +220,7 @@ namespace ExportToRoll20
 
                 // check for ritual magery
                 GCATrait traitRitualMagery = currentCharacter.ItemByNameAndExt("Ritual Magery", (int)TraitTypes.Advantages);
-                if(traitRitualMagery != null && traitRitualMagery.Level > roll20Character.SpellBonus)
+                if (traitRitualMagery != null && traitRitualMagery.Level > roll20Character.SpellBonus)
                 {
                     roll20Character.SpellBonus = traitRitualMagery.Level;
                 }
@@ -229,7 +230,7 @@ namespace ExportToRoll20
 
                 if (traitsPowerInvestitures != null)
                 {
-                    foreach(GCATrait trait in traitsPowerInvestitures)
+                    foreach (GCATrait trait in traitsPowerInvestitures)
                     {
                         if (trait.Level > roll20Character.SpellBonus)
                         {
@@ -247,8 +248,8 @@ namespace ExportToRoll20
                 roll20Character.RepeatingCultures = GetRepeatingCultures(currentCharacter);
 
                 roll20Character.RepeatingTraits = GetRepeatingTraits(currentCharacter);
-                
-            }   
+
+            }
 
             return roll20Character;
 
@@ -257,13 +258,13 @@ namespace ExportToRoll20
         public string GetReactions(GCACharacter currentCharacter)
         {
             GCATrait traitReactions = currentCharacter.ItemByNameAndExt("Reaction", (int)TraitTypes.Attributes);
-            
+
             string reactionBonusList = GetTraitModifiersList(traitReactions);
-            
+
             string reactionConditionalList = GetTraitConditionalList(traitReactions);
-            
+
             string reactions = reactionBonusList;
-            
+
             if (reactionConditionalList.Length > 0)
             {
                 if (reactionBonusList.Length > 0)
@@ -277,7 +278,7 @@ namespace ExportToRoll20
             }
 
             return reactions;
-            
+
         }
 
         public List<RepeatingCulture> GetRepeatingCultures(GCACharacter currentCharacter)
@@ -290,7 +291,7 @@ namespace ExportToRoll20
             {
                 var culture = new RepeatingCulture();
                 culture.Idkey = item.IDKey.ToString();
-                culture.Name = item.DisplayName;
+                culture.Name = item.FullName;
                 culture.Points = item.Points;
 
                 cultures.Add(culture);
@@ -440,7 +441,7 @@ namespace ExportToRoll20
 
                 listItem.Idkey = item.IDKey.ToString();
 
-                listItem.Name = item.DisplayName;
+                listItem.Name = item.FullName;
 
                 listItem.TraitLevel = item.Level.ToString();
 
@@ -450,7 +451,7 @@ namespace ExportToRoll20
 
                 listItem.Ref = item.get_TagItem("page");
 
-                listItem.Notes = item.Notes;
+                listItem.Notes = GetTraitNotes(item);
 
                 list.Add(listItem);
 
@@ -463,7 +464,7 @@ namespace ExportToRoll20
         {
             string Foa = "";
 
-            foreach(GCAModifier mod in trait.Mods)
+            foreach (GCAModifier mod in trait.Mods)
             {
                 if (mod.Group.Contains("Frequency of Appearance"))
                 {
@@ -471,12 +472,73 @@ namespace ExportToRoll20
                     string[] shortNameParts = mod.get_CaptionExpanded(false).Split(' ');
 
                     Foa = shortNameParts[0];
-                    
+
                 }
 
             }
 
             return Foa;
+        }
+
+        public string GetTraitNotes(GCATrait trait)
+        {
+            var notes = new ArrayList();
+
+            var userNotes = trait.get_TagItem("usernotes");
+
+            if (userNotes != null)
+            {
+                notes.Add(userNotes);
+            }
+
+            if (trait.DisplayName.Length > 0 && trait.DisplayName.Contains("("))
+            {
+                // Contact (Effective Skill 12; Rival Gang; 9 or less, *1; Somewhat Reliable, *1)
+                // Crossbow 3 (Armor Piercing) (Armor Divisor, 2, +50%; Increased Range, x2, +10%)
+                // we want the value inside the parenthesis 
+
+                // remove the name and nameext
+                string name = trait.DisplayName;
+
+                // try to remove name + level
+                name = name.Replace(trait.Name + " " + trait.Level.ToString() + " ", "");
+
+                // if previous didn't work, try remove the name
+                name = name.Replace(trait.Name + " ", "");
+
+                string nameExtension = "(" + trait.NameExt + ") ";
+
+                if (name.StartsWith(nameExtension))
+                {
+                    // remove the extension
+                    name = name.Replace(nameExtension, "");
+                }
+
+                // remove last parenthese 
+                name = name.Remove(name.Length - 1);
+
+                // remove first parenthese
+                name = name.Remove(0, 1);
+
+                string[] seperators = { "; " };
+
+                string[] nameParts = name.Split(seperators, System.StringSplitOptions.RemoveEmptyEntries);
+
+                if (nameParts.Length > 0)
+                {
+                    notes.Add(string.Join("\n", nameParts));
+                }
+
+            }
+
+            if (trait.Notes.Length > 0)
+            {
+                notes.Add(trait.Notes);
+            }
+
+            string noteDescription = string.Join("\n", notes.ToArray());
+
+            return noteDescription;
         }
 
     }
