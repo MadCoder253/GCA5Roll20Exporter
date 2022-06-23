@@ -249,6 +249,12 @@ namespace ExportToRoll20
 
                 roll20Character.RepeatingTraits = GetRepeatingTraits(currentCharacter);
 
+                roll20Character.RepeatingPerks = GetRepeatingPerks(currentCharacter);
+
+                roll20Character.RepeatingQuirks = GetRepeatingQuirks(currentCharacter);
+
+                roll20Character.RepeatingDisadvantages = GetRepeatingDisadvantages(currentCharacter);
+
             }
 
             return roll20Character;
@@ -460,6 +466,95 @@ namespace ExportToRoll20
             return list;
         }
 
+        public List<RepeatingPerk> GetRepeatingPerks(GCACharacter myCharacter)
+        {
+            List<RepeatingPerk> list = new List<RepeatingPerk>();
+
+            var perks = myCharacter.ItemsByType[(int)TraitTypes.Perks];
+
+            foreach (GCATrait item in perks)
+            {
+                var listItem = new RepeatingPerk();
+
+                listItem.Idkey = item.IDKey.ToString();
+
+                listItem.Name = item.FullName;
+
+                listItem.Foa = GetFrequencyOfAppearance(item);
+
+                listItem.Points = item.Points;
+
+                listItem.Ref = item.get_TagItem("page");
+
+                listItem.Notes = GetTraitNotes(item);
+
+                list.Add(listItem);
+            }
+
+            return list;
+
+        }
+
+        public List<RepeatingQuirk> GetRepeatingQuirks(GCACharacter myCharacter)
+        {
+            List<RepeatingQuirk> list = new List<RepeatingQuirk>();
+
+            var quirks = myCharacter.ItemsByType[(int)TraitTypes.Quirks];
+
+            foreach (GCATrait item in quirks)
+            {
+                var listItem = new RepeatingQuirk();
+
+                listItem.Idkey = item.IDKey.ToString();
+
+                listItem.Name = item.FullName;
+
+                listItem.ControlRating = GetControlRating(item);
+
+                listItem.Points = item.Points;
+
+                listItem.Ref = item.get_TagItem("page");
+
+                listItem.Notes = GetTraitNotes(item);
+
+                list.Add(listItem);
+            }
+
+            return list;
+
+        }
+
+        public List<RepeatingDisadvantage> GetRepeatingDisadvantages(GCACharacter myCharacter)
+        {
+            List<RepeatingDisadvantage> list = new List<RepeatingDisadvantage>();
+
+            var disadvantages = myCharacter.ItemsByType[(int)TraitTypes.Disadvantages];
+
+            foreach (GCATrait item in disadvantages)
+            {
+                var listItem = new RepeatingDisadvantage();
+
+                listItem.Idkey = item.IDKey.ToString();
+
+                listItem.Name = item.FullName;
+
+                listItem.TraitLevel = item.Level.ToString();
+
+                listItem.ControlRating = GetControlRating(item);
+
+                listItem.Points = item.Points;
+
+                listItem.Ref = item.get_TagItem("page");
+
+                listItem.Notes = GetTraitNotes(item);
+
+                list.Add(listItem);
+
+            }
+
+            return list;
+        }
+
         public string GetFrequencyOfAppearance(GCATrait trait)
         {
             string Foa = "";
@@ -478,6 +573,26 @@ namespace ExportToRoll20
             }
 
             return Foa;
+        }
+
+        public string GetControlRating(GCATrait trait)
+        {
+            string controlRating = "";
+
+            foreach (GCAModifier mod in trait.Mods)
+            {
+                if (mod.Group.Contains("Self-Control"))
+                {
+                    // <shortname>12 or less</shortname>
+                    string[] shortNameParts = mod.get_CaptionExpanded(false).Split(' ');
+
+                    controlRating = shortNameParts[0];
+
+                }
+
+            }
+
+            return controlRating;
         }
 
         public string GetTraitNotes(GCATrait trait)
