@@ -255,6 +255,11 @@ namespace ExportToRoll20
 
                 roll20Character.RepeatingDisadvantages = GetRepeatingDisadvantages(currentCharacter);
 
+                // TODO: get Racial/Template traits.
+                
+                roll20Character.RepeatingSkills = GetRepeatingSkills(currentCharacter);
+
+
             }
 
             return roll20Character;
@@ -550,6 +555,44 @@ namespace ExportToRoll20
 
                 list.Add(listItem);
 
+            }
+
+            return list;
+        }
+
+        public List<RepeatingSkill> GetRepeatingSkills(GCACharacter myCharacter)
+        {
+            List<RepeatingSkill> list = new List<RepeatingSkill>();
+
+            var skills = myCharacter.ItemsByType[(int)TraitTypes.Skills];
+
+            foreach (GCATrait skill in skills)
+            {
+                var listItem = new RepeatingSkill();
+
+                listItem.Idkey = skill.IDKey.ToString();
+
+                listItem.Name = skill.Name;
+
+                listItem.Tl = skill.get_TagItem("tl");
+
+                listItem.Base = "";
+
+                listItem.Difficulty = skill.SkillType;
+
+                listItem.Bonus = GetTraitModifier(skill);
+
+                listItem.Points = skill.Points;
+
+                listItem.Skill = skill.Level;
+
+                listItem.Ref = skill.get_TagItem("page");
+
+                listItem.SkillModNotes = GetTraitModifiersList(skill);
+
+                listItem.Notes = GetTraitNotes(skill);
+
+                list.Add(listItem);
             }
 
             return list;
