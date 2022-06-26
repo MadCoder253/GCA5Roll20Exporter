@@ -102,7 +102,7 @@ namespace ExportToRoll20
 
             ConvertToRoll20Character converter = new ConvertToRoll20Character();
 
-            Roll20Character character = converter.GetCharacter(Party.Current, TargetFilename);
+            Roll20Character character = converter.GetCharacter(Party.Current);
 
             var fileData = character.ToXmlString();
 

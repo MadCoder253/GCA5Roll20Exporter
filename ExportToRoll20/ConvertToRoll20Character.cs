@@ -12,13 +12,12 @@ namespace ExportToRoll20
 {
     public class ConvertToRoll20Character
     {
-        private string TargetFileName;
+        private List<string> templateNeeds = new List<string>();
+        private List<string> templateGives = new List<string>();
 
-        public Roll20Character GetCharacter(GCACharacter currentCharacter, string targetFilename)
+        public Roll20Character GetCharacter(GCACharacter currentCharacter)
         {
             Roll20Character roll20Character = new Roll20Character();
-
-            TargetFileName = targetFilename;
 
             if (currentCharacter != null)
             {
@@ -28,7 +27,7 @@ namespace ExportToRoll20
                 roll20Character.Nickname = "";
                 roll20Character.Race = currentCharacter.Race;
                 roll20Character.RaceRef = "";
-                roll20Character.TemplateNames = "";
+                roll20Character.TemplateNames = SetTemplateMetaDataReturnTemplateNames(currentCharacter);
                 roll20Character.Gender = "";
 
                 GCATrait traitSizeMod = currentCharacter.ItemByNameAndExt("Size Modifier", (int)TraitTypes.Attributes);
@@ -245,18 +244,23 @@ namespace ExportToRoll20
                     roll20Character.CombatReflexes = true;
                 }
 
+                // TODO: refactoring
+                roll20Character.RepeatingRacial = GetRepeatingRacials(currentCharacter);
+
                 roll20Character.RepeatingCultures = GetRepeatingCultures(currentCharacter);
 
                 roll20Character.RepeatingTraits = GetRepeatingTraits(currentCharacter);
 
                 roll20Character.RepeatingPerks = GetRepeatingPerks(currentCharacter);
 
+                var features = GetRepeatingFeatures(currentCharacter);
+
+                // add any features to the end of the list of perks
+                roll20Character.RepeatingPerks.AddRange(features);
+
                 roll20Character.RepeatingQuirks = GetRepeatingQuirks(currentCharacter);
 
                 roll20Character.RepeatingDisadvantages = GetRepeatingDisadvantages(currentCharacter);
-
-                // TODO: get Racial/Template traits.
-                roll20Character.RepeatingRacial = GetRepeatingRacials(currentCharacter);
 
                 roll20Character.RepeatingSkills = GetRepeatingSkills(currentCharacter);
 
@@ -442,7 +446,22 @@ namespace ExportToRoll20
             return string.Join("\n", conditionalLists.ToArray());
         }
 
-        public List<RepeatingTrait> GetRepeatingTraits(GCACharacter myCharacter)
+        /// <summary>
+        /// Gives is a list of traits provided by a template.
+        /// Function will look for partial string matches to a trait name.
+        /// </summary>
+        /// <param name="trait"></param>
+        /// <returns></returns>
+        public bool IsRacialTrait(GCATrait trait)
+        {
+            var traitName = trait.FullName;
+
+            bool isRacial = templateNeeds.Any(given => given.Contains(traitName));
+
+            return isRacial;
+        }
+
+        public List<RepeatingTrait> GetRepeatingTraits(GCACharacter myCharacter, bool getRacialTraits = false)
         {
             List<RepeatingTrait> list = new List<RepeatingTrait>();
 
@@ -450,24 +469,33 @@ namespace ExportToRoll20
 
             foreach (GCATrait item in advantages)
             {
-                // ignore racial templates
-                if (!item.get_TagItem("cat").Contains("Racial Template Advantages"))
+                if (getRacialTraits == false && IsRacialTrait(item) == false)
                 {
-
+                    // this is a regual trait so add it.
                     var listItem = new RepeatingTrait
                     {
                         Idkey = item.IDKey.ToString(),
-
                         Name = item.FullName,
-
                         TraitLevel = item.Level.ToString(),
-
                         Foa = GetFrequencyOfAppearance(item),
-
                         Points = item.Points,
-
                         Ref = item.get_TagItem("page"),
+                        Notes = GetTraitNotes(item)
+                    };
 
+                    list.Add(listItem);
+                }
+                else if (getRacialTraits == true && IsRacialTrait(item) == true)
+                {
+                    // this a racial trait, so add it
+                    var listItem = new RepeatingTrait
+                    {
+                        Idkey = item.IDKey.ToString(),
+                        Name = item.FullName,
+                        TraitLevel = item.Level.ToString(),
+                        Foa = GetFrequencyOfAppearance(item),
+                        Points = item.Points,
+                        Ref = item.get_TagItem("page"),
                         Notes = GetTraitNotes(item)
                     };
 
@@ -479,37 +507,96 @@ namespace ExportToRoll20
             return list;
         }
 
-        public List<RepeatingPerk> GetRepeatingPerks(GCACharacter myCharacter)
+        public List<RepeatingPerk> GetRepeatingPerks(GCACharacter myCharacter, bool getRacialTraits = false)
         {
             List<RepeatingPerk> list = new List<RepeatingPerk>();
 
+            // regular perks
             var perks = myCharacter.ItemsByType[(int)TraitTypes.Perks];
 
             foreach (GCATrait item in perks)
             {
-                var listItem = new RepeatingPerk
+                if (getRacialTraits == false && IsRacialTrait(item) == false)
                 {
-                    Idkey = item.IDKey.ToString(),
+                    // this is a regular perk so add it.
+                    var listItem = new RepeatingPerk
+                    {
+                        Idkey = item.IDKey.ToString(),
+                        Name = item.FullName,
+                        Foa = GetFrequencyOfAppearance(item),
+                        Points = item.Points,
+                        Ref = item.get_TagItem("page"),
+                        Notes = GetTraitNotes(item)
+                    };
 
-                    Name = item.FullName,
+                    list.Add(listItem);
+                }
+                else if (getRacialTraits == true && IsRacialTrait(item) == true)
+                {
+                    // this a racial trait, so add it
+                    var listItem = new RepeatingPerk
+                    {
+                        Idkey = item.IDKey.ToString(),
+                        Name = item.FullName,
+                        Foa = GetFrequencyOfAppearance(item),
+                        Points = item.Points,
+                        Ref = item.get_TagItem("page"),
+                        Notes = GetTraitNotes(item)
+                    };
 
-                    Foa = GetFrequencyOfAppearance(item),
-
-                    Points = item.Points,
-
-                    Ref = item.get_TagItem("page"),
-
-                    Notes = GetTraitNotes(item)
-                };
-
-                list.Add(listItem);
+                    list.Add(listItem);
+                }
             }
 
             return list;
 
         }
 
-        public List<RepeatingQuirk> GetRepeatingQuirks(GCACharacter myCharacter)
+        public List<RepeatingPerk> GetRepeatingFeatures(GCACharacter myCharacter, bool getRacialTraits = false)
+        {
+            List<RepeatingPerk> list = new List<RepeatingPerk>();
+
+            // regular perks
+            var perks = myCharacter.ItemsByType[(int)TraitTypes.Features];
+
+            foreach (GCATrait item in perks)
+            {
+                if (getRacialTraits == false && IsRacialTrait(item) == false)
+                {
+                    // this is a regular perk so add it.
+                    var listItem = new RepeatingPerk
+                    {
+                        Idkey = item.IDKey.ToString(),
+                        Name = "Feature: " + item.FullName,
+                        Foa = GetFrequencyOfAppearance(item),
+                        Points = item.Points,
+                        Ref = item.get_TagItem("page"),
+                        Notes = GetTraitNotes(item)
+                    };
+
+                    list.Add(listItem);
+                }
+                else if (getRacialTraits == true && IsRacialTrait(item) == true)
+                {
+                    // this a racial trait, so add it
+                    var listItem = new RepeatingPerk
+                    {
+                        Idkey = item.IDKey.ToString(),
+                        Name = item.FullName,
+                        Foa = GetFrequencyOfAppearance(item),
+                        Points = item.Points,
+                        Ref = item.get_TagItem("page"),
+                        Notes = GetTraitNotes(item)
+                    };
+
+                    list.Add(listItem);
+                }
+            }
+
+            return list;
+        }
+
+        public List<RepeatingQuirk> GetRepeatingQuirks(GCACharacter myCharacter, bool getRacialTraits = false)
         {
             List<RepeatingQuirk> list = new List<RepeatingQuirk>();
 
@@ -517,29 +604,45 @@ namespace ExportToRoll20
 
             foreach (GCATrait item in quirks)
             {
-                var listItem = new RepeatingQuirk
+                if (getRacialTraits == false && IsRacialTrait(item) == false)
                 {
-                    Idkey = item.IDKey.ToString(),
+                    // this is a regular quirk so add it.
+                    var listItem = new RepeatingQuirk
+                    {
+                        Idkey = item.IDKey.ToString(),
+                        Name = item.FullName,
+                        ControlRating = GetControlRating(item),
+                        Points = item.Points,
+                        Ref = item.get_TagItem("page"),
+                        Notes = GetTraitNotes(item)
+                    };
 
-                    Name = item.FullName,
+                    list.Add(listItem);
+                }
+                else if (getRacialTraits == true && IsRacialTrait(item) == true)
+                {
+                    // this a racial quirk, so add it
+                    var listItem = new RepeatingQuirk
+                    {
+                        Idkey = item.IDKey.ToString(),
+                        Name = item.FullName,
+                        ControlRating = GetControlRating(item),
+                        Points = item.Points,
+                        Ref = item.get_TagItem("page"),
+                        Notes = GetTraitNotes(item)
+                    };
 
-                    ControlRating = GetControlRating(item),
+                    list.Add(listItem);
 
-                    Points = item.Points,
+                }
 
-                    Ref = item.get_TagItem("page"),
-
-                    Notes = GetTraitNotes(item)
-                };
-
-                list.Add(listItem);
             }
 
             return list;
 
         }
 
-        public List<RepeatingDisadvantage> GetRepeatingDisadvantages(GCACharacter myCharacter)
+        public List<RepeatingDisadvantage> GetRepeatingDisadvantages(GCACharacter myCharacter, bool getRacialTraits = false)
         {
             List<RepeatingDisadvantage> list = new List<RepeatingDisadvantage>();
 
@@ -547,23 +650,33 @@ namespace ExportToRoll20
 
             foreach (GCATrait item in disadvantages)
             {
-                // ignore racial templates
-                if (!item.get_TagItem("cat").Contains("Racial Template Disadvantages"))
+                if (getRacialTraits == false && IsRacialTrait(item) == false)
                 {
+                    // this is a regular disadvantage so add it.
                     var listItem = new RepeatingDisadvantage
                     {
                         Idkey = item.IDKey.ToString(),
-
                         Name = item.FullName,
-
                         TraitLevel = item.Level.ToString(),
-
                         ControlRating = GetControlRating(item),
-
                         Points = item.Points,
-
                         Ref = item.get_TagItem("page"),
+                        Notes = GetTraitNotes(item)
+                    };
 
+                    list.Add(listItem);
+                }
+                else if (getRacialTraits == true && IsRacialTrait(item) == true)
+                {
+                    // this a racial disadvantage, so add it
+                    var listItem = new RepeatingDisadvantage
+                    {
+                        Idkey = item.IDKey.ToString(),
+                        Name = item.FullName,
+                        TraitLevel = item.Level.ToString(),
+                        ControlRating = GetControlRating(item),
+                        Points = item.Points,
+                        Ref = item.get_TagItem("page"),
                         Notes = GetTraitNotes(item)
                     };
 
@@ -575,86 +688,143 @@ namespace ExportToRoll20
             return list;
         }
 
-        public List<RepeatingRacial> GetRepeatingRacials(GCACharacter myCharacter)
+        public string SetTemplateMetaDataReturnTemplateNames(GCACharacter myCharacter)
         {
-            List<RepeatingRacial> list = new List<RepeatingRacial>();
+            var templates = myCharacter.ItemsByType[(int)TraitTypes.Templates];
 
-            // first get advantages. 
-            var racialTraits = myCharacter.ItemsByType[(int)TraitTypes.Advantages];
+            List<string> templateNames = new List<string>();
 
-            foreach (GCATrait item in racialTraits)
+            foreach (GCATrait template in templates)
             {
-                // example advantage:  <name>Racial ST Bonus</name>
-                // or category:        <cat>Racial Template Advantages</cat>
-                if (item.Name.StartsWith("Racial") || item.get_TagItem("cat").Contains("Racial Template Advantages"))
+                templateNames.Add(template.FullName);
+
+                var thisTemplatesGives = template.get_TagItem("gives");
+
+                if (!string.IsNullOrEmpty(thisTemplatesGives))
                 {
-                    string controlOrFoa = GetFrequencyOfAppearance(item);
+                    var listTemplateGives = thisTemplatesGives.Split(',');
 
-                    // if empty, look for control rating
-                    if (string.IsNullOrEmpty(controlOrFoa))
-                    {
-                        controlOrFoa = GetControlRating(item);
-                    }
+                    templateGives.AddRange(listTemplateGives);
+                }
 
-                    var listItem = new RepeatingRacial
-                    {
-                        Idkey = item.IDKey.ToString(),
+                var thisTemplateNeeds = template.get_TagItem("needs");
 
-                        Name = item.FullName,
+                if (!string.IsNullOrEmpty(thisTemplateNeeds))
+                {
+                    var listTemplateNeeds = thisTemplateNeeds.Split(',');
 
-                        TraitLevel = item.Level.ToString(),
-                        ControlRating = controlOrFoa,
-
-                        Points = item.Points,
-
-                        Ref = item.get_TagItem("page"),
-
-                        Notes = GetTraitNotes(item)
-                    };
-
-                    list.Add(listItem);
-
+                    templateNeeds.AddRange(listTemplateNeeds);
                 }
 
             }
 
-            // try to get disadvantages
-            var racialDisadvantages = myCharacter.ItemsByType[(int)TraitTypes.Disadvantages];
+            return string.Join(", ", templateNames.ToArray());
+        }
 
-            foreach (GCATrait item in racialDisadvantages)
+        /// <summary>
+        /// TODO: completely refactor
+        /// </summary>
+        /// <param name="myCharacter"></param>
+        /// <returns></returns>
+        public List<RepeatingRacial> GetRepeatingRacials(GCACharacter myCharacter)
+        {
+            List<RepeatingRacial> list = new List<RepeatingRacial>();
+
+            // get advantages
+            var advantages = GetRepeatingTraits(myCharacter, true);
+
+            foreach (var trait in advantages)
             {
-                // example advantage:  <name>Racial ST Bonus</name>
-                // or category:        <cat>Racial Template Advantages</cat>
-                if (item.Name.StartsWith("Racial") || item.get_TagItem("cat").Contains("Racial Template Disadvantages"))
+                var racialTrait = new RepeatingRacial()
                 {
-                    string controlOrFoa = GetFrequencyOfAppearance(item);
+                    Idkey = trait.Idkey,
+                    Name = trait.Name,
+                    TraitLevel = trait.TraitLevel,
+                    ControlRating = trait.Foa,
+                    Points = trait.Points,
+                    Ref = trait.Ref,
+                    Notes = trait.Notes
+                };
 
-                    // if empty, look for control rating
-                    if (string.IsNullOrEmpty(controlOrFoa))
-                    {
-                        controlOrFoa = GetControlRating(item);
-                    }
+                list.Add(racialTrait);
+            }
 
-                    var listItem = new RepeatingRacial
-                    {
-                        Idkey = item.IDKey.ToString(),
+            // get perks
+            var perks = GetRepeatingPerks(myCharacter, true);
 
-                        Name = item.FullName,
+            foreach (var perk in perks)
+            {
+                var racialTrait = new RepeatingRacial
+                {
+                    Idkey = perk.Idkey,
+                    Name = perk.Name,
+                    TraitLevel = "",
+                    ControlRating = perk.Foa,
+                    Points = perk.Points,
+                    Ref = perk.Ref,
+                    Notes = perk.Notes
+                };
 
-                        TraitLevel = item.Level.ToString(),
+                list.Add(racialTrait);
 
-                        ControlRating = controlOrFoa,
+            }
 
-                        Points = item.Points,
+            // get features
+            var features = GetRepeatingFeatures(myCharacter, true);
 
-                        Ref = item.get_TagItem("page"),
+            foreach (var feature in features)
+            {
+                var racialTrait = new RepeatingRacial
+                {
+                    Idkey = feature.Idkey,
+                    Name = feature.Name,
+                    TraitLevel = "",
+                    ControlRating = feature.Foa,
+                    Points = feature.Points,
+                    Ref = feature.Ref,
+                    Notes = feature.Notes
+                };
 
-                        Notes = GetTraitNotes(item)
-                    };
+                list.Add(racialTrait);
 
-                    list.Add(listItem);
+            }
 
-                }
+            // get quirks
+            var quirks = GetRepeatingQuirks(myCharacter, true);
+
+            foreach (var quirk in quirks)
+            {
+                var racialTrait = new RepeatingRacial
+                {
+                    Idkey = quirk.Idkey,
+                    Name = quirk.Name,
+                    TraitLevel = "",
+                    ControlRating = quirk.ControlRating,
+                    Points = quirk.Points,
+                    Ref = quirk.Ref,
+                    Notes = quirk.Notes
+                };
+
+                list.Add(racialTrait);
+            }
+
+            // get disadvantages
+            var disadvantages = GetRepeatingDisadvantages(myCharacter, true);
+
+            foreach (var disadvantage in disadvantages)
+            {
+                var racialDisadvantage = new RepeatingRacial
+                {
+                    Idkey = disadvantage.Idkey,
+                    Name = disadvantage.Name,
+                    TraitLevel = disadvantage.TraitLevel,
+                    ControlRating = disadvantage.ControlRating,
+                    Points = disadvantage.Points,
+                    Ref = disadvantage.Ref,
+                    Notes = disadvantage.Notes
+                };
+
+                list.Add(racialDisadvantage);
             }
 
             return list;
@@ -669,29 +839,19 @@ namespace ExportToRoll20
 
             foreach (GCATrait skill in skills)
             {
-                var listItem = new RepeatingSkill();
-
-                listItem.Idkey = skill.IDKey.ToString();
-
-                listItem.Name = skill.Name;
-
-                listItem.Tl = skill.get_TagItem("tl");
-
-                listItem.Base = "";
-
-                listItem.Difficulty = skill.SkillType;
-
-                listItem.Bonus = GetTraitModifier(skill);
-
-                listItem.Points = skill.Points;
-
-                listItem.Skill = skill.Level;
-
-                listItem.Ref = skill.get_TagItem("page");
-
-                listItem.SkillModNotes = GetTraitModifiersList(skill);
-
-                listItem.Notes = GetTraitNotes(skill);
+                var listItem = new RepeatingSkill
+                {
+                    Idkey = skill.IDKey.ToString(),
+                    Name = skill.Name,
+                    Tl = skill.get_TagItem("tl"),
+                    Difficulty = skill.SkillType,
+                    Bonus = GetTraitModifier(skill),
+                    Points = skill.Points,
+                    Skill = skill.Level,
+                    Ref = skill.get_TagItem("page"),
+                    SkillModNotes = GetTraitModifiersList(skill),
+                    Notes = GetTraitNotes(skill)
+                };
 
                 list.Add(listItem);
             }
