@@ -368,7 +368,7 @@ namespace ExportToRoll20
         public string Parent { get; set; } = "";
 
         [XmlElement(ElementName = "base_level")]
-        public double BaseLevel { get; set; } = 0;
+        public string BaseLevel { get; set; } = "";
 
         [XmlElement(ElementName = "default")]
         public double Default { get; set; } = 0;

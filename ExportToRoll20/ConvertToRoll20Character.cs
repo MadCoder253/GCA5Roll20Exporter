@@ -19,7 +19,7 @@ namespace ExportToRoll20
         {
             return string.Join(", ", allTemplateNeeds.ToArray());
         }
-        
+
         public Roll20Character GetCharacter(GCACharacter currentCharacter)
         {
             Roll20Character roll20Character = new Roll20Character();
@@ -264,9 +264,12 @@ namespace ExportToRoll20
 
                 roll20Character.RepeatingDisadvantages = GetRepeatingDisadvantages(currentCharacter);
 
+                roll20Character.RepeatingRacial = GetRepeatingTemplates(currentCharacter);
+
                 roll20Character.RepeatingSkills = GetRepeatingSkills(currentCharacter);
 
-                roll20Character.RepeatingRacial = GetRepeatingTemplates(currentCharacter);
+                roll20Character.RepeatingTechniquesrevised = GetRepeatingTechniques(currentCharacter);
+
 
             }
 
@@ -918,24 +921,90 @@ namespace ExportToRoll20
 
             foreach (GCATrait skill in skills)
             {
-                var listItem = new RepeatingSkill
+                // only add regular skills
+                if (!skill.SkillType.StartsWith("Tech"))
                 {
-                    Idkey = skill.IDKey.ToString(),
-                    Name = skill.Name,
-                    Tl = skill.get_TagItem("tl"),
-                    Difficulty = skill.SkillType,
-                    Bonus = GetTraitModifier(skill),
-                    Points = skill.Points,
-                    Skill = skill.Level,
-                    Ref = skill.get_TagItem("page"),
-                    SkillModNotes = GetTraitModifiersList(skill),
-                    Notes = GetTraitNotes(skill)
-                };
+                    var listItem = new RepeatingSkill
+                    {
+                        Idkey = skill.IDKey.ToString(),
+                        Name = skill.FullName,
+                        Tl = skill.get_TagItem("tl"),
+                        Difficulty = skill.SkillType,
+                        Bonus = GetTraitModifier(skill),
+                        Points = skill.Points,
+                        Skill = skill.Level,
+                        Ref = skill.get_TagItem("page"),
+                        SkillModNotes = GetTraitModifiersList(skill),
+                        Notes = GetTraitNotes(skill)
+                    };
 
-                list.Add(listItem);
+                    list.Add(listItem);
+                }
             }
 
             return list;
+        }
+
+        public List<RepeatingTechniquesrevised> GetRepeatingTechniques(GCACharacter myCharacter)
+        {
+            List<RepeatingTechniquesrevised> list = new List<RepeatingTechniquesrevised>();
+
+            var skills = myCharacter.ItemsByType[(int)TraitTypes.Skills];
+
+            foreach (GCATrait skill in skills)
+            {
+                // only add techniques
+                if (skill.SkillType.StartsWith("Tech"))
+                {
+                    var listItem = new RepeatingTechniquesrevised
+                    {
+                        Idkey = skill.IDKey.ToString(),
+                        Name = skill.FullName,
+                        Parent = skill.get_TagItem("deffrom"),
+                        BaseLevel = skill.get_TagItem("deflevel"),
+                        Default = GetTechniqueDefaultModifier(skill),
+                        // TODO: develop function to get max level
+                        //       example: <upto>"SK:Brawling::parrylevel"</upto>
+                        Difficulty = skill.SkillType,
+                        SkillModifier = GetTraitModifier(skill),
+                        Points = skill.Points,
+                        Skill = skill.Level,
+                        Ref = skill.get_TagItem("page"),
+                        SkillModNotes = GetTraitModifiersList(skill),
+                        Notes = GetTraitNotes(skill)
+                    };
+
+                    list.Add(listItem);
+                }
+
+            }
+
+            return list;
+
+        }
+
+        public double GetTechniqueDefaultModifier(GCATrait skill)
+        {
+            double modifier = 0;
+
+            // example: "SK:Brawling::parrylevel" - 1
+            string[] mods = skill.get_TagItem("default").Split(' ');
+
+            string value = "0";
+
+            if (mods.Length == 3)
+            {
+                // Example: should be -1
+                value = mods[1] + mods[2];
+
+                if (!double.TryParse(value, out modifier))
+                {
+                    modifier = 0;
+                }
+            }
+
+
+            return modifier;
         }
 
         public string GetFrequencyOfAppearance(GCATrait trait)
