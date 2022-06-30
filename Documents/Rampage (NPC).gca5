@@ -3,13 +3,13 @@
   <character>
     <author>
       <name>GURPS Character Assistant</name>
-      <version>GCA5Engine, Version=5.0.187.0</version>
+      <version>GCA5Engine, Version=5.0.189.0</version>
       <copyright>Program code is copyright © 1995-2022 by Armin D. Sykes. All data files, graphics, and other GURPS-specific content is copyright © 2005 and other years by Steve Jackson Games Incorporated. GURPS and the all-seeing pyramid are registered trademarks of Steve Jackson Games Incorporated. All rights reserved.</copyright>
-      <datecreated>Sunday, June 26, 2022</datecreated>
+      <datecreated>Tuesday, June 28, 2022</datecreated>
     </author>
     <system>
       <version>5</version>
-      <lastkey>13172</lastkey>
+      <lastkey>13174</lastkey>
     </system>
     <library>
       <name>%user%\Supers.gds</name>
@@ -176,6 +176,8 @@
       <sheetviewsheet />
       <charactersheet>GURPS 4th Edition Official Character Sheet</charactersheet>
       <exportsheet>Simple Text Export</exportsheet>
+      <altexportsheet>Export Character to Roll20</altexportsheet>
+      <altexportsheet>Simple Text Export</altexportsheet>
       <altexportsheet>Export Character to Roll20</altexportsheet>
       <altexportsheet>Simple Text Export</altexportsheet>
       <altexportsheet>Simple Text Export</altexportsheet>
@@ -6996,7 +6998,7 @@ Body Control Talent\par
         </trait>
       </quirks>
       <features count="0" />
-      <skills count="14">
+      <skills count="16">
         <trait type="Skills" idkey="13172">
           <name>Aggressive Parry</name>
           <nameext>Brawling</nameext>
@@ -7087,6 +7089,41 @@ Body Control Talent\par
             <page>B176</page>
             <default>IQ - 4, "SK:Geography (local)" - 3</default>
             <noresync>yes</noresync>
+          </ref>
+        </trait>
+        <trait type="Skills" idkey="13173">
+          <name>Arm Lock</name>
+          <nameext>Wrestling</nameext>
+          <needscheck>-1</needscheck>
+          <taboofailed>0</taboofailed>
+          <cat>Techniques, Techniques - Combat, Techniques, Techniques - Combat, Techniques - Realistic</cat>
+          <points>2</points>
+          <type>Tech/A</type>
+          <step>+2</step>
+          <stepoff>def</stepoff>
+          <level>13</level>
+          <calcs>
+            <sd>1</sd>
+            <deflevel>11</deflevel>
+            <deffrom>Wrestling</deffrom>
+            <deffromid>13174</deffromid>
+            <pointmult>1</pointmult>
+            <levelmult>1</levelmult>
+            <syslevels>0</syslevels>
+            <extralevels>0</extralevels>
+            <baselevel>13</baselevel>
+            <basepoints>2</basepoints>
+            <multpoints>2</multpoints>
+            <apppoints>2</apppoints>
+            <premodspoints>2</premodspoints>
+            <baseapppoints>2</baseapppoints>
+            <upto>prereq + 4</upto>
+          </calcs>
+          <armordata />
+          <ref>
+            <page>MA65, B230</page>
+            <needs>SK:Wrestling</needs>
+            <default>"SK:Wrestling::level"</default>
           </ref>
         </trait>
         <trait type="Skills" idkey="10753">
@@ -7570,6 +7607,38 @@ Body Control Talent\par
           <ref>
             <page>B223</page>
             <default>IQ - 5, SK:Detective!</default>
+          </ref>
+        </trait>
+        <trait type="Skills" idkey="13174">
+          <name>Wrestling</name>
+          <needscheck>-1</needscheck>
+          <taboofailed>0</taboofailed>
+          <cat>_General, Combat/Weapons - Melee Combat</cat>
+          <points>1</points>
+          <type>DX/A</type>
+          <step>-1</step>
+          <stepoff>DX</stepoff>
+          <level>11</level>
+          <parrylevel>9</parrylevel>
+          <calcs>
+            <sd>0</sd>
+            <deflevel>0</deflevel>
+            <pointmult>1</pointmult>
+            <levelmult>1</levelmult>
+            <syslevels>0</syslevels>
+            <extralevels>0</extralevels>
+            <baselevel>11</baselevel>
+            <basepoints>1</basepoints>
+            <multpoints>1</multpoints>
+            <apppoints>1</apppoints>
+            <premodspoints>1</premodspoints>
+            <baseapppoints>1</baseapppoints>
+            <parryat>@int(%level/2)+3</parryat>
+          </calcs>
+          <armordata />
+          <ref>
+            <page>B228</page>
+            <default>SK:Wrestling Art - 3, SK:Wrestling Sport - 3</default>
           </ref>
         </trait>
       </skills>

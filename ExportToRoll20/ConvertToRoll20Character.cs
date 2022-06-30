@@ -963,8 +963,7 @@ namespace ExportToRoll20
                         Parent = skill.get_TagItem("deffrom"),
                         BaseLevel = skill.get_TagItem("deflevel"),
                         Default = GetTechniqueDefaultModifier(skill),
-                        // TODO: develop function to get max level
-                        //       example: <upto>"SK:Brawling::parrylevel"</upto>
+                        MaxModifier = GetTechniqueMaxModifier(skill),
                         Difficulty = skill.SkillType,
                         SkillModifier = GetTraitModifier(skill),
                         Points = skill.Points,
@@ -983,26 +982,57 @@ namespace ExportToRoll20
 
         }
 
+        public List<RepeatingDefense> GetRepeatingDefenses(GCACharacter myCharacter)
+        {
+            List<RepeatingDefense> list = new List<RepeatingDefense>();
+
+            var defenses = myCharacter.ItemsByType[(int) TraitTypes.None];
+
+            // get predefined list of attributes for defense
+            // <name>Punch</name> get attack modes, then get parry/block etc.
+
+            // get a list of skills, get attackmodes, get parry/block/etc.
+
+            // get a list of advantages, get attackmodes, get defenses
+
+            return list;
+        }
+
         public double GetTechniqueDefaultModifier(GCATrait skill)
         {
             double modifier = 0;
 
             // example: "SK:Brawling::parrylevel" - 1
             string[] mods = skill.get_TagItem("default").Split(' ');
-
-            string value = "0";
-
             if (mods.Length == 3)
             {
                 // Example: should be -1
-                value = mods[1] + mods[2];
-
+                string value = mods[1] + mods[2];
                 if (!double.TryParse(value, out modifier))
                 {
                     modifier = 0;
                 }
             }
 
+
+            return modifier;
+        }
+
+        public double GetTechniqueMaxModifier(GCATrait skill)
+        {
+            double modifier = 0;
+
+            // example: <upto>prereq + 4</upto>
+            string[] mods = skill.get_TagItem("upto").Split(' ');
+            if (mods.Length == 3)
+            {
+                // Example: should be -1
+                string value = mods[1] + mods[2];
+                if (!double.TryParse(value, out modifier))
+                {
+                    modifier = 0;
+                }
+            }
 
             return modifier;
         }
