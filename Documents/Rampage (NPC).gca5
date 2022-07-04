@@ -5,11 +5,11 @@
       <name>GURPS Character Assistant</name>
       <version>GCA5Engine, Version=5.0.189.0</version>
       <copyright>Program code is copyright © 1995-2022 by Armin D. Sykes. All data files, graphics, and other GURPS-specific content is copyright © 2005 and other years by Steve Jackson Games Incorporated. GURPS and the all-seeing pyramid are registered trademarks of Steve Jackson Games Incorporated. All rights reserved.</copyright>
-      <datecreated>Tuesday, June 28, 2022</datecreated>
+      <datecreated>Monday, July 4, 2022</datecreated>
     </author>
     <system>
       <version>5</version>
-      <lastkey>13174</lastkey>
+      <lastkey>13176</lastkey>
     </system>
     <library>
       <name>%user%\Supers.gds</name>
@@ -176,6 +176,8 @@
       <sheetviewsheet />
       <charactersheet>GURPS 4th Edition Official Character Sheet</charactersheet>
       <exportsheet>Simple Text Export</exportsheet>
+      <altexportsheet>Export Character to Roll20</altexportsheet>
+      <altexportsheet>Simple Text Export</altexportsheet>
       <altexportsheet>Export Character to Roll20</altexportsheet>
       <altexportsheet>Simple Text Export</altexportsheet>
       <altexportsheet>Export Character to Roll20</altexportsheet>
@@ -2735,14 +2737,14 @@ Body Control Talent\par
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
-          <score>6795</score>
+          <score>5295</score>
           <level>0</level>
           <calcs>
             <syslevels>0</syslevels>
             <basevalue>ST:Money Base + (ST:Starting Wealth * @max(@if(@hasmod(5% of Starting Wealth) THEN 0.05),@if(@hasmod(10% of Starting Wealth) THEN 0.1),@if(@hasmod(15% of Starting Wealth) THEN 0.15),@if(@hasmod(20% of Starting Wealth) THEN 0.2),@if(@hasmod(30% of Starting Wealth) THEN 0.3),@if(@hasmod(40% of Starting Wealth) THEN 0.4),@if(@hasmod(50% of Starting Wealth) THEN 0.5),@if(@hasmod(60% of Starting Wealth) THEN 0.6),@if(@hasmod(70% of Starting Wealth) THEN 0.7),@if(@hasmod(80% of Starting Wealth) THEN 0.8),@if(@hasmod(90% of Starting Wealth) THEN 0.9),@if(@hasmod(100% of Starting Wealth) THEN 1) ) ) - char::equipmentcost</basevalue>
             <minscore>0</minscore>
             <step>0</step>
-            <basescore>6795</basescore>
+            <basescore>5295</basescore>
           </calcs>
           <armordata />
           <ref>
@@ -3256,14 +3258,14 @@ Body Control Talent\par
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
-          <score>38795</score>
+          <score>37295</score>
           <level>0</level>
           <calcs>
             <syslevels>4600</syslevels>
             <basevalue>ST:Starting Wealth - char::equipmentcost</basevalue>
             <minscore>0</minscore>
             <step>0</step>
-            <basescore>34195</basescore>
+            <basescore>32695</basescore>
           </calcs>
           <armordata />
           <ref>
@@ -6998,7 +7000,7 @@ Body Control Talent\par
         </trait>
       </quirks>
       <features count="0" />
-      <skills count="16">
+      <skills count="17">
         <trait type="Skills" idkey="13172">
           <name>Aggressive Parry</name>
           <nameext>Brawling</nameext>
@@ -7548,6 +7550,39 @@ Body Control Talent\par
             <page>B211</page>
           </ref>
         </trait>
+        <trait type="Skills" idkey="13175">
+          <name>Shield</name>
+          <nameext>Force</nameext>
+          <needscheck>-1</needscheck>
+          <taboofailed>0</taboofailed>
+          <cat>_General, Combat/Weapons - Melee Combat</cat>
+          <points>2</points>
+          <type>DX/E</type>
+          <step>+1</step>
+          <stepoff>DX</stepoff>
+          <level>13</level>
+          <blocklevel>10</blocklevel>
+          <calcs>
+            <sd>0</sd>
+            <deflevel>0</deflevel>
+            <pointmult>1</pointmult>
+            <levelmult>1</levelmult>
+            <syslevels>0</syslevels>
+            <extralevels>0</extralevels>
+            <baselevel>13</baselevel>
+            <basepoints>2</basepoints>
+            <multpoints>2</multpoints>
+            <apppoints>2</apppoints>
+            <premodspoints>2</premodspoints>
+            <baseapppoints>2</baseapppoints>
+            <blockat>@int(%level/2)+3</blockat>
+          </calcs>
+          <armordata />
+          <ref>
+            <page>B220</page>
+            <default>DX - 4, "SK:Shield (Shield)" - 2, "SK:Shield (Buckler)" - 2, "SK:Shield Art (Force)" - 3, "SK:Shield Sport (Force)" - 3</default>
+          </ref>
+        </trait>
         <trait type="Skills" idkey="10779">
           <name>Singing</name>
           <needscheck>-1</needscheck>
@@ -7643,7 +7678,7 @@ Body Control Talent\par
         </trait>
       </skills>
       <spells count="0" />
-      <equipment count="5">
+      <equipment count="6">
         <trait type="Equipment" idkey="10833">
           <name>Advanced Body Armor</name>
           <needscheck>-1</needscheck>
@@ -7781,6 +7816,94 @@ Body Control Talent\par
               <itemnotes>{Concealable as or under clothing.},{Give +1 to kicking damage (p. B271).}</itemnotes>
             </attackmode>
           </attackmodes>
+        </trait>
+        <trait type="Equipment" idkey="13176">
+          <name>Force Shield</name>
+          <needscheck>-1</needscheck>
+          <taboofailed>0</taboofailed>
+          <cat>_Armor - Shields, Basic Set, Basic Set - Armor, Basic Set - Armor - Ultra-Tech, Basic Set - Armor - Ultra-Tech - Shields</cat>
+          <cost>1500</cost>
+          <count>1</count>
+          <weight>0.5</weight>
+          <level>0</level>
+          <calcs>
+            <basecost>1500</basecost>
+            <baseweight>0.5</baseweight>
+            <precountcost>1500</precountcost>
+            <precountweight>0.5</precountweight>
+            <premodscost>1500</premodscost>
+            <preformulacost>1500</preformulacost>
+            <preformulaweight>.5</preformulaweight>
+            <postformulacost>1500</postformulacost>
+            <postformulaweight>0.5</postformulaweight>
+            <prechildrencost>1500</prechildrencost>
+            <prechildrenweight>0.5</prechildrenweight>
+          </calcs>
+          <armordata>
+            <dr>100</dr>
+            <chardr>100</chardr>
+            <db>3</db>
+            <chardb>3</chardb>
+            <drnotes>{DR is hardened (treat as one level of the Hardened enhancement, p. B47).}</drnotes>
+          </armordata>
+          <ref>
+            <page>B273, B287</page>
+            <description>TL:^ LC:3 DB:3 Dam:thr cr Reach:1 Parry:No ST:-- DR:100 HP:-- Skill:Shield (Force) Notes: [3,5] Also available as a buckler. You can ready a buckler in one turn and drop it as a free action, just like a weapon - but it always occupies one hand, and it does not allow a shield rush. Use Shield (Buckler) instead of regular shield skill. No effect on statistics. Worn on the wrist, leaving the hand free. DR is hardened (treat as Hardened enhancement, p. B47).</description>
+            <mods>Equipment, Shield</mods>
+            <techlvl>^</techlvl>
+            <charunits>lb</charunits>
+          </ref>
+          <attackmodes count="2">
+            <attackmode>
+              <name>Bash</name>
+              <notes>[3,5]</notes>
+              <lc>3</lc>
+              <damage>thr</damage>
+              <dmg>thr</dmg>
+              <damtype>cr</damtype>
+              <parry>No</parry>
+              <reach>1</reach>
+              <skillused>ST:DX-4, SK:Shield (Shield)-2, SK:Shield (Buckler)-2, SK:Shield (Force)</skillused>
+              <chardamage>2d</chardamage>
+              <chardamtype>cr</chardamtype>
+              <charparry>No</charparry>
+              <charreach>1</charreach>
+              <charskillused>"SK:Shield (Force)"</charskillused>
+              <charskillscore>13</charskillscore>
+              <charparryscore>No</charparryscore>
+              <chareffectivest>21</chareffectivest>
+              <charskillusedkey>k13175</charskillusedkey>
+              <charblockscore>10</charblockscore>
+              <itemnotes>{Worn on the wrist, leaving the hand free.}</itemnotes>
+            </attackmode>
+            <attackmode>
+              <name>Rush</name>
+              <notes>[3,5]</notes>
+              <lc>3</lc>
+              <damage>slam+3</damage>
+              <damtype>cr</damtype>
+              <parry>No</parry>
+              <reach>1</reach>
+              <skillused>ST:DX-4, SK:Shield (Shield)-2, SK:Shield (Buckler)-2, SK:Shield (Force)</skillused>
+              <chardamage>slam+3</chardamage>
+              <chardamtype>cr</chardamtype>
+              <charparry>No</charparry>
+              <charreach>1</charreach>
+              <charskillused>"SK:Shield (Force)"</charskillused>
+              <charskillscore>13</charskillscore>
+              <charparryscore>No</charparryscore>
+              <chareffectivest>21</chareffectivest>
+              <charskillusedkey>k13175</charskillusedkey>
+              <charblockscore>10</charblockscore>
+              <itemnotes>{Worn on the wrist, leaving the hand free.}</itemnotes>
+            </attackmode>
+          </attackmodes>
+          <extended count="1">
+            <extendedtag>
+              <tagname>hp</tagname>
+              <tagvalue>--</tagvalue>
+            </extendedtag>
+          </extended>
         </trait>
         <trait type="Equipment" idkey="10788">
           <name>Laser Sight</name>

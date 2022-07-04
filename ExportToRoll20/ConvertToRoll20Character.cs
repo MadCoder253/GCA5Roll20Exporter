@@ -270,7 +270,7 @@ namespace ExportToRoll20
 
                 roll20Character.RepeatingTechniquesrevised = GetRepeatingTechniques(currentCharacter);
 
-
+                roll20Character.RepeatingDefense = GetRepeatingDefenses(currentCharacter);
             }
 
             return roll20Character;
@@ -986,16 +986,182 @@ namespace ExportToRoll20
         {
             List<RepeatingDefense> list = new List<RepeatingDefense>();
 
-            var defenses = myCharacter.ItemsByType[(int) TraitTypes.None];
+            // loop through all items
+            foreach(GCATrait trait in myCharacter.Items)
+            {
+                // loop through the modes, (usually an attack mode)
+                // <attackmodes count="1">
+                foreach (Mode mode in trait.Modes)
+                {
+                    var parryDefense = GetParryDefense(trait, mode);
 
-            // get predefined list of attributes for defense
-            // <name>Punch</name> get attack modes, then get parry/block etc.
+                    // if there's a name, we have a valid parry defense
+                    if (parryDefense != null)
+                    {
+                        list.Add(parryDefense);
+                    }
 
-            // get a list of skills, get attackmodes, get parry/block/etc.
+                    var powerDefense = GetPowerDefense(trait, mode);
 
-            // get a list of advantages, get attackmodes, get defenses
+                    if (powerDefense != null)
+                    {
+                        list.Add(powerDefense);
+                    }
+
+                }
+
+                var blockDefense = GetBlockDefense(trait);
+
+                if (blockDefense != null)
+                {
+                    list.Add(blockDefense);
+                }
+            }
 
             return list;
+        }
+
+        /// <summary>
+        /// Get parry defense item
+        /// </summary>
+        /// <param name="trait"></param>
+        /// <param name="mode"></param>
+        /// <returns></returns>
+        public RepeatingDefense GetParryDefense(GCATrait trait, Mode mode)
+        {
+            // set defense type
+            var defenseType = "Parry";
+
+            if (mode.Name.ToLower() == "brawling" || mode.Name.ToLower() == "karate" || mode.Name.ToLower() == "punch")
+            {
+                defenseType = "Unarmed Parry";
+            }
+
+            // attempt to get a parry score
+            var parryValue = mode.get_TagItem("charparryscore");
+
+            if (!double.TryParse(parryValue, out double parryScore))
+            {
+                parryScore = 0;
+            }
+
+            // attemp to get a acc value. If there's a ACC value, don't create a valid defense
+            var accValue = mode.get_TagItem("acc");
+
+            var defenseName = trait.FullName;
+
+            if (trait.FullName != mode.Name)
+            {
+                defenseName += " (" + mode.Name + ")";
+            }
+
+            if (string.IsNullOrEmpty(accValue) && !string.IsNullOrEmpty(mode.Name) && parryScore > 0)
+            {
+                var item = new RepeatingDefense
+                {
+                    Idkey = trait.IDKey + "_" + mode.Name,
+                    Name = defenseName,
+                    Type = defenseType,
+                    Info = "",
+                    Skill = parryScore,
+                    SkillMod = 0,
+                    DefenseModReason = "",
+                    InfoDescription = ""
+                };
+
+                return item;
+            };
+
+            return null;
+
+        }
+
+        public RepeatingDefense GetBlockDefense(GCATrait trait)
+        {
+            var blockValue = trait.get_TagItem("blocklevel");
+
+            var categories = trait.get_TagItem("cat");
+
+            // ignore the DX attribute & talents
+            if (trait.Name != "DX" && !categories.ToLower().Contains("talent") && double.TryParse(blockValue, out double block))
+            {
+                var item = new RepeatingDefense
+                {
+                    Idkey = trait.IDKey + "_block",
+                    Name = trait.FullName,
+                    Type = "Block",
+                    Info = "",
+                    Skill = block,
+                    SkillMod = 0,
+                    DefenseModReason = "",
+                    InfoDescription = ""
+                };
+
+                return item;
+            }
+
+            return null;
+
+        }
+
+        public RepeatingDefense GetPowerDefense(GCATrait trait, Mode mode)
+        {
+            var categories = trait.get_TagItem("cat");
+
+            if (categories.ToLower().Contains("talent"))
+            {
+                var defenseType = "Power";
+
+                var append = "power";
+
+                if (mode.Name.ToLower().Contains("dodge"))
+                {
+                    defenseType = "Power Dodge";
+                    append = "_power_dodge";
+                }
+                else if (mode.Name.ToLower().Contains("parry"))
+                {
+                    defenseType = "Power Parry";
+                    append = "_power_parry";
+                }
+                else if (mode.Name.ToLower().Contains("block/physical"))
+                {
+                    defenseType = "Power Block";
+                    append = "_power_block_physical";
+                }
+                else if (mode.Name.ToLower().Contains("block/mental"))
+                {
+                    defenseType = "Power Block Mental";
+                    append = "_power_block_mental";
+                }
+
+                var scoreValue = mode.get_TagItem("charskillscore");
+
+                if (double.TryParse(scoreValue, out double score))
+                {
+
+                    var powerDefense = new RepeatingDefense
+                    {
+                        Idkey = trait.IDKey + append,
+                        Name = trait.FullName + " (" + mode.Name + ")",
+                        Type = defenseType,
+                        Info = "",
+                        Skill = score,
+                        SkillMod = 0,
+                        DefenseModReason = "",
+                        InfoDescription = ""
+                    };
+
+                    if (powerDefense != null)
+                    {
+                        return powerDefense;
+                    }
+                }
+
+            }
+            
+            return null;
+
         }
 
         public double GetTechniqueDefaultModifier(GCATrait skill)
