@@ -680,11 +680,11 @@ namespace ExportToRoll20
 
             var arrKeys = idkeys.Split(seperators, StringSplitOptions.RemoveEmptyEntries).ToList<string>();
 
-            // loop through ALL items
-            foreach (GCATrait trait in myCharacter.Items)
+            foreach (var idKey in arrKeys)
             {
-                // is the item one of the idkeys associated with the template
-                if (arrKeys.Any(key => key == trait.IDKey.ToString()))
+                GCATrait trait = GetTraitByIdKey(myCharacter, idKey);
+
+                if (trait != null)
                 {
                     var refPage = trait.get_TagItem("ref");
 
@@ -711,10 +711,27 @@ namespace ExportToRoll20
 
                     list.Add(racialTrait);
                 }
+
             }
 
             return list;
         }
+
+        public GCATrait GetTraitByIdKey(GCACharacter myCharacter, string IdKey)
+        {
+            // loop through ALL items
+            foreach (GCATrait trait in myCharacter.Items)
+            {
+                // is the item one of the idkeys associated with the template
+                if (IdKey == trait.IDKey.ToString())
+                {
+                    return trait;
+                }
+            }
+
+            return null;
+        }
+
 
         public List<RepeatingSkill> GetRepeatingSkills(GCACharacter myCharacter)
         {
