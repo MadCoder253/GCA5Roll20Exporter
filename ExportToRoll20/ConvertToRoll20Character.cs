@@ -273,6 +273,8 @@ namespace ExportToRoll20
                 roll20Character.RepeatingRanged = GetRepeatingRanged(currentCharacter);
 
                 roll20Character.RepeatingItem = GetRepeatingItems(currentCharacter);
+
+                roll20Character.RepeatingSpells = GetRepeatingSpells(currentCharacter);
             }
 
             return roll20Character;
@@ -381,7 +383,8 @@ namespace ExportToRoll20
                     string bonusItem = theTrait.BonusListItems(index);
 
                     // ignore combat reflexes bonuses, that is added on the Roll20 character sheet
-                    if (!bonusItem.Contains("combat reflexes"))
+                    // also ignore magery and Power Investiture
+                    if (!bonusItem.Contains("combat reflexes") && !bonusItem.Contains("Magery") && !bonusItem.Contains("Power Investiture"))
                     {
                         // example string: +1 from 'Extra ST'
                         // handles negative also: -1 from 'Reduced IQ`
@@ -404,7 +407,7 @@ namespace ExportToRoll20
 
         /// <summary>
         /// Gets a comma separated list of reasons for bonuslist items
-        /// ignores combat reflexes, which is handled by Roll20 sheet
+        /// ignores combat reflexes, magery, and power investiture, which is handled by Roll20 sheet
         /// </summary>
         /// <param name="theTrait"></param>
         /// <returns></returns>
@@ -419,7 +422,8 @@ namespace ExportToRoll20
                     string bonusItem = theTrait.BonusListItems(index);
 
                     // ignore combat reflexes bonuses, that is added on the Roll20 character sheet
-                    if (!bonusItem.Contains("combat reflexes"))
+                    // ignore Magery and Power Investiture
+                    if (!bonusItem.Contains("combat reflexes") && !bonusItem.Contains("Magery") && !bonusItem.Contains("Power Investiture"))
                     {
                         reasons.Add(bonusItem);
 
@@ -866,7 +870,7 @@ namespace ExportToRoll20
 
                         string meleeName = trait.FullName;
 
-                        if (trait.FullName != mode.Name)
+                        if (trait.FullName != mode.Name && mode.Name.Length > 0)
                         {
                             meleeName += " (" + mode.Name + ")";
                         }
@@ -1035,9 +1039,90 @@ namespace ExportToRoll20
 
         }
 
+        public List<RepeatingSpell> GetRepeatingSpells(GCACharacter myCharacter)
+        {
+            List<RepeatingSpell> list = new List<RepeatingSpell>();
+
+            var spells = myCharacter.ItemsByType[(int)TraitTypes.Spells];
+
+            foreach (GCATrait trait in spells)
+            {
+                // only get regular spells
+                if (!trait.SkillType.StartsWith("tech"))
+                {
+                    string spellClassSummary = trait.get_TagItem("class");
+
+                    string resistedBy = "";
+
+                    string spellClass;
+
+                    // <class>Regular/R-HT</class>
+                    if (spellClassSummary.Contains("/R"))
+                    {
+                        var arrSpellClass = spellClassSummary.Split('/');
+
+                        spellClass = arrSpellClass[0];
+
+                        resistedBy = arrSpellClass[1];
+                    }
+                    else
+                    {
+                        spellClass = spellClassSummary;
+                    }
+
+                    string primaryCollege = "";
+
+                    string secondaryCollege = "";
+
+                    var categories = trait.get_TagItem("cat");
+
+                    string[] seperators = { ", " };
+
+                    var arrCats = categories.Split(seperators, StringSplitOptions.RemoveEmptyEntries);
+
+                    if (arrCats.Length > 0)
+                    {
+                        primaryCollege = arrCats[0];
+
+                        if (arrCats.Length > 1)
+                        {
+                            secondaryCollege = arrCats[1];
+                        }
+                    }
+
+                    var spell = new RepeatingSpell()
+                    {
+                        Idkey = trait.IDKey.ToString(),
+                        Name = trait.FullName,
+                        Difficulty = trait.SkillType,
+                        SpellModifier = GetTraitModifier(trait),
+                        Points = trait.Points,
+                        SpellResistedBy = resistedBy,
+                        Duration = trait.get_TagItem("duration"),
+                        Cost = trait.get_TagItem("castingcost"),
+                        Skill = trait.Level,
+                        Ref = trait.get_TagItem("page"),
+                        Casttime = trait.get_TagItem("time"),
+                        Maintain = "",
+                        SpellClass = spellClass,
+                        SpellCollege = primaryCollege,
+                        SpellCollegeSecondary = secondaryCollege,
+                        SpellModNotes = GetTraitModifiersList(trait),
+                        SpellNotes = GetTraitNotes(trait)
+                    };
+
+                    list.Add(spell);
+
+                }
+
+            }
+
+            return list;
+        }
+
         public string GetLegalityClass(GCATrait trait)
         {
-            foreach(Mode mode in trait.Modes)
+            foreach (Mode mode in trait.Modes)
             {
                 if (!string.IsNullOrEmpty(mode.get_TagItem("lc")))
                 {
@@ -1077,7 +1162,7 @@ namespace ExportToRoll20
 
             var defenseName = trait.FullName;
 
-            if (trait.FullName != mode.Name)
+            if (trait.FullName != mode.Name && mode.Name.Length > 0)
             {
                 defenseName += " (" + mode.Name + ")";
             }

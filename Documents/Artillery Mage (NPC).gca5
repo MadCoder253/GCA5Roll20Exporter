@@ -3,13 +3,13 @@
   <character>
     <author>
       <name>GURPS Character Assistant</name>
-      <version>GCA5Engine, Version=5.0.187.0</version>
+      <version>GCA5Engine, Version=5.0.189.0</version>
       <copyright>Program code is copyright © 1995-2022 by Armin D. Sykes. All data files, graphics, and other GURPS-specific content is copyright © 2005 and other years by Steve Jackson Games Incorporated. GURPS and the all-seeing pyramid are registered trademarks of Steve Jackson Games Incorporated. All rights reserved.</copyright>
-      <datecreated>Friday, March 3, 2017</datecreated>
+      <datecreated>Saturday, July 9, 2022</datecreated>
     </author>
     <system>
       <version>5</version>
-      <lastkey>234</lastkey>
+      <lastkey>13354</lastkey>
     </system>
     <library>
       <name>%user%\Greyhawk.gds</name>
@@ -183,6 +183,8 @@
       <charactersheet>%user%\phoenix.gcs</charactersheet>
       <altcharactersheet>%user%\text layout.gcs</altcharactersheet>
       <exportsheet>Export Character to Roll20</exportsheet>
+      <altexportsheet>Export Character to Roll20</altexportsheet>
+      <altexportsheet>Simple Text Export</altexportsheet>
       <altexportsheet>Simple Text Export</altexportsheet>
     </output>
     <vitals>
@@ -5126,7 +5128,7 @@
           </ref>
         </trait>
       </skills>
-      <spells count="25">
+      <spells count="31">
         <trait type="Spells" idkey="226">
           <name>Air Jet</name>
           <bonuslist>+3 from 'Magery'</bonuslist>
@@ -5188,6 +5190,112 @@
               <chardamtype>knock</chardamtype>
               <charreach>~2</charreach>
               <itemnotes>{~1-3 energy. Multiply spell effect based on enegy spent.}</itemnotes>
+            </attackmode>
+          </attackmodes>
+        </trait>
+        <trait type="Spells" idkey="13349">
+          <name>Body of Flames</name>
+          <bonuslist>+3 from 'Magery'</bonuslist>
+          <needscheck>-1</needscheck>
+          <taboofailed>0</taboofailed>
+          <cat>Fire</cat>
+          <points>1</points>
+          <type>IQ/VH</type>
+          <step>+0</step>
+          <stepoff>IQ</stepoff>
+          <level>13</level>
+          <calcs>
+            <sd>0</sd>
+            <deflevel>0</deflevel>
+            <pointmult>1</pointmult>
+            <levelmult>1</levelmult>
+            <syslevels>3</syslevels>
+            <extralevels>3</extralevels>
+            <baselevel>10</baselevel>
+            <basepoints>1</basepoints>
+            <multpoints>1</multpoints>
+            <apppoints>1</apppoints>
+            <premodspoints>1</premodspoints>
+            <baseapppoints>1</baseapppoints>
+          </calcs>
+          <armordata />
+          <ref>
+            <page>M76</page>
+            <description>Prereq Count: 8 Prerequisites: Magery 1, Breathe Fire</description>
+            <shortcat>Fi</shortcat>
+            <prereqcount>8</prereqcount>
+            <magery>1</magery>
+            <class>Regular/R-HT</class>
+            <time>5 sec.</time>
+            <duration>1 min.</duration>
+            <castingcost>12/4</castingcost>
+            <countasneed>Magical</countasneed>
+            <ident>Magical</ident>
+            <needs>Breathe Fire, ST:Magery = 0 | PE:Charms ([Spell]) | PE:Charms (%SpellsList%) | PE:Charms (Body of Flames)</needs>
+            <mods>Spells</mods>
+          </ref>
+        </trait>
+        <trait type="Spells" idkey="13350">
+          <name>Breathe Fire</name>
+          <bonuslist>+3 from 'Magery'</bonuslist>
+          <needscheck>-1</needscheck>
+          <taboofailed>0</taboofailed>
+          <cat>Fire</cat>
+          <points>1</points>
+          <type>IQ/VH</type>
+          <step>+0</step>
+          <stepoff>IQ</stepoff>
+          <level>13</level>
+          <calcs>
+            <sd>0</sd>
+            <deflevel>0</deflevel>
+            <pointmult>1</pointmult>
+            <levelmult>1</levelmult>
+            <syslevels>3</syslevels>
+            <extralevels>3</extralevels>
+            <baselevel>10</baselevel>
+            <basepoints>1</basepoints>
+            <multpoints>1</multpoints>
+            <apppoints>1</apppoints>
+            <premodspoints>1</premodspoints>
+            <baseapppoints>1</baseapppoints>
+          </calcs>
+          <armordata />
+          <ref>
+            <page>M76</page>
+            <description>Prereq Count: 7 Prerequisites: Magery 1, Flame Jet, Resist Fire</description>
+            <shortcat>Fi</shortcat>
+            <prereqcount>7</prereqcount>
+            <magery>1</magery>
+            <class>Regular</class>
+            <time>2 sec.</time>
+            <duration>1 sec.</duration>
+            <castingcost>1 to 4</castingcost>
+            <countasneed>Magical</countasneed>
+            <ident>Magical</ident>
+            <needs>(AD:Magery 0 | ST:Magery 0 = 1), (AD:Magery = 1, ST:Magery = 1 | ST:Magery Fire = 1), Flame Jet, Resist Fire, ST:Magery = 0 | PE:Charms ([Spell]) | PE:Charms (%SpellsList%) | PE:Charms (Breathe Fire)</needs>
+            <mods>Spells</mods>
+          </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+              <notes>~1-4en</notes>
+              <damage>~1d+1</damage>
+              <damtype>burn</damtype>
+              <parry>No</parry>
+              <reach>~1</reach>
+              <skillused>DX-4, Innate Attack (Breath), Innate Attack (Gaze)-2, Innate Attack (Projectile)-2, Innate Attack (Beam)-2</skillused>
+              <charparry>No</charparry>
+              <chareffectivest>9</chareffectivest>
+              <charskillscore>11</charskillscore>
+              <charskillused>"SK:Innate Attack (Projectile)"-2</charskillused>
+              <charparryscore>No</charparryscore>
+              <charskillusedkey>k187</charskillusedkey>
+              <chardamage>~1d+1</chardamage>
+              <dmg>1</dmg>
+              <chardamtype>burn</chardamtype>
+              <charreach>~1</charreach>
+              <itemnotes>{~1-4 energy. Multiply spell effect based on enegy spent.}</itemnotes>
             </attackmode>
           </attackmodes>
         </trait>
@@ -5401,6 +5509,48 @@
             <mods>Spells</mods>
           </ref>
         </trait>
+        <trait type="Spells" idkey="13354">
+          <name>Extinguish Fire</name>
+          <bonuslist>+3 from 'Magery'</bonuslist>
+          <needscheck>-1</needscheck>
+          <taboofailed>0</taboofailed>
+          <cat>Fire</cat>
+          <points>1</points>
+          <type>IQ/H</type>
+          <step>+1</step>
+          <stepoff>IQ</stepoff>
+          <level>14</level>
+          <calcs>
+            <sd>0</sd>
+            <deflevel>0</deflevel>
+            <pointmult>1</pointmult>
+            <levelmult>1</levelmult>
+            <syslevels>3</syslevels>
+            <extralevels>3</extralevels>
+            <baselevel>11</baselevel>
+            <basepoints>1</basepoints>
+            <multpoints>1</multpoints>
+            <apppoints>1</apppoints>
+            <premodspoints>1</premodspoints>
+            <baseapppoints>1</baseapppoints>
+          </calcs>
+          <armordata />
+          <ref>
+            <page>M72, B247</page>
+            <description>Prereq Count: 1 Prerequisites: Ignite Fire</description>
+            <shortcat>Fi</shortcat>
+            <prereqcount>1</prereqcount>
+            <magery>0</magery>
+            <class>Area</class>
+            <time>1 sec.</time>
+            <duration>Perm.</duration>
+            <castingcost>3</castingcost>
+            <countasneed>Magical</countasneed>
+            <ident>Magical</ident>
+            <needs>Ignite Fire, ST:Magery = 0 | PE:Charms ([Spell]) | PE:Charms (%SpellsList%) | PE:Charms (Extinguish Fire)</needs>
+            <mods>Spells</mods>
+          </ref>
+        </trait>
         <trait type="Spells" idkey="214">
           <name>Fire Cloud</name>
           <bonuslist>+3 from 'Magery'</bonuslist>
@@ -5507,6 +5657,112 @@
               <charrangehalfdam>25</charrangehalfdam>
               <charrangemax>50</charrangemax>
               <characc>1</characc>
+              <itemnotes>{~1-3 energy. Multiply spell effect based on enegy spent.}</itemnotes>
+            </attackmode>
+          </attackmodes>
+        </trait>
+        <trait type="Spells" idkey="13353">
+          <name>Fireproof</name>
+          <bonuslist>+3 from 'Magery'</bonuslist>
+          <needscheck>-1</needscheck>
+          <taboofailed>0</taboofailed>
+          <cat>Fire</cat>
+          <points>1</points>
+          <type>IQ/H</type>
+          <step>+1</step>
+          <stepoff>IQ</stepoff>
+          <level>14</level>
+          <calcs>
+            <sd>0</sd>
+            <deflevel>0</deflevel>
+            <pointmult>1</pointmult>
+            <levelmult>1</levelmult>
+            <syslevels>3</syslevels>
+            <extralevels>3</extralevels>
+            <baselevel>11</baselevel>
+            <basepoints>1</basepoints>
+            <multpoints>1</multpoints>
+            <apppoints>1</apppoints>
+            <premodspoints>1</premodspoints>
+            <baseapppoints>1</baseapppoints>
+          </calcs>
+          <armordata />
+          <ref>
+            <page>M73</page>
+            <description>Prereq Count: 2 Prerequisites: Extinguish Fire</description>
+            <shortcat>Fi</shortcat>
+            <prereqcount>2</prereqcount>
+            <magery>0</magery>
+            <class>Area</class>
+            <time>5 min.</time>
+            <duration>1 day</duration>
+            <castingcost>3#</castingcost>
+            <countasneed>Magical</countasneed>
+            <ident>Magical</ident>
+            <needs>Extinguish Fire, ST:Magery = 0 | PE:Charms ([Spell]) | PE:Charms (%SpellsList%) | PE:Charms (Fireproof)</needs>
+            <mods>Spells</mods>
+          </ref>
+        </trait>
+        <trait type="Spells" idkey="13351">
+          <name>Flame Jet</name>
+          <bonuslist>+3 from 'Magery'</bonuslist>
+          <needscheck>-1</needscheck>
+          <taboofailed>0</taboofailed>
+          <cat>Fire</cat>
+          <points>1</points>
+          <type>IQ/H</type>
+          <step>+1</step>
+          <stepoff>IQ</stepoff>
+          <level>14</level>
+          <calcs>
+            <sd>0</sd>
+            <deflevel>0</deflevel>
+            <pointmult>1</pointmult>
+            <levelmult>1</levelmult>
+            <syslevels>3</syslevels>
+            <extralevels>3</extralevels>
+            <baselevel>11</baselevel>
+            <basepoints>1</basepoints>
+            <multpoints>1</multpoints>
+            <apppoints>1</apppoints>
+            <premodspoints>1</premodspoints>
+            <baseapppoints>1</baseapppoints>
+          </calcs>
+          <armordata />
+          <ref>
+            <page>M73</page>
+            <description>Prereq Count: 3 Prerequisites: Create Fire, Shape Fire</description>
+            <shortcat>Fi</shortcat>
+            <prereqcount>3</prereqcount>
+            <magery>0</magery>
+            <class>Regular</class>
+            <time>1 sec.</time>
+            <duration>1 sec.</duration>
+            <castingcost>1 to 3/S</castingcost>
+            <countasneed>Magical</countasneed>
+            <ident>Magical</ident>
+            <needs>Create Fire, Shape Fire, ST:Magery = 0 | PE:Charms ([Spell]) | PE:Charms (%SpellsList%) | PE:Charms (Flame Jet)</needs>
+            <mods>Spells</mods>
+          </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+              <notes>~1-3en</notes>
+              <damage>~1d</damage>
+              <damtype>burn</damtype>
+              <parry>No</parry>
+              <reach>~1</reach>
+              <skillused>ST:DX-4, SK:Innate Attack (Beam), SK:Innate Attack (Gaze)-2, SK:Innate Attack (Projectile)-2, SK:Innate Attack (Breath)-2</skillused>
+              <charparry>No</charparry>
+              <chareffectivest>9</chareffectivest>
+              <charskillscore>11</charskillscore>
+              <charskillused>"SK:Innate Attack (Projectile)"-2</charskillused>
+              <charparryscore>No</charparryscore>
+              <charskillusedkey>k187</charskillusedkey>
+              <chardamage>~1d</chardamage>
+              <dmg>1</dmg>
+              <chardamtype>burn</chardamtype>
+              <charreach>~1</charreach>
               <itemnotes>{~1-3 energy. Multiply spell effect based on enegy spent.}</itemnotes>
             </attackmode>
           </attackmodes>
@@ -5941,6 +6197,48 @@
             <mods>Spells</mods>
           </ref>
         </trait>
+        <trait type="Spells" idkey="13352">
+          <name>Resist Fire</name>
+          <bonuslist>+3 from 'Magery'</bonuslist>
+          <needscheck>-1</needscheck>
+          <taboofailed>0</taboofailed>
+          <cat>Fire</cat>
+          <points>1</points>
+          <type>IQ/H</type>
+          <step>+1</step>
+          <stepoff>IQ</stepoff>
+          <level>14</level>
+          <calcs>
+            <sd>0</sd>
+            <deflevel>0</deflevel>
+            <pointmult>1</pointmult>
+            <levelmult>1</levelmult>
+            <syslevels>3</syslevels>
+            <extralevels>3</extralevels>
+            <baselevel>11</baselevel>
+            <basepoints>1</basepoints>
+            <multpoints>1</multpoints>
+            <apppoints>1</apppoints>
+            <premodspoints>1</premodspoints>
+            <baseapppoints>1</baseapppoints>
+          </calcs>
+          <armordata />
+          <ref>
+            <page>M74, B247</page>
+            <description>Prereq Count: 3 Prerequisites: Fireproof or Extinguish Fire, Cold</description>
+            <shortcat>Fi</shortcat>
+            <prereqcount>3</prereqcount>
+            <magery>0</magery>
+            <class>Regular</class>
+            <time>1 sec.</time>
+            <duration>1 min.</duration>
+            <castingcost>2/1#</castingcost>
+            <countasneed>Magical</countasneed>
+            <ident>Magical</ident>
+            <needs>(Fireproof | Extinguish Fire, Cold), ST:Magery = 0 | PE:Charms ([Spell]) | PE:Charms (%SpellsList%) | PE:Charms (Resist Fire)</needs>
+            <mods>Spells</mods>
+          </ref>
+        </trait>
         <trait type="Spells" idkey="218">
           <name>Seek Air</name>
           <bonuslist>+3 from 'Magery'</bonuslist>
@@ -6365,14 +6663,10 @@
               <page>M67, B480</page>
               <tier>1</tier>
               <upto>5</upto>
-              <extended count="2">
+              <extended count="1">
                 <extendedtag>
                   <tagname>energy</tagname>
                   <tagvalue>@indexedvalue(me::level, 100, 500, 2000, 8000, 20000) * ( +  +  +  +  +  +  +  + 100)/100 * @if(@hasmod(Bane (x1/3)) THEN (1/3) ELSE 1) * @if(@hasmod(Bane (x1/4)) THEN 0.25 ELSE 1) * @if(@hasmod(Bane (x1/10)) THEN 0.1 ELSE 1) * @if(@hasmod(Attune (x1/2)) THEN 0.5 ELSE 1)</tagvalue>
-                </extendedtag>
-                <extendedtag>
-                  <tagname>x</tagname>
-                  <tagvalue />
                 </extendedtag>
               </extended>
               <bonuses count="1">
@@ -6752,7 +7046,7 @@
         <thbase>1</thbase>
         <thadd>-2</thadd>
         <swbase>1</swbase>
-        <swadd />
+        <swadd>0</swadd>
       </basicdamage>
       <basicdamage>
         <st>11</st>
@@ -6771,16 +7065,16 @@
       <basicdamage>
         <st>13</st>
         <thbase>1</thbase>
-        <thadd />
+        <thadd>0</thadd>
         <swbase>2</swbase>
         <swadd>-1</swadd>
       </basicdamage>
       <basicdamage>
         <st>14</st>
         <thbase>1</thbase>
-        <thadd />
+        <thadd>0</thadd>
         <swbase>2</swbase>
-        <swadd />
+        <swadd>0</swadd>
       </basicdamage>
       <basicdamage>
         <st>15</st>
@@ -6808,7 +7102,7 @@
         <thbase>1</thbase>
         <thadd>+2</thadd>
         <swbase>3</swbase>
-        <swadd />
+        <swadd>0</swadd>
       </basicdamage>
       <basicdamage>
         <st>19</st>
@@ -6827,16 +7121,16 @@
       <basicdamage>
         <st>21</st>
         <thbase>2</thbase>
-        <thadd />
+        <thadd>0</thadd>
         <swbase>4</swbase>
         <swadd>-1</swadd>
       </basicdamage>
       <basicdamage>
         <st>22</st>
         <thbase>2</thbase>
-        <thadd />
+        <thadd>0</thadd>
         <swbase>4</swbase>
-        <swadd />
+        <swadd>0</swadd>
       </basicdamage>
       <basicdamage>
         <st>23</st>
@@ -6864,7 +7158,7 @@
         <thbase>2</thbase>
         <thadd>+2</thadd>
         <swbase>5</swbase>
-        <swadd />
+        <swadd>0</swadd>
       </basicdamage>
       <basicdamage>
         <st>27</st>
@@ -6883,14 +7177,14 @@
       <basicdamage>
         <st>29</st>
         <thbase>3</thbase>
-        <thadd />
+        <thadd>0</thadd>
         <swbase>5</swbase>
         <swadd>+2</swadd>
       </basicdamage>
       <basicdamage>
         <st>30</st>
         <thbase>3</thbase>
-        <thadd />
+        <thadd>0</thadd>
         <swbase>5</swbase>
         <swadd>+2</swadd>
       </basicdamage>
@@ -6913,14 +7207,14 @@
         <thbase>3</thbase>
         <thadd>+2</thadd>
         <swbase>6</swbase>
-        <swadd />
+        <swadd>0</swadd>
       </basicdamage>
       <basicdamage>
         <st>34</st>
         <thbase>3</thbase>
         <thadd>+2</thadd>
         <swbase>6</swbase>
-        <swadd />
+        <swadd>0</swadd>
       </basicdamage>
       <basicdamage>
         <st>35</st>
@@ -6939,14 +7233,14 @@
       <basicdamage>
         <st>37</st>
         <thbase>4</thbase>
-        <thadd />
+        <thadd>0</thadd>
         <swbase>6</swbase>
         <swadd>+2</swadd>
       </basicdamage>
       <basicdamage>
         <st>38</st>
         <thbase>4</thbase>
-        <thadd />
+        <thadd>0</thadd>
         <swbase>6</swbase>
         <swadd>+2</swadd>
       </basicdamage>
@@ -6967,7 +7261,7 @@
       <basicdamage>
         <st>45</st>
         <thbase>5</thbase>
-        <thadd />
+        <thadd>0</thadd>
         <swbase>7</swbase>
         <swadd>+1</swadd>
       </basicdamage>
@@ -6981,7 +7275,7 @@
       <basicdamage>
         <st>55</st>
         <thbase>6</thbase>
-        <thadd />
+        <thadd>0</thadd>
         <swbase>8</swbase>
         <swadd>+1</swadd>
       </basicdamage>
@@ -6990,7 +7284,7 @@
         <thbase>7</thbase>
         <thadd>-1</thadd>
         <swbase>9</swbase>
-        <swadd />
+        <swadd>0</swadd>
       </basicdamage>
       <basicdamage>
         <st>65</st>
@@ -7002,9 +7296,9 @@
       <basicdamage>
         <st>70</st>
         <thbase>8</thbase>
-        <thadd />
+        <thadd>0</thadd>
         <swbase>10</swbase>
-        <swadd />
+        <swadd>0</swadd>
       </basicdamage>
       <basicdamage>
         <st>75</st>
@@ -7016,9 +7310,9 @@
       <basicdamage>
         <st>80</st>
         <thbase>9</thbase>
-        <thadd />
+        <thadd>0</thadd>
         <swbase>11</swbase>
-        <swadd />
+        <swadd>0</swadd>
       </basicdamage>
       <basicdamage>
         <st>85</st>
@@ -7030,9 +7324,9 @@
       <basicdamage>
         <st>90</st>
         <thbase>10</thbase>
-        <thadd />
+        <thadd>0</thadd>
         <swbase>12</swbase>
-        <swadd />
+        <swadd>0</swadd>
       </basicdamage>
       <basicdamage>
         <st>95</st>
@@ -7044,16 +7338,16 @@
       <basicdamage>
         <st>100</st>
         <thbase>11</thbase>
-        <thadd />
+        <thadd>0</thadd>
         <swbase>13</swbase>
-        <swadd />
+        <swadd>0</swadd>
       </basicdamage>
       <basicdamage>
         <st>0</st>
         <thbase>(@int(ST:Striking ST/10)+1)</thbase>
-        <thadd />
+        <thadd>0</thadd>
         <swbase>(@int(ST:Striking ST/10)+3)</swbase>
-        <swadd />
+        <swadd>0</swadd>
       </basicdamage>
     </basicdamages>
     <damagebreaks count="2">
@@ -35597,7 +35891,7 @@
         <filename>mental_16.png</filename>
         <criteria>Advantages where cat listincludes {mental}</criteria>
         <image><![CDATA[iVBORw0KGgoAAAANSUhEUgAAAA8AAAAQCAYAAADJViUEAAAABGdBTUEAALGPC/xhBQAAAAlwSFlz
-AAALEQAACxEBf2RfkQAAAAd0SU1FB+EGERIZD2I0ZEoAAAD7SURBVDhPvZI/yoNAEMU9in8KC8FK
+AAALEAAACxABrSO9dQAAAAd0SU1FB+EGERIZD2I0ZEoAAAD7SURBVDhPvZI/yoNAEMU9in8KC8FK
 bKwttLMRQbDwCFqJCHZWVvYexs4beJtJnmaWTXaT70sTHo8dduY3zA5rkEbLspDv+9S2Lc3zTEVR
 UJ7ntO87yXVSeClJEhqGgY7jUDyOI63rKho8jktRFIlC0zQV476ua9q27WwgQMhxnLcgbFnWmW+a
 5nsYRr4sSxXmZBAEWhBGvqoqFcZY/G7P8/4PY8tcIC8ONu5lOBlO0/QZdl1XwLJt2z4BngRxlmX6
@@ -35609,7 +35903,7 @@ xg3BO+JKFy8frAAAAABJRU5ErkJggg==]]></image>
         <filename>mental_16.png</filename>
         <criteria>Disadvantages where cat listincludes {mental}</criteria>
         <image><![CDATA[iVBORw0KGgoAAAANSUhEUgAAAA8AAAAQCAYAAADJViUEAAAABGdBTUEAALGPC/xhBQAAAAlwSFlz
-AAALEQAACxEBf2RfkQAAAAd0SU1FB+EGERIZD2I0ZEoAAAD7SURBVDhPvZI/yoNAEMU9in8KC8FK
+AAALEAAACxABrSO9dQAAAAd0SU1FB+EGERIZD2I0ZEoAAAD7SURBVDhPvZI/yoNAEMU9in8KC8FK
 bKwttLMRQbDwCFqJCHZWVvYexs4beJtJnmaWTXaT70sTHo8dduY3zA5rkEbLspDv+9S2Lc3zTEVR
 UJ7ntO87yXVSeClJEhqGgY7jUDyOI63rKho8jktRFIlC0zQV476ua9q27WwgQMhxnLcgbFnWmW+a
 5nsYRr4sSxXmZBAEWhBGvqoqFcZY/G7P8/4PY8tcIC8ONu5lOBlO0/QZdl1XwLJt2z4BngRxlmX6
@@ -35667,8 +35961,8 @@ z86dSz83cz7h/HhPTM/9CxEXbvUG9g5c9Ll4+ZL7pQt9Tn1nL9tdPnXF5srJq4yrndcsr3X0W/S3
 /2TxU/uA5UDHdavrXTesb3QPLh88M+QwdP6m681Lt7xuXbu94vbgcOjwnZHokdE77DtTd1PuvriX
 eW/h/sYH6AdFD6UeVjxSfNTws+7PbaOWo6fHXMf6Hwc/vj/OGn/2S8Yv7ycKnpCfVEyqTDZPmU2d
 mnafvvF05dOJZ+nPFmYKf5X+tfa5zvMffnP8rX82YnbiBf/Fp99LXsq/PPRq2aueuYC5R69TXy/M
-F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALEQAA
-CxEBf2RfkQAAA5NJREFUOE9lk3tM01cUx49AeUO1gFApA3mpW0JmshkTY+KGUZljsvgoGmXozHA+
+F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALEAAA
+CxABrSO9dQAAA5NJREFUOE9lk3tM01cUx49AeUO1gFApA3mpW0JmshkTY+KGUZljsvgoGmXozHA+
 EPQvjYmIc8l0bjI25kSXKGYQH6gBFcUXY10qETtny6PwYy2dtmBJf0VaUqA5O+cuEN2anNz7uz3n
 c8/5nnvA5XKB3+8HSZJAp9OFt7W1xXg9niBEhJGXLxdsL9pmLj9YJo+Pj7/LZ+3t7YpLFy/G6PV6
 hdstA5+NjY0ByPK/H8anxpxl2dnjczMysOXBg6+cTieszvv4BQAg26GDZffdbjccPlReOTc9Ezeu
@@ -35737,8 +36031,8 @@ z86dSz83cz7h/HhPTM/9CxEXbvUG9g5c9Ll4+ZL7pQt9Tn1nL9tdPnXF5srJq4yrndcsr3X0W/S3
 /2TxU/uA5UDHdavrXTesb3QPLh88M+QwdP6m681Lt7xuXbu94vbgcOjwnZHokdE77DtTd1PuvriX
 eW/h/sYH6AdFD6UeVjxSfNTws+7PbaOWo6fHXMf6Hwc/vj/OGn/2S8Yv7ycKnpCfVEyqTDZPmU2d
 mnafvvF05dOJZ+nPFmYKf5X+tfa5zvMffnP8rX82YnbiBf/Fp99LXsq/PPRq2aueuYC5R69TXy/M
-F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALEQAA
-CxEBf2RfkQAAA5NJREFUOE9lk3tM01cUx49AeUO1gFApA3mpW0JmshkTY+KGUZljsvgoGmXozHA+
+F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALEAAA
+CxABrSO9dQAAA5NJREFUOE9lk3tM01cUx49AeUO1gFApA3mpW0JmshkTY+KGUZljsvgoGmXozHA+
 EPQvjYmIc8l0bjI25kSXKGYQH6gBFcUXY10qETtny6PwYy2dtmBJf0VaUqA5O+cuEN2anNz7uz3n
 c8/5nnvA5XKB3+8HSZJAp9OFt7W1xXg9niBEhJGXLxdsL9pmLj9YJo+Pj7/LZ+3t7YpLFy/G6PV6
 hdstA5+NjY0ByPK/H8anxpxl2dnjczMysOXBg6+cTieszvv4BQAg26GDZffdbjccPlReOTc9Ezeu
@@ -35807,8 +36101,8 @@ z86dSz83cz7h/HhPTM/9CxEXbvUG9g5c9Ll4+ZL7pQt9Tn1nL9tdPnXF5srJq4yrndcsr3X0W/S3
 /2TxU/uA5UDHdavrXTesb3QPLh88M+QwdP6m681Lt7xuXbu94vbgcOjwnZHokdE77DtTd1PuvriX
 eW/h/sYH6AdFD6UeVjxSfNTws+7PbaOWo6fHXMf6Hwc/vj/OGn/2S8Yv7ycKnpCfVEyqTDZPmU2d
 mnafvvF05dOJZ+nPFmYKf5X+tfa5zvMffnP8rX82YnbiBf/Fp99LXsq/PPRq2aueuYC5R69TXy/M
-F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALEQAA
-CxEBf2RfkQAABTtJREFUOE9tVHlQk1cQ3xA5FPEElcOEU/A+8WprFcQCCgI61AOtovWgtv7RqZwT
+F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALEAAA
+CxABrSO9dQAABTtJREFUOE9tVHlQk1cQ3xA5FPEElcOEU/A+8WprFcQCCgI61AOtovWgtv7RqZwT
 22o5PYvBKkJCiiYIIYQjciRMEKiOQggKigYB0TC2NlyKUa7Xfd+Mzjj2m3nzvWPf77e7v30L7W1t
 PPG1a2lV6iq3pvtNUCSXQ19vLyTGJ0ClSgVPWlth146dIBJmASEEGhoaQJgpgK6uLhgZGYYfjhyB
 iEOHQKVUMef1dfXQ0dEBXXq929Xs7DhRVtZRyLuee9uZwyGeS5aSqJ+OKaS5ucHDQ0Nmp5JToKWl
@@ -35885,8 +36179,8 @@ z86dSz83cz7h/HhPTM/9CxEXbvUG9g5c9Ll4+ZL7pQt9Tn1nL9tdPnXF5srJq4yrndcsr3X0W/S3
 /2TxU/uA5UDHdavrXTesb3QPLh88M+QwdP6m681Lt7xuXbu94vbgcOjwnZHokdE77DtTd1PuvriX
 eW/h/sYH6AdFD6UeVjxSfNTws+7PbaOWo6fHXMf6Hwc/vj/OGn/2S8Yv7ycKnpCfVEyqTDZPmU2d
 mnafvvF05dOJZ+nPFmYKf5X+tfa5zvMffnP8rX82YnbiBf/Fp99LXsq/PPRq2aueuYC5R69TXy/M
-F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALEQAA
-CxEBf2RfkQAABTtJREFUOE9tVHlQk1cQ3xA5FPEElcOEU/A+8WprFcQCCgI61AOtovWgtv7RqZwT
+F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALEAAA
+CxABrSO9dQAABTtJREFUOE9tVHlQk1cQ3xA5FPEElcOEU/A+8WprFcQCCgI61AOtovWgtv7RqZwT
 22o5PYvBKkJCiiYIIYQjciRMEKiOQggKigYB0TC2NlyKUa7Xfd+Mzjj2m3nzvWPf77e7v30L7W1t
 PPG1a2lV6iq3pvtNUCSXQ19vLyTGJ0ClSgVPWlth146dIBJmASEEGhoaQJgpgK6uLhgZGYYfjhyB
 iEOHQKVUMef1dfXQ0dEBXXq929Xs7DhRVtZRyLuee9uZwyGeS5aSqJ+OKaS5ucHDQ0Nmp5JToKWl
@@ -35963,8 +36257,8 @@ z86dSz83cz7h/HhPTM/9CxEXbvUG9g5c9Ll4+ZL7pQt9Tn1nL9tdPnXF5srJq4yrndcsr3X0W/S3
 /2TxU/uA5UDHdavrXTesb3QPLh88M+QwdP6m681Lt7xuXbu94vbgcOjwnZHokdE77DtTd1PuvriX
 eW/h/sYH6AdFD6UeVjxSfNTws+7PbaOWo6fHXMf6Hwc/vj/OGn/2S8Yv7ycKnpCfVEyqTDZPmU2d
 mnafvvF05dOJZ+nPFmYKf5X+tfa5zvMffnP8rX82YnbiBf/Fp99LXsq/PPRq2aueuYC5R69TXy/M
-F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALEQAA
-CxEBf2RfkQAAAkFJREFUKFNj+Pr1K8P79+8Znj59ynDr1i31msqqiQmxcQdbm1tWrVm92vjZs2cM
+F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALEAAA
+CxABrSO9dQAAAkFJREFUKFNj+Pr1K8P79+8Znj59ynDr1i31msqqiQmxcQdbm1tWrVm92vjZs2cM
 ////Z/j79y8Dw8+fP8Gcc2fPers5u/znZuf8z8vB+Z+ThfW/lpr6/9OnTlWB5P/8+cMANvnz58/m
 zg6O/xkYGP4rysj+V1VU+q8kJw/mgzQ8e/o0AKQBbGpdbe0mkISyvAIKBmkCiefn5F4EK3744IGd
 raXVfw5mlv8qCoooikF8QV6+/xoqqv+PHjniz7Bq5apiIT7+/3KSUigKYRjkHJAGoMc7GPp6e1Yw
@@ -36027,8 +36321,8 @@ z86dSz83cz7h/HhPTM/9CxEXbvUG9g5c9Ll4+ZL7pQt9Tn1nL9tdPnXF5srJq4yrndcsr3X0W/S3
 /2TxU/uA5UDHdavrXTesb3QPLh88M+QwdP6m681Lt7xuXbu94vbgcOjwnZHokdE77DtTd1PuvriX
 eW/h/sYH6AdFD6UeVjxSfNTws+7PbaOWo6fHXMf6Hwc/vj/OGn/2S8Yv7ycKnpCfVEyqTDZPmU2d
 mnafvvF05dOJZ+nPFmYKf5X+tfa5zvMffnP8rX82YnbiBf/Fp99LXsq/PPRq2aueuYC5R69TXy/M
-F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALEQAA
-CxEBf2RfkQAAAkFJREFUKFNj+Pr1K8P79+8Znj59ynDr1i31msqqiQmxcQdbm1tWrVm92vjZs2cM
+F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALEAAA
+CxABrSO9dQAAAkFJREFUKFNj+Pr1K8P79+8Znj59ynDr1i31msqqiQmxcQdbm1tWrVm92vjZs2cM
 ////Z/j79y8Dw8+fP8Gcc2fPers5u/znZuf8z8vB+Z+ThfW/lpr6/9OnTlWB5P/8+cMANvnz58/m
 zg6O/xkYGP4rysj+V1VU+q8kJw/mgzQ8e/o0AKQBbGpdbe0mkISyvAIKBmkCiefn5F4EK3744IGd
 raXVfw5mlv8qCoooikF8QV6+/xoqqv+PHjniz7Bq5apiIT7+/3KSUigKYRjkHJAGoMc7GPp6e1Yw
@@ -36091,8 +36385,8 @@ z86dSz83cz7h/HhPTM/9CxEXbvUG9g5c9Ll4+ZL7pQt9Tn1nL9tdPnXF5srJq4yrndcsr3X0W/S3
 /2TxU/uA5UDHdavrXTesb3QPLh88M+QwdP6m681Lt7xuXbu94vbgcOjwnZHokdE77DtTd1PuvriX
 eW/h/sYH6AdFD6UeVjxSfNTws+7PbaOWo6fHXMf6Hwc/vj/OGn/2S8Yv7ycKnpCfVEyqTDZPmU2d
 mnafvvF05dOJZ+nPFmYKf5X+tfa5zvMffnP8rX82YnbiBf/Fp99LXsq/PPRq2aueuYC5R69TXy/M
-F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALEQAA
-CxEBf2RfkQAAAnhJREFUOE9VUklMk1EQHgiNIjsGEZEipZa4REiUoB6ApERD4sEFg0i8GKnVeAOR
+F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALEAAA
+CxABrSO9dQAAAnhJREFUOE9VUklMk1EQHgiNIjsGEZEipZa4REiUoB6ApERD4sEFg0i8GKnVeAOR
 eFT04BKMtRgTPVUSXAktxBM1pUEoWKtiWaXYlcVg96bLD+ObX0U4fJl/3vu+eTPz/RCNRtchFosB
 IhIEGrX6jrq7uzzKzj6OjMDo11GASCSyChKEQiF4r9XCh4EBwRFpFYpFIjSbzY1erxfGx8YBVlZW
 VvG3MgwNDsLLzk5J2YFSPwBgXs42fPRQ0flraUm4SloDMUWdTnc8P3c7T85ISUUS3m5tnYfJiQmw
@@ -36156,8 +36450,8 @@ z86dSz83cz7h/HhPTM/9CxEXbvUG9g5c9Ll4+ZL7pQt9Tn1nL9tdPnXF5srJq4yrndcsr3X0W/S3
 /2TxU/uA5UDHdavrXTesb3QPLh88M+QwdP6m681Lt7xuXbu94vbgcOjwnZHokdE77DtTd1PuvriX
 eW/h/sYH6AdFD6UeVjxSfNTws+7PbaOWo6fHXMf6Hwc/vj/OGn/2S8Yv7ycKnpCfVEyqTDZPmU2d
 mnafvvF05dOJZ+nPFmYKf5X+tfa5zvMffnP8rX82YnbiBf/Fp99LXsq/PPRq2aueuYC5R69TXy/M
-F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALEQAA
-CxEBf2RfkQAAAnhJREFUOE9VUklMk1EQHgiNIjsGEZEipZa4REiUoB6ApERD4sEFg0i8GKnVeAOR
+F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALEAAA
+CxABrSO9dQAAAnhJREFUOE9VUklMk1EQHgiNIjsGEZEipZa4REiUoB6ApERD4sEFg0i8GKnVeAOR
 eFT04BKMtRgTPVUSXAktxBM1pUEoWKtiWaXYlcVg96bLD+ObX0U4fJl/3vu+eTPz/RCNRtchFosB
 IhIEGrX6jrq7uzzKzj6OjMDo11GASCSyChKEQiF4r9XCh4EBwRFpFYpFIjSbzY1erxfGx8YBVlZW
 VvG3MgwNDsLLzk5J2YFSPwBgXs42fPRQ0flraUm4SloDMUWdTnc8P3c7T85ISUUS3m5tnYfJiQmw

@@ -334,6 +334,9 @@ namespace ExportToRoll20
         [XmlElement(ElementName = "skill")]
         public double Skill { get; set; } = 0;
 
+        [XmlElement(ElementName = "ref")]
+        public string Ref { get; set; } = "";
+
         [XmlElement(ElementName = "casttime")]
         public string Casttime { get; set; } = "";
 
