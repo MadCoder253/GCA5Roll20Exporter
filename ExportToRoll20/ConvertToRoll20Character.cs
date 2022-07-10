@@ -271,6 +271,8 @@ namespace ExportToRoll20
                 roll20Character.RepeatingMelee = GetRepeatingMelee(currentCharacter);
 
                 roll20Character.RepeatingRanged = GetRepeatingRanged(currentCharacter);
+
+                roll20Character.RepeatingItem = GetRepeatingItems(currentCharacter);
             }
 
             return roll20Character;
@@ -993,11 +995,57 @@ namespace ExportToRoll20
 
             foreach (GCATrait trait in items)
             {
+                string legalityClass = GetLegalityClass(trait);
+
+                if (!double.TryParse(trait.get_TagItem("count"), out double itemCount))
+                {
+                    itemCount = 0;
+                }
+
+                if (!double.TryParse(trait.get_TagItem("weight"), out double itemWeight))
+                {
+                    itemWeight = 0;
+                }
+
+                if (!double.TryParse(trait.get_TagItem("cost"), out double itemCost))
+                {
+                    itemCost = 0;
+                }
+
+                string notes = GetTraitNotes(trait);
+
+                var item = new RepeatingItem()
+                {
+                    Idkey = trait.IDKey.ToString(),
+                    Name = trait.FullName,
+                    Tl = trait.get_TagItem("techlvl"),
+                    LegalityClass = legalityClass,
+                    Ref = trait.get_TagItem("page"),
+                    Count = itemCount,
+                    Weight = itemWeight,
+                    Cost = itemCost,
+                    Notes = notes
+                };
+
+                list.Add(item);
 
             }
 
             return list;
 
+        }
+
+        public string GetLegalityClass(GCATrait trait)
+        {
+            foreach(Mode mode in trait.Modes)
+            {
+                if (!string.IsNullOrEmpty(mode.get_TagItem("lc")))
+                {
+                    return mode.get_TagItem("lc");
+                }
+            }
+
+            return "";
         }
 
         /// <summary>
@@ -1276,7 +1324,7 @@ namespace ExportToRoll20
 
             if (!string.IsNullOrEmpty(tagDescription))
             {
-                notes.Add("Description: " + tagDescription);
+                notes.Add(tagDescription);
             }
 
             string noteDescription = string.Join("\n", notes.ToArray());
