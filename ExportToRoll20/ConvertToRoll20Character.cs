@@ -269,6 +269,8 @@ namespace ExportToRoll20
                 roll20Character.RepeatingDefense = GetRepeatingDefenses(currentCharacter);
 
                 roll20Character.RepeatingMelee = GetRepeatingMelee(currentCharacter);
+
+                roll20Character.RepeatingRanged = GetRepeatingRanged(currentCharacter);
             }
 
             return roll20Character;
@@ -899,6 +901,103 @@ namespace ExportToRoll20
             }
 
             return list;
+        }
+
+        public List<RepeatingRanged> GetRepeatingRanged(GCACharacter myCharacter)
+        {
+            List<RepeatingRanged> list = new List<RepeatingRanged>();
+
+            // loop through all items
+            foreach (GCATrait trait in myCharacter.Items)
+            {
+                // loop through the modes, (usually an attack mode)
+                // <attackmodes count="1">
+                foreach (Mode mode in trait.Modes)
+                {
+                    bool isRanged = !string.IsNullOrEmpty(mode.get_TagItem("acc"));
+
+                    if (isRanged)
+                    {
+                        string rangedIdKey = trait.IDKey.ToString() + "_" + mode.CollectionKey;
+
+                        string rangedName = trait.FullName;
+
+                        if (trait.FullName != mode.Name && mode.Name.Length > 0)
+                        {
+                            rangedName += " (" + mode.Name + ")";
+                        }
+
+                        var rangedDamage = mode.get_TagItem("chardamage").Replace("d", "d6");
+
+                        if (!double.TryParse(mode.get_TagItem("charskillscore"), out double rangedSkill))
+                        {
+                            rangedSkill = 0;
+                        }
+
+                        if (!double.TryParse(mode.get_TagItem("chararmordivisor"), out double armorDivisor))
+                        {
+                            armorDivisor = 1;
+                        }
+
+                        string halfRange = mode.get_TagItem("charrangehalfdam");
+
+                        string maxRange = mode.get_TagItem("charrangemax");
+
+                        List<string> ranges = new List<string>();
+
+                        if (halfRange.Length > 0)
+                        {
+                            ranges.Add(halfRange);
+                        }
+
+                        if (maxRange.Length > 0 && maxRange != halfRange)
+                        {
+                            ranges.Add(maxRange);
+                        }
+
+                        string finalRange = string.Join("/", ranges.ToArray());
+
+                        var item = new RepeatingRanged()
+                        {
+                            Idkey = rangedIdKey,
+                            Name = rangedName,
+                            Damage = rangedDamage,
+                            Type = mode.get_TagItem("chardamtype"),
+                            Acc = mode.get_TagItem("characc"),
+                            Range = finalRange,
+                            Rof = mode.get_TagItem("charrof"),
+                            Shots = mode.get_TagItem("charshots"),
+                            Bulk = mode.get_TagItem("charbulk"),
+                            Recoil = mode.get_TagItem("charrcl"),
+                            Skill = rangedSkill,
+                            Malfunction = mode.get_TagItem("charmalf"),
+                            ArmorDivisor = armorDivisor,
+                            Notes = mode.get_TagItem("itemnotes")
+                        };
+
+                        list.Add(item);
+                    }
+
+                }
+
+            }
+
+            return list;
+        }
+
+        public List<RepeatingItem> GetRepeatingItems(GCACharacter myCharacter)
+        {
+            List<RepeatingItem> list = new List<RepeatingItem>();
+
+            var items = myCharacter.ItemsByType[(int)TraitTypes.Equipment];
+
+            foreach (GCATrait trait in items)
+            {
+
+            }
+
+            return list;
+
         }
 
         /// <summary>
