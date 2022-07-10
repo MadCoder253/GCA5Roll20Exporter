@@ -267,6 +267,8 @@ namespace ExportToRoll20
                 roll20Character.RepeatingTechniquesrevised = GetRepeatingTechniques(currentCharacter);
 
                 roll20Character.RepeatingDefense = GetRepeatingDefenses(currentCharacter);
+
+                roll20Character.RepeatingMelee = GetRepeatingMelee(currentCharacter);
             }
 
             return roll20Character;
@@ -841,6 +843,64 @@ namespace ExportToRoll20
             return list;
         }
 
+        public List<RepeatingMelee> GetRepeatingMelee(GCACharacter myCharacter)
+        {
+            List<RepeatingMelee> list = new List<RepeatingMelee>();
+
+            // loop through all items
+            foreach (GCATrait trait in myCharacter.Items)
+            {
+                // loop through the modes, (usually an attack mode)
+                // <attackmodes count="1">
+                foreach (Mode mode in trait.Modes)
+                {
+                    bool isMeleeWeapon = !string.IsNullOrEmpty(mode.get_TagItem("reach"));
+
+                    if (isMeleeWeapon)
+                    {
+                        string meleeIdKey = trait.IDKey.ToString() + "_" + mode.CollectionKey;
+
+                        string meleeName = trait.FullName;
+
+                        if (trait.FullName != mode.Name)
+                        {
+                            meleeName += " (" + mode.Name + ")";
+                        }
+
+                        var meleeDamage = mode.get_TagItem("chardamage").Replace("d", "d6");
+
+                        if (!double.TryParse(mode.get_TagItem("charskillscore"), out double meleeSkill))
+                        {
+                            meleeSkill = 0;
+                        }
+
+                        if (!double.TryParse(mode.get_TagItem("chararmordivisor"), out double armorDivisor))
+                        {
+                            armorDivisor = 1;
+                        }
+
+                        var item = new RepeatingMelee()
+                        {
+                            Idkey = meleeIdKey,
+                            Name = meleeName,
+                            Damage = meleeDamage,
+                            Type = mode.get_TagItem("chardamtype"),
+                            Reach = mode.get_TagItem("reach"),
+                            Skill = meleeSkill,
+                            ArmorDivisor = armorDivisor,
+                            Notes = mode.get_TagItem("itemnotes")
+                        };
+
+                        list.Add(item);
+                    }
+
+                }
+
+            }
+
+            return list;
+        }
+
         /// <summary>
         /// Get parry defense item
         /// </summary>
@@ -879,7 +939,7 @@ namespace ExportToRoll20
             {
                 var item = new RepeatingDefense
                 {
-                    Idkey = trait.IDKey + "_" + mode.Name,
+                    Idkey = trait.IDKey + "_" + mode.CollectionKey,
                     Name = defenseName,
                     Type = defenseType,
                     Info = "",
@@ -932,27 +992,21 @@ namespace ExportToRoll20
             {
                 var defenseType = "Power";
 
-                var append = "power";
-
                 if (mode.Name.ToLower().Contains("dodge"))
                 {
                     defenseType = "Power Dodge";
-                    append = "_power_dodge";
                 }
                 else if (mode.Name.ToLower().Contains("parry"))
                 {
                     defenseType = "Power Parry";
-                    append = "_power_parry";
                 }
                 else if (mode.Name.ToLower().Contains("block/physical"))
                 {
                     defenseType = "Power Block";
-                    append = "_power_block_physical";
                 }
                 else if (mode.Name.ToLower().Contains("block/mental"))
                 {
                     defenseType = "Power Block Mental";
-                    append = "_power_block_mental";
                 }
 
                 var scoreValue = mode.get_TagItem("charskillscore");
@@ -962,7 +1016,7 @@ namespace ExportToRoll20
 
                     var powerDefense = new RepeatingDefense
                     {
-                        Idkey = trait.IDKey + append,
+                        Idkey = trait.IDKey + "_" + mode.CollectionKey,
                         Name = trait.FullName + " (" + mode.Name + ")",
                         Type = defenseType,
                         Info = "",
