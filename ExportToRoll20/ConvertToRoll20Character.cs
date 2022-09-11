@@ -309,6 +309,26 @@ namespace ExportToRoll20
 
         }
 
+        public List<RepeatingLanguage> GetRepeatingLanguages(GCACharacter currentCharacter)
+        {
+            List<RepeatingLanguage> languages = new List<RepeatingLanguage>();
+
+            var traitLanguages = currentCharacter.ItemsByType[(int)TraitTypes.Languages];
+
+            foreach (GCATrait item in traitLanguages)
+            {
+                var language = new RepeatingLanguage
+                {
+                    Idkey = item.IDKey.ToString(),
+                    Name = item.FullName
+                };
+
+                languages.Add(language);
+            }
+
+            return languages;
+        }
+
         public List<RepeatingCulture> GetRepeatingCultures(GCACharacter currentCharacter)
         {
             List<RepeatingCulture> cultures = new List<RepeatingCulture>();
