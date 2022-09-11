@@ -139,9 +139,6 @@ namespace ExportToRoll20
         [XmlElement(ElementName = "skill")]
         public double Skill { get; set; } = 0;
 
-        [XmlElement(ElementName = "reason_for_mod")]
-        public string ReasonForMod { get; set; } = "";
-
         [XmlElement(ElementName = "armor_divisor")]
         public double ArmorDivisor { get; set; } = 0;
 
@@ -249,9 +246,6 @@ namespace ExportToRoll20
 
         [XmlElement(ElementName = "skill")]
         public double Skill { get; set; } = 0;
-
-        [XmlElement(ElementName = "reason_for_mod")]
-        public string ReasonForMod { get; set; } = "";
 
         [XmlElement(ElementName = "malfunction")]
         public string Malfunction { get; set; } = "";

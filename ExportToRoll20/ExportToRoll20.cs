@@ -18,6 +18,8 @@ using GCA5Engine;
 using System.Drawing;
 using System.IO;
 using ExtensionMethod;
+using Newtonsoft.Json;
+using System.Xml;
 
 namespace ExportToRoll20
 {
@@ -82,7 +84,7 @@ namespace ExportToRoll20
 
         public string SupportedFileTypeFilter()
         {
-            return "XML files (*.xml)|*.xml";
+            return "JSON files (*.json)|*.json";
         }
 
         public void UpgradeOptions(SheetOptionsManager Options)
@@ -104,7 +106,7 @@ namespace ExportToRoll20
 
             Roll20Character character = converter.GetCharacter(Party.Current);
 
-            var fileData = character.ToXmlString();
+            var fileData = JsonConvert.SerializeObject(character, Newtonsoft.Json.Formatting.Indented);
 
             FileWriter fileWriter = new FileWriter();
 

@@ -38,6 +38,9 @@
       <HintPath>..\..\..\..\..\Program Files (x86)\GURPS Character Assistant 5\GCA5Engine.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -55,10 +58,13 @@
     <Compile Include="Roll20Character.cs" />
     <Compile Include="XmlTools.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>copy /Y "$(ProjectDir)$(OutDir)$(TargetFileName)" "C:\Users\kfoub\OneDrive\Documents\GURPS Character Assistant 5\plugins\ExportToRoll20\$(TargetFileName)"
 copy /Y "$(ProjectDir)$(OutDir)$(ProjectName).pdb" "C:\Users\kfoub\OneDrive\Documents\GURPS Character Assistant 5\plugins\ExportToRoll20\$(ProjectName).pdb"
-</PostBuildEvent>
+copy /Y "$(SolutionDir)\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll" "C:\Users\kfoub\OneDrive\Documents\GURPS Character Assistant 5\plugins\ExportToRoll20\Newtonsoft.Json.dll"</PostBuildEvent>
   </PropertyGroup>
 </Project>

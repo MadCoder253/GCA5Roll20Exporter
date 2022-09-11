@@ -245,6 +245,8 @@ namespace ExportToRoll20
                     roll20Character.CombatReflexes = true;
                 }
 
+                // TODO: Add languages!
+
                 roll20Character.RepeatingCultures = GetRepeatingCultures(currentCharacter);
 
                 roll20Character.RepeatingTraits = GetRepeatingTraits(currentCharacter);
@@ -742,7 +744,7 @@ namespace ExportToRoll20
             return null;
         }
 
-
+        // TODO: Wildcard!
         public List<RepeatingSkill> GetRepeatingSkills(GCACharacter myCharacter)
         {
             List<RepeatingSkill> list = new List<RepeatingSkill>();
@@ -759,7 +761,8 @@ namespace ExportToRoll20
                         Idkey = skill.IDKey.ToString(),
                         Name = skill.FullName,
                         Tl = skill.get_TagItem("tl"),
-                        Difficulty = skill.SkillType,
+                        Base = GetBaseAttributeForSkill(skill.get_TagItem("stepoff")),
+                        Difficulty = GetDifficultyForSkill(skill.SkillType),
                         Bonus = GetTraitModifier(skill),
                         Points = skill.Points,
                         Skill = skill.Level,
@@ -773,6 +776,54 @@ namespace ExportToRoll20
             }
 
             return list;
+        }
+        
+        public string GetDifficultyForSkill(string skillType)
+        {
+            string difficulty = "E";
+
+            string[] arrSkillType = skillType.Split('/');
+
+            difficulty = arrSkillType[1];
+
+            return difficulty;
+        }
+
+        public string GetBaseAttributeForSkill(string stepoff)
+        {
+            string baseAttribute = "10";
+
+            switch (stepoff)
+            {
+                case "ST":
+                    baseAttribute = "@{strength}";
+                    break;
+
+                case "DX":
+                    baseAttribute = "@{dexterity}";
+                    break;
+
+                case "IQ":
+                    baseAttribute = "@{intelligence}";
+                    break;
+
+                case "HT":
+                    baseAttribute = "@{health}";
+                    break;
+
+                case "WILL":
+                    baseAttribute = "@{willpower}";
+                    break;
+
+                case "PER":
+                    baseAttribute = "@{perception}";
+                    break;
+
+                default:
+                    break;
+            }
+
+            return baseAttribute;
         }
 
         public List<RepeatingTechniquesrevised> GetRepeatingTechniques(GCACharacter myCharacter)
@@ -794,7 +845,7 @@ namespace ExportToRoll20
                         BaseLevel = skill.get_TagItem("deflevel"),
                         Default = GetTechniqueDefaultModifier(skill),
                         MaxModifier = GetTechniqueMaxModifier(skill),
-                        Difficulty = skill.SkillType,
+                        Difficulty = GetDifficultyForTechnique(skill.SkillType),
                         SkillModifier = GetTraitModifier(skill),
                         Points = skill.Points,
                         Skill = skill.Level,
@@ -810,6 +861,15 @@ namespace ExportToRoll20
 
             return list;
 
+        }
+
+        public string GetDifficultyForTechnique(string skillType)
+        {
+            string[] arrSkillType = skillType.Split('/');
+
+            string difficulty = arrSkillType[1];
+
+            return difficulty;
         }
 
         public List<RepeatingDefense> GetRepeatingDefenses(GCACharacter myCharacter)
@@ -1094,7 +1154,7 @@ namespace ExportToRoll20
                     {
                         Idkey = trait.IDKey.ToString(),
                         Name = trait.FullName,
-                        Difficulty = trait.SkillType,
+                        Difficulty = GetDifficultyForSkill(trait.SkillType),
                         SpellModifier = GetTraitModifier(trait),
                         Points = trait.Points,
                         SpellResistedBy = resistedBy,
@@ -1353,9 +1413,9 @@ namespace ExportToRoll20
         {
             var notes = new ArrayList();
 
-            var userNotes = trait.get_TagItem("usernotes");
+            var userNotes = trait.get_TagItem("usernotes").Trim();
 
-            if (userNotes != null)
+            if (!string.IsNullOrEmpty(userNotes))
             {
                 notes.Add(userNotes);
             }
@@ -1400,12 +1460,12 @@ namespace ExportToRoll20
 
             }
 
-            if (trait.Notes.Length > 0)
+            if (!string.IsNullOrEmpty(trait.Notes.Trim()))
             {
                 notes.Add(trait.Notes);
             }
 
-            var tagDescription = trait.get_TagItem("description");
+            var tagDescription = trait.get_TagItem("description").Trim();
 
             if (!string.IsNullOrEmpty(tagDescription))
             {
