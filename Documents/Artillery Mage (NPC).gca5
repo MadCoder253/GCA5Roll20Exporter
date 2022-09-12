@@ -3,13 +3,13 @@
   <character>
     <author>
       <name>GURPS Character Assistant</name>
-      <version>GCA5Engine, Version=5.0.189.0</version>
+      <version>GCA5Engine, Version=5.0.197.0</version>
       <copyright>Program code is copyright © 1995-2022 by Armin D. Sykes. All data files, graphics, and other GURPS-specific content is copyright © 2005 and other years by Steve Jackson Games Incorporated. GURPS and the all-seeing pyramid are registered trademarks of Steve Jackson Games Incorporated. All rights reserved.</copyright>
-      <datecreated>Saturday, July 9, 2022</datecreated>
+      <datecreated>Sunday, September 11, 2022</datecreated>
     </author>
     <system>
       <version>5</version>
-      <lastkey>13354</lastkey>
+      <lastkey>13364</lastkey>
     </system>
     <library>
       <name>%user%\Greyhawk.gds</name>
@@ -183,6 +183,8 @@
       <charactersheet>%user%\phoenix.gcs</charactersheet>
       <altcharactersheet>%user%\text layout.gcs</altcharactersheet>
       <exportsheet>Export Character to Roll20</exportsheet>
+      <altexportsheet>Export Character to Roll20</altexportsheet>
+      <altexportsheet>Simple Text Export</altexportsheet>
       <altexportsheet>Export Character to Roll20</altexportsheet>
       <altexportsheet>Simple Text Export</altexportsheet>
       <altexportsheet>Simple Text Export</altexportsheet>
@@ -822,6 +824,11 @@
             <mainwin>13</mainwin>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="2">
           <name>Agricultural PI</name>
@@ -842,6 +849,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="3">
           <name>Air Move</name>
@@ -866,6 +878,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="4">
           <name>Appealing</name>
@@ -883,6 +900,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="5">
           <name>Artificer PI</name>
@@ -903,6 +925,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="6">
           <name>Basic Air Move</name>
@@ -924,6 +951,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="7">
           <name>Basic Brachiation Move</name>
@@ -945,6 +977,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="8">
           <name>Basic Ground Move</name>
@@ -966,6 +1003,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="9">
           <name>Basic Lift</name>
@@ -987,6 +1029,11 @@
           <ref>
             <units>lb|kg</units>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10">
           <name>Basic Move</name>
@@ -1012,6 +1059,11 @@
             <display>No</display>
             <disadat>-1</disadat>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="11">
           <name>Basic Space Move</name>
@@ -1033,6 +1085,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="12">
           <name>Basic Speed</name>
@@ -1057,6 +1114,11 @@
             <display>No</display>
             <disadat>-1</disadat>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="13">
           <name>Basic Water Move</name>
@@ -1078,6 +1140,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="14">
           <name>Bite</name>
@@ -1138,6 +1205,11 @@
           <ref>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="16">
           <name>Brachiation Move</name>
@@ -1159,6 +1231,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="17">
           <name>Broad Jump</name>
@@ -1179,6 +1256,11 @@
             <page>B352</page>
             <units>ft | m</units>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="18">
           <name>Carry on Back</name>
@@ -1199,6 +1281,11 @@
             <page>B353</page>
             <units>lb | kg</units>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="19">
           <name>City PI</name>
@@ -1219,6 +1306,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="20">
           <name>Consciousness Check</name>
@@ -1238,6 +1330,11 @@
           <ref>
             <display>yes</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="21">
           <name>Cost of Living</name>
@@ -1260,6 +1357,11 @@
             <mainwin>18</mainwin>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="22">
           <name>Damage Base</name>
@@ -1278,6 +1380,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="23">
           <name>DB</name>
@@ -1297,6 +1404,11 @@
           <ref>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="24">
           <name>Death Check</name>
@@ -1316,6 +1428,11 @@
           <ref>
             <display>yes</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="25">
           <name>Death PI</name>
@@ -1336,6 +1453,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="26">
           <name>Divine Elements</name>
@@ -1351,6 +1473,11 @@
           </calcs>
           <armordata />
           <ref />
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="27">
           <name>Dodge</name>
@@ -1371,6 +1498,11 @@
           <ref>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="28">
           <name>DR</name>
@@ -1389,6 +1521,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="29">
           <name>Druidic PI</name>
@@ -1409,6 +1546,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="30">
           <name>DX</name>
@@ -1440,6 +1582,11 @@
             <display>no</display>
             <disadat>-1</disadat>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <modifiers count="1">
             <modifier idkey="31">
               <name>No Fine Manipulators</name>
@@ -1474,6 +1621,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="33">
           <name>Elemental Influence</name>
@@ -1495,6 +1647,11 @@
             <gives>+1 to ("CO:~Elemental Meta-Spells", "CO:~Elemental Air", "CO:~Elemental Earth", "CO:~Elemental Fire", "CO:~Elemental Metal", "CO:~Elemental Void/Sound/Ether", "CO:~Elemental Water", "CO:~Elemental Wood")</gives>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <bonuses count="1">
             <bonus>
               <targetname>("co:~elemental meta-spells", "co:~elemental air", "co:~elemental earth", "co:~elemental fire", "co:~elemental metal", "co:~elemental void/sound/ether", "co:~elemental water", "co:~elemental wood")</targetname>
@@ -1526,6 +1683,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="35">
           <name>Elemental Influence Earth</name>
@@ -1546,6 +1708,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="36">
           <name>Elemental Influence Fire</name>
@@ -1566,6 +1733,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="37">
           <name>Elemental Influence Meta-Spells</name>
@@ -1586,6 +1758,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="38">
           <name>Elemental Influence Metal</name>
@@ -1606,6 +1783,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="39">
           <name>Elemental Influence Void/Sound/Ether</name>
@@ -1626,6 +1808,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="40">
           <name>Elemental Influence Water</name>
@@ -1646,6 +1833,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="41">
           <name>Elemental Influence Wood</name>
@@ -1666,6 +1858,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="42">
           <name>EnchantmentEnergyMultiplier</name>
@@ -1684,6 +1881,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="43">
           <name>EnchantmentQuickAndDirtyCost</name>
@@ -1702,6 +1904,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="44">
           <name>EnchantmentQuickAndDirtyThreshold</name>
@@ -1720,6 +1927,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="45">
           <name>EnchantmentSlowAndSureCost</name>
@@ -1738,6 +1950,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="46">
           <name>Encumbrance Penalty</name>
@@ -1756,6 +1973,11 @@
             <conditional>-1 to (SK:Climbing, SK:Stealth),-2 to SK:Swimming,-1 to (SK:Judo, SK:Karate, "SK:Main-Gauche", SK:Rapier, SK:Saber, SK:Smallsword) when "striking or parrying"</conditional>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <conditionals count="3">
             <bonus>
               <targetname>(sk:climbing, sk:stealth)</targetname>
@@ -1806,6 +2028,11 @@
             <gives>=@if( me::score = @int(me::score) then @power(2, me::score) else @power(2, @int(me::score)) * 1.5 ) * ST:Air Move::basescore - ST:Air Move::basescore to ST:Air Move</gives>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <bonuses count="1">
             <bonus>
               <targetprefix>ST</targetprefix>
@@ -1837,6 +2064,11 @@
             <gives>=@if( me::score = @int(me::score) then @power(2, me::score) else @power(2, @int(me::score)) * 1.5 ) * ST:Ground Move::basescore - ST:Ground Move::basescore to ST:Ground Move</gives>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <bonuses count="1">
             <bonus>
               <targetprefix>ST</targetprefix>
@@ -1868,6 +2100,11 @@
             <gives>=@if( me::score = @int(me::score) then @power(2, me::score) else @power(2, @int(me::score)) * 1.5 ) * ST:Space Move::basescore - ST:Space Move::basescore to ST:Space Move</gives>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <bonuses count="1">
             <bonus>
               <targetprefix>ST</targetprefix>
@@ -1899,6 +2136,11 @@
             <gives>=@if( me::score = @int(me::score) then @power(2, me::score) else @power(2, @int(me::score)) * 1.5 ) * ST:Water Move::basescore - ST:Water Move::basescore to ST:Water Move</gives>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <bonuses count="1">
             <bonus>
               <targetprefix>ST</targetprefix>
@@ -1930,6 +2172,11 @@
           <ref>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="52">
           <name>Extra Arm SM</name>
@@ -1950,6 +2197,11 @@
             <gives>=+@if(me::score &lt; 1 THEN 0 ELSE @if(me::score = 1 THEN 0.5 ELSE @if(me::score = 2 THEN 1 ELSE (@indexedvalue((me::score- (6 * @int(me::score / 6))) + 1, 0.7,1,1.5,2,3,5) * (10 ^ @int(me::score / 6)))))) to ST:Extra Arm Reach</gives>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <bonuses count="1">
             <bonus>
               <targetprefix>ST</targetprefix>
@@ -2015,6 +2267,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="55">
           <name>Fright Check</name>
@@ -2030,6 +2287,11 @@
           </calcs>
           <armordata />
           <ref />
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="56">
           <name>Ground Move</name>
@@ -2048,6 +2310,11 @@
           </calcs>
           <armordata />
           <ref />
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="57">
           <name>Healing PI</name>
@@ -2068,6 +2335,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="58">
           <name>Hearing</name>
@@ -2085,6 +2357,11 @@
           </calcs>
           <armordata />
           <ref />
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="59">
           <name>Heavy Encumbrance</name>
@@ -2106,6 +2383,11 @@
           <ref>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="60">
           <name>Heavy Encumbrance Move</name>
@@ -2127,6 +2409,11 @@
           <ref>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="61">
           <name>High Jump</name>
@@ -2147,6 +2434,11 @@
             <page>B352</page>
             <units>in | cm</units>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="62">
           <name>Hit Points</name>
@@ -2215,6 +2507,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="65">
           <name>HT</name>
@@ -2240,6 +2537,11 @@
             <display>no</display>
             <disadat>-1</disadat>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="66">
           <name>Hunt PI</name>
@@ -2260,6 +2562,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="67">
           <name>IQ</name>
@@ -2287,6 +2594,11 @@
             <display>no</display>
             <disadat>-1</disadat>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="68">
           <name>Jump Move</name>
@@ -2307,6 +2619,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="69">
           <name>Kick</name>
@@ -2394,6 +2711,11 @@
           <ref>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="71">
           <name>Leg SM</name>
@@ -2414,6 +2736,11 @@
             <gives>=+@if(me::score &lt; 1 THEN 0 ELSE @if(me::score = 1 THEN 0.5 ELSE @if(me::score = 2 THEN 1 ELSE (@indexedvalue((me::score- (6 * @int(me::score / 6))) + 1, 0.7,1,1.5,2,3,5) * (10 ^ @int(me::score / 6)))))) to ST:Leg Reach</gives>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <bonuses count="1">
             <bonus>
               <targetprefix>ST</targetprefix>
@@ -2450,6 +2777,11 @@
             <initmods>Size, -10%, group(Size),formula(-@if(ST:Size Modifier::score &gt; 0 &amp; ST:Lifting ST::level &gt; 0 THEN ST:Size Modifier::score * 10 else 0)),forceformula(yes)</initmods>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <modifiers count="1">
             <modifier idkey="73">
               <name>Size</name>
@@ -2484,6 +2816,11 @@
           <ref>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="75">
           <name>Light Encumbrance Move</name>
@@ -2505,6 +2842,11 @@
           <ref>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="76">
           <name>Love PI</name>
@@ -2525,10 +2867,15 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="77">
           <name>Magery</name>
-          <bonuslist>+3 from 'Magery'</bonuslist>
+          <bonuslist>+3 from 'Magery 3'</bonuslist>
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
@@ -2547,6 +2894,11 @@
             <gives>=+me::score to ("CO:Air", "CO:Animal", "CO:Body Control", "CO:Communication &amp; Empathy", "CO:Earth", "CO:Enchantment", "CO:Fire", "CO:Food", "CO:Illusion &amp; Creation", "CO:Gate", "CO:Healing", "CO:Knowledge", "CO:Light &amp; Darkness", "CO:Making &amp; Breaking", "CO:Meta-Spells", "CO:Mind Control", "CO:Movement", "CO:Necromancy", "CO:Plant", "CO:Protection &amp; Warning", "CO:Sound", "CO:Technological", "CO:Water", "CO:Weather")</gives>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <bonuses count="1">
             <bonus>
               <targetname>("co:air", "co:animal", "co:body control", "co:communication &amp; empathy", "co:earth", "co:enchantment", "co:fire", "co:food", "co:illusion &amp; creation", "co:gate", "co:healing", "co:knowledge", "co:light &amp; darkness", "co:making &amp; breaking", "co:meta-spells", "co:mind control", "co:movement", "co:necromancy", "co:plant", "co:protection &amp; warning", "co:sound", "co:technological", "co:water", "co:weather")</targetname>
@@ -2579,6 +2931,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="79">
           <name>Magery Air</name>
@@ -2599,6 +2956,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="80">
           <name>Magery Animal</name>
@@ -2619,6 +2981,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="81">
           <name>Magery Body Control</name>
@@ -2639,6 +3006,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="82">
           <name>Magery Communication &amp; Empathy</name>
@@ -2659,6 +3031,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="83">
           <name>Magery Earth</name>
@@ -2679,6 +3056,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="84">
           <name>Magery Enchantment</name>
@@ -2699,6 +3081,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="85">
           <name>Magery Fire</name>
@@ -2719,6 +3106,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="86">
           <name>Magery Food</name>
@@ -2739,6 +3131,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="87">
           <name>Magery Gate</name>
@@ -2759,6 +3156,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="88">
           <name>Magery Healing</name>
@@ -2779,6 +3181,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="89">
           <name>Magery Illusion &amp; Creation</name>
@@ -2799,6 +3206,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="90">
           <name>Magery Knowledge</name>
@@ -2819,6 +3231,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="91">
           <name>Magery Light &amp; Darkness</name>
@@ -2839,6 +3256,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="92">
           <name>Magery Making &amp; Breaking</name>
@@ -2859,6 +3281,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="93">
           <name>Magery Meta-Spells</name>
@@ -2879,6 +3306,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="94">
           <name>Magery Mind Control</name>
@@ -2899,6 +3331,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="95">
           <name>Magery Movement</name>
@@ -2919,6 +3356,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="96">
           <name>Magery Necromancy</name>
@@ -2939,6 +3381,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="97">
           <name>Magery Plant</name>
@@ -2959,6 +3406,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="98">
           <name>Magery Protection &amp; Warning</name>
@@ -2979,6 +3431,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="99">
           <name>Magery Sound</name>
@@ -2999,6 +3456,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="100">
           <name>Magery Technological</name>
@@ -3019,6 +3481,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="101">
           <name>Magery Water</name>
@@ -3039,6 +3506,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="102">
           <name>Magery Weather</name>
@@ -3059,10 +3531,15 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="103">
           <name>MageryBase</name>
-          <bonuslist>+3 from 'Magery'</bonuslist>
+          <bonuslist>+3 from 'Magery 3'</bonuslist>
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
@@ -3080,6 +3557,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="104">
           <name>Medium Encumbrance</name>
@@ -3101,6 +3583,11 @@
           <ref>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="105">
           <name>Medium Encumbrance Move</name>
@@ -3122,6 +3609,11 @@
           <ref>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="106">
           <name>Messenger/Rogue PI</name>
@@ -3142,6 +3634,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="107">
           <name>Metric</name>
@@ -3165,6 +3662,11 @@
           <ref>
             <display>yes</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="108">
           <name>Money</name>
@@ -3187,6 +3689,11 @@
             <mainwin>15</mainwin>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <modifiers count="1">
             <modifier idkey="109">
               <name>100% of Starting Wealth</name>
@@ -3218,6 +3725,11 @@
           <ref>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="111">
           <name>Monthly Pay</name>
@@ -3240,6 +3752,11 @@
             <mainwin>17</mainwin>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="112">
           <name>Native Cultural Familiarities</name>
@@ -3258,17 +3775,23 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="113">
           <name>Native Languages</name>
+          <bonuslist>+1 from 'Common (Native; Native Language, -6)'</bonuslist>
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
-          <score>0</score>
+          <score>1</score>
           <level>0</level>
           <hide>yes</hide>
           <calcs>
-            <syslevels>0</syslevels>
+            <syslevels>1</syslevels>
             <basevalue>0</basevalue>
             <basescore>0</basescore>
           </calcs>
@@ -3276,6 +3799,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="114">
           <name>Neck Reach</name>
@@ -3295,6 +3823,11 @@
           <ref>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="115">
           <name>Neck SM</name>
@@ -3315,6 +3848,11 @@
             <gives>=+@if(me::score &lt; 1 THEN 0 ELSE @if(me::score = 1 THEN 0.5 ELSE @if(me::score = 2 THEN 1 ELSE (@indexedvalue((me::score- (6 * @int(me::score / 6))) + 1, 0.7,1,1.5,2,3,5) * (10 ^ @int(me::score / 6)))))) to ST:Neck Reach</gives>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <bonuses count="1">
             <bonus>
               <targetprefix>ST</targetprefix>
@@ -3347,6 +3885,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="117">
           <name>No Encumbrance</name>
@@ -3368,6 +3911,11 @@
           <ref>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="118">
           <name>No Encumbrance Move</name>
@@ -3389,6 +3937,11 @@
           <ref>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="119">
           <name>No Fine Manipulators</name>
@@ -3407,6 +3960,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="120">
           <name>One Arm Lifting ST</name>
@@ -3425,6 +3983,11 @@
           </calcs>
           <armordata />
           <ref />
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="121">
           <name>One Arm Reach</name>
@@ -3444,6 +4007,11 @@
           <ref>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="122">
           <name>One Arm SM</name>
@@ -3464,6 +4032,11 @@
             <gives>=+@if(me::score &lt; 1 THEN 0 ELSE @if(me::score = 1 THEN 0.5 ELSE @if(me::score = 2 THEN 1 ELSE (@indexedvalue((me::score- (6 * @int(me::score / 6))) + 1, 0.7,1,1.5,2,3,5) * (10 ^ @int(me::score / 6)))))) to ST:One Arm Reach</gives>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <bonuses count="1">
             <bonus>
               <targetprefix>ST</targetprefix>
@@ -3494,6 +4067,11 @@
           </calcs>
           <armordata />
           <ref />
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="124">
           <name>One-Handed Lift</name>
@@ -3515,6 +4093,11 @@
             <page>B353</page>
             <units>lb | kg</units>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="125">
           <name>Parry</name>
@@ -3534,6 +4117,11 @@
           <ref>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="126">
           <name>Perception</name>
@@ -3558,6 +4146,11 @@
             <mainwin>7</mainwin>
             <disadat>-1</disadat>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="127">
           <name>Power Item</name>
@@ -3578,6 +4171,11 @@
             <mainwin>19</mainwin>
             <noresync>yes</noresync>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="128">
           <name>Punch</name>
@@ -3663,6 +4261,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="130">
           <name>Remaining Funds</name>
@@ -3682,6 +4285,11 @@
           <ref>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="131">
           <name>Sea PI</name>
@@ -3702,6 +4310,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="132">
           <name>Shamanic PI</name>
@@ -3722,6 +4335,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="133">
           <name>Shift Slightly</name>
@@ -3742,6 +4360,11 @@
             <page>B353</page>
             <units>lb | kg</units>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="134">
           <name>Shove/Knock Over</name>
@@ -3762,6 +4385,11 @@
             <page>B353</page>
             <units>lb | kg</units>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="135">
           <name>Signature Gear</name>
@@ -3782,6 +4410,11 @@
           <ref>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="136">
           <name>Size Modifier</name>
@@ -3806,6 +4439,11 @@
           <ref>
             <mainwin>12</mainwin>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="137">
           <name>Space Move</name>
@@ -3830,6 +4468,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="138">
           <name>ST</name>
@@ -3859,6 +4502,11 @@
             <display>no</display>
             <disadat>-1</disadat>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <modifiers count="2">
             <modifier idkey="140">
               <name>No Fine Manipulators</name>
@@ -3902,10 +4550,15 @@
           <ref>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="142">
           <name>Status</name>
-          <bonuslist>+1 from 'Status', 0 from 'Wealth'</bonuslist>
+          <bonuslist>+1 from 'Status (+1)', +0 from 'Wealth (Comfortable)'</bonuslist>
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
@@ -3927,6 +4580,11 @@
             <mainwin>16</mainwin>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="143">
           <name>Storm PI</name>
@@ -3947,6 +4605,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="144">
           <name>Striking ST</name>
@@ -3971,6 +4634,11 @@
             <initmods>Size, -10%, group(Size),formula(-@if(ST:Size Modifier::score &gt; 0 &amp; ST:Striking ST::level &gt; 0 THEN ST:Size Modifier::score * 10 else 0)),forceformula(yes)</initmods>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <modifiers count="1">
             <modifier idkey="145">
               <name>Size</name>
@@ -4004,6 +4672,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="147">
           <name>Super Jump</name>
@@ -4022,6 +4695,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="148">
           <name>Taste/Smell</name>
@@ -4039,6 +4717,11 @@
           </calcs>
           <armordata />
           <ref />
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="149">
           <name>Tech Level</name>
@@ -4064,6 +4747,11 @@
             <mods>Tech Level</mods>
             <mainwin>14</mainwin>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="150">
           <name>Three Arm Lifting ST</name>
@@ -4082,6 +4770,11 @@
           </calcs>
           <armordata />
           <ref />
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="151">
           <name>Three Arm Striking ST</name>
@@ -4100,6 +4793,11 @@
           </calcs>
           <armordata />
           <ref />
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="152">
           <name>TK Basic Lift</name>
@@ -4123,6 +4821,11 @@
             <units>lb | kg</units>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="153">
           <name>TK Heavy Encumbrance</name>
@@ -4145,6 +4848,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="154">
           <name>TK Heavy Encumbrance Move</name>
@@ -4167,6 +4875,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="155">
           <name>TK Light Encumbrance</name>
@@ -4189,6 +4902,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="156">
           <name>TK Light Encumbrance Move</name>
@@ -4211,6 +4929,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="157">
           <name>TK Max Lift</name>
@@ -4233,6 +4956,11 @@
             <units>lb | kg</units>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="158">
           <name>TK Medium Encumbrance</name>
@@ -4255,6 +4983,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="159">
           <name>TK Medium Encumbrance Move</name>
@@ -4277,6 +5010,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="160">
           <name>TK Move</name>
@@ -4297,6 +5035,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="161">
           <name>TK No Encumbrance</name>
@@ -4319,6 +5062,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="162">
           <name>TK No Encumbrance Move</name>
@@ -4341,6 +5089,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="163">
           <name>TK Shift Slightly</name>
@@ -4363,6 +5116,11 @@
             <units>lb | kg</units>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="164">
           <name>TK Shove/Knock Over</name>
@@ -4385,6 +5143,11 @@
             <units>lb | kg</units>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="165">
           <name>TK ST</name>
@@ -4405,6 +5168,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="166">
           <name>TK X-Heavy Encumbrance</name>
@@ -4427,6 +5195,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="167">
           <name>TK X-Heavy Encumbrance Move</name>
@@ -4449,6 +5222,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="168">
           <name>Touch</name>
@@ -4466,6 +5244,11 @@
           </calcs>
           <armordata />
           <ref />
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="169">
           <name>Tunneling Move</name>
@@ -4486,6 +5269,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="170">
           <name>Two Arm Lifting ST</name>
@@ -4504,6 +5292,11 @@
           </calcs>
           <armordata />
           <ref />
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="171">
           <name>Two Arm Reach</name>
@@ -4523,6 +5316,11 @@
           <ref>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="172">
           <name>Two Arm SM</name>
@@ -4543,6 +5341,11 @@
             <gives>=+@if(me::score &lt; 1 THEN 0 ELSE @if(me::score = 1 THEN 0.5 ELSE @if(me::score = 2 THEN 1 ELSE (@indexedvalue((me::score- (6 * @int(me::score / 6))) + 1, 0.7,1,1.5,2,3,5) * (10 ^ @int(me::score / 6)))))) to ST:Two Arm Reach</gives>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <bonuses count="1">
             <bonus>
               <targetprefix>ST</targetprefix>
@@ -4573,6 +5376,11 @@
           </calcs>
           <armordata />
           <ref />
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="174">
           <name>Two-Handed Lift</name>
@@ -4594,6 +5402,11 @@
             <page>B353</page>
             <units>lb | kg</units>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="175">
           <name>Unappealing</name>
@@ -4611,6 +5424,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="176">
           <name>Unholy PI</name>
@@ -4631,6 +5449,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="177">
           <name>Vision</name>
@@ -4648,6 +5471,11 @@
           </calcs>
           <armordata />
           <ref />
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="178">
           <name>War PI</name>
@@ -4668,6 +5496,11 @@
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="179">
           <name>Water Move</name>
@@ -4689,10 +5522,15 @@
           </calcs>
           <armordata />
           <ref />
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="180">
           <name>Wealth Modifier</name>
-          <bonuslist>+10 from 'Wealth'</bonuslist>
+          <bonuslist>+10 from 'Wealth (Comfortable)'</bonuslist>
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
@@ -4710,6 +5548,11 @@
           <ref>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="181">
           <name>Will</name>
@@ -4733,6 +5576,11 @@
             <mainwin>6</mainwin>
             <disadat>-1</disadat>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="182">
           <name>X-Heavy Encumbrance</name>
@@ -4754,6 +5602,11 @@
           <ref>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="183">
           <name>X-Heavy Encumbrance Move</name>
@@ -4775,10 +5628,107 @@
           <ref>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
       </attributes>
-      <languages count="0" />
-      <cultures count="0" />
+      <languages count="1">
+        <trait type="Languages" idkey="13362">
+          <name>Common</name>
+          <bonuslist>+0 from 'Common (Broken; Native Language, -6)'</bonuslist>
+          <needscheck>-1</needscheck>
+          <taboofailed>0</taboofailed>
+          <cat>Mundane, Social, Language, Language Spoken, Language Written, Social Background</cat>
+          <points>0</points>
+          <level>3</level>
+          <calcs>
+            <cost>2/4</cost>
+            <syslevels>0</syslevels>
+            <baselevel>3</baselevel>
+            <premodspoints>6</premodspoints>
+            <upto>3</upto>
+            <levelnames>[None], Broken, Accented, Native</levelnames>
+          </calcs>
+          <armordata />
+          <ref>
+            <basedon>Language - Native</basedon>
+            <page>B24</page>
+            <taboo>Native Languages &gt; 1</taboo>
+            <mods>Language, Native Language</mods>
+          </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
+          <modifiers count="1">
+            <modifier idkey="13363">
+              <name>Native Language</name>
+              <group>Native Language</group>
+              <cost>-6</cost>
+              <level>1</level>
+              <premodsvalue>-6</premodsvalue>
+              <value>-6</value>
+              <valuenum>-6</valuenum>
+              <gives>=+1 to ST:Native Languages, =-"AD:Language Talent::level" to owner::level</gives>
+              <page>B23</page>
+              <bonuses count="2">
+                <bonus>
+                  <targetprefix>ST</targetprefix>
+                  <targetname>native languages</targetname>
+                  <targettype>Attributes</targettype>
+                  <affects>level</affects>
+                  <bonuspart>+1</bonuspart>
+                  <bonustype>3</bonustype>
+                  <fullbonustext>=+1 to ST:Native Languages</fullbonustext>
+                  <value>1</value>
+                </bonus>
+                <bonus>
+                  <targetname>owner</targetname>
+                  <targettag>level</targettag>
+                  <targettype>Owner</targettype>
+                  <affects>level</affects>
+                  <bonuspart>-"AD:Language Talent::level"</bonuspart>
+                  <bonustype>3</bonustype>
+                  <fullbonustext>=-"AD:Language Talent::level" to owner::level</fullbonustext>
+                  <value>0</value>
+                </bonus>
+              </bonuses>
+            </modifier>
+          </modifiers>
+        </trait>
+      </languages>
+      <cultures count="1">
+        <trait type="Cultures" idkey="13364">
+          <name>Western</name>
+          <needscheck>-1</needscheck>
+          <taboofailed>0</taboofailed>
+          <cat>Mundane, Social, Cultural Familiarity, Social Background</cat>
+          <points>1</points>
+          <level>1</level>
+          <calcs>
+            <cost>1</cost>
+            <syslevels>0</syslevels>
+            <baselevel>1</baselevel>
+            <premodspoints>1</premodspoints>
+          </calcs>
+          <armordata />
+          <ref>
+            <basedon>Cultural Familiarity</basedon>
+            <page>B23</page>
+            <taboo>Native Cultural Familiarities &gt; 1</taboo>
+            <mods>Cultural Familiarity</mods>
+          </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
+        </trait>
+      </cultures>
       <advantages count="5">
         <trait type="Advantages" idkey="186">
           <name>Energy Reserve</name>
@@ -4799,6 +5749,11 @@
             <page>P119</page>
             <mods>Energy Reserve</mods>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Advantages" idkey="184">
           <name>Magery</name>
@@ -4823,6 +5778,11 @@
             <taboo>@if(@itemhasmod(AD:Magic Resistance, Improved) THEN 0 ELSE AD:Magic Resistance), AD:Mana Damper, ST:Magery &gt; 6,ST:Magery Air &gt; 6,ST:Magery Body Control &gt; 6,ST:Magery Communication &amp; Empathy &gt; 6,ST:Magery Earth &gt; 6,ST:Magery Enchantment &gt; 6,ST:Magery Fire &gt; 6,ST:Magery Gate &gt; 6,ST:Magery Healing &gt; 6,ST:Magery Knowledge &gt; 6,ST:Magery Light &amp; Darkness &gt; 6,ST:Magery Meta-Spells &gt; 6,ST:Magery Mind Control &gt; 6,ST:Magery Movement &gt; 6,ST:Magery Necromancy &gt; 6,ST:Magery Protection &amp; Warning &gt; 6,ST:Magery Water &gt; 6,ST:Magery Animal &gt; 6,ST:Magery Food &gt; 6,ST:Magery Illusion &amp; Creation &gt; 6,ST:Magery Making &amp; Breaking &gt; 6,ST:Magery Plant &gt; 6,ST:Magery Sound &gt; 6,ST:Magery Technological &gt; 6,ST:Magery Weather &gt; 6</taboo>
             <mods>Magery, Talents</mods>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <bonuses count="4">
             <bonus>
               <targetprefix>ST</targetprefix>
@@ -4921,7 +5881,7 @@
         </trait>
         <trait type="Advantages" idkey="231">
           <name>Status</name>
-          <bonuslist>0 from 'Wealth'</bonuslist>
+          <bonuslist>+0 from 'Wealth (Comfortable)'</bonuslist>
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <cat>Mundane, Social, Influence, Mundane Social</cat>
@@ -4942,6 +5902,11 @@
             <taboo>DI:Status</taboo>
             <mods>Status</mods>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <bonuses count="1">
             <bonus>
               <targetprefix>ST</targetprefix>
@@ -4977,6 +5942,11 @@
             <taboo>DI:Wealth, AD:Wealth &gt; me::level, AD:Wealth &lt; me::level, AD:Wealth &gt; @if(@itemhasmod(AD:Wealth, Heir) = 0 THEN 100 ELSE @itemhasmod(AD:Wealth, Heir)-1)</taboo>
             <mods>Wealth</mods>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <bonuses count="4">
             <bonus>
               <targetprefix>ST</targetprefix>
@@ -5043,6 +6013,11 @@
             <mods>Self-Control</mods>
             <initmods>You resist on a roll of 12 or less (quite often), *1, shortname(12 or less), group(Self-Control), page(B121)</initmods>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <modifiers count="1">
             <modifier idkey="234">
               <name>You resist on a roll of 12 or less</name>
@@ -5094,6 +6069,11 @@
             <page>B201</page>
             <default>DX - 4, SK:Innate Attack - 2</default>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Skills" idkey="188">
           <name>Staff</name>
@@ -5126,6 +6106,11 @@
             <page>B208</page>
             <default>DX - 5, SK:Polearm - 4, SK:Spear - 2, SK:Staff Art - 3, SK:Staff Sport - 3</default>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
       </skills>
       <spells count="31">
@@ -5199,11 +6184,11 @@
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <cat>Fire</cat>
-          <points>1</points>
+          <points>4</points>
           <type>IQ/VH</type>
-          <step>+0</step>
+          <step>+2</step>
           <stepoff>IQ</stepoff>
-          <level>13</level>
+          <level>15</level>
           <calcs>
             <sd>0</sd>
             <deflevel>0</deflevel>
@@ -5211,12 +6196,12 @@
             <levelmult>1</levelmult>
             <syslevels>3</syslevels>
             <extralevels>3</extralevels>
-            <baselevel>10</baselevel>
-            <basepoints>1</basepoints>
-            <multpoints>1</multpoints>
-            <apppoints>1</apppoints>
-            <premodspoints>1</premodspoints>
-            <baseapppoints>1</baseapppoints>
+            <baselevel>12</baselevel>
+            <basepoints>4</basepoints>
+            <multpoints>4</multpoints>
+            <apppoints>4</apppoints>
+            <premodspoints>4</premodspoints>
+            <baseapppoints>4</baseapppoints>
           </calcs>
           <armordata />
           <ref>
@@ -5234,6 +6219,11 @@
             <needs>Breathe Fire, ST:Magery = 0 | PE:Charms ([Spell]) | PE:Charms (%SpellsList%) | PE:Charms (Body of Flames)</needs>
             <mods>Spells</mods>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Spells" idkey="13350">
           <name>Breathe Fire</name>
@@ -5340,6 +6330,11 @@
             <needs>(Purify Air | Seek Air), ST:Magery = 0 | PE:Charms ([Spell]) | PE:Charms (%SpellsList%) | PE:Charms (Create Air)</needs>
             <mods>Spells</mods>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Spells" idkey="197">
           <name>Create Earth</name>
@@ -5382,6 +6377,11 @@
             <needs>Earth to Stone, ST:Magery = 0 | PE:Charms ([Spell]) | PE:Charms (%SpellsList%) | PE:Charms (Create Earth)</needs>
             <mods>Spells</mods>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Spells" idkey="212">
           <name>Create Fire</name>
@@ -5424,6 +6424,11 @@
             <needs>(Ignite Fire | Seek Fire), ST:Magery = 0 | PE:Charms ([Spell]) | PE:Charms (%SpellsList%) | PE:Charms (Create Fire)</needs>
             <mods>Spells</mods>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Spells" idkey="219">
           <name>Create Water</name>
@@ -5466,6 +6471,11 @@
             <needs>Purify Water, ST:Magery = 0 | PE:Charms ([Spell]) | PE:Charms (%SpellsList%) | PE:Charms (Create Water)</needs>
             <mods>Spells</mods>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Spells" idkey="198">
           <name>Earth to Stone</name>
@@ -5508,6 +6518,11 @@
             <needs>(AD:Magery 0 | ST:Magery 0 = 1), (AD:Magery = 1, ST:Magery = 1 | ST:Magery Earth = 1), Shape Earth, ST:Magery = 0 | PE:Charms ([Spell]) | PE:Charms (%SpellsList%) | PE:Charms (Earth to Stone)</needs>
             <mods>Spells</mods>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Spells" idkey="13354">
           <name>Extinguish Fire</name>
@@ -5550,6 +6565,11 @@
             <needs>Ignite Fire, ST:Magery = 0 | PE:Charms ([Spell]) | PE:Charms (%SpellsList%) | PE:Charms (Extinguish Fire)</needs>
             <mods>Spells</mods>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Spells" idkey="214">
           <name>Fire Cloud</name>
@@ -5592,6 +6612,11 @@
             <needs>Shape Air, Fireball, ST:Magery = 0 | PE:Charms ([Spell]) | PE:Charms (%SpellsList%) | PE:Charms (Fire Cloud)</needs>
             <mods>Spells</mods>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Spells" idkey="216">
           <name>Fireball</name>
@@ -5702,6 +6727,11 @@
             <needs>Extinguish Fire, ST:Magery = 0 | PE:Charms ([Spell]) | PE:Charms (%SpellsList%) | PE:Charms (Fireproof)</needs>
             <mods>Spells</mods>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Spells" idkey="13351">
           <name>Flame Jet</name>
@@ -5944,6 +6974,11 @@
             <needs>ST:Magery = 0 | PE:Charms ([Spell]) | PE:Charms (%SpellsList%) | PE:Charms (Ignite Fire)</needs>
             <mods>Spells</mods>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Spells" idkey="229">
           <name>Itch</name>
@@ -5986,6 +7021,11 @@
             <needs>ST:Magery = 0 | PE:Charms ([Spell]) | PE:Charms (%SpellsList%) | PE:Charms (Itch)</needs>
             <mods>Spells</mods>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Spells" idkey="195">
           <name>Lend Energy</name>
@@ -6028,6 +7068,11 @@
             <needs>((AD:Magery 0 | ST:Magery 0 = 1), (AD:Magery = 1 | ST:Magery Healing = 1) | AD:Empathy), ST:Magery = 0 | PE:Charms ([Spell]) | PE:Charms (%SpellsList%) | PE:Charms (Lend Energy)</needs>
             <mods>Spells</mods>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Spells" idkey="230">
           <name>Light</name>
@@ -6070,6 +7115,11 @@
             <needs>ST:Magery = 0 | PE:Charms ([Spell]) | PE:Charms (%SpellsList%) | PE:Charms (Light)</needs>
             <mods>Spells</mods>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Spells" idkey="211">
           <name>Purify Air</name>
@@ -6112,6 +7162,11 @@
             <needs>ST:Magery = 0 | PE:Charms ([Spell]) | PE:Charms (%SpellsList%) | PE:Charms (Purify Air)</needs>
             <mods>Spells</mods>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Spells" idkey="220">
           <name>Purify Water</name>
@@ -6154,6 +7209,11 @@
             <needs>Seek Water, ST:Magery = 0 | PE:Charms ([Spell]) | PE:Charms (%SpellsList%) | PE:Charms (Purify Water)</needs>
             <mods>Spells</mods>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Spells" idkey="196">
           <name>Recover Energy</name>
@@ -6196,6 +7256,11 @@
             <needs>(AD:Magery 0 | ST:Magery 0 = 1), (AD:Magery = 1 | ST:Magery Healing = 1), Lend Energy, ST:Magery = 0 | PE:Charms ([Spell]) | PE:Charms (%SpellsList%) | PE:Charms (Recover Energy)</needs>
             <mods>Spells</mods>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Spells" idkey="13352">
           <name>Resist Fire</name>
@@ -6238,6 +7303,11 @@
             <needs>(Fireproof | Extinguish Fire, Cold), ST:Magery = 0 | PE:Charms ([Spell]) | PE:Charms (%SpellsList%) | PE:Charms (Resist Fire)</needs>
             <mods>Spells</mods>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Spells" idkey="218">
           <name>Seek Air</name>
@@ -6280,6 +7350,11 @@
             <needs>ST:Magery = 0 | PE:Charms ([Spell]) | PE:Charms (%SpellsList%) | PE:Charms (Seek Air)</needs>
             <mods>Spells</mods>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Spells" idkey="200">
           <name>Seek Earth</name>
@@ -6322,6 +7397,11 @@
             <needs>ST:Magery = 0 | PE:Charms ([Spell]) | PE:Charms (%SpellsList%) | PE:Charms (Seek Earth)</needs>
             <mods>Spells</mods>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Spells" idkey="221">
           <name>Seek Water</name>
@@ -6364,6 +7444,11 @@
             <needs>ST:Magery = 0 | PE:Charms ([Spell]) | PE:Charms (%SpellsList%) | PE:Charms (Seek Water)</needs>
             <mods>Spells</mods>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Spells" idkey="215">
           <name>Shape Air</name>
@@ -6406,6 +7491,11 @@
             <needs>Create Air, ST:Magery = 0 | PE:Charms ([Spell]) | PE:Charms (%SpellsList%) | PE:Charms (Shape Air)</needs>
             <mods>Spells</mods>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Spells" idkey="199">
           <name>Shape Earth</name>
@@ -6448,6 +7538,11 @@
             <needs>Seek Earth, ST:Magery = 0 | PE:Charms ([Spell]) | PE:Charms (%SpellsList%) | PE:Charms (Shape Earth)</needs>
             <mods>Spells</mods>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Spells" idkey="217">
           <name>Shape Fire</name>
@@ -6490,6 +7585,11 @@
             <needs>Ignite Fire, ST:Magery = 0 | PE:Charms ([Spell]) | PE:Charms (%SpellsList%) | PE:Charms (Shape Fire)</needs>
             <mods>Spells</mods>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Spells" idkey="224">
           <name>Shape Water</name>
@@ -6532,6 +7632,11 @@
             <needs>Create Water, ST:Magery = 0 | PE:Charms ([Spell]) | PE:Charms (%SpellsList%) | PE:Charms (Shape Water)</needs>
             <mods>Spells</mods>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Spells" idkey="201">
           <name>Stone Missile</name>
@@ -35891,7 +36996,7 @@
         <filename>mental_16.png</filename>
         <criteria>Advantages where cat listincludes {mental}</criteria>
         <image><![CDATA[iVBORw0KGgoAAAANSUhEUgAAAA8AAAAQCAYAAADJViUEAAAABGdBTUEAALGPC/xhBQAAAAlwSFlz
-AAALEAAACxABrSO9dQAAAAd0SU1FB+EGERIZD2I0ZEoAAAD7SURBVDhPvZI/yoNAEMU9in8KC8FK
+AAALDwAACw8BkvkDpQAAAAd0SU1FB+EGERIZD2I0ZEoAAAD7SURBVDhPvZI/yoNAEMU9in8KC8FK
 bKwttLMRQbDwCFqJCHZWVvYexs4beJtJnmaWTXaT70sTHo8dduY3zA5rkEbLspDv+9S2Lc3zTEVR
 UJ7ntO87yXVSeClJEhqGgY7jUDyOI63rKho8jktRFIlC0zQV476ua9q27WwgQMhxnLcgbFnWmW+a
 5nsYRr4sSxXmZBAEWhBGvqoqFcZY/G7P8/4PY8tcIC8ONu5lOBlO0/QZdl1XwLJt2z4BngRxlmX6
@@ -35903,7 +37008,7 @@ xg3BO+JKFy8frAAAAABJRU5ErkJggg==]]></image>
         <filename>mental_16.png</filename>
         <criteria>Disadvantages where cat listincludes {mental}</criteria>
         <image><![CDATA[iVBORw0KGgoAAAANSUhEUgAAAA8AAAAQCAYAAADJViUEAAAABGdBTUEAALGPC/xhBQAAAAlwSFlz
-AAALEAAACxABrSO9dQAAAAd0SU1FB+EGERIZD2I0ZEoAAAD7SURBVDhPvZI/yoNAEMU9in8KC8FK
+AAALDwAACw8BkvkDpQAAAAd0SU1FB+EGERIZD2I0ZEoAAAD7SURBVDhPvZI/yoNAEMU9in8KC8FK
 bKwttLMRQbDwCFqJCHZWVvYexs4beJtJnmaWTXaT70sTHo8dduY3zA5rkEbLspDv+9S2Lc3zTEVR
 UJ7ntO87yXVSeClJEhqGgY7jUDyOI63rKho8jktRFIlC0zQV476ua9q27WwgQMhxnLcgbFnWmW+a
 5nsYRr4sSxXmZBAEWhBGvqoqFcZY/G7P8/4PY8tcIC8ONu5lOBlO0/QZdl1XwLJt2z4BngRxlmX6
@@ -35961,8 +37066,8 @@ z86dSz83cz7h/HhPTM/9CxEXbvUG9g5c9Ll4+ZL7pQt9Tn1nL9tdPnXF5srJq4yrndcsr3X0W/S3
 /2TxU/uA5UDHdavrXTesb3QPLh88M+QwdP6m681Lt7xuXbu94vbgcOjwnZHokdE77DtTd1PuvriX
 eW/h/sYH6AdFD6UeVjxSfNTws+7PbaOWo6fHXMf6Hwc/vj/OGn/2S8Yv7ycKnpCfVEyqTDZPmU2d
 mnafvvF05dOJZ+nPFmYKf5X+tfa5zvMffnP8rX82YnbiBf/Fp99LXsq/PPRq2aueuYC5R69TXy/M
-F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALEAAA
-CxABrSO9dQAAA5NJREFUOE9lk3tM01cUx49AeUO1gFApA3mpW0JmshkTY+KGUZljsvgoGmXozHA+
+F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDwAA
+Cw8BkvkDpQAAA5NJREFUOE9lk3tM01cUx49AeUO1gFApA3mpW0JmshkTY+KGUZljsvgoGmXozHA+
 EPQvjYmIc8l0bjI25kSXKGYQH6gBFcUXY10qETtny6PwYy2dtmBJf0VaUqA5O+cuEN2anNz7uz3n
 c8/5nnvA5XKB3+8HSZJAp9OFt7W1xXg9niBEhJGXLxdsL9pmLj9YJo+Pj7/LZ+3t7YpLFy/G6PV6
 hdstA5+NjY0ByPK/H8anxpxl2dnjczMysOXBg6+cTieszvv4BQAg26GDZffdbjccPlReOTc9Ezeu
@@ -36031,8 +37136,8 @@ z86dSz83cz7h/HhPTM/9CxEXbvUG9g5c9Ll4+ZL7pQt9Tn1nL9tdPnXF5srJq4yrndcsr3X0W/S3
 /2TxU/uA5UDHdavrXTesb3QPLh88M+QwdP6m681Lt7xuXbu94vbgcOjwnZHokdE77DtTd1PuvriX
 eW/h/sYH6AdFD6UeVjxSfNTws+7PbaOWo6fHXMf6Hwc/vj/OGn/2S8Yv7ycKnpCfVEyqTDZPmU2d
 mnafvvF05dOJZ+nPFmYKf5X+tfa5zvMffnP8rX82YnbiBf/Fp99LXsq/PPRq2aueuYC5R69TXy/M
-F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALEAAA
-CxABrSO9dQAAA5NJREFUOE9lk3tM01cUx49AeUO1gFApA3mpW0JmshkTY+KGUZljsvgoGmXozHA+
+F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDwAA
+Cw8BkvkDpQAAA5NJREFUOE9lk3tM01cUx49AeUO1gFApA3mpW0JmshkTY+KGUZljsvgoGmXozHA+
 EPQvjYmIc8l0bjI25kSXKGYQH6gBFcUXY10qETtny6PwYy2dtmBJf0VaUqA5O+cuEN2anNz7uz3n
 c8/5nnvA5XKB3+8HSZJAp9OFt7W1xXg9niBEhJGXLxdsL9pmLj9YJo+Pj7/LZ+3t7YpLFy/G6PV6
 hdstA5+NjY0ByPK/H8anxpxl2dnjczMysOXBg6+cTieszvv4BQAg26GDZffdbjccPlReOTc9Ezeu
@@ -36101,8 +37206,8 @@ z86dSz83cz7h/HhPTM/9CxEXbvUG9g5c9Ll4+ZL7pQt9Tn1nL9tdPnXF5srJq4yrndcsr3X0W/S3
 /2TxU/uA5UDHdavrXTesb3QPLh88M+QwdP6m681Lt7xuXbu94vbgcOjwnZHokdE77DtTd1PuvriX
 eW/h/sYH6AdFD6UeVjxSfNTws+7PbaOWo6fHXMf6Hwc/vj/OGn/2S8Yv7ycKnpCfVEyqTDZPmU2d
 mnafvvF05dOJZ+nPFmYKf5X+tfa5zvMffnP8rX82YnbiBf/Fp99LXsq/PPRq2aueuYC5R69TXy/M
-F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALEAAA
-CxABrSO9dQAABTtJREFUOE9tVHlQk1cQ3xA5FPEElcOEU/A+8WprFcQCCgI61AOtovWgtv7RqZwT
+F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDwAA
+Cw8BkvkDpQAABTtJREFUOE9tVHlQk1cQ3xA5FPEElcOEU/A+8WprFcQCCgI61AOtovWgtv7RqZwT
 22o5PYvBKkJCiiYIIYQjciRMEKiOQggKigYB0TC2NlyKUa7Xfd+Mzjj2m3nzvWPf77e7v30L7W1t
 PPG1a2lV6iq3pvtNUCSXQ19vLyTGJ0ClSgVPWlth146dIBJmASEEGhoaQJgpgK6uLhgZGYYfjhyB
 iEOHQKVUMef1dfXQ0dEBXXq929Xs7DhRVtZRyLuee9uZwyGeS5aSqJ+OKaS5ucHDQ0Nmp5JToKWl
@@ -36179,8 +37284,8 @@ z86dSz83cz7h/HhPTM/9CxEXbvUG9g5c9Ll4+ZL7pQt9Tn1nL9tdPnXF5srJq4yrndcsr3X0W/S3
 /2TxU/uA5UDHdavrXTesb3QPLh88M+QwdP6m681Lt7xuXbu94vbgcOjwnZHokdE77DtTd1PuvriX
 eW/h/sYH6AdFD6UeVjxSfNTws+7PbaOWo6fHXMf6Hwc/vj/OGn/2S8Yv7ycKnpCfVEyqTDZPmU2d
 mnafvvF05dOJZ+nPFmYKf5X+tfa5zvMffnP8rX82YnbiBf/Fp99LXsq/PPRq2aueuYC5R69TXy/M
-F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALEAAA
-CxABrSO9dQAABTtJREFUOE9tVHlQk1cQ3xA5FPEElcOEU/A+8WprFcQCCgI61AOtovWgtv7RqZwT
+F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDwAA
+Cw8BkvkDpQAABTtJREFUOE9tVHlQk1cQ3xA5FPEElcOEU/A+8WprFcQCCgI61AOtovWgtv7RqZwT
 22o5PYvBKkJCiiYIIYQjciRMEKiOQggKigYB0TC2NlyKUa7Xfd+Mzjj2m3nzvWPf77e7v30L7W1t
 PPG1a2lV6iq3pvtNUCSXQ19vLyTGJ0ClSgVPWlth146dIBJmASEEGhoaQJgpgK6uLhgZGYYfjhyB
 iEOHQKVUMef1dfXQ0dEBXXq929Xs7DhRVtZRyLuee9uZwyGeS5aSqJ+OKaS5ucHDQ0Nmp5JToKWl
@@ -36257,8 +37362,8 @@ z86dSz83cz7h/HhPTM/9CxEXbvUG9g5c9Ll4+ZL7pQt9Tn1nL9tdPnXF5srJq4yrndcsr3X0W/S3
 /2TxU/uA5UDHdavrXTesb3QPLh88M+QwdP6m681Lt7xuXbu94vbgcOjwnZHokdE77DtTd1PuvriX
 eW/h/sYH6AdFD6UeVjxSfNTws+7PbaOWo6fHXMf6Hwc/vj/OGn/2S8Yv7ycKnpCfVEyqTDZPmU2d
 mnafvvF05dOJZ+nPFmYKf5X+tfa5zvMffnP8rX82YnbiBf/Fp99LXsq/PPRq2aueuYC5R69TXy/M
-F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALEAAA
-CxABrSO9dQAAAkFJREFUKFNj+Pr1K8P79+8Znj59ynDr1i31msqqiQmxcQdbm1tWrVm92vjZs2cM
+F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDwAA
+Cw8BkvkDpQAAAkFJREFUKFNj+Pr1K8P79+8Znj59ynDr1i31msqqiQmxcQdbm1tWrVm92vjZs2cM
 ////Z/j79y8Dw8+fP8Gcc2fPers5u/znZuf8z8vB+Z+ThfW/lpr6/9OnTlWB5P/8+cMANvnz58/m
 zg6O/xkYGP4rysj+V1VU+q8kJw/mgzQ8e/o0AKQBbGpdbe0mkISyvAIKBmkCiefn5F4EK3744IGd
 raXVfw5mlv8qCoooikF8QV6+/xoqqv+PHjniz7Bq5apiIT7+/3KSUigKYRjkHJAGoMc7GPp6e1Yw
@@ -36321,8 +37426,8 @@ z86dSz83cz7h/HhPTM/9CxEXbvUG9g5c9Ll4+ZL7pQt9Tn1nL9tdPnXF5srJq4yrndcsr3X0W/S3
 /2TxU/uA5UDHdavrXTesb3QPLh88M+QwdP6m681Lt7xuXbu94vbgcOjwnZHokdE77DtTd1PuvriX
 eW/h/sYH6AdFD6UeVjxSfNTws+7PbaOWo6fHXMf6Hwc/vj/OGn/2S8Yv7ycKnpCfVEyqTDZPmU2d
 mnafvvF05dOJZ+nPFmYKf5X+tfa5zvMffnP8rX82YnbiBf/Fp99LXsq/PPRq2aueuYC5R69TXy/M
-F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALEAAA
-CxABrSO9dQAAAkFJREFUKFNj+Pr1K8P79+8Znj59ynDr1i31msqqiQmxcQdbm1tWrVm92vjZs2cM
+F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDwAA
+Cw8BkvkDpQAAAkFJREFUKFNj+Pr1K8P79+8Znj59ynDr1i31msqqiQmxcQdbm1tWrVm92vjZs2cM
 ////Z/j79y8Dw8+fP8Gcc2fPers5u/znZuf8z8vB+Z+ThfW/lpr6/9OnTlWB5P/8+cMANvnz58/m
 zg6O/xkYGP4rysj+V1VU+q8kJw/mgzQ8e/o0AKQBbGpdbe0mkISyvAIKBmkCiefn5F4EK3744IGd
 raXVfw5mlv8qCoooikF8QV6+/xoqqv+PHjniz7Bq5apiIT7+/3KSUigKYRjkHJAGoMc7GPp6e1Yw
@@ -36385,8 +37490,8 @@ z86dSz83cz7h/HhPTM/9CxEXbvUG9g5c9Ll4+ZL7pQt9Tn1nL9tdPnXF5srJq4yrndcsr3X0W/S3
 /2TxU/uA5UDHdavrXTesb3QPLh88M+QwdP6m681Lt7xuXbu94vbgcOjwnZHokdE77DtTd1PuvriX
 eW/h/sYH6AdFD6UeVjxSfNTws+7PbaOWo6fHXMf6Hwc/vj/OGn/2S8Yv7ycKnpCfVEyqTDZPmU2d
 mnafvvF05dOJZ+nPFmYKf5X+tfa5zvMffnP8rX82YnbiBf/Fp99LXsq/PPRq2aueuYC5R69TXy/M
-F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALEAAA
-CxABrSO9dQAAAnhJREFUOE9VUklMk1EQHgiNIjsGEZEipZa4REiUoB6ApERD4sEFg0i8GKnVeAOR
+F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDwAA
+Cw8BkvkDpQAAAnhJREFUOE9VUklMk1EQHgiNIjsGEZEipZa4REiUoB6ApERD4sEFg0i8GKnVeAOR
 eFT04BKMtRgTPVUSXAktxBM1pUEoWKtiWaXYlcVg96bLD+ObX0U4fJl/3vu+eTPz/RCNRtchFosB
 IhIEGrX6jrq7uzzKzj6OjMDo11GASCSyChKEQiF4r9XCh4EBwRFpFYpFIjSbzY1erxfGx8YBVlZW
 VvG3MgwNDsLLzk5J2YFSPwBgXs42fPRQ0flraUm4SloDMUWdTnc8P3c7T85ISUUS3m5tnYfJiQmw
@@ -36450,8 +37555,8 @@ z86dSz83cz7h/HhPTM/9CxEXbvUG9g5c9Ll4+ZL7pQt9Tn1nL9tdPnXF5srJq4yrndcsr3X0W/S3
 /2TxU/uA5UDHdavrXTesb3QPLh88M+QwdP6m681Lt7xuXbu94vbgcOjwnZHokdE77DtTd1PuvriX
 eW/h/sYH6AdFD6UeVjxSfNTws+7PbaOWo6fHXMf6Hwc/vj/OGn/2S8Yv7ycKnpCfVEyqTDZPmU2d
 mnafvvF05dOJZ+nPFmYKf5X+tfa5zvMffnP8rX82YnbiBf/Fp99LXsq/PPRq2aueuYC5R69TXy/M
-F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALEAAA
-CxABrSO9dQAAAnhJREFUOE9VUklMk1EQHgiNIjsGEZEipZa4REiUoB6ApERD4sEFg0i8GKnVeAOR
+F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDwAA
+Cw8BkvkDpQAAAnhJREFUOE9VUklMk1EQHgiNIjsGEZEipZa4REiUoB6ApERD4sEFg0i8GKnVeAOR
 eFT04BKMtRgTPVUSXAktxBM1pUEoWKtiWaXYlcVg96bLD+ObX0U4fJl/3vu+eTPz/RCNRtchFosB
 IhIEGrX6jrq7uzzKzj6OjMDo11GASCSyChKEQiF4r9XCh4EBwRFpFYpFIjSbzY1erxfGx8YBVlZW
 VvG3MgwNDsLLzk5J2YFSPwBgXs42fPRQ0flraUm4SloDMUWdTnc8P3c7T85ISUUS3m5tnYfJiQmw
