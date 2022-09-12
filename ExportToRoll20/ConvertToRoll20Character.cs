@@ -989,7 +989,7 @@ namespace ExportToRoll20
         /// </summary>
         /// <param name="oldValue"></param>
         /// <returns></returns>
-        public string getAlphaNumericCharacters(string oldValue)
+        public string GetAlphaNumericCharacters(string oldValue)
         {
             string newValue;
 
@@ -1015,9 +1015,9 @@ namespace ExportToRoll20
 
                     if (isMeleeWeapon)
                     {
-                        string idKeyTraitName = getAlphaNumericCharacters(trait.Name.ToLower());
+                        string idKeyTraitName = GetAlphaNumericCharacters(trait.Name.ToLower().Replace(" ", "_"));
 
-                        string idKeyModeName = getAlphaNumericCharacters(mode.Name.ToLower());
+                        string idKeyModeName = GetAlphaNumericCharacters(mode.Name.ToLower().Replace(" ", "_"));
 
                         string meleeIdKey = trait.IDKey.ToString() + "_" + idKeyTraitName + "_" + idKeyModeName;
 
@@ -1077,9 +1077,9 @@ namespace ExportToRoll20
 
                     if (isRanged)
                     {
-                        string idKeyTraitName = getAlphaNumericCharacters(trait.Name.ToLower());
+                        string idKeyTraitName = GetAlphaNumericCharacters(trait.Name.ToLower().Replace(" ", "_"));
 
-                        string idKeyModeName = getAlphaNumericCharacters(mode.Name.ToLower());
+                        string idKeyModeName = GetAlphaNumericCharacters(mode.Name.ToLower().Replace(" ", "_"));
 
                         string rangedIdKey = trait.IDKey.ToString() + "_" + idKeyTraitName + "_" + idKeyModeName;
 
