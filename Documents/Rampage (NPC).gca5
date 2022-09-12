@@ -3,13 +3,13 @@
   <character>
     <author>
       <name>GURPS Character Assistant</name>
-      <version>GCA5Engine, Version=5.0.189.0</version>
+      <version>GCA5Engine, Version=5.0.197.0</version>
       <copyright>Program code is copyright © 1995-2022 by Armin D. Sykes. All data files, graphics, and other GURPS-specific content is copyright © 2005 and other years by Steve Jackson Games Incorporated. GURPS and the all-seeing pyramid are registered trademarks of Steve Jackson Games Incorporated. All rights reserved.</copyright>
-      <datecreated>Monday, July 4, 2022</datecreated>
+      <datecreated>Sunday, September 11, 2022</datecreated>
     </author>
     <system>
       <version>5</version>
-      <lastkey>13176</lastkey>
+      <lastkey>13360</lastkey>
     </system>
     <library>
       <name>%user%\Supers.gds</name>
@@ -176,6 +176,16 @@
       <sheetviewsheet />
       <charactersheet>GURPS 4th Edition Official Character Sheet</charactersheet>
       <exportsheet>Simple Text Export</exportsheet>
+      <altexportsheet>Export Character to Roll20</altexportsheet>
+      <altexportsheet>Simple Text Export</altexportsheet>
+      <altexportsheet>Export Character to Roll20</altexportsheet>
+      <altexportsheet>Simple Text Export</altexportsheet>
+      <altexportsheet>Export Character to Roll20</altexportsheet>
+      <altexportsheet>Simple Text Export</altexportsheet>
+      <altexportsheet>Export Character to Roll20</altexportsheet>
+      <altexportsheet>Simple Text Export</altexportsheet>
+      <altexportsheet>Export Character to Roll20</altexportsheet>
+      <altexportsheet>Simple Text Export</altexportsheet>
       <altexportsheet>Export Character to Roll20</altexportsheet>
       <altexportsheet>Simple Text Export</altexportsheet>
       <altexportsheet>Export Character to Roll20</altexportsheet>
@@ -841,6 +851,11 @@ Body Control Talent\par
             <mainwin>13</mainwin>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10515">
           <name>Air Move</name>
@@ -865,10 +880,15 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10516">
           <name>Appealing</name>
-          <bonuslist>+1 from 'Appearance'</bonuslist>
+          <bonuslist>+1 from 'Appearance (Attractive)'</bonuslist>
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
@@ -883,6 +903,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10517">
           <name>Basic Air Move</name>
@@ -904,6 +929,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10518">
           <name>Basic Brachiation Move</name>
@@ -925,6 +955,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10519">
           <name>Basic Ground Move</name>
@@ -946,6 +981,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10520">
           <name>Basic Lift</name>
@@ -967,6 +1007,11 @@ Body Control Talent\par
           <ref>
             <units>lb|kg</units>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10521">
           <name>Basic Move</name>
@@ -992,6 +1037,11 @@ Body Control Talent\par
             <display>No</display>
             <disadat>-1</disadat>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10522">
           <name>Basic Space Move</name>
@@ -1013,6 +1063,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10523">
           <name>Basic Speed</name>
@@ -1037,6 +1092,11 @@ Body Control Talent\par
             <display>No</display>
             <disadat>-1</disadat>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10524">
           <name>Basic Water Move</name>
@@ -1058,6 +1118,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10525">
           <name>Bite</name>
@@ -1102,7 +1167,7 @@ Body Control Talent\par
         </trait>
         <trait type="Attributes" idkey="10526">
           <name>Block</name>
-          <bonuslist>+1 from 'Combat Reflexes'</bonuslist>
+          <bonuslist>+1 from 'Combat Reflexes (Biological, -10%)'</bonuslist>
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
@@ -1119,6 +1184,11 @@ Body Control Talent\par
           <ref>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10527">
           <name>Brachiation Move</name>
@@ -1140,6 +1210,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10528">
           <name>Broad Jump</name>
@@ -1160,6 +1235,11 @@ Body Control Talent\par
             <page>B352</page>
             <units>ft | m</units>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10529">
           <name>Carry on Back</name>
@@ -1180,6 +1260,11 @@ Body Control Talent\par
             <page>B353</page>
             <units>lb | kg</units>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10668">
           <name>Chip Slots</name>
@@ -1195,6 +1280,11 @@ Body Control Talent\par
           </calcs>
           <armordata />
           <ref />
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10530">
           <name>Consciousness Check</name>
@@ -1215,6 +1305,11 @@ Body Control Talent\par
           <ref>
             <display>yes</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10531">
           <name>Cost of Living</name>
@@ -1237,6 +1332,11 @@ Body Control Talent\par
             <mainwin>18</mainwin>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10532">
           <name>Damage Base</name>
@@ -1255,6 +1355,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10533">
           <name>DB</name>
@@ -1274,6 +1379,11 @@ Body Control Talent\par
           <ref>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10534">
           <name>Death Check</name>
@@ -1294,10 +1404,15 @@ Body Control Talent\par
           <ref>
             <display>yes</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10535">
           <name>Dodge</name>
-          <bonuslist>+1 from 'Combat Reflexes', +1 from 'Enhanced Dodge'</bonuslist>
+          <bonuslist>+1 from 'Combat Reflexes (Biological, -10%)', +1 from 'Enhanced Dodge 1 (Biological, -10%)'</bonuslist>
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
@@ -1315,6 +1430,11 @@ Body Control Talent\par
           <ref>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10536">
           <name>DR</name>
@@ -1333,6 +1453,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10537">
           <name>DX</name>
@@ -1366,6 +1491,11 @@ Body Control Talent\par
             <display>no</display>
             <disadat>-1</disadat>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <modifiers count="1">
             <modifier idkey="10538">
               <name>No Fine Manipulators</name>
@@ -1398,6 +1528,11 @@ Body Control Talent\par
             <conditional>-1 to (SK:Climbing, SK:Stealth),-2 to SK:Swimming,-1 to (SK:Judo, SK:Karate, "SK:Main-Gauche", SK:Rapier, SK:Saber, SK:Smallsword) when "striking or parrying"</conditional>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <conditionals count="3">
             <bonus>
               <targetname>(sk:climbing, sk:stealth)</targetname>
@@ -1448,6 +1583,11 @@ Body Control Talent\par
             <gives>=@if( me::score = @int(me::score) then @power(2, me::score) else @power(2, @int(me::score)) * 1.5 ) * ST:Air Move::basescore - ST:Air Move::basescore to ST:Air Move</gives>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <bonuses count="1">
             <bonus>
               <targetprefix>ST</targetprefix>
@@ -1463,7 +1603,7 @@ Body Control Talent\par
         </trait>
         <trait type="Attributes" idkey="10541">
           <name>Enhanced Ground Move</name>
-          <bonuslist>+0.5 from 'Enhanced Move (Ground)'</bonuslist>
+          <bonuslist>+0.5 from 'Enhanced Move (#list(LevelName Step 0.5); Ground; Biological, -10%)'</bonuslist>
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
@@ -1480,6 +1620,11 @@ Body Control Talent\par
             <gives>=@if( me::score = @int(me::score) then @power(2, me::score) else @power(2, @int(me::score)) * 1.5 ) * ST:Ground Move::basescore - ST:Ground Move::basescore to ST:Ground Move</gives>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <bonuses count="1">
             <bonus>
               <targetprefix>ST</targetprefix>
@@ -1511,6 +1656,11 @@ Body Control Talent\par
             <gives>=@if( me::score = @int(me::score) then @power(2, me::score) else @power(2, @int(me::score)) * 1.5 ) * ST:Space Move::basescore - ST:Space Move::basescore to ST:Space Move</gives>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <bonuses count="1">
             <bonus>
               <targetprefix>ST</targetprefix>
@@ -1542,6 +1692,11 @@ Body Control Talent\par
             <gives>=@if( me::score = @int(me::score) then @power(2, me::score) else @power(2, @int(me::score)) * 1.5 ) * ST:Water Move::basescore - ST:Water Move::basescore to ST:Water Move</gives>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <bonuses count="1">
             <bonus>
               <targetprefix>ST</targetprefix>
@@ -1573,6 +1728,11 @@ Body Control Talent\par
           <ref>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10545">
           <name>Extra Arm SM</name>
@@ -1593,6 +1753,11 @@ Body Control Talent\par
             <gives>=+@if(me::score &lt; 1 THEN 0 ELSE @if(me::score = 1 THEN 0.5 ELSE @if(me::score = 2 THEN 1 ELSE (@indexedvalue((me::score- (6 * @int(me::score / 6))) + 1, 0.7,1,1.5,2,3,5) * (10 ^ @int(me::score / 6)))))) to ST:Extra Arm Reach</gives>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <bonuses count="1">
             <bonus>
               <targetprefix>ST</targetprefix>
@@ -1641,7 +1806,7 @@ Body Control Talent\par
         </trait>
         <trait type="Attributes" idkey="10547">
           <name>Fright Check</name>
-          <bonuslist>+2 from 'Combat Reflexes'</bonuslist>
+          <bonuslist>+2 from 'Combat Reflexes (Biological, -10%)'</bonuslist>
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
@@ -1654,6 +1819,11 @@ Body Control Talent\par
           </calcs>
           <armordata />
           <ref />
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10548">
           <name>Ground Move</name>
@@ -1676,6 +1846,11 @@ Body Control Talent\par
             <mainwin>11</mainwin>
             <noresync>yes</noresync>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10549">
           <name>Hearing</name>
@@ -1693,6 +1868,11 @@ Body Control Talent\par
           </calcs>
           <armordata />
           <ref />
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10550">
           <name>Heavy Encumbrance</name>
@@ -1714,6 +1894,11 @@ Body Control Talent\par
           <ref>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10551">
           <name>Heavy Encumbrance Move</name>
@@ -1735,6 +1920,11 @@ Body Control Talent\par
           <ref>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10552">
           <name>High Jump</name>
@@ -1755,6 +1945,11 @@ Body Control Talent\par
             <page>B352</page>
             <units>in | cm</units>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10553">
           <name>Hit Points</name>
@@ -1833,6 +2028,11 @@ Body Control Talent\par
             <display>no</display>
             <disadat>-1</disadat>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10669">
           <name>HT÷2</name>
@@ -1848,6 +2048,11 @@ Body Control Talent\par
           </calcs>
           <armordata />
           <ref />
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10556">
           <name>IQ</name>
@@ -1873,6 +2078,11 @@ Body Control Talent\par
             <display>no</display>
             <disadat>-1</disadat>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10557">
           <name>Jump Move</name>
@@ -1893,6 +2103,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10558">
           <name>Kick</name>
@@ -1980,6 +2195,11 @@ Body Control Talent\par
           <ref>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10560">
           <name>Leg SM</name>
@@ -2000,6 +2220,11 @@ Body Control Talent\par
             <gives>=+@if(me::score &lt; 1 THEN 0 ELSE @if(me::score = 1 THEN 0.5 ELSE @if(me::score = 2 THEN 1 ELSE (@indexedvalue((me::score- (6 * @int(me::score / 6))) + 1, 0.7,1,1.5,2,3,5) * (10 ^ @int(me::score / 6)))))) to ST:Leg Reach</gives>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <bonuses count="1">
             <bonus>
               <targetprefix>ST</targetprefix>
@@ -2015,7 +2240,7 @@ Body Control Talent\par
         </trait>
         <trait type="Attributes" idkey="10561">
           <name>Lifting ST</name>
-          <bonuslist>+4 from 'Enhanced Muscle', +3 from 'Lifting ST'</bonuslist>
+          <bonuslist>+4 from 'Enhanced Muscle 4 (Biological, -10%)', +3 from 'Lifting ST 3 (Size, +0%)'</bonuslist>
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>15</points>
@@ -2039,6 +2264,11 @@ Body Control Talent\par
             <initmods>Size, -10%, group(Size),formula(-@if(ST:Size Modifier::score &gt; 0 &amp; ST:Lifting ST::level &gt; 0 THEN ST:Size Modifier::score * 10 else 0)),forceformula(yes)</initmods>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <modifiers count="1">
             <modifier idkey="10562">
               <name>Size</name>
@@ -2073,6 +2303,11 @@ Body Control Talent\par
           <ref>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10564">
           <name>Light Encumbrance Move</name>
@@ -2094,6 +2329,11 @@ Body Control Talent\par
           <ref>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10565">
           <name>Magery</name>
@@ -2115,6 +2355,11 @@ Body Control Talent\par
             <gives>=+me::score to ("CO:Air", "CO:Animal", "CO:Body Control", "CO:Communication &amp; Empathy", "CO:Earth", "CO:Enchantment", "CO:Fire", "CO:Food", "CO:Illusion &amp; Creation", "CO:Gate", "CO:Healing", "CO:Knowledge", "CO:Light &amp; Darkness", "CO:Making &amp; Breaking", "CO:Meta-Spells", "CO:Mind Control", "CO:Movement", "CO:Necromancy", "CO:Plant", "CO:Protection &amp; Warning", "CO:Sound", "CO:Technological", "CO:Water", "CO:Weather")</gives>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <bonuses count="1">
             <bonus>
               <targetname>("co:air", "co:animal", "co:body control", "co:communication &amp; empathy", "co:earth", "co:enchantment", "co:fire", "co:food", "co:illusion &amp; creation", "co:gate", "co:healing", "co:knowledge", "co:light &amp; darkness", "co:making &amp; breaking", "co:meta-spells", "co:mind control", "co:movement", "co:necromancy", "co:plant", "co:protection &amp; warning", "co:sound", "co:technological", "co:water", "co:weather")</targetname>
@@ -2146,6 +2391,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10567">
           <name>Magery Air</name>
@@ -2166,6 +2416,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10568">
           <name>Magery Animal</name>
@@ -2186,6 +2441,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10569">
           <name>Magery Body Control</name>
@@ -2206,6 +2466,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10570">
           <name>Magery Communication &amp; Empathy</name>
@@ -2226,6 +2491,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10571">
           <name>Magery Earth</name>
@@ -2246,6 +2516,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10572">
           <name>Magery Enchantment</name>
@@ -2266,6 +2541,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10573">
           <name>Magery Fire</name>
@@ -2286,6 +2566,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10574">
           <name>Magery Food</name>
@@ -2306,6 +2591,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10575">
           <name>Magery Gate</name>
@@ -2326,6 +2616,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10576">
           <name>Magery Healing</name>
@@ -2346,6 +2641,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10577">
           <name>Magery Illusion &amp; Creation</name>
@@ -2366,6 +2666,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10578">
           <name>Magery Knowledge</name>
@@ -2386,6 +2691,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10579">
           <name>Magery Light &amp; Darkness</name>
@@ -2406,6 +2716,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10580">
           <name>Magery Making &amp; Breaking</name>
@@ -2426,6 +2741,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10581">
           <name>Magery Meta-Spells</name>
@@ -2446,6 +2766,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10582">
           <name>Magery Mind Control</name>
@@ -2466,6 +2791,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10583">
           <name>Magery Movement</name>
@@ -2486,6 +2816,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10584">
           <name>Magery Necromancy</name>
@@ -2506,6 +2841,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10585">
           <name>Magery Plant</name>
@@ -2526,6 +2866,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10586">
           <name>Magery Protection &amp; Warning</name>
@@ -2546,6 +2891,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10587">
           <name>Magery Sound</name>
@@ -2566,6 +2916,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10588">
           <name>Magery Technological</name>
@@ -2586,6 +2941,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10589">
           <name>Magery Water</name>
@@ -2606,6 +2966,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10590">
           <name>Magery Weather</name>
@@ -2626,6 +2991,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10591">
           <name>MageryBase</name>
@@ -2646,6 +3016,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10592">
           <name>Medium Encumbrance</name>
@@ -2667,6 +3042,11 @@ Body Control Talent\par
           <ref>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10593">
           <name>Medium Encumbrance Move</name>
@@ -2688,6 +3068,11 @@ Body Control Talent\par
           <ref>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10594">
           <name>Metric</name>
@@ -2711,6 +3096,11 @@ Body Control Talent\par
           <ref>
             <display>yes</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10670">
           <name>Modified ST-Based Damage</name>
@@ -2731,20 +3121,25 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10595">
           <name>Money</name>
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
-          <score>5295</score>
+          <score>5169.6</score>
           <level>0</level>
           <calcs>
             <syslevels>0</syslevels>
             <basevalue>ST:Money Base + (ST:Starting Wealth * @max(@if(@hasmod(5% of Starting Wealth) THEN 0.05),@if(@hasmod(10% of Starting Wealth) THEN 0.1),@if(@hasmod(15% of Starting Wealth) THEN 0.15),@if(@hasmod(20% of Starting Wealth) THEN 0.2),@if(@hasmod(30% of Starting Wealth) THEN 0.3),@if(@hasmod(40% of Starting Wealth) THEN 0.4),@if(@hasmod(50% of Starting Wealth) THEN 0.5),@if(@hasmod(60% of Starting Wealth) THEN 0.6),@if(@hasmod(70% of Starting Wealth) THEN 0.7),@if(@hasmod(80% of Starting Wealth) THEN 0.8),@if(@hasmod(90% of Starting Wealth) THEN 0.9),@if(@hasmod(100% of Starting Wealth) THEN 1) ) ) - char::equipmentcost</basevalue>
             <minscore>0</minscore>
             <step>0</step>
-            <basescore>5295</basescore>
+            <basescore>5169.6</basescore>
           </calcs>
           <armordata />
           <ref>
@@ -2753,6 +3148,11 @@ Body Control Talent\par
             <mainwin>15</mainwin>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <modifiers count="1">
             <modifier idkey="10596">
               <name>20% of Starting Wealth</name>
@@ -2767,7 +3167,7 @@ Body Control Talent\par
         </trait>
         <trait type="Attributes" idkey="10597">
           <name>Money Base</name>
-          <bonuslist>+4600 from 'Advanced Body Armor'</bonuslist>
+          <bonuslist>+4600 from 'Advanced Body Armor (Signature Gear, +0)'</bonuslist>
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
@@ -2785,6 +3185,11 @@ Body Control Talent\par
           <ref>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10598">
           <name>Monthly Pay</name>
@@ -2807,6 +3212,11 @@ Body Control Talent\par
             <mainwin>17</mainwin>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10599">
           <name>Native Cultural Familiarities</name>
@@ -2826,10 +3236,15 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10600">
           <name>Native Languages</name>
-          <bonuslist>+1 from 'English'</bonuslist>
+          <bonuslist>+1 from 'English (Native; Native Language, -6)'</bonuslist>
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
@@ -2845,6 +3260,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10601">
           <name>Neck Reach</name>
@@ -2864,6 +3284,11 @@ Body Control Talent\par
           <ref>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10602">
           <name>Neck SM</name>
@@ -2884,6 +3309,11 @@ Body Control Talent\par
             <gives>=+@if(me::score &lt; 1 THEN 0 ELSE @if(me::score = 1 THEN 0.5 ELSE @if(me::score = 2 THEN 1 ELSE (@indexedvalue((me::score- (6 * @int(me::score / 6))) + 1, 0.7,1,1.5,2,3,5) * (10 ^ @int(me::score / 6)))))) to ST:Neck Reach</gives>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <bonuses count="1">
             <bonus>
               <targetprefix>ST</targetprefix>
@@ -2917,6 +3347,11 @@ Body Control Talent\par
           <ref>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10604">
           <name>No Encumbrance Move</name>
@@ -2938,6 +3373,11 @@ Body Control Talent\par
           <ref>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10605">
           <name>No Fine Manipulators</name>
@@ -2956,6 +3396,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10606">
           <name>One Arm Lifting ST</name>
@@ -2974,6 +3419,11 @@ Body Control Talent\par
           </calcs>
           <armordata />
           <ref />
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10607">
           <name>One Arm Reach</name>
@@ -2993,6 +3443,11 @@ Body Control Talent\par
           <ref>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10608">
           <name>One Arm SM</name>
@@ -3013,6 +3468,11 @@ Body Control Talent\par
             <gives>=+@if(me::score &lt; 1 THEN 0 ELSE @if(me::score = 1 THEN 0.5 ELSE @if(me::score = 2 THEN 1 ELSE (@indexedvalue((me::score- (6 * @int(me::score / 6))) + 1, 0.7,1,1.5,2,3,5) * (10 ^ @int(me::score / 6)))))) to ST:One Arm Reach</gives>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <bonuses count="1">
             <bonus>
               <targetprefix>ST</targetprefix>
@@ -3043,6 +3503,11 @@ Body Control Talent\par
           </calcs>
           <armordata />
           <ref />
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10610">
           <name>One-Handed Lift</name>
@@ -3064,10 +3529,15 @@ Body Control Talent\par
             <page>B353</page>
             <units>lb | kg</units>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10611">
           <name>Parry</name>
-          <bonuslist>+1 from 'Combat Reflexes'</bonuslist>
+          <bonuslist>+1 from 'Combat Reflexes (Biological, -10%)'</bonuslist>
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
@@ -3084,6 +3554,11 @@ Body Control Talent\par
           <ref>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10612">
           <name>Perception</name>
@@ -3110,6 +3585,11 @@ Body Control Talent\par
             <mainwin>7</mainwin>
             <disadat>-1</disadat>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10671">
           <name>PowerBlockMentalBase</name>
@@ -3128,6 +3608,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10672">
           <name>PowerBlockPhysicalBase</name>
@@ -3146,6 +3631,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10673">
           <name>PowerDodgeBase</name>
@@ -3164,6 +3654,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10613">
           <name>Punch</name>
@@ -3235,8 +3730,8 @@ Body Control Talent\par
         </trait>
         <trait type="Attributes" idkey="10614">
           <name>Reaction</name>
-          <bonuslist>+2 from 'Charisma'</bonuslist>
-          <conditionallist>-2 from 'Reputation (Gang Leader)'</conditionallist>
+          <bonuslist>+2 from 'Charisma 2'</bonuslist>
+          <conditionallist>-2 from 'Reputation 2 (Gang Leader; 7 or less, +1, *1/3; Large class, +1, *1/2)'</conditionallist>
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
@@ -3251,26 +3746,36 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10615">
           <name>Remaining Funds</name>
-          <bonuslist>+4600 from 'Advanced Body Armor'</bonuslist>
+          <bonuslist>+4600 from 'Advanced Body Armor (Signature Gear, +0)'</bonuslist>
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
-          <score>37295</score>
+          <score>37169.6</score>
           <level>0</level>
           <calcs>
             <syslevels>4600</syslevels>
             <basevalue>ST:Starting Wealth - char::equipmentcost</basevalue>
             <minscore>0</minscore>
             <step>0</step>
-            <basescore>32695</basescore>
+            <basescore>32569.6</basescore>
           </calcs>
           <armordata />
           <ref>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10616">
           <name>Shift Slightly</name>
@@ -3291,6 +3796,11 @@ Body Control Talent\par
             <page>B353</page>
             <units>lb | kg</units>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10617">
           <name>Shove/Knock Over</name>
@@ -3311,10 +3821,15 @@ Body Control Talent\par
             <page>B353</page>
             <units>lb | kg</units>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10618">
           <name>Signature Gear</name>
-          <bonuslist>-4600 from 'Advanced Body Armor', +10000 from 'Signature Gear (Advanced Body Armor)'</bonuslist>
+          <bonuslist>-4600 from 'Advanced Body Armor (Signature Gear, +0)', +10000 from 'Signature Gear (%SigGearAliasList%; Advanced Body Armor)'</bonuslist>
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
@@ -3333,6 +3848,11 @@ Body Control Talent\par
             <display>No</display>
             <noresync>yes</noresync>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10619">
           <name>Size Modifier</name>
@@ -3357,6 +3877,11 @@ Body Control Talent\par
           <ref>
             <mainwin>12</mainwin>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10620">
           <name>Space Move</name>
@@ -3381,11 +3906,16 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10621">
           <name>ST</name>
-          <bonuslist>+1 from 'Extra ST'</bonuslist>
-          <conditionallist>+3 from 'Lifting ST'</conditionallist>
+          <bonuslist>+1 from 'Extra ST 1 (Affects ST, +0%; Size, +0%)'</bonuslist>
+          <conditionallist>+3 from 'Lifting ST 3 (Size, +0%)'</conditionallist>
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <symbol>ST</symbol>
@@ -3412,6 +3942,11 @@ Body Control Talent\par
             <display>no</display>
             <disadat>-1</disadat>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <modifiers count="2">
             <modifier idkey="10623">
               <name>No Fine Manipulators</name>
@@ -3455,10 +3990,15 @@ Body Control Talent\par
           <ref>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10625">
           <name>Status</name>
-          <bonuslist>0 from 'Wealth'</bonuslist>
+          <bonuslist>+0 from 'Wealth (Comfortable)'</bonuslist>
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
@@ -3480,10 +4020,15 @@ Body Control Talent\par
             <mainwin>16</mainwin>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10626">
           <name>Striking ST</name>
-          <bonuslist>+4 from 'Enhanced Muscle'</bonuslist>
+          <bonuslist>+4 from 'Enhanced Muscle 4 (Biological, -10%)'</bonuslist>
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
@@ -3505,6 +4050,11 @@ Body Control Talent\par
             <initmods>Size, -10%, group(Size),formula(-@if(ST:Size Modifier::score &gt; 0 &amp; ST:Striking ST::level &gt; 0 THEN ST:Size Modifier::score * 10 else 0)),forceformula(yes)</initmods>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <modifiers count="1">
             <modifier idkey="10627">
               <name>Size</name>
@@ -3536,6 +4086,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10674">
           <name>Super Jump Horizontal</name>
@@ -3554,6 +4109,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10675">
           <name>Super Jump Vertical</name>
@@ -3572,6 +4132,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10676">
           <name>Super-Effort Basic Lift</name>
@@ -3595,6 +4160,11 @@ Body Control Talent\par
             <hideme>@if( "ST:Super-Effort Lifting Strength::score"=0 then 1 else 0)</hideme>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10677">
           <name>Super-Effort Carry on Back</name>
@@ -3618,6 +4188,11 @@ Body Control Talent\par
             <hideme>@if( "ST:Super-Effort Lifting Strength::score"=0 then 1 else 0)</hideme>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10678">
           <name>Super-Effort Lifting ST</name>
@@ -3639,6 +4214,11 @@ Body Control Talent\par
             <hideme>@if( "ST:Super-Effort Lifting Strength::score"=0 then 1 else 0)</hideme>
             <display>yes</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10679">
           <name>Super-Effort Lifting Strength</name>
@@ -3660,6 +4240,11 @@ Body Control Talent\par
             <gives>=+((@indexedvalue((me::score - (6 * @int(me::score / 6))) + 1, 2,3,5,7,10,15) * (10 ^ @int(me::score / 6))) - me::score) to ST:Super-Effort Lifting ST</gives>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <bonuses count="1">
             <bonus>
               <targetprefix>ST</targetprefix>
@@ -3694,6 +4279,11 @@ Body Control Talent\par
             <hideme>@if( "ST:Super-Effort Lifting Strength::score"=0 then 1 else 0)</hideme>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10681">
           <name>Super-Effort Shift Slightly</name>
@@ -3717,6 +4307,11 @@ Body Control Talent\par
             <hideme>@if( "ST:Super-Effort Lifting Strength::score"=0 then 1 else 0)</hideme>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10682">
           <name>Super-Effort Shove/Knock Over</name>
@@ -3740,6 +4335,11 @@ Body Control Talent\par
             <hideme>@if( "ST:Super-Effort Lifting Strength::score"=0 then 1 else 0)</hideme>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10683">
           <name>Super-Effort ST</name>
@@ -3762,6 +4362,11 @@ Body Control Talent\par
             <mainwin>1</mainwin>
             <display>yes</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10684">
           <name>Super-Effort Strength</name>
@@ -3783,6 +4388,11 @@ Body Control Talent\par
             <gives>=+((@indexedvalue((me::score - (6 * @int(me::score / 6))) + 1, 2,3,5,7,10,15) * (10 ^ @int(me::score / 6))) - me::score) to ST:Super-Effort ST</gives>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <bonuses count="1">
             <bonus>
               <targetprefix>ST</targetprefix>
@@ -3816,6 +4426,11 @@ Body Control Talent\par
             <hideme>@if( "ST:Super-Effort Striking Strength::score"=0 then 1 else 0)</hideme>
             <display>yes</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10686">
           <name>Super-Effort Striking Strength</name>
@@ -3837,6 +4452,11 @@ Body Control Talent\par
             <gives>=+((@indexedvalue((me::score - (6 * @int(me::score / 6))) + 1, 2,3,5,7,10,15) * (10 ^ @int(me::score / 6))) - me::score) to ST:Super-Effort Striking ST</gives>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <bonuses count="1">
             <bonus>
               <targetprefix>ST</targetprefix>
@@ -3871,6 +4491,11 @@ Body Control Talent\par
             <hideme>@if( "ST:Super-Effort Lifting Strength::score"=0 then 1 else 0)</hideme>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10629">
           <name>Taste/Smell</name>
@@ -3888,6 +4513,11 @@ Body Control Talent\par
           </calcs>
           <armordata />
           <ref />
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10630">
           <name>Tech Level</name>
@@ -3913,6 +4543,11 @@ Body Control Talent\par
             <mods>Tech Level</mods>
             <mainwin>14</mainwin>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10631">
           <name>Three Arm Lifting ST</name>
@@ -3931,6 +4566,11 @@ Body Control Talent\par
           </calcs>
           <armordata />
           <ref />
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10632">
           <name>Three Arm Striking ST</name>
@@ -3949,6 +4589,11 @@ Body Control Talent\par
           </calcs>
           <armordata />
           <ref />
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10633">
           <name>TK Basic Lift</name>
@@ -3972,6 +4617,11 @@ Body Control Talent\par
             <units>lb | kg</units>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10634">
           <name>TK Heavy Encumbrance</name>
@@ -3994,6 +4644,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10635">
           <name>TK Heavy Encumbrance Move</name>
@@ -4016,6 +4671,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10636">
           <name>TK Light Encumbrance</name>
@@ -4038,6 +4698,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10637">
           <name>TK Light Encumbrance Move</name>
@@ -4060,6 +4725,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10638">
           <name>TK Max Lift</name>
@@ -4082,6 +4752,11 @@ Body Control Talent\par
             <units>lb | kg</units>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10639">
           <name>TK Medium Encumbrance</name>
@@ -4104,6 +4779,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10640">
           <name>TK Medium Encumbrance Move</name>
@@ -4126,6 +4806,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10641">
           <name>TK Move</name>
@@ -4146,6 +4831,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10642">
           <name>TK No Encumbrance</name>
@@ -4168,6 +4858,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10643">
           <name>TK No Encumbrance Move</name>
@@ -4190,6 +4885,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10644">
           <name>TK Shift Slightly</name>
@@ -4212,6 +4912,11 @@ Body Control Talent\par
             <units>lb | kg</units>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10645">
           <name>TK Shove/Knock Over</name>
@@ -4234,6 +4939,11 @@ Body Control Talent\par
             <units>lb | kg</units>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10646">
           <name>TK ST</name>
@@ -4254,6 +4964,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10688">
           <name>TK Super-Effort Basic Lift</name>
@@ -4277,6 +4992,11 @@ Body Control Talent\par
             <hideme>@if( "ST:TK Super-Effort Strength::score"=0 then 1 else 0)</hideme>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10689">
           <name>TK Super-Effort Max Lift</name>
@@ -4299,6 +5019,11 @@ Body Control Talent\par
             <hideme>@if( "ST:TK Super-Effort Strength::score"=0 then 1 else 0)</hideme>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10690">
           <name>TK Super-Effort Shift Slightly</name>
@@ -4322,6 +5047,11 @@ Body Control Talent\par
             <hideme>@if( "ST:TK Super-Effort Strength::score"=0 then 1 else 0)</hideme>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10691">
           <name>TK Super-Effort Shove/Knock Over</name>
@@ -4345,6 +5075,11 @@ Body Control Talent\par
             <hideme>@if( "ST:TK Super-Effort Strength::score"=0 then 1 else 0)</hideme>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10692">
           <name>TK Super-Effort ST</name>
@@ -4366,6 +5101,11 @@ Body Control Talent\par
             <hideme>@if( "ST:TK Super-Effort Strength::score"=0 then 1 else 0)</hideme>
             <display>yes</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10693">
           <name>TK Super-Effort Strength</name>
@@ -4387,6 +5127,11 @@ Body Control Talent\par
             <gives>=+((@indexedvalue((me::score - (6 * @int(me::score / 6))) + 1, 2,3,5,7,10,15) * (10 ^ @int(me::score / 6))) - me::score) to ST:TK Super-Effort ST</gives>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <bonuses count="1">
             <bonus>
               <targetprefix>ST</targetprefix>
@@ -4420,6 +5165,11 @@ Body Control Talent\par
             <hideme>@if( "ST:TK Super-Effort Strength::score"=0 then 1 else 0)</hideme>
             <display>yes</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10695">
           <name>TK Super-Effort Striking Strength</name>
@@ -4441,6 +5191,11 @@ Body Control Talent\par
             <gives>=+((@indexedvalue((me::score - (6 * @int(me::score / 6))) + 1, 2,3,5,7,10,15) * (10 ^ @int(me::score / 6))) - me::score) to ST:TK Super-Effort Striking ST</gives>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <bonuses count="1">
             <bonus>
               <targetprefix>ST</targetprefix>
@@ -4475,6 +5230,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10648">
           <name>TK X-Heavy Encumbrance Move</name>
@@ -4497,6 +5257,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10649">
           <name>Touch</name>
@@ -4514,6 +5279,11 @@ Body Control Talent\par
           </calcs>
           <armordata />
           <ref />
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10650">
           <name>Tunneling Move</name>
@@ -4534,6 +5304,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10651">
           <name>Two Arm Lifting ST</name>
@@ -4552,6 +5327,11 @@ Body Control Talent\par
           </calcs>
           <armordata />
           <ref />
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10652">
           <name>Two Arm Reach</name>
@@ -4571,6 +5351,11 @@ Body Control Talent\par
           <ref>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10653">
           <name>Two Arm SM</name>
@@ -4591,6 +5376,11 @@ Body Control Talent\par
             <gives>=+@if(me::score &lt; 1 THEN 0 ELSE @if(me::score = 1 THEN 0.5 ELSE @if(me::score = 2 THEN 1 ELSE (@indexedvalue((me::score- (6 * @int(me::score / 6))) + 1, 0.7,1,1.5,2,3,5) * (10 ^ @int(me::score / 6)))))) to ST:Two Arm Reach</gives>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <bonuses count="1">
             <bonus>
               <targetprefix>ST</targetprefix>
@@ -4621,6 +5411,11 @@ Body Control Talent\par
           </calcs>
           <armordata />
           <ref />
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10655">
           <name>Two-Handed Lift</name>
@@ -4642,10 +5437,15 @@ Body Control Talent\par
             <page>B353</page>
             <units>lb | kg</units>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10656">
           <name>Unappealing</name>
-          <bonuslist>+1 from 'Appearance'</bonuslist>
+          <bonuslist>+1 from 'Appearance (Attractive)'</bonuslist>
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
@@ -4660,6 +5460,11 @@ Body Control Talent\par
           <ref>
             <display>no</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10657">
           <name>Vision</name>
@@ -4677,6 +5482,11 @@ Body Control Talent\par
           </calcs>
           <armordata />
           <ref />
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10658">
           <name>Water Move</name>
@@ -4698,10 +5508,15 @@ Body Control Talent\par
           </calcs>
           <armordata />
           <ref />
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10659">
           <name>Wealth Modifier</name>
-          <bonuslist>+10 from 'Wealth'</bonuslist>
+          <bonuslist>+10 from 'Wealth (Comfortable)'</bonuslist>
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <points>0</points>
@@ -4719,6 +5534,11 @@ Body Control Talent\par
           <ref>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10660">
           <name>Will</name>
@@ -4744,6 +5564,11 @@ Body Control Talent\par
             <mainwin>6</mainwin>
             <disadat>-1</disadat>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10696">
           <name>Will÷2</name>
@@ -4761,6 +5586,11 @@ Body Control Talent\par
           <ref>
             <display>yes</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10661">
           <name>X-Heavy Encumbrance</name>
@@ -4782,6 +5612,11 @@ Body Control Talent\par
           <ref>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Attributes" idkey="10662">
           <name>X-Heavy Encumbrance Move</name>
@@ -4803,12 +5638,17 @@ Body Control Talent\par
           <ref>
             <display>No</display>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
       </attributes>
-      <languages count="3">
+      <languages count="4">
         <trait type="Languages" idkey="10663">
           <name>English</name>
-          <bonuslist>0 from 'English'</bonuslist>
+          <bonuslist>+0 from 'English (Broken; Native Language, -6)'</bonuslist>
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <cat>Mundane, Social, Language, Language Spoken, Language Written, Social Background</cat>
@@ -4830,6 +5670,11 @@ Body Control Talent\par
             <mods>Language, Native Language</mods>
             <initmods>Native Language, -6, gives(=+1 to ST:Native Languages, =-"AD:Language Talent::level" to owner::level), group(Native Language), page(B23)</initmods>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <extended count="1">
             <extendedtag>
               <tagname>init</tagname>
@@ -4878,13 +5723,13 @@ Body Control Talent\par
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <cat>Mundane, Social, Language, Language Spoken, Social Background</cat>
-          <points>1</points>
-          <level>1</level>
+          <points>2</points>
+          <level>2</level>
           <calcs>
             <cost>1/2</cost>
             <syslevels>0</syslevels>
-            <baselevel>1</baselevel>
-            <premodspoints>1</premodspoints>
+            <baselevel>2</baselevel>
+            <premodspoints>2</premodspoints>
             <upto>3 LimitingTotal</upto>
             <levelnames>[None], Broken, Accented, Native</levelnames>
           </calcs>
@@ -4895,6 +5740,42 @@ Body Control Talent\par
             <taboo>Native Languages &gt; 1</taboo>
             <mods>Language</mods>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
+        </trait>
+        <trait type="Languages" idkey="13360">
+          <name>French</name>
+          <nameext>Written</nameext>
+          <needscheck>-1</needscheck>
+          <taboofailed>0</taboofailed>
+          <cat>Mundane, Social, Language, Language Written, Social Background</cat>
+          <points>1</points>
+          <level>1</level>
+          <calcs>
+            <cost>1/2</cost>
+            <syslevels>0</syslevels>
+            <baselevel>1</baselevel>
+            <premodspoints>1</premodspoints>
+            <upto>3 LimitingTotal</upto>
+            <levelnames>[Illiterate], Semi-Literate, Literate, Native</levelnames>
+          </calcs>
+          <armordata />
+          <ref>
+            <basedon>Language (Written)</basedon>
+            <page>B24</page>
+            <description>At TL 3 and below Illiteracy doesn't count against the Disadvantage Limit. This can be changed by checking (or unchecking) the 'Do Not Count Against Disadvantage Limit' box in the Edit window.</description>
+            <taboo>Native Languages &gt; 1</taboo>
+            <mods>Language</mods>
+            <ndl>@if(ST:Tech Level::basescore &lt;=4 THEN 1 ELSE 0)</ndl>
+          </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Languages" idkey="12984">
           <name>German</name>
@@ -4918,6 +5799,11 @@ Body Control Talent\par
             <taboo>Native Languages &gt; 1</taboo>
             <mods>Language</mods>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
       </languages>
       <cultures count="2">
@@ -4941,6 +5827,11 @@ Body Control Talent\par
             <gives>+1 to ST:Native Cultural Familiarities</gives>
             <taboo>Native Cultural Familiarities &gt; 1</taboo>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <bonuses count="1">
             <bonus>
               <targetprefix>ST</targetprefix>
@@ -4974,6 +5865,11 @@ Body Control Talent\par
             <taboo>Native Cultural Familiarities &gt; 1</taboo>
             <mods>Cultural Familiarity</mods>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
       </cultures>
       <advantages count="23">
@@ -4995,6 +5891,11 @@ Body Control Talent\par
             <page>B39</page>
             <taboo>DI:One Arm, DI:One Hand</taboo>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Advantages" idkey="10800">
           <name>Appearance</name>
@@ -5018,6 +5919,11 @@ Body Control Talent\par
             <taboo>DI:Appearance</taboo>
             <mods>Attractive, Appearance</mods>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <bonuses count="3">
             <bonus>
               <targetprefix>ST</targetprefix>
@@ -5200,6 +6106,11 @@ Body Control Talent\par
             <gives>+1 to ST:Reaction, +1 To GR:Charisma</gives>
             <conditional>+1 to GR:Influence Skills when "making Influence rolls"</conditional>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <bonuses count="2">
             <bonus>
               <targetprefix>ST</targetprefix>
@@ -5257,6 +6168,11 @@ Body Control Talent\par
             <gives>=+1 To GR:Combat Reflexes, =+2 To Fright Check</gives>
             <taboo>DI:Combat Paralysis, AD:Enhanced Time Sense</taboo>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <modifiers count="1">
             <modifier idkey="10699">
               <name>Biological</name>
@@ -5315,6 +6231,11 @@ Body Control Talent\par
             <description>Ugly dude with twisted lips</description>
             <mods>Contact, Frequency of Appearance, Reliability, Favor</mods>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <modifiers count="2">
             <modifier idkey="12988">
               <name>Frequency: roll of  9 or less</name>
@@ -6062,6 +6983,11 @@ Body Control Talent\par
             <gives>+1 to me::dr</gives>
             <mods>Damage Resistance, Damage Resistance Partial, Limited Defense</mods>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <modifiers count="2">
             <modifier idkey="10697">
               <name>Biological</name>
@@ -6115,6 +7041,11 @@ Body Control Talent\par
             <page>B51</page>
             <gives>+1 To Dodge</gives>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <modifiers count="1">
             <modifier idkey="10701">
               <name>Biological</name>
@@ -6161,6 +7092,11 @@ Body Control Talent\par
             <gives>+0.5 To ST:Enhanced Ground Move</gives>
             <mods>Enhanced Move</mods>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <modifiers count="1">
             <modifier idkey="10716">
               <name>Biological</name>
@@ -6204,6 +7140,11 @@ Body Control Talent\par
             <page>Bio213</page>
             <gives>+1 to ST:Striking ST, +1 to ST:Lifting ST</gives>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <modifiers count="1">
             <modifier idkey="10703">
               <name>Biological</name>
@@ -6257,6 +7198,11 @@ Body Control Talent\par
             <page>B54, P49</page>
             <mods>Extra Attack</mods>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <modifiers count="1">
             <modifier idkey="10719">
               <name>Biological</name>
@@ -6290,6 +7236,11 @@ Body Control Talent\par
             <description>The Extra ST advantage allows you to take extra levels of the attribute which you can then apply enhancements and limitations to. The "Affects displayed score" modifier causes the Extra ST advantage to affect the displayed attribute score. If you don't wish this advantage to affect the displayed score remove that modifier.</description>
             <mods>Extra ST, Size, No Fine Manipulators</mods>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <modifiers count="2">
             <modifier idkey="11894">
               <name>Affects displayed ST score</name>
@@ -6356,6 +7307,11 @@ Body Control Talent\par
             <conditional>+1 to ST:HT</conditional>
             <taboo>AD:Very Fit, DI:Unfit, DI:Very Unfit</taboo>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <bonuses count="2">
             <bonus>
               <targetprefix>ST</targetprefix>
@@ -6411,6 +7367,11 @@ Body Control Talent\par
             <conditional>+1 to ST:ST</conditional>
             <mods>Lifting ST, No Fine Manipulators, Size</mods>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <modifiers count="1">
             <modifier idkey="11892">
               <name>Size</name>
@@ -6468,6 +7429,11 @@ Body Control Talent\par
             <basedon>Protected [Sense]</basedon>
             <page>B78, P69</page>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <modifiers count="1">
             <modifier idkey="10710">
               <name>Biological</name>
@@ -6503,6 +7469,11 @@ Body Control Talent\par
             <conditional>+5 to ST:HT when "overcoming a Crippling Injury"</conditional>
             <taboo>AD:Very Rapid Healing, DI:Slow Healing, AD:Regeneration</taboo>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <conditionals count="1">
             <bonus>
               <targetprefix>ST</targetprefix>
@@ -6535,6 +7506,11 @@ Body Control Talent\par
             <basedon>_New Leveled Advantage</basedon>
             <noresync>yes</noresync>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <modifiers count="1">
             <modifier idkey="10713">
               <name>Biological</name>
@@ -6571,6 +7547,11 @@ Body Control Talent\par
             <mods>Resistant</mods>
             <initmods>Degree: Immunity, *1, shortname(Immunity), group(Resistant)</initmods>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <modifiers count="2">
             <modifier idkey="10708">
               <name>Biological</name>
@@ -6619,6 +7600,11 @@ Body Control Talent\par
             <gives>+(5* @indexedvalue(ST:Tech Level::basevalue + 1, 25, 50, 75, 100, 200, 500, 1000, 1500, 2000, 3000, 5000, 7500, 10000)) to ST:Signature Gear</gives>
             <taboo>ST:Signature Gear &lt; 0</taboo>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <bonuses count="1">
             <bonus>
               <targetprefix>ST</targetprefix>
@@ -6654,6 +7640,11 @@ Body Control Talent\par
             <taboo>DI:Wealth, AD:Wealth &gt; me::level, AD:Wealth &lt; me::level, AD:Wealth &gt; @if(@itemhasmod(AD:Wealth, Heir) = 0 THEN 100 ELSE @itemhasmod(AD:Wealth, Heir)-1)</taboo>
             <mods>Wealth</mods>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <bonuses count="4">
             <bonus>
               <targetprefix>ST</targetprefix>
@@ -6716,6 +7707,11 @@ Body Control Talent\par
           <ref>
             <page>B100, B100,PU2:13</page>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Perks" idkey="10757">
           <name>Base</name>
@@ -6736,6 +7732,11 @@ Body Control Talent\par
             <basedon>Base</basedon>
             <page>PU2:17</page>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Perks" idkey="10794">
           <name>Teamwork</name>
@@ -6756,6 +7757,11 @@ Body Control Talent\par
             <basedon>Teamwork</basedon>
             <page>MA52, PU2:6</page>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
       </perks>
       <disadvantages count="4">
@@ -6778,6 +7784,11 @@ Body Control Talent\par
             <mods>Self-Control</mods>
             <initmods>You resist on a roll of 12 or less (quite often), *1, shortname(12 or less), group(Self-Control), page(B121)</initmods>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <modifiers count="1">
             <modifier idkey="10759">
               <name>You resist on a roll of 12 or less</name>
@@ -6816,6 +7827,11 @@ Body Control Talent\par
             <mods>Enemy, Frequency of Appearance</mods>
             <initmods>Frequency: roll of  9 or less (Fairly often), *1, shortname(9 or less), group(Frequency of Appearance)</initmods>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <modifiers count="2">
             <modifier idkey="10770">
               <name>Frequency: roll of  9 or less</name>
@@ -6861,6 +7877,11 @@ Body Control Talent\par
             <mods>Self-Control</mods>
             <initmods>You resist on a roll of 12 or less (quite often), *1, shortname(12 or less), group(Self-Control), page(B121)</initmods>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <modifiers count="1">
             <modifier idkey="10761">
               <name>You resist on a roll of 12 or less</name>
@@ -6899,6 +7920,11 @@ Body Control Talent\par
             <mods>Reputation Disadvantage</mods>
             <initmods>People Affected: Almost everyone in your game world, *1, shortname(Almost everyone), group(Reputation) |  Frequency of Recognition: All the time, *1, shortname(All the time), group(Reputation)</initmods>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
           <modifiers count="2">
             <modifier idkey="10768">
               <name>Frequency of Recognition: Occasionally</name>
@@ -6978,6 +8004,11 @@ Body Control Talent\par
           <ref>
             <page>B164</page>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Quirks" idkey="10773">
           <name>wears chains</name>
@@ -6997,10 +8028,15 @@ Body Control Talent\par
             <basedon>_New Quirk</basedon>
             <noresync>yes</noresync>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
       </quirks>
       <features count="0" />
-      <skills count="17">
+      <skills count="18">
         <trait type="Skills" idkey="13172">
           <name>Aggressive Parry</name>
           <nameext>Brawling</nameext>
@@ -7092,6 +8128,11 @@ Body Control Talent\par
             <default>IQ - 4, "SK:Geography (local)" - 3</default>
             <noresync>yes</noresync>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Skills" idkey="13173">
           <name>Arm Lock</name>
@@ -7127,6 +8168,11 @@ Body Control Talent\par
             <needs>SK:Wrestling</needs>
             <default>"SK:Wrestling::level"</default>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Skills" idkey="10753">
           <name>Brawling</name>
@@ -7296,6 +8342,11 @@ Body Control Talent\par
             <page>B183</page>
             <default>HT - 4</default>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Skills" idkey="10776">
           <name>Connoisseur</name>
@@ -7331,6 +8382,11 @@ Body Control Talent\par
             <page>B185</page>
             <default>IQ - 5, "SK:Group Performance (Conducting)" - 3, SK:Musical Composition - 3, SK:Musical Instrument - 3</default>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Skills" idkey="10777">
           <name>Dancing</name>
@@ -7361,6 +8417,11 @@ Body Control Talent\par
             <page>B187</page>
             <default>DX - 5</default>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Skills" idkey="10781">
           <name>Forced Entry</name>
@@ -7390,6 +8451,11 @@ Body Control Talent\par
           <ref>
             <page>B196</page>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Skills" idkey="10775">
           <name>Guns</name>
@@ -7422,11 +8488,16 @@ Body Control Talent\par
             <page>B198</page>
             <default>DX - 4, "SK:Guns (Grenade Launcher)" - 4, "SK:Guns (Gyroc)" - 4, "SK:Guns (Light Anti-Armor Weapon)" - 4, "SK:Guns (Light Machine Gun)" - 2, "SK:Guns (Musket)" - 2, "SK:Guns (Pistol)" - 2, "SK:Guns (Rifle)" - 2, "SK:Guns (Shotgun)" - 2, "SK:Guns (Submachine Gun)" - 2, SK:Gun!, "SK:Beam Weapons (Pistol)"-4, "SK:Guns (Taser)" - 2</default>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Skills" idkey="10752">
           <name>Innate Attack</name>
           <nameext>Projectile</nameext>
-          <bonuslist>+1 from 'Body Control Talent'</bonuslist>
+          <bonuslist>+1 from 'Body Control Talent 1 (Innate Attack (Projectile), +0)'</bonuslist>
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <cat>_General, Combat/Weapons - Ranged Combat</cat>
@@ -7456,10 +8527,15 @@ Body Control Talent\par
             <page>B201</page>
             <default>DX - 4, SK:Innate Attack - 2</default>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Skills" idkey="10782">
           <name>Intimidation</name>
-          <conditionallist>+2 from 'Charisma' when making Influence rolls, +2 from 'Reputation (Gang Leader)' when your reputation counts, -2 from 'Reputation (Gang Leader)' when your reputation works against you</conditionallist>
+          <conditionallist>+2 from 'Charisma 2' when making Influence rolls, +2 from 'Reputation 2 (Gang Leader; 7 or less, *1/3; Large class, *1/2)' when your reputation counts, -2 from 'Reputation 2 (Gang Leader; 7 or less, *1/3; Large class, *1/2)' when your reputation works against you</conditionallist>
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <cat>_General, Criminal/Street, Police, Social</cat>
@@ -7487,10 +8563,15 @@ Body Control Talent\par
             <page>B202</page>
             <default>Will - 5, SK:Acting - 3</default>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Skills" idkey="10798">
           <name>Leadership</name>
-          <bonuslist>+2 from 'Charisma'</bonuslist>
+          <bonuslist>+2 from 'Charisma 2'</bonuslist>
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <cat>_General, Military, Social</cat>
@@ -7518,6 +8599,11 @@ Body Control Talent\par
             <page>B204</page>
             <default>IQ - 5</default>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Skills" idkey="10778">
           <name>Musical Instrument</name>
@@ -7549,6 +8635,49 @@ Body Control Talent\par
             <basedon>Musical Instrument</basedon>
             <page>B211</page>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
+        </trait>
+        <trait type="Skills" idkey="13357">
+          <name>Navigation</name>
+          <nameext>Land</nameext>
+          <conditionallist>+1 from 'Compass'</conditionallist>
+          <needscheck>-1</needscheck>
+          <taboofailed>0</taboofailed>
+          <cat>_General, Outdoor/Exploration, Technical, Vehicle</cat>
+          <tl>8</tl>
+          <points>2</points>
+          <type>IQ/A</type>
+          <step>+0</step>
+          <stepoff>IQ</stepoff>
+          <level>10</level>
+          <calcs>
+            <sd>0</sd>
+            <deflevel>0</deflevel>
+            <pointmult>1</pointmult>
+            <levelmult>1</levelmult>
+            <syslevels>0</syslevels>
+            <extralevels>0</extralevels>
+            <baselevel>10</baselevel>
+            <basepoints>2</basepoints>
+            <multpoints>2</multpoints>
+            <apppoints>2</apppoints>
+            <premodspoints>2</premodspoints>
+            <baseapppoints>2</baseapppoints>
+          </calcs>
+          <armordata />
+          <ref>
+            <page>B211</page>
+            <default>IQ - 5, SK:Cartography - 4, "SK:Mathematics (Surveying)" - 4, "SK:Navigation (Sea)" - 2, "SK:Navigation (Air)" - 2</default>
+          </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Skills" idkey="13175">
           <name>Shield</name>
@@ -7582,6 +8711,11 @@ Body Control Talent\par
             <page>B220</page>
             <default>DX - 4, "SK:Shield (Shield)" - 2, "SK:Shield (Buckler)" - 2, "SK:Shield Art (Force)" - 3, "SK:Shield Sport (Force)" - 3</default>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Skills" idkey="10779">
           <name>Singing</name>
@@ -7612,10 +8746,15 @@ Body Control Talent\par
             <page>B220</page>
             <default>HT - 4</default>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Skills" idkey="10783">
           <name>Streetwise</name>
-          <conditionallist>+2 from 'Charisma' when making Influence rolls</conditionallist>
+          <conditionallist>+2 from 'Charisma 2' when making Influence rolls</conditionallist>
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <cat>_General, Criminal/Street, Police, Social</cat>
@@ -7643,6 +8782,11 @@ Body Control Talent\par
             <page>B223</page>
             <default>IQ - 5, SK:Detective!</default>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Skills" idkey="13174">
           <name>Wrestling</name>
@@ -7675,10 +8819,15 @@ Body Control Talent\par
             <page>B228</page>
             <default>SK:Wrestling Art - 3, SK:Wrestling Sport - 3</default>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
       </skills>
       <spells count="0" />
-      <equipment count="6">
+      <equipment count="9">
         <trait type="Equipment" idkey="10833">
           <name>Advanced Body Armor</name>
           <needscheck>-1</needscheck>
@@ -7817,8 +8966,58 @@ Body Control Talent\par
             </attackmode>
           </attackmodes>
         </trait>
+        <trait type="Equipment" idkey="13358">
+          <name>Compass</name>
+          <needscheck>-1</needscheck>
+          <taboofailed>0</taboofailed>
+          <cat>Basic Set, Basic Set - Miscellaneous Equipment, Basic Set - Miscellaneous Equipment - Camping &amp; Survival Gear</cat>
+          <cost>50</cost>
+          <count>1</count>
+          <weight>0</weight>
+          <level>0</level>
+          <calcs>
+            <basecost>50</basecost>
+            <baseweight>0</baseweight>
+            <precountcost>50</precountcost>
+            <precountweight>0</precountweight>
+            <premodscost>50</premodscost>
+            <preformulacost>50</preformulacost>
+            <preformulaweight>0</preformulaweight>
+            <postformulacost>50</postformulacost>
+            <postformulaweight>0</postformulaweight>
+            <prechildrencost>50</prechildrencost>
+            <prechildrenweight>0</prechildrenweight>
+          </calcs>
+          <armordata />
+          <ref>
+            <page>B288</page>
+            <description>TL:6 Notes: +1 to Navigation skill</description>
+            <conditional>+1 to "SK:Navigation"</conditional>
+            <mods>Equipment</mods>
+            <techlvl>6</techlvl>
+            <charunits>lb</charunits>
+          </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
+          <conditionals count="1">
+            <bonus>
+              <targetprefix>SK</targetprefix>
+              <targetname>navigation</targetname>
+              <targettype>Skills</targettype>
+              <affects>level</affects>
+              <bonuspart>+1</bonuspart>
+              <bonustype>1</bonustype>
+              <fullbonustext>+1 to "SK:Navigation"</fullbonustext>
+              <value>1</value>
+            </bonus>
+          </conditionals>
+        </trait>
         <trait type="Equipment" idkey="13176">
           <name>Force Shield</name>
+          <bonuslist>Block score includes +3 from 'shield DB'.</bonuslist>
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <cat>_Armor - Shields, Basic Set, Basic Set - Armor, Basic Set - Armor - Ultra-Tech, Basic Set - Armor - Ultra-Tech - Shields</cat>
@@ -7873,7 +9072,7 @@ Body Control Talent\par
               <charparryscore>No</charparryscore>
               <chareffectivest>21</chareffectivest>
               <charskillusedkey>k13175</charskillusedkey>
-              <charblockscore>10</charblockscore>
+              <charblockscore>13</charblockscore>
               <itemnotes>{Worn on the wrist, leaving the hand free.}</itemnotes>
             </attackmode>
             <attackmode>
@@ -7894,7 +9093,7 @@ Body Control Talent\par
               <charparryscore>No</charparryscore>
               <chareffectivest>21</chareffectivest>
               <charskillusedkey>k13175</charskillusedkey>
-              <charblockscore>10</charblockscore>
+              <charblockscore>13</charblockscore>
               <itemnotes>{Worn on the wrist, leaving the hand free.}</itemnotes>
             </attackmode>
           </attackmodes>
@@ -7905,8 +9104,49 @@ Body Control Talent\par
             </extendedtag>
           </extended>
         </trait>
+        <trait type="Equipment" idkey="13355">
+          <name>Holster, Belt</name>
+          <childkeylist>k10792, k10786, k13356</childkeylist>
+          <needscheck>-1</needscheck>
+          <taboofailed>0</taboofailed>
+          <cat>Basic Set, Basic Set - Miscellaneous Equipment, Basic Set - Miscellaneous Equipment - Weapon &amp; Combat Accessories</cat>
+          <cost>1180.4</cost>
+          <count>1</count>
+          <weight>7.62</weight>
+          <level>0</level>
+          <calcs>
+            <basecost>25</basecost>
+            <baseweight>0.5</baseweight>
+            <childrencosts>1155.4</childrencosts>
+            <childrenweights>7.12</childrenweights>
+            <precountcost>25</precountcost>
+            <precountweight>0.5</precountweight>
+            <premodscost>25</premodscost>
+            <preformulacost>25</preformulacost>
+            <preformulaweight>.5</preformulaweight>
+            <postformulacost>25</postformulacost>
+            <postformulaweight>0.5</postformulaweight>
+            <prechildrencost>25</prechildrencost>
+            <prechildrenweight>0.5</prechildrenweight>
+          </calcs>
+          <armordata />
+          <ref>
+            <page>B289</page>
+            <description>TL:5 Notes: Fits most pistols.</description>
+            <mods>Equipment</mods>
+            <techlvl>5</techlvl>
+            <isparent>yes</isparent>
+            <charunits>lb</charunits>
+          </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
+        </trait>
         <trait type="Equipment" idkey="10788">
           <name>Laser Sight</name>
+          <parentkey>k10786</parentkey>
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <cat>Basic Set, Basic Set - Miscellaneous Equipment, Basic Set - Miscellaneous Equipment - Weapon &amp; Combat Accessories</cat>
@@ -7936,9 +9176,15 @@ Body Control Talent\par
             <load>Standard</load>
             <charunits>lb</charunits>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Equipment" idkey="10792">
           <name>Personal Basics</name>
+          <parentkey>k13355</parentkey>
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <cat>Basic Set, Basic Set - Miscellaneous Equipment, Basic Set - Miscellaneous Equipment - Camping &amp; Survival Gear</cat>
@@ -7968,19 +9214,28 @@ Body Control Talent\par
             <load>Standard</load>
             <charunits>lb</charunits>
           </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
         </trait>
         <trait type="Equipment" idkey="10786">
           <name>Revolver, .357M</name>
+          <parentkey>k13355</parentkey>
+          <childkeylist>k10788</childkeylist>
           <needscheck>-1</needscheck>
           <taboofailed>0</taboofailed>
           <cat>Basic Set, Basic Set - Firearms, Basic Set - Firearms - Pistols &amp; SMGs, _Firearms, _Firearms - High-Tech</cat>
-          <cost>1000</cost>
+          <cost>1100</cost>
           <count>1</count>
           <weight>3.6</weight>
           <level>0</level>
           <calcs>
             <basecost>500</basecost>
             <baseweight>3</baseweight>
+            <childrencosts>100</childrencosts>
+            <childrenweights>0</childrenweights>
             <precountcost>1000</precountcost>
             <precountweight>3.6</precountweight>
             <premodscost>500</premodscost>
@@ -7998,6 +9253,7 @@ Body Control Talent\par
             <mods>Equipment, Guns</mods>
             <techlvl>7</techlvl>
             <load>Standard</load>
+            <isparent>yes</isparent>
             <charunits>lb</charunits>
           </ref>
           <attackmodes count="1">
@@ -8085,13 +9341,51 @@ Body Control Talent\par
             </modifier>
           </modifiers>
         </trait>
+        <trait type="Equipment" idkey="13356">
+          <name>Revolver, .357M</name>
+          <nameext>Ammunition</nameext>
+          <parentkey>k13355</parentkey>
+          <needscheck>-1</needscheck>
+          <taboofailed>0</taboofailed>
+          <cat>Basic Set, Basic Set - Firearms, Basic Set - Firearms - Pistols &amp; SMGs, _Firearms, _Firearms - High-Tech</cat>
+          <cost>50.4</cost>
+          <count>12</count>
+          <weight>2.52</weight>
+          <level>0</level>
+          <calcs>
+            <basecost>4.2</basecost>
+            <baseweight>0.21</baseweight>
+            <precountcost>4.2</precountcost>
+            <precountweight>0.21</precountweight>
+            <premodscost>4.2</premodscost>
+            <preformulacost>50.4</preformulacost>
+            <preformulaweight>2.52</preformulaweight>
+            <postformulacost>50.4</postformulacost>
+            <postformulaweight>2.52</postformulaweight>
+            <prechildrencost>50.4</prechildrencost>
+            <prechildrenweight>2.52</prechildrenweight>
+          </calcs>
+          <armordata />
+          <ref>
+            <mods>Equipment, Ammunition</mods>
+            <techlvl>7</techlvl>
+            <charunits>lb</charunits>
+          </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+              <lc>3</lc>
+              <uses>6</uses>
+            </attackmode>
+          </attackmodes>
+        </trait>
       </equipment>
       <templates count="0" />
     </traits>
     <loadouts count="1">
       <loadout>
         <name>Standard</name>
-        <weight>25.6</weight>
+        <weight>21</weight>
         <shielddb>0</shielddb>
         <hexmask>------</hexmask>
         <alwaysautocalcarmor>-1</alwaysautocalcarmor>

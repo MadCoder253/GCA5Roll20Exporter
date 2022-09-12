@@ -14,7 +14,7 @@ namespace ExportToRoll20
     public class ConvertToRoll20Character
     {
         // TODO: convert to using pkids, much more accurate.
-        private List<string> idkeysForAllTemplates = new List<string>();
+        private readonly List<string> idkeysForAllTemplates = new List<string>();
 
         public Roll20Character GetCharacter(GCACharacter currentCharacter)
         {
@@ -245,7 +245,7 @@ namespace ExportToRoll20
                     roll20Character.CombatReflexes = true;
                 }
 
-                // TODO: Add languages!
+                roll20Character.RepeatingLanguages = GetRepeatingLanguages(currentCharacter);
 
                 roll20Character.RepeatingCultures = GetRepeatingCultures(currentCharacter);
 
@@ -317,16 +317,71 @@ namespace ExportToRoll20
 
             foreach (GCATrait item in traitLanguages)
             {
+                var basedOn = item.get_TagItem("basedon").ToLower();
+
+                var isNative = basedOn.Contains("native");
+
+                var isSpoken = item.NameExt.ToLower().Contains("spoken");
+
+                var isWritten = item.NameExt.ToLower().Contains("written");
+                
+                double spokenPoints;
+                
+                double writtenPoints;
+                
+                if (isWritten)
+                {
+                    // skip this one, we'll attempt to find it later.
+                    continue;
+
+                }
+                else if (isSpoken)
+                {
+                    spokenPoints = item.Points;
+
+                    writtenPoints = GetWrittenPoints(currentCharacter, item);
+
+                }
+                else
+                {
+                    spokenPoints = item.Points;
+                    writtenPoints = item.Points;
+                }
+
                 var language = new RepeatingLanguage
                 {
                     Idkey = item.IDKey.ToString(),
-                    Name = item.FullName
+                    Name = item.Name,
+                    Spoken = spokenPoints,
+                    Written = writtenPoints,
+                    IsNative = isNative,
                 };
 
                 languages.Add(language);
             }
 
             return languages;
+        }
+
+        public double GetWrittenPoints(GCACharacter currentCharacter, GCATrait spokenTrait)
+        {
+            double spokenPoints = 0;
+
+            var traitLanguages = currentCharacter.ItemsByType[(int)TraitTypes.Languages];
+
+            // loop through and find written version
+            foreach (GCATrait item in traitLanguages)
+            {
+                if (item.Name == spokenTrait.Name && item.NameExt.ToLower().Contains("written"))
+                {
+                    spokenPoints = item.Points;
+                    break;
+                }
+
+            }
+
+            return spokenPoints;
+
         }
 
         public List<RepeatingCulture> GetRepeatingCultures(GCACharacter currentCharacter)
@@ -797,14 +852,12 @@ namespace ExportToRoll20
 
             return list;
         }
-        
+
         public string GetDifficultyForSkill(string skillType)
         {
-            string difficulty = "E";
-
             string[] arrSkillType = skillType.Split('/');
 
-            difficulty = arrSkillType[1];
+            string difficulty = arrSkillType[1];
 
             return difficulty;
         }
@@ -931,6 +984,22 @@ namespace ExportToRoll20
             return list;
         }
 
+        /// <summary>
+        /// strip out all characters except letters and numbers
+        /// </summary>
+        /// <param name="oldValue"></param>
+        /// <returns></returns>
+        public string getAlphaNumericCharacters(string oldValue)
+        {
+            string newValue;
+
+            Regex rgx = new Regex("[^a-zA-Z0-9 -]");
+            
+            newValue = rgx.Replace(oldValue, "");
+            
+            return newValue;
+        }
+
         public List<RepeatingMelee> GetRepeatingMelee(GCACharacter myCharacter)
         {
             List<RepeatingMelee> list = new List<RepeatingMelee>();
@@ -946,7 +1015,11 @@ namespace ExportToRoll20
 
                     if (isMeleeWeapon)
                     {
-                        string meleeIdKey = trait.IDKey.ToString() + "_" + mode.CollectionKey;
+                        string idKeyTraitName = getAlphaNumericCharacters(trait.Name.ToLower());
+
+                        string idKeyModeName = getAlphaNumericCharacters(mode.Name.ToLower());
+
+                        string meleeIdKey = trait.IDKey.ToString() + "_" + idKeyTraitName + "_" + idKeyModeName;
 
                         string meleeName = trait.FullName;
 
@@ -1004,7 +1077,11 @@ namespace ExportToRoll20
 
                     if (isRanged)
                     {
-                        string rangedIdKey = trait.IDKey.ToString() + "_" + mode.CollectionKey;
+                        string idKeyTraitName = getAlphaNumericCharacters(trait.Name.ToLower());
+
+                        string idKeyModeName = getAlphaNumericCharacters(mode.Name.ToLower());
+
+                        string rangedIdKey = trait.IDKey.ToString() + "_" + idKeyTraitName + "_" + idKeyModeName;
 
                         string rangedName = trait.FullName;
 
@@ -1224,9 +1301,13 @@ namespace ExportToRoll20
             // set defense type
             var defenseType = "Parry";
 
+            var idKeySuffix = "parry";
+
             if (mode.Name.ToLower() == "brawling" || mode.Name.ToLower() == "karate" || mode.Name.ToLower() == "punch")
             {
                 defenseType = "Unarmed Parry";
+
+                idKeySuffix = "unarmed_parry";
             }
 
             // attempt to get a parry score
@@ -1251,7 +1332,7 @@ namespace ExportToRoll20
             {
                 var item = new RepeatingDefense
                 {
-                    Idkey = trait.IDKey + "_" + mode.CollectionKey,
+                    Idkey = trait.IDKey + "_" + idKeySuffix,
                     Name = defenseName,
                     Type = defenseType,
                     Info = "",
@@ -1304,21 +1385,32 @@ namespace ExportToRoll20
             {
                 var defenseType = "Power";
 
+                var idKeySuffix = "power";
+
                 if (mode.Name.ToLower().Contains("dodge"))
                 {
                     defenseType = "Power Dodge";
+
+                    idKeySuffix = "power_dodge";
+
                 }
                 else if (mode.Name.ToLower().Contains("parry"))
                 {
                     defenseType = "Power Parry";
+
+                    idKeySuffix = "power_parry";
                 }
                 else if (mode.Name.ToLower().Contains("block/physical"))
                 {
                     defenseType = "Power Block";
+
+                    idKeySuffix = "power_block";
                 }
                 else if (mode.Name.ToLower().Contains("block/mental"))
                 {
                     defenseType = "Power Block Mental";
+
+                    idKeySuffix = "power_block_mental";
                 }
 
                 var scoreValue = mode.get_TagItem("charskillscore");
@@ -1328,7 +1420,7 @@ namespace ExportToRoll20
 
                     var powerDefense = new RepeatingDefense
                     {
-                        Idkey = trait.IDKey + "_" + mode.CollectionKey,
+                        Idkey = trait.IDKey + "_" + idKeySuffix,
                         Name = trait.FullName + " (" + mode.Name + ")",
                         Type = defenseType,
                         Info = "",
