@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace ExportToRoll20
 {
@@ -582,205 +582,205 @@ namespace ExportToRoll20
 
         }
 
-        public string CharacterName { get; set; } = "";
+        public string CharacterName { get; set; }
 
-        public string Fullname { get; set; } = "";
+        public string Fullname { get; set; }
 
-        public string Playername { get; set; } = "";
+        public string Playername { get; set; }
 
-        public string Nickname { get; set; } = "";
+        public string Nickname { get; set; }
 
-        public string Race { get; set; } = "";
+        public string Race { get; set; }
 
-        public string RaceRef { get; set; } = "";
+        public string RaceRef { get; set; }
 
-        public string TemplateNames { get; set; } = "";
+        public string TemplateNames { get; set; }
 
-        public string Gender { get; set; } = "";
+        public string Gender { get; set; }
 
-        public double Size { get; set; } = 0;
+        public double Size { get; set; } 
 
-        public bool ApplySizeModifier { get; set; } = false;
+        public bool ApplySizeModifier { get; set; }
 
-        public string Reactions { get; set; } = "";
+        public string Reactions { get; set; }
 
-        public double CampaignTl { get; set; } = 0;
+        public double CampaignTl { get; set; } 
 
-        public double TotalPoints { get; set; } = 0;
+        public double TotalPoints { get; set; }
 
-        public double Tl { get; set; } = 0;
+        public double Tl { get; set; } 
 
-        public double TlPts { get; set; } = 0;
+        public double TlPts { get; set; } 
 
-        public string Status { get; set; } = "";
+        public string Status { get; set; } 
 
-        public string Wealth { get; set; } = "";
+        public string Wealth { get; set; } 
 
-        public double Income { get; set; } = 0;
+        public double Income { get; set; } 
 
-        public double CostOfLiving { get; set; } = 0;
+        public double CostOfLiving { get; set; }
 
-        public double Stash { get; set; } = 0;
+        public double Stash { get; set; } 
 
-        public string Age { get; set; } = "";
+        public string Age { get; set; } 
 
-        public string Height { get; set; } = "";
+        public string Height { get; set; } 
 
-        public double Weight { get; set; } = 0;
+        public double Weight { get; set; } 
 
-        public double Appearance { get; set; } = 0;
+        public double Appearance { get; set; } 
 
-        public string GeneralAppearance { get; set; } = "";
+        public string GeneralAppearance { get; set; } 
 
-        public double StrengthMod { get; set; } = 0;
+        public double StrengthMod { get; set; } 
 
-        public double StrengthPoints { get; set; } = 0;
+        public double StrengthPoints { get; set; } 
 
-        public double DexterityMod { get; set; } = 0;
+        public double DexterityMod { get; set; } 
 
-        public double DexterityPoints { get; set; } = 0;
+        public double DexterityPoints { get; set; } 
 
-        public double IntelligenceMod { get; set; } = 0;
+        public double IntelligenceMod { get; set; } 
 
-        public double IntelligencePoints { get; set; } = 0;
+        public double IntelligencePoints { get; set; } 
 
-        public double HealthMod { get; set; } = 0;
+        public double HealthMod { get; set; } 
 
-        public double HealthPoints { get; set; } = 0;
+        public double HealthPoints { get; set; }
 
-        public double PerceptionMod { get; set; } = 0;
+        public double PerceptionMod { get; set; } 
 
-        public double PerceptionPoints { get; set; } = 0;
+        public double PerceptionPoints { get; set; } 
 
-        public double VisionMod { get; set; } = 0;
+        public double VisionMod { get; set; } 
 
-        public double VisionPoints { get; set; } = 0;
+        public double VisionPoints { get; set; } 
 
-        public double HearingMod { get; set; } = 0;
+        public double HearingMod { get; set; }
 
-        public double HearingPoints { get; set; } = 0;
+        public double HearingPoints { get; set; }
 
-        public double TasteSmellMod { get; set; } = 0;
+        public double TasteSmellMod { get; set; } 
 
-        public double TasteSmellPoints { get; set; } = 0;
+        public double TasteSmellPoints { get; set; } 
 
-        public double TouchMod { get; set; } = 0;
+        public double TouchMod { get; set; } 
 
-        public double TouchPoints { get; set; } = 0;
+        public double TouchPoints { get; set; } 
 
-        public double WillpowerMod { get; set; } = 0;
+        public double WillpowerMod { get; set; } 
 
-        public double WillpowerPoints { get; set; } = 0;
+        public double WillpowerPoints { get; set; } 
 
-        public double FearCheckMod { get; set; } = 0;
+        public double FearCheckMod { get; set; } 
 
-        public double FearCheckPoints { get; set; } = 0;
+        public double FearCheckPoints { get; set; }
 
-        public double StunCheckMod { get; set; } = 0;
+        public double StunCheckMod { get; set; } 
 
-        public double KnockdownCheckMod { get; set; } = 0;
+        public double KnockdownCheckMod { get; set; }
 
-        public double UnconsciousCheckMod { get; set; } = 0;
+        public double UnconsciousCheckMod { get; set; } 
 
-        public double UnconsciousCheckPoints { get; set; } = 0;
+        public double UnconsciousCheckPoints { get; set; }
 
-        public double DeathCheckMod { get; set; } = 0;
+        public double DeathCheckMod { get; set; } 
 
-        public double DeathCheckPoints { get; set; } = 0;
+        public double DeathCheckPoints { get; set; } 
 
-        public double BasicSpeedMod { get; set; } = 0;
+        public double BasicSpeedMod { get; set; } 
 
-        public double BasicSpeedPoints { get; set; } = 0;
+        public double BasicSpeedPoints { get; set; } 
 
-        public double BasicMoveMod { get; set; } = 0;
+        public double BasicMoveMod { get; set; } 
 
-        public double BasicMovePoints { get; set; } = 0;
+        public double BasicMovePoints { get; set; } 
 
-        public double EnhancedGroundMoveMod { get; set; } = 0;
+        public double EnhancedGroundMoveMod { get; set; } 
 
-        public double EnhancedGroundMovePoints { get; set; } = 0;
+        public double EnhancedGroundMovePoints { get; set; } 
 
-        public double DodgeMod { get; set; } = 0;
+        public double DodgeMod { get; set; } 
 
-        public double LiftStMod { get; set; } = 0;
+        public double LiftStMod { get; set; }
 
-        public double LiftStPoints { get; set; } = 0;
+        public double LiftStPoints { get; set; } 
 
-        public double StrikingStMod { get; set; } = 0;
+        public double StrikingStMod { get; set; } 
 
-        public double StrikingStPoints { get; set; } = 0;
+        public double StrikingStPoints { get; set; } 
 
-        public double HitPointsMod { get; set; } = 0;
+        public double HitPointsMod { get; set; } 
 
-        public double HitPointsPoints { get; set; } = 0;
+        public double HitPointsPoints { get; set; }
 
-        public double HitPoints { get; set; } = 0;
+        public double HitPoints { get; set; }
 
-        public double FatiguePointsMod { get; set; } = 0;
+        public double FatiguePointsMod { get; set; }
 
-        public double FatiguePointsPoints { get; set; } = 0;
+        public double FatiguePointsPoints { get; set; } 
 
-        public double FatiguePoints { get; set; } = 0;
+        public double FatiguePoints { get; set; } 
 
-        public bool FlightChecked { get; set; } = false;
+        public bool FlightChecked { get; set; } 
 
-        public double FlightPoints { get; set; } = 0;
+        public double FlightPoints { get; set; }
 
-        public double BasicAirMoveMod { get; set; } = 0;
+        public double BasicAirMoveMod { get; set; } 
 
-        public double BasicAirMovePoints { get; set; } = 0;
+        public double BasicAirMovePoints { get; set; }
+ 
+        public double EnhancedAirLevel { get; set; } 
 
-        public double EnhancedAirLevel { get; set; } = 0;
+        public double EnhancedAirMovePoints { get; set; } 
 
-        public double EnhancedAirMovePoints { get; set; } = 0;
+        public bool AmphibiousChecked { get; set; } 
 
-        public bool AmphibiousChecked { get; set; } = false;
+        public double AmphibiousPoints { get; set; } 
 
-        public double AmphibiousPoints { get; set; } = 0;
+        public double BasicWaterMoveMod { get; set; }
 
-        public double BasicWaterMoveMod { get; set; } = 0;
+        public double BasicWaterMovePoints { get; set; } 
 
-        public double BasicWaterMovePoints { get; set; } = 0;
+        public double EnhancedWaterLevel { get; set; } 
 
-        public double EnhancedWaterLevel { get; set; } = 0;
+        public double EnhancedWaterMovePoints { get; set; } 
 
-        public double EnhancedWaterMovePoints { get; set; } = 0;
+        public double SuperJumpEnteredLevel { get; set; } 
 
-        public double SuperJumpEnteredLevel { get; set; } = 0;
+        public double SuperJumpPoints { get; set; } 
 
-        public double SuperJumpPoints { get; set; } = 0;
+        public double SpellBonus { get; set; } 
 
-        public double SpellBonus { get; set; } = 0;
+        public bool CombatReflexes { get; set; }
 
-        public bool CombatReflexes { get; set; } = false;
+        public List<RepeatingLanguage> RepeatingLanguages { get; set; }
 
-        public List<RepeatingLanguage> RepeatingLanguages { get; set; } = new List<RepeatingLanguage>();
+        public List<RepeatingCulture> RepeatingCultures { get; set; }
 
-        public List<RepeatingCulture> RepeatingCultures { get; set; } = new List<RepeatingCulture>();
+        public List<RepeatingTrait> RepeatingTraits { get; set; }
 
-        public List<RepeatingTrait> RepeatingTraits { get; set; } = new List<RepeatingTrait>();
+        public List<RepeatingPerk> RepeatingPerks { get; set; }
 
-        public List<RepeatingPerk> RepeatingPerks { get; set; } = new List<RepeatingPerk>();
+        public List<RepeatingQuirk> RepeatingQuirks { get; set; } 
 
-        public List<RepeatingQuirk> RepeatingQuirks { get; set; } = new List<RepeatingQuirk>();
+        public List<RepeatingDisadvantage> RepeatingDisadvantages { get; set; }
 
-        public List<RepeatingDisadvantage> RepeatingDisadvantages { get; set; } = new List<RepeatingDisadvantage>();
+        public List<RepeatingRacial> RepeatingRacial { get; set; } 
 
-        public List<RepeatingRacial> RepeatingRacial { get; set; } = new List<RepeatingRacial>();
+        public List<RepeatingSkill> RepeatingSkills { get; set; } 
 
-        public List<RepeatingSkill> RepeatingSkills { get; set; } = new List<RepeatingSkill>();
+        public List<RepeatingTechniquesrevised> RepeatingTechniquesrevised { get; set; }
 
-        public List<RepeatingTechniquesrevised> RepeatingTechniquesrevised { get; set; } = new List<RepeatingTechniquesrevised>();
+        public List<RepeatingDefense> RepeatingDefense { get; set; } 
 
-        public List<RepeatingDefense> RepeatingDefense { get; set; } = new List<RepeatingDefense>();
+        public List<RepeatingMelee> RepeatingMelee { get; set; } 
 
-        public List<RepeatingMelee> RepeatingMelee { get; set; } = new List<RepeatingMelee>();
+        public List<RepeatingRanged> RepeatingRanged { get; set; }
 
-        public List<RepeatingRanged> RepeatingRanged { get; set; } = new List<RepeatingRanged>();
+        public List<RepeatingItem> RepeatingItem { get; set; } 
 
-        public List<RepeatingItem> RepeatingItem { get; set; } = new List<RepeatingItem>();
-
-        public List<RepeatingSpell> RepeatingSpells { get; set; } = new List<RepeatingSpell>();
+        public List<RepeatingSpell> RepeatingSpells { get; set; } 
 
     }
 
