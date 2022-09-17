@@ -37,7 +37,9 @@ namespace ExportToRoll20
 
                 roll20Character.Reactions = GetReactions(currentCharacter);
 
-                if (int.TryParse(currentCharacter.Campaign.BaseTL, out int campaignTl))
+                int campaignTl;
+                bool result = int.TryParse(currentCharacter.Campaign.BaseTL, out campaignTl);
+                if (result)
                 {
                     roll20Character.CampaignTl = campaignTl;
                 }
@@ -48,7 +50,9 @@ namespace ExportToRoll20
 
                 roll20Character.TotalPoints = currentCharacter.Campaign.BasePoints;
 
-                if (int.TryParse(currentCharacter.TL, out int techLevel))
+                int techLevel;
+                result = int.TryParse(currentCharacter.TL, out techLevel);
+                if (result)
                 {
                     roll20Character.Tl = techLevel;
                 }
@@ -76,7 +80,10 @@ namespace ExportToRoll20
 
                 roll20Character.Age = currentCharacter.Age;
                 roll20Character.Height = currentCharacter.Height;
-                if (double.TryParse(currentCharacter.Weight, out double weight))
+
+                double weight;
+                result = double.TryParse(currentCharacter.Weight, out weight);
+                if (result)
                 {
                     roll20Character.Weight = weight;
                 }
@@ -468,7 +475,9 @@ namespace ExportToRoll20
                         string[] splitBonusItem = bonusItem.Split(' ');
 
                         // only need the first part
-                        if (double.TryParse(splitBonusItem[0], out double modifier))
+                        double modifier;
+                        bool result = double.TryParse(splitBonusItem[0], out modifier);
+                        if (result)
                         {
                             finalModifier += modifier;
                         }
@@ -1030,12 +1039,16 @@ namespace ExportToRoll20
 
                         var meleeDamage = mode.get_TagItem("chardamage").Replace("d", "d6");
 
-                        if (!double.TryParse(mode.get_TagItem("charskillscore"), out double meleeSkill))
+                        double meleeSkill;
+                        bool result = double.TryParse(mode.get_TagItem("charskillscore"), out meleeSkill);
+                        if (!result)
                         {
                             meleeSkill = 0;
                         }
 
-                        if (!double.TryParse(mode.get_TagItem("chararmordivisor"), out double armorDivisor))
+                        double armorDivisor;
+                        result = double.TryParse(mode.get_TagItem("chararmordivisor"), out armorDivisor);
+                        if (!result)
                         {
                             armorDivisor = 1;
                         }
@@ -1092,12 +1105,16 @@ namespace ExportToRoll20
 
                         var rangedDamage = mode.get_TagItem("chardamage").Replace("d", "d6");
 
-                        if (!double.TryParse(mode.get_TagItem("charskillscore"), out double rangedSkill))
+                        double rangedSkill;
+                        bool result = double.TryParse(mode.get_TagItem("charskillscore"), out rangedSkill);
+                        if (!result)
                         {
                             rangedSkill = 0;
                         }
 
-                        if (!double.TryParse(mode.get_TagItem("chararmordivisor"), out double armorDivisor))
+                        double armorDivisor;
+                        result = double.TryParse(mode.get_TagItem("chararmordivisor"), out armorDivisor);
+                        if (!result)
                         {
                             armorDivisor = 1;
                         }
@@ -1158,17 +1175,23 @@ namespace ExportToRoll20
             {
                 string legalityClass = GetLegalityClass(trait);
 
-                if (!double.TryParse(trait.get_TagItem("count"), out double itemCount))
+                double itemCount;
+                bool result = double.TryParse(trait.get_TagItem("count"), out itemCount);
+                if (!result)
                 {
                     itemCount = 0;
                 }
 
-                if (!double.TryParse(trait.get_TagItem("weight"), out double itemWeight))
+                double itemWeight;
+                result = double.TryParse(trait.get_TagItem("weight"), out itemWeight);
+                if (!result)
                 {
                     itemWeight = 0;
                 }
 
-                if (!double.TryParse(trait.get_TagItem("cost"), out double itemCost))
+                double itemCost;
+                result = double.TryParse(trait.get_TagItem("cost"), out itemCost);
+                if (!result)
                 {
                     itemCost = 0;
                 }
@@ -1313,7 +1336,9 @@ namespace ExportToRoll20
             // attempt to get a parry score
             var parryValue = mode.get_TagItem("charparryscore");
 
-            if (!double.TryParse(parryValue, out double parryScore))
+            double parryScore;
+            bool result = double.TryParse(parryValue, out parryScore);
+            if (!result)
             {
                 parryScore = 0;
             }
@@ -1356,7 +1381,9 @@ namespace ExportToRoll20
             var categories = trait.get_TagItem("cat");
 
             // ignore the DX attribute & talents
-            if (trait.Name != "DX" && !categories.ToLower().Contains("talent") && double.TryParse(blockValue, out double block))
+            double block;
+            bool result = double.TryParse(blockValue, out block);
+            if (trait.Name != "DX" && !categories.ToLower().Contains("talent") && result)
             {
                 var item = new RepeatingDefense
                 {
@@ -1415,7 +1442,9 @@ namespace ExportToRoll20
 
                 var scoreValue = mode.get_TagItem("charskillscore");
 
-                if (double.TryParse(scoreValue, out double score))
+                double score;
+                bool result = double.TryParse(scoreValue, out score);
+                if (result)
                 {
 
                     var powerDefense = new RepeatingDefense
