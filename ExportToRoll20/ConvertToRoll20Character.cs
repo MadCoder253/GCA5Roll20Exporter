@@ -875,7 +875,7 @@ namespace ExportToRoll20
         {
             string baseAttribute = "10";
 
-            switch (stepoff)
+            switch (stepoff.ToUpper())
             {
                 case "ST":
                     baseAttribute = "@{strength}";
