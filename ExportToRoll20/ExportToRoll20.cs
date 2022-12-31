@@ -27,7 +27,7 @@ namespace ExportToRoll20
     {
         private const string PLUGIN_NAME = "Export Character to Roll20";
         private const string PLUGIN_DESCRIPTION = "Export Character to a json file to import into Roll20. For more informaiton see: https://github.com/MadCoder253/GCA5Roll20Exporter";
-        private const string PLUGIN_VERSION = "1.0.0.0";
+        private const string PLUGIN_VERSION = "1.0.1.8";
 
         public event IExportSheet.RequestRunSpecificOptionsEventHandler RequestRunSpecificOptions;
 
