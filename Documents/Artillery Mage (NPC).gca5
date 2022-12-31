@@ -3,13 +3,13 @@
   <character>
     <author>
       <name>GURPS Character Assistant</name>
-      <version>GCA5Engine, Version=5.0.197.0</version>
+      <version>GCA5Engine, Version=5.0.202.0</version>
       <copyright>Program code is copyright © 1995-2022 by Armin D. Sykes. All data files, graphics, and other GURPS-specific content is copyright © 2005 and other years by Steve Jackson Games Incorporated. GURPS and the all-seeing pyramid are registered trademarks of Steve Jackson Games Incorporated. All rights reserved.</copyright>
-      <datecreated>Sunday, September 11, 2022</datecreated>
+      <datecreated>Friday, December 30, 2022</datecreated>
     </author>
     <system>
       <version>5</version>
-      <lastkey>13364</lastkey>
+      <lastkey>13366</lastkey>
     </system>
     <library>
       <name>%user%\Greyhawk.gds</name>
@@ -187,14 +187,18 @@
       <altexportsheet>Simple Text Export</altexportsheet>
       <altexportsheet>Export Character to Roll20</altexportsheet>
       <altexportsheet>Simple Text Export</altexportsheet>
+      <altexportsheet>Export Character to Roll20</altexportsheet>
+      <altexportsheet>Simple Text Export</altexportsheet>
+      <altexportsheet>Export Character to Roll20</altexportsheet>
+      <altexportsheet>Simple Text Export</altexportsheet>
       <altexportsheet>Simple Text Export</altexportsheet>
     </output>
     <vitals>
       <race>Human</race>
-      <height />
-      <weight />
-      <age />
-      <appearance />
+      <height>5'9"</height>
+      <weight>154</weight>
+      <age>27</age>
+      <appearance>Typical, smug wizard.</appearance>
       <portraitfile />
     </vitals>
     <basicdefense>
@@ -6036,7 +6040,7 @@
       </disadvantages>
       <quirks count="0" />
       <features count="0" />
-      <skills count="2">
+      <skills count="4">
         <trait type="Skills" idkey="187">
           <name>Innate Attack</name>
           <nameext>Projectile</nameext>
@@ -6068,6 +6072,76 @@
           <ref>
             <page>B201</page>
             <default>DX - 4, SK:Innate Attack - 2</default>
+          </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
+        </trait>
+        <trait type="Skills" idkey="13365">
+          <name>Meditation</name>
+          <needscheck>-1</needscheck>
+          <taboofailed>0</taboofailed>
+          <cat>_General, Esoteric</cat>
+          <points>2</points>
+          <type>Will/H</type>
+          <step>-1</step>
+          <stepoff>Will</stepoff>
+          <level>12</level>
+          <calcs>
+            <sd>0</sd>
+            <deflevel>0</deflevel>
+            <pointmult>1</pointmult>
+            <levelmult>1</levelmult>
+            <syslevels>0</syslevels>
+            <extralevels>0</extralevels>
+            <baselevel>12</baselevel>
+            <basepoints>2</basepoints>
+            <multpoints>2</multpoints>
+            <apppoints>2</apppoints>
+            <premodspoints>2</premodspoints>
+            <baseapppoints>2</baseapppoints>
+          </calcs>
+          <armordata />
+          <ref>
+            <page>B207</page>
+            <default>Will - 6, SK:Autohypnosis - 4</default>
+          </ref>
+          <attackmodes count="1">
+            <attackmode>
+              <name />
+            </attackmode>
+          </attackmodes>
+        </trait>
+        <trait type="Skills" idkey="13366">
+          <name>Search</name>
+          <needscheck>-1</needscheck>
+          <taboofailed>0</taboofailed>
+          <cat>_General, Police, Spy</cat>
+          <points>2</points>
+          <type>Per/A</type>
+          <step>+0</step>
+          <stepoff>Per</stepoff>
+          <level>13</level>
+          <calcs>
+            <sd>0</sd>
+            <deflevel>0</deflevel>
+            <pointmult>1</pointmult>
+            <levelmult>1</levelmult>
+            <syslevels>0</syslevels>
+            <extralevels>0</extralevels>
+            <baselevel>13</baselevel>
+            <basepoints>2</basepoints>
+            <multpoints>2</multpoints>
+            <apppoints>2</apppoints>
+            <premodspoints>2</premodspoints>
+            <baseapppoints>2</baseapppoints>
+          </calcs>
+          <armordata />
+          <ref>
+            <page>B219</page>
+            <default>Per - 5, SK:Criminology - 5, SK:Detective!</default>
           </ref>
           <attackmodes count="1">
             <attackmode>
@@ -36996,7 +37070,7 @@
         <filename>mental_16.png</filename>
         <criteria>Advantages where cat listincludes {mental}</criteria>
         <image><![CDATA[iVBORw0KGgoAAAANSUhEUgAAAA8AAAAQCAYAAADJViUEAAAABGdBTUEAALGPC/xhBQAAAAlwSFlz
-AAALDwAACw8BkvkDpQAAAAd0SU1FB+EGERIZD2I0ZEoAAAD7SURBVDhPvZI/yoNAEMU9in8KC8FK
+AAALDQAACw0B7QfALAAAAAd0SU1FB+EGERIZD2I0ZEoAAAD7SURBVDhPvZI/yoNAEMU9in8KC8FK
 bKwttLMRQbDwCFqJCHZWVvYexs4beJtJnmaWTXaT70sTHo8dduY3zA5rkEbLspDv+9S2Lc3zTEVR
 UJ7ntO87yXVSeClJEhqGgY7jUDyOI63rKho8jktRFIlC0zQV476ua9q27WwgQMhxnLcgbFnWmW+a
 5nsYRr4sSxXmZBAEWhBGvqoqFcZY/G7P8/4PY8tcIC8ONu5lOBlO0/QZdl1XwLJt2z4BngRxlmX6
@@ -37008,7 +37082,7 @@ xg3BO+JKFy8frAAAAABJRU5ErkJggg==]]></image>
         <filename>mental_16.png</filename>
         <criteria>Disadvantages where cat listincludes {mental}</criteria>
         <image><![CDATA[iVBORw0KGgoAAAANSUhEUgAAAA8AAAAQCAYAAADJViUEAAAABGdBTUEAALGPC/xhBQAAAAlwSFlz
-AAALDwAACw8BkvkDpQAAAAd0SU1FB+EGERIZD2I0ZEoAAAD7SURBVDhPvZI/yoNAEMU9in8KC8FK
+AAALDQAACw0B7QfALAAAAAd0SU1FB+EGERIZD2I0ZEoAAAD7SURBVDhPvZI/yoNAEMU9in8KC8FK
 bKwttLMRQbDwCFqJCHZWVvYexs4beJtJnmaWTXaT70sTHo8dduY3zA5rkEbLspDv+9S2Lc3zTEVR
 UJ7ntO87yXVSeClJEhqGgY7jUDyOI63rKho8jktRFIlC0zQV476ua9q27WwgQMhxnLcgbFnWmW+a
 5nsYRr4sSxXmZBAEWhBGvqoqFcZY/G7P8/4PY8tcIC8ONu5lOBlO0/QZdl1XwLJt2z4BngRxlmX6
@@ -37066,8 +37140,8 @@ z86dSz83cz7h/HhPTM/9CxEXbvUG9g5c9Ll4+ZL7pQt9Tn1nL9tdPnXF5srJq4yrndcsr3X0W/S3
 /2TxU/uA5UDHdavrXTesb3QPLh88M+QwdP6m681Lt7xuXbu94vbgcOjwnZHokdE77DtTd1PuvriX
 eW/h/sYH6AdFD6UeVjxSfNTws+7PbaOWo6fHXMf6Hwc/vj/OGn/2S8Yv7ycKnpCfVEyqTDZPmU2d
 mnafvvF05dOJZ+nPFmYKf5X+tfa5zvMffnP8rX82YnbiBf/Fp99LXsq/PPRq2aueuYC5R69TXy/M
-F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDwAA
-Cw8BkvkDpQAAA5NJREFUOE9lk3tM01cUx49AeUO1gFApA3mpW0JmshkTY+KGUZljsvgoGmXozHA+
+F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDQAA
+Cw0B7QfALAAAA5NJREFUOE9lk3tM01cUx49AeUO1gFApA3mpW0JmshkTY+KGUZljsvgoGmXozHA+
 EPQvjYmIc8l0bjI25kSXKGYQH6gBFcUXY10qETtny6PwYy2dtmBJf0VaUqA5O+cuEN2anNz7uz3n
 c8/5nnvA5XKB3+8HSZJAp9OFt7W1xXg9niBEhJGXLxdsL9pmLj9YJo+Pj7/LZ+3t7YpLFy/G6PV6
 hdstA5+NjY0ByPK/H8anxpxl2dnjczMysOXBg6+cTieszvv4BQAg26GDZffdbjccPlReOTc9Ezeu
@@ -37136,8 +37210,8 @@ z86dSz83cz7h/HhPTM/9CxEXbvUG9g5c9Ll4+ZL7pQt9Tn1nL9tdPnXF5srJq4yrndcsr3X0W/S3
 /2TxU/uA5UDHdavrXTesb3QPLh88M+QwdP6m681Lt7xuXbu94vbgcOjwnZHokdE77DtTd1PuvriX
 eW/h/sYH6AdFD6UeVjxSfNTws+7PbaOWo6fHXMf6Hwc/vj/OGn/2S8Yv7ycKnpCfVEyqTDZPmU2d
 mnafvvF05dOJZ+nPFmYKf5X+tfa5zvMffnP8rX82YnbiBf/Fp99LXsq/PPRq2aueuYC5R69TXy/M
-F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDwAA
-Cw8BkvkDpQAAA5NJREFUOE9lk3tM01cUx49AeUO1gFApA3mpW0JmshkTY+KGUZljsvgoGmXozHA+
+F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDQAA
+Cw0B7QfALAAAA5NJREFUOE9lk3tM01cUx49AeUO1gFApA3mpW0JmshkTY+KGUZljsvgoGmXozHA+
 EPQvjYmIc8l0bjI25kSXKGYQH6gBFcUXY10qETtny6PwYy2dtmBJf0VaUqA5O+cuEN2anNz7uz3n
 c8/5nnvA5XKB3+8HSZJAp9OFt7W1xXg9niBEhJGXLxdsL9pmLj9YJo+Pj7/LZ+3t7YpLFy/G6PV6
 hdstA5+NjY0ByPK/H8anxpxl2dnjczMysOXBg6+cTieszvv4BQAg26GDZffdbjccPlReOTc9Ezeu
@@ -37206,8 +37280,8 @@ z86dSz83cz7h/HhPTM/9CxEXbvUG9g5c9Ll4+ZL7pQt9Tn1nL9tdPnXF5srJq4yrndcsr3X0W/S3
 /2TxU/uA5UDHdavrXTesb3QPLh88M+QwdP6m681Lt7xuXbu94vbgcOjwnZHokdE77DtTd1PuvriX
 eW/h/sYH6AdFD6UeVjxSfNTws+7PbaOWo6fHXMf6Hwc/vj/OGn/2S8Yv7ycKnpCfVEyqTDZPmU2d
 mnafvvF05dOJZ+nPFmYKf5X+tfa5zvMffnP8rX82YnbiBf/Fp99LXsq/PPRq2aueuYC5R69TXy/M
-F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDwAA
-Cw8BkvkDpQAABTtJREFUOE9tVHlQk1cQ3xA5FPEElcOEU/A+8WprFcQCCgI61AOtovWgtv7RqZwT
+F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDQAA
+Cw0B7QfALAAABTtJREFUOE9tVHlQk1cQ3xA5FPEElcOEU/A+8WprFcQCCgI61AOtovWgtv7RqZwT
 22o5PYvBKkJCiiYIIYQjciRMEKiOQggKigYB0TC2NlyKUa7Xfd+Mzjj2m3nzvWPf77e7v30L7W1t
 PPG1a2lV6iq3pvtNUCSXQ19vLyTGJ0ClSgVPWlth146dIBJmASEEGhoaQJgpgK6uLhgZGYYfjhyB
 iEOHQKVUMef1dfXQ0dEBXXq929Xs7DhRVtZRyLuee9uZwyGeS5aSqJ+OKaS5ucHDQ0Nmp5JToKWl
@@ -37284,8 +37358,8 @@ z86dSz83cz7h/HhPTM/9CxEXbvUG9g5c9Ll4+ZL7pQt9Tn1nL9tdPnXF5srJq4yrndcsr3X0W/S3
 /2TxU/uA5UDHdavrXTesb3QPLh88M+QwdP6m681Lt7xuXbu94vbgcOjwnZHokdE77DtTd1PuvriX
 eW/h/sYH6AdFD6UeVjxSfNTws+7PbaOWo6fHXMf6Hwc/vj/OGn/2S8Yv7ycKnpCfVEyqTDZPmU2d
 mnafvvF05dOJZ+nPFmYKf5X+tfa5zvMffnP8rX82YnbiBf/Fp99LXsq/PPRq2aueuYC5R69TXy/M
-F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDwAA
-Cw8BkvkDpQAABTtJREFUOE9tVHlQk1cQ3xA5FPEElcOEU/A+8WprFcQCCgI61AOtovWgtv7RqZwT
+F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDQAA
+Cw0B7QfALAAABTtJREFUOE9tVHlQk1cQ3xA5FPEElcOEU/A+8WprFcQCCgI61AOtovWgtv7RqZwT
 22o5PYvBKkJCiiYIIYQjciRMEKiOQggKigYB0TC2NlyKUa7Xfd+Mzjj2m3nzvWPf77e7v30L7W1t
 PPG1a2lV6iq3pvtNUCSXQ19vLyTGJ0ClSgVPWlth146dIBJmASEEGhoaQJgpgK6uLhgZGYYfjhyB
 iEOHQKVUMef1dfXQ0dEBXXq929Xs7DhRVtZRyLuee9uZwyGeS5aSqJ+OKaS5ucHDQ0Nmp5JToKWl
@@ -37362,8 +37436,8 @@ z86dSz83cz7h/HhPTM/9CxEXbvUG9g5c9Ll4+ZL7pQt9Tn1nL9tdPnXF5srJq4yrndcsr3X0W/S3
 /2TxU/uA5UDHdavrXTesb3QPLh88M+QwdP6m681Lt7xuXbu94vbgcOjwnZHokdE77DtTd1PuvriX
 eW/h/sYH6AdFD6UeVjxSfNTws+7PbaOWo6fHXMf6Hwc/vj/OGn/2S8Yv7ycKnpCfVEyqTDZPmU2d
 mnafvvF05dOJZ+nPFmYKf5X+tfa5zvMffnP8rX82YnbiBf/Fp99LXsq/PPRq2aueuYC5R69TXy/M
-F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDwAA
-Cw8BkvkDpQAAAkFJREFUKFNj+Pr1K8P79+8Znj59ynDr1i31msqqiQmxcQdbm1tWrVm92vjZs2cM
+F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDQAA
+Cw0B7QfALAAAAkFJREFUKFNj+Pr1K8P79+8Znj59ynDr1i31msqqiQmxcQdbm1tWrVm92vjZs2cM
 ////Z/j79y8Dw8+fP8Gcc2fPers5u/znZuf8z8vB+Z+ThfW/lpr6/9OnTlWB5P/8+cMANvnz58/m
 zg6O/xkYGP4rysj+V1VU+q8kJw/mgzQ8e/o0AKQBbGpdbe0mkISyvAIKBmkCiefn5F4EK3744IGd
 raXVfw5mlv8qCoooikF8QV6+/xoqqv+PHjniz7Bq5apiIT7+/3KSUigKYRjkHJAGoMc7GPp6e1Yw
@@ -37426,8 +37500,8 @@ z86dSz83cz7h/HhPTM/9CxEXbvUG9g5c9Ll4+ZL7pQt9Tn1nL9tdPnXF5srJq4yrndcsr3X0W/S3
 /2TxU/uA5UDHdavrXTesb3QPLh88M+QwdP6m681Lt7xuXbu94vbgcOjwnZHokdE77DtTd1PuvriX
 eW/h/sYH6AdFD6UeVjxSfNTws+7PbaOWo6fHXMf6Hwc/vj/OGn/2S8Yv7ycKnpCfVEyqTDZPmU2d
 mnafvvF05dOJZ+nPFmYKf5X+tfa5zvMffnP8rX82YnbiBf/Fp99LXsq/PPRq2aueuYC5R69TXy/M
-F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDwAA
-Cw8BkvkDpQAAAkFJREFUKFNj+Pr1K8P79+8Znj59ynDr1i31msqqiQmxcQdbm1tWrVm92vjZs2cM
+F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDQAA
+Cw0B7QfALAAAAkFJREFUKFNj+Pr1K8P79+8Znj59ynDr1i31msqqiQmxcQdbm1tWrVm92vjZs2cM
 ////Z/j79y8Dw8+fP8Gcc2fPers5u/znZuf8z8vB+Z+ThfW/lpr6/9OnTlWB5P/8+cMANvnz58/m
 zg6O/xkYGP4rysj+V1VU+q8kJw/mgzQ8e/o0AKQBbGpdbe0mkISyvAIKBmkCiefn5F4EK3744IGd
 raXVfw5mlv8qCoooikF8QV6+/xoqqv+PHjniz7Bq5apiIT7+/3KSUigKYRjkHJAGoMc7GPp6e1Yw
@@ -37490,8 +37564,8 @@ z86dSz83cz7h/HhPTM/9CxEXbvUG9g5c9Ll4+ZL7pQt9Tn1nL9tdPnXF5srJq4yrndcsr3X0W/S3
 /2TxU/uA5UDHdavrXTesb3QPLh88M+QwdP6m681Lt7xuXbu94vbgcOjwnZHokdE77DtTd1PuvriX
 eW/h/sYH6AdFD6UeVjxSfNTws+7PbaOWo6fHXMf6Hwc/vj/OGn/2S8Yv7ycKnpCfVEyqTDZPmU2d
 mnafvvF05dOJZ+nPFmYKf5X+tfa5zvMffnP8rX82YnbiBf/Fp99LXsq/PPRq2aueuYC5R69TXy/M
-F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDwAA
-Cw8BkvkDpQAAAnhJREFUOE9VUklMk1EQHgiNIjsGEZEipZa4REiUoB6ApERD4sEFg0i8GKnVeAOR
+F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDQAA
+Cw0B7QfALAAAAnhJREFUOE9VUklMk1EQHgiNIjsGEZEipZa4REiUoB6ApERD4sEFg0i8GKnVeAOR
 eFT04BKMtRgTPVUSXAktxBM1pUEoWKtiWaXYlcVg96bLD+ObX0U4fJl/3vu+eTPz/RCNRtchFosB
 IhIEGrX6jrq7uzzKzj6OjMDo11GASCSyChKEQiF4r9XCh4EBwRFpFYpFIjSbzY1erxfGx8YBVlZW
 VvG3MgwNDsLLzk5J2YFSPwBgXs42fPRQ0flraUm4SloDMUWdTnc8P3c7T85ISUUS3m5tnYfJiQmw
@@ -37555,8 +37629,8 @@ z86dSz83cz7h/HhPTM/9CxEXbvUG9g5c9Ll4+ZL7pQt9Tn1nL9tdPnXF5srJq4yrndcsr3X0W/S3
 /2TxU/uA5UDHdavrXTesb3QPLh88M+QwdP6m681Lt7xuXbu94vbgcOjwnZHokdE77DtTd1PuvriX
 eW/h/sYH6AdFD6UeVjxSfNTws+7PbaOWo6fHXMf6Hwc/vj/OGn/2S8Yv7ycKnpCfVEyqTDZPmU2d
 mnafvvF05dOJZ+nPFmYKf5X+tfa5zvMffnP8rX82YnbiBf/Fp99LXsq/PPRq2aueuYC5R69TXy/M
-F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDwAA
-Cw8BkvkDpQAAAnhJREFUOE9VUklMk1EQHgiNIjsGEZEipZa4REiUoB6ApERD4sEFg0i8GKnVeAOR
+F72Rf3P4LeNt37vwd5MLWe+x7ys/6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDQAA
+Cw0B7QfALAAAAnhJREFUOE9VUklMk1EQHgiNIjsGEZEipZa4REiUoB6ApERD4sEFg0i8GKnVeAOR
 eFT04BKMtRgTPVUSXAktxBM1pUEoWKtiWaXYlcVg96bLD+ObX0U4fJl/3vu+eTPz/RCNRtchFosB
 IhIEGrX6jrq7uzzKzj6OjMDo11GASCSyChKEQiF4r9XCh4EBwRFpFYpFIjSbzY1erxfGx8YBVlZW
 VvG3MgwNDsLLzk5J2YFSPwBgXs42fPRQ0flraUm4SloDMUWdTnc8P3c7T85ISUUS3m5tnYfJiQmw

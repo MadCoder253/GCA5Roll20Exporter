@@ -746,7 +746,7 @@ namespace ExportToRoll20
                 {
                     Idkey = template.IDKey.ToString(),
                     Name = template.FullName,
-                    Points = 0,
+                    Points = template.PreModsPoints,
                     Ref = template.get_TagItem("ref"),
                     Notes = notes
                 };
@@ -875,7 +875,7 @@ namespace ExportToRoll20
         {
             string baseAttribute = "10";
 
-            switch (stepoff)
+            switch (stepoff.ToUpper())
             {
                 case "ST":
                     baseAttribute = "@{strength}";
@@ -1270,13 +1270,23 @@ namespace ExportToRoll20
                         }
                     }
 
+                    // if it is a parent, set the points to zero
+                    var childIds =  trait.get_TagItem("childkeylist").Split(seperators, StringSplitOptions.RemoveEmptyEntries);
+
+                    double spellPoints = trait.Points;
+
+                    if (childIds.Length > 0)
+                    {
+                        spellPoints = 0;
+                    }
+
                     var spell = new RepeatingSpell()
                     {
                         Idkey = trait.IDKey.ToString(),
                         Name = trait.FullName,
                         Difficulty = GetDifficultyForSkill(trait.SkillType),
                         SpellModifier = GetTraitModifier(trait),
-                        Points = trait.Points,
+                        Points = spellPoints,
                         SpellResistedBy = resistedBy,
                         Duration = trait.get_TagItem("duration"),
                         Cost = trait.get_TagItem("castingcost"),
@@ -1554,13 +1564,6 @@ namespace ExportToRoll20
         {
             var notes = new ArrayList();
 
-            var userNotes = trait.get_TagItem("usernotes").Trim();
-
-            if (!string.IsNullOrEmpty(userNotes))
-            {
-                notes.Add(userNotes);
-            }
-
             if (trait.DisplayName.Length > 0 && trait.DisplayName.Contains("("))
             {
                 // Contact (Effective Skill 12; Rival Gang; 9 or less, *1; Somewhat Reliable, *1)
@@ -1596,23 +1599,42 @@ namespace ExportToRoll20
 
                 if (nameParts.Length > 0)
                 {
-                    notes.Add(string.Join("\n", nameParts));
+                    notes.Add("**Features**:\n" + string.Join("\n", nameParts) + "\n");
                 }
 
             }
 
-            if (!string.IsNullOrEmpty(trait.Notes.Trim()))
+            // --------- User Notes ------------
+            var userNotes = trait.GetNotes(true);
+
+            if (!string.IsNullOrEmpty(userNotes))
             {
-                notes.Add(trait.Notes);
+                notes.Add("**User Notes:**\n" + userNotes);
             }
 
+            // --------- Description ------------
             var tagDescription = trait.get_TagItem("description").Trim();
 
             if (!string.IsNullOrEmpty(tagDescription))
             {
-                notes.Add(tagDescription);
+                // convert to plain text
+                tagDescription = modHelperFunctions.RTFtoPlainText(tagDescription);
+
+                notes.Add("**Description:**\n" + tagDescription);
             }
 
+            // --------- VTT Notes ------------
+            var vttNotes = trait.get_TagItem("vttnotes").Trim();
+
+            if (!string.IsNullOrEmpty(vttNotes))
+            {
+                // convert to plain text
+                vttNotes = modHelperFunctions.RTFtoPlainText(vttNotes);
+
+                notes.Add("**VTT Notes:**\n" + vttNotes);
+            }
+
+            // combine everything
             string noteDescription = string.Join("\n", notes.ToArray());
 
             return noteDescription;

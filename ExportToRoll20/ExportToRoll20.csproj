@@ -63,8 +63,8 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy /Y "$(ProjectDir)$(OutDir)$(TargetFileName)" "C:\Users\kfoub\OneDrive\Documents\GURPS Character Assistant 5\plugins\ExportToRoll20\$(TargetFileName)"
-copy /Y "$(ProjectDir)$(OutDir)$(ProjectName).pdb" "C:\Users\kfoub\OneDrive\Documents\GURPS Character Assistant 5\plugins\ExportToRoll20\$(ProjectName).pdb"
-copy /Y "$(SolutionDir)\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll" "C:\Users\kfoub\OneDrive\Documents\GURPS Character Assistant 5\plugins\ExportToRoll20\Newtonsoft.Json.dll"</PostBuildEvent>
+    <PostBuildEvent>copy /Y "$(ProjectDir)\ExportToRoll20.cs" "C:\ProgramData\Steve Jackson Games\GURPS Character Assistant 5\plugins\ExportToRoll20\ExportToRoll20.cs"
+copy /Y "$(ProjectDir)\ConvertToRoll20Character.cs" "C:\ProgramData\Steve Jackson Games\GURPS Character Assistant 5\plugins\ExportToRoll20\ConvertToRoll20Character.cs"
+copy /Y "$(ProjectDir)\AssemblyInfo.cs" "C:\ProgramData\Steve Jackson Games\GURPS Character Assistant 5\plugins\ExportToRoll20\AssemblyInfo.cs"</PostBuildEvent>
   </PropertyGroup>
 </Project>
