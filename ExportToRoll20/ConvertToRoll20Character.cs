@@ -283,7 +283,7 @@ namespace ExportToRoll20
 
                 roll20Character.RepeatingItem = GetRepeatingItems(currentCharacter);
 
-                roll20Character.RepeatingSpells = GetRepeatingSpells(currentCharacter);
+                roll20Character.RepeatingSpells = GetRepeatingSpells(currentCharacter, roll20Character.RepeatingTechniquesrevised);
             }
 
             return roll20Character;
@@ -1219,7 +1219,7 @@ namespace ExportToRoll20
 
         }
 
-        public List<RepeatingSpell> GetRepeatingSpells(GCACharacter myCharacter)
+        public List<RepeatingSpell> GetRepeatingSpells(GCACharacter myCharacter, List<RepeatingTechniquesrevised> repeatingTechniquesrevised)
         {
             List<RepeatingSpell> list = new List<RepeatingSpell>();
 
@@ -1227,87 +1227,121 @@ namespace ExportToRoll20
 
             foreach (GCATrait trait in spells)
             {
-                // only get regular spells
-                if (!trait.SkillType.StartsWith("tech"))
+                string spellClassSummary = trait.get_TagItem("class");
+
+                string resistedBy = "";
+
+                string spellClass;
+
+                // <class>Regular/R-HT</class>
+                if (spellClassSummary.Contains("/R"))
                 {
-                    string spellClassSummary = trait.get_TagItem("class");
+                    var arrSpellClass = spellClassSummary.Split('/');
 
-                    string resistedBy = "";
+                    spellClass = arrSpellClass[0];
 
-                    string spellClass;
+                    resistedBy = arrSpellClass[1];
+                }
+                else
+                {
+                    spellClass = spellClassSummary;
+                }
 
-                    // <class>Regular/R-HT</class>
-                    if (spellClassSummary.Contains("/R"))
+                string primaryCollege = "";
+
+                string secondaryCollege = "";
+
+                var categories = trait.get_TagItem("cat");
+
+                string[] seperators = { ", " };
+
+                var arrCats = categories.Split(seperators, StringSplitOptions.RemoveEmptyEntries);
+
+                if (arrCats.Length > 0)
+                {
+                    primaryCollege = arrCats[0];
+
+                    if (arrCats.Length > 1)
                     {
-                        var arrSpellClass = spellClassSummary.Split('/');
-
-                        spellClass = arrSpellClass[0];
-
-                        resistedBy = arrSpellClass[1];
+                        secondaryCollege = arrCats[1];
                     }
-                    else
-                    {
-                        spellClass = spellClassSummary;
-                    }
+                }
 
-                    string primaryCollege = "";
+                // if it is a parent, set the points to zero
+                var childIds = trait.get_TagItem("childkeylist").Split(seperators, StringSplitOptions.RemoveEmptyEntries);
 
-                    string secondaryCollege = "";
+                double spellPoints = trait.Points;
 
-                    var categories = trait.get_TagItem("cat");
+                var difficulty = GetDifficultyForSkill(trait.SkillType);
 
-                    string[] seperators = { ", " };
+                var spellName = trait.FullName;
 
-                    var arrCats = categories.Split(seperators, StringSplitOptions.RemoveEmptyEntries);
+                if (childIds.Length > 0)
+                {
+                    spellPoints = 0;
 
-                    if (arrCats.Length > 0)
-                    {
-                        primaryCollege = arrCats[0];
+                } else if (trait.SkillType.ToLower().StartsWith("tech"))
+                {
+                    spellPoints = 0;
 
-                        if (arrCats.Length > 1)
-                        {
-                            secondaryCollege = arrCats[1];
-                        }
-                    }
+                    difficulty = "T/H";
 
-                    // if it is a parent, set the points to zero
-                    var childIds =  trait.get_TagItem("childkeylist").Split(seperators, StringSplitOptions.RemoveEmptyEntries);
+                    // add the technique to the repeating techniques list
+                    var technique = this.getRepeatingTechnique(trait);
 
-                    double spellPoints = trait.Points;
+                    repeatingTechniquesrevised.Add(technique);
 
-                    if (childIds.Length > 0)
-                    {
-                        spellPoints = 0;
-                    }
-
-                    var spell = new RepeatingSpell()
-                    {
-                        Idkey = trait.IDKey.ToString(),
-                        Name = trait.FullName,
-                        Difficulty = GetDifficultyForSkill(trait.SkillType),
-                        SpellModifier = GetTraitModifier(trait),
-                        Points = spellPoints,
-                        SpellResistedBy = resistedBy,
-                        Duration = trait.get_TagItem("duration"),
-                        Cost = trait.get_TagItem("castingcost"),
-                        Skill = trait.Level,
-                        Ref = trait.get_TagItem("page"),
-                        Casttime = trait.get_TagItem("time"),
-                        Maintain = "",
-                        SpellClass = spellClass,
-                        SpellCollege = primaryCollege,
-                        SpellCollegeSecondary = secondaryCollege,
-                        SpellModNotes = GetTraitModifiersList(trait),
-                        SpellNotes = GetTraitNotes(trait)
-                    };
-
-                    list.Add(spell);
 
                 }
+
+                var spell = new RepeatingSpell()
+                {
+                    Idkey = trait.IDKey.ToString(),
+                    Name = spellName,
+                    Difficulty = difficulty,
+                    SpellModifier = GetTraitModifier(trait),
+                    Points = spellPoints,
+                    SpellResistedBy = resistedBy,
+                    Duration = trait.get_TagItem("duration"),
+                    Cost = trait.get_TagItem("castingcost"),
+                    Skill = trait.Level,
+                    Ref = trait.get_TagItem("page"),
+                    Casttime = trait.get_TagItem("time"),
+                    Maintain = "",
+                    SpellClass = spellClass,
+                    SpellCollege = primaryCollege,
+                    SpellCollegeSecondary = secondaryCollege,
+                    SpellModNotes = GetTraitModifiersList(trait),
+                    SpellNotes = GetTraitNotes(trait)
+                };
+
+                list.Add(spell);
 
             }
 
             return list;
+        }
+
+        protected RepeatingTechniquesrevised getRepeatingTechnique(GCATrait skill)
+        {
+            var technique = new RepeatingTechniquesrevised() {
+                Idkey = skill.IDKey.ToString() + "-ritual",
+                Name = skill.FullName,
+                Parent = skill.get_TagItem("deffrom"),
+                BaseLevel = skill.get_TagItem("deflevel"),
+                Default = GetTechniqueDefaultModifier(skill),
+                MaxModifier = GetTechniqueMaxModifier(skill),
+                Difficulty = GetDifficultyForTechnique(skill.SkillType),
+                SkillModifier = GetTraitModifier(skill),
+                Points = skill.Points,
+                Skill = skill.Level,
+                Ref = skill.get_TagItem("page"),
+                SkillModNotes = GetTraitModifiersList(skill),
+                Notes = GetTraitNotes(skill)
+            };
+
+            return technique;
+
         }
 
         public string GetLegalityClass(GCATrait trait)
