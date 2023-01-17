@@ -10,7 +10,7 @@ Initial source code provided by WoodmanX
 
 ## Versions
 
-### 1.0.1.9
+### 1.0.1.10
 
 - Fix bug when checking base skill trait by capitalizing the value for `stepoff` value.
 - Some templates have a base cost that is not reflected in the list of traits. Update template to get PreModsPoints.
@@ -18,6 +18,7 @@ Initial source code provided by WoodmanX
 - Implemented modHelperFunctions.RTFtoPlainText() for notes.
 - If a spell is a parent, set the points to zero. Temporary fix until parent/child relationships are handled.
 - If a spell is a ritual magic, add the spell with zero point cast but also add an entry to the techniques table for that ritual magic spell.
+- Fix bug with item cost and weight. Updated to get base cost and weight.
 
 ## File Locations
 

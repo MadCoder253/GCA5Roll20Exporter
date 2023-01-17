@@ -1183,14 +1183,14 @@ namespace ExportToRoll20
                 }
 
                 double itemWeight;
-                result = double.TryParse(trait.get_TagItem("weight"), out itemWeight);
+                result = double.TryParse(trait.get_TagItem("baseweight"), out itemWeight);
                 if (!result)
                 {
                     itemWeight = 0;
                 }
 
                 double itemCost;
-                result = double.TryParse(trait.get_TagItem("cost"), out itemCost);
+                result = double.TryParse(trait.get_TagItem("basecost"), out itemCost);
                 if (!result)
                 {
                     itemCost = 0;
