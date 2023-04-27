@@ -1,9 +1,9 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "$id": "http://example.com/example.json",
+  "$id": "http://roll20.com/roll20.gurps.schema.json",
   "type": "object",
   "default": {},
-  "title": "Root Schema",
+  "title": "Roll20 GURPS Character Sheet Schema",
   "required": [
     "CharacterName",
     "Fullname",
@@ -679,7 +679,7 @@
     "FlightChecked": {
       "type": "boolean",
       "default": false,
-      "title": "Does the character have the Flight advantage.",
+      "title": "Does the character have the Flight advantage?",
       "examples": [
         false
       ]
@@ -810,7 +810,7 @@
       "title": "The Repeating Languages Section",
       "items": {
         "type": "object",
-        "title": "A Schema",
+        "title": "Language",
         "required": [
           "Idkey",
           "Name",
@@ -830,7 +830,7 @@
           },
           "Name": {
             "type": "string",
-            "title": "The Name Schema",
+            "title": "The Name of the Language.",
             "examples": [
               "English",
               "French",
@@ -839,7 +839,7 @@
           },
           "Spoken": {
             "type": "number",
-            "title": "The Spoken Schema",
+            "title": "The Amount of Points entered for the Spoken trait of the language.",
             "examples": [
               0.0,
               2.0
@@ -847,7 +847,7 @@
           },
           "Written": {
             "type": "number",
-            "title": "The Written Schema",
+            "title": "The Amount of Points entered for the The Written trait of the language.",
             "examples": [
               0.0,
               1.0,
@@ -856,7 +856,7 @@
           },
           "IsNative": {
             "type": "boolean",
-            "title": "The IsNative Schema",
+            "title": "The IsNative Language flag.",
             "examples": [
               true,
               false
@@ -916,10 +916,10 @@
     "RepeatingCultures": {
       "type": "array",
       "default": [],
-      "title": "The RepeatingCultures Schema",
+      "title": "The Repeating Cultures Section",
       "items": {
         "type": "object",
-        "title": "A Schema",
+        "title": "Culture",
         "required": [
           "Idkey",
           "Name",
@@ -936,7 +936,7 @@
           },
           "Name": {
             "type": "string",
-            "title": "The Name Schema",
+            "title": "The Name of the Culture.",
             "examples": [
               "European (Native)",
               "Western"
@@ -944,7 +944,7 @@
           },
           "Points": {
             "type": "number",
-            "title": "The Points Schema",
+            "title": "The Amount of Points entered for the Culture trait.",
             "examples": [
               0.0,
               1.0
@@ -982,10 +982,10 @@
     "RepeatingTraits": {
       "type": "array",
       "default": [],
-      "title": "The RepeatingTraits Schema",
+      "title": "The Repeating Traits/Advantages Section",
       "items": {
         "type": "object",
-        "title": "A Schema",
+        "title": "Trait",
         "required": [
           "Idkey",
           "Name",
@@ -1002,73 +1002,29 @@
             "examples": [
               "10717",
               "10800",
-              "10704",
-              "10799",
-              "10698",
-              "12986",
-              "10720",
-              "10730",
-              "10741",
-              "10666",
-              "10700",
-              "10715",
-              "10702",
-              "10718",
-              "11893",
-              "10712",
-              "11891",
-              "10709",
-              "10714",
-              "10711",
-              "10705",
-              "10835",
-              "11890"
+              "10704"
             ]
           },
           "Name": {
             "type": "string",
-            "title": "The Name Schema",
+            "title": "The Name of the Trait.",
             "examples": [
               "Ambidexterity",
-              "Appearance",
-              "Body Control Talent",
-              "Charisma",
-              "Combat Reflexes",
-              "Contact (Rival Gang)",
-              "Crossbow (Armor Piercing)",
-              "Crossbow (Explosive)",
-              "Crossbow (Smoke Arrow)",
-              "Damage Resistance",
-              "Enhanced Dodge",
-              "Enhanced Move (Ground)",
-              "Enhanced Muscle",
-              "Extra Attack",
-              "Extra ST",
-              "Fit",
-              "Lifting ST",
-              "Protected Vision",
-              "Rapid Healing",
-              "Resilience",
-              "Resistant (Metabolic Hazards)",
-              "Signature Gear (Advanced Body Armor)",
-              "Wealth"
+              "Appearance"
             ]
           },
           "TraitLevel": {
             "type": "string",
-            "title": "The TraitLevel Schema",
+            "title": "The Trait Level",
             "examples": [
               "1",
               "2",
-              "3",
-              "6",
-              "4",
-              "20"
+              "3"
             ]
           },
           "Foa": {
             "type": "string",
-            "title": "The Foa Schema",
+            "title": "The Frequency of Appearance check as a single number.",
             "examples": [
               "",
               "9"
@@ -1076,81 +1032,37 @@
           },
           "Points": {
             "type": "number",
-            "title": "The Points Schema",
+            "title": "The Amount of Points entered for the trait.",
             "examples": [
               5.0,
               4.0,
-              10.0,
-              14.0,
-              1.0,
-              38.0,
-              7.0,
-              9.0,
-              29.0,
-              23.0,
-              18.0
+              10.0
             ]
           },
           "Ref": {
             "type": "string",
-            "title": "The Ref Schema",
+            "title": "The Book and Page Reference for the trait.",
             "examples": [
               "B39",
               "B21",
-              "P121,P167-169",
-              "B41",
-              "B43",
-              "B44",
-              "B61, P53",
-              "B72, P64",
-              "B46, P45",
-              "B51",
-              "B52, P49",
-              "Bio213",
-              "B54, P49",
-              "B14",
-              "B55",
-              "B65, P58",
-              "B78, P69",
-              "B79",
-              "",
-              "B80, P71",
-              "B85",
-              "B25"
+              "P121,P167-169"
             ]
           },
           "Notes": {
             "type": "string",
-            "title": "The Notes Schema",
+            "title": "Notes about the trait",
             "examples": [
-              "",
               "Attractive",
               "Innate Attack (Projectile), +0",
               "Biological, -10%",
               "My notes here\nEffective Skill 12\nRival Gang\n9 or less, *1\nSomewhat Reliable, *1\nMy notes here\nUgly dude with twisted lips",
               "Armor Piercing\nArmor Divisor, 2, +50%\nGadget/Breakable: DR 3-5, -15%\nGadget/Breakable: Size -3 or -4, -15%\nGadget/Can Be Stolen: Must be forcefully removed, -10%\nInaccurate, -1, -5%\nIncreased Range, x2, +10%\nIncreased Range, 1/2D Range only, x5, +10%\nNo Signature, +20%\nRicochet, +10%",
-              "Explosive\nAlternative Attack, *1/5\nDouble Knockback, +20%\nExplosive, Damage / 2xYards, +100%\nGadget/Breakable: DR 3-5, -15%\nGadget/Breakable: Size -3 or -4, -15%\nGadget/Can Be Stolen: Must be forcefully removed, -10%\nInaccurate, -1, -5%\nIncreased Range, x2, +10%\nIncreased Range, 1/2D Range only, x10, +15%\nNo Signature, +20%",
-              "Smoke Arrow\nAlternative Ability, *1/5\nArea Effect, 4 yd, +50%\nGadget/Breakable: DR 3-5, -15%\nGadget/Breakable: Size -3 or -4, -15%\nGadget/Can Be Stolen: Must be forcefully removed, -10%\nInaccurate, -1, -5%\nIncreased Range, x2, +10%\nIncreased Range, 1/2D Range Only, x5, +10%\nNo Signature, +20%\nRanged, +50%",
               "Biological, -10%\nTough Skin, -40%",
-              "#list(LevelName Step 0.5)\nGround\nBiological, -10%",
-              "Affects ST, +0%\nSize, +0%\nThe Extra ST advantage allows you to take extra levels of the attribute which you can then apply enhancements and limitations to. The \"Affects displayed score\" modifier causes the Extra ST advantage to affect the displayed attribute score. If you don't wish this advantage to affect the displayed score remove that modifier.",
-              "Size, +0%",
-              "Very Common\nMetabolic Hazards\nBiological, -10%\n+3, *1/3",
-              "%SigGearAliasList%\nAdvanced Body Armor",
               "Comfortable"
             ]
           }
         },
         "examples": [
-          {
-            "Idkey": "10717",
-            "Name": "Ambidexterity",
-            "TraitLevel": "1",
-            "Foa": "",
-            "Points": 5.0,
-            "Ref": "B39",
-            "Notes": ""
-          },
           {
             "Idkey": "10800",
             "Name": "Appearance",
@@ -1168,24 +1080,6 @@
             "Points": 5.0,
             "Ref": "P121,P167-169",
             "Notes": "Innate Attack (Projectile), +0"
-          },
-          {
-            "Idkey": "10799",
-            "Name": "Charisma",
-            "TraitLevel": "2",
-            "Foa": "",
-            "Points": 10.0,
-            "Ref": "B41",
-            "Notes": ""
-          },
-          {
-            "Idkey": "10698",
-            "Name": "Combat Reflexes",
-            "TraitLevel": "1",
-            "Foa": "",
-            "Points": 14.0,
-            "Ref": "B43",
-            "Notes": "Biological, -10%"
           },
           {
             "Idkey": "12986",
@@ -1566,10 +1460,10 @@
     "RepeatingPerks": {
       "type": "array",
       "default": [],
-      "title": "The RepeatingPerks Schema",
+      "title": "The Repeating Perks Section",
       "items": {
         "type": "object",
-        "title": "A Schema",
+        "title": "Perk",
         "required": [
           "Idkey",
           "Name",
@@ -1590,7 +1484,7 @@
           },
           "Name": {
             "type": "string",
-            "title": "The Name Schema",
+            "title": "The Name of the perk.",
             "examples": [
               "Alcohol Tolerance",
               "Base (Bar)",
@@ -1599,21 +1493,22 @@
           },
           "Foa": {
             "type": "string",
-            "title": "The Foa Schema",
+            "title": "The Frequency of Appearance (FOA) change.",
             "examples": [
-              ""
+              "",
+              "9"
             ]
           },
           "Points": {
             "type": "number",
-            "title": "The Points Schema",
+            "title": "The Amount of Points entered for the Perk.",
             "examples": [
               1.0
             ]
           },
           "Ref": {
             "type": "string",
-            "title": "The Ref Schema",
+            "title": "The Book and Page Reference for the Perk.",
             "examples": [
               "B100, B100,PU2:13",
               "PU2:17",
@@ -1622,7 +1517,7 @@
           },
           "Notes": {
             "type": "string",
-            "title": "The Notes Schema",
+            "title": "The Notes for the Perk.",
             "examples": [
               "",
               "Bar",
@@ -1689,10 +1584,10 @@
     "RepeatingQuirks": {
       "type": "array",
       "default": [],
-      "title": "The RepeatingQuirks Schema",
+      "title": "The Repeating Quirks Section",
       "items": {
         "type": "object",
-        "title": "A Schema",
+        "title": "Quirk",
         "required": [
           "Idkey",
           "Name",
@@ -1712,7 +1607,7 @@
           },
           "Name": {
             "type": "string",
-            "title": "The Name Schema",
+            "title": "The Name of the quirk.",
             "examples": [
               "Chauvinistic",
               "wears chains"
@@ -1720,14 +1615,14 @@
           },
           "ControlRating": {
             "type": "string",
-            "title": "The ControlRating Schema",
+            "title": "The Control Rating of quirk, such as 9 or less.",
             "examples": [
-              ""
+              "9"
             ]
           },
           "Points": {
             "type": "number",
-            "title": "The Points Schema",
+            "title": "The Amount of Points entered for the quirk.",
             "examples": [
               "-",
               1.0
@@ -1735,7 +1630,7 @@
           },
           "Ref": {
             "type": "string",
-            "title": "The Ref Schema",
+            "title": "The Book and Page Reference of the quirk.",
             "examples": [
               "B164",
               ""
@@ -1743,7 +1638,7 @@
           },
           "Notes": {
             "type": "string",
-            "title": "The Notes Schema",
+            "title": "The Notes on the quirk.",
             "examples": [
               ""
             ]
@@ -1754,8 +1649,7 @@
             "Idkey": "10774",
             "Name": "Chauvinistic",
             "ControlRating": "",
-            "Points": "-",
-            1.0,
+            "Points": -1.0,
             "Ref": "B164",
             "Notes": ""
           },
@@ -1763,8 +1657,7 @@
             "Idkey": "10773",
             "Name": "wears chains",
             "ControlRating": "",
-            "Points": "-",
-            1.0,
+            "Points": -1.0,
             "Ref": "",
             "Notes": ""
           }
@@ -1776,8 +1669,7 @@
             "Idkey": "10774",
             "Name": "Chauvinistic",
             "ControlRating": "",
-            "Points": "-",
-            1.0,
+            "Points": -1.0,
             "Ref": "B164",
             "Notes": ""
           },
@@ -1785,8 +1677,7 @@
             "Idkey": "10773",
             "Name": "wears chains",
             "ControlRating": "",
-            "Points": "-",
-            1.0,
+            "Points": -1.0,
             "Ref": "",
             "Notes": ""
           }
@@ -1796,10 +1687,10 @@
     "RepeatingDisadvantages": {
       "type": "array",
       "default": [],
-      "title": "The RepeatingDisadvantages Schema",
+      "title": "The Repeating Disadvantages Section",
       "items": {
         "type": "object",
-        "title": "A Schema",
+        "title": "Disadvantage",
         "required": [
           "Idkey",
           "Name",
@@ -1822,7 +1713,7 @@
           },
           "Name": {
             "type": "string",
-            "title": "The Name Schema",
+            "title": "The Name of the Disadvantage.",
             "examples": [
               "Bad Temper",
               "Enemy (Police)",
@@ -1832,7 +1723,7 @@
           },
           "TraitLevel": {
             "type": "string",
-            "title": "The TraitLevel Schema",
+            "title": "The Trait Level of the Disadvantage.",
             "examples": [
               "1",
               "2"
@@ -1840,7 +1731,7 @@
           },
           "ControlRating": {
             "type": "string",
-            "title": "The ControlRating Schema",
+            "title": "The Control Rating of the Disadvantage.",
             "examples": [
               "12",
               ""
@@ -1848,14 +1739,11 @@
           },
           "Points": {
             "type": "number",
-            "title": "The Points Schema",
+            "title": "The Amount of Points entered for the Disadvantage.",
             "examples": [
-              "-",
-              10.0,
-              "-",
-              15.0,
-              "-",
-              1.0
+              -10.0,
+              -15.0,
+              -1.0
             ]
           },
           "Ref": {
@@ -1884,8 +1772,7 @@
             "Name": "Bad Temper",
             "TraitLevel": "1",
             "ControlRating": "12",
-            "Points": "-",
-            10.0,
+            "Points": -10.0,
             "Ref": "B124",
             "Notes": "12 or less, *1"
           },
@@ -1894,8 +1781,7 @@
             "Name": "Enemy (Police)",
             "TraitLevel": "1",
             "ControlRating": "",
-            "Points": "-",
-            10.0,
+            "Points": -10.0,
             "Ref": "B135",
             "Notes": "Small group (3-5 people)\nPolice\n9 or less, *1\nHunter, *1"
           },
@@ -1904,8 +1790,7 @@
             "Name": "Greed",
             "TraitLevel": "1",
             "ControlRating": "12",
-            "Points": "-",
-            15.0,
+            "Points": -15.0,
             "Ref": "B137",
             "Notes": "12 or less, *1"
           },
@@ -1914,8 +1799,7 @@
             "Name": "Reputation (Gang Leader)",
             "TraitLevel": "2",
             "ControlRating": "",
-            "Points": "-",
-            1.0,
+            "Points": -1.0,
             "Ref": "B27",
             "Notes": "Gang Leader\n7 or less, *1/3\nLarge class, *1/2"
           }
@@ -1928,8 +1812,7 @@
             "Name": "Bad Temper",
             "TraitLevel": "1",
             "ControlRating": "12",
-            "Points": "-",
-            10.0,
+            "Points": -10.0,
             "Ref": "B124",
             "Notes": "12 or less, *1"
           },
@@ -1938,8 +1821,7 @@
             "Name": "Enemy (Police)",
             "TraitLevel": "1",
             "ControlRating": "",
-            "Points": "-",
-            10.0,
+            "Points": -10.0,
             "Ref": "B135",
             "Notes": "Small group (3-5 people)\nPolice\n9 or less, *1\nHunter, *1"
           },
@@ -1948,8 +1830,7 @@
             "Name": "Greed",
             "TraitLevel": "1",
             "ControlRating": "12",
-            "Points": "-",
-            15.0,
+            "Points": -15.0,
             "Ref": "B137",
             "Notes": "12 or less, *1"
           },
@@ -1958,8 +1839,7 @@
             "Name": "Reputation (Gang Leader)",
             "TraitLevel": "2",
             "ControlRating": "",
-            "Points": "-",
-            1.0,
+            "Points": -1.0,
             "Ref": "B27",
             "Notes": "Gang Leader\n7 or less, *1/3\nLarge class, *1/2"
           }
@@ -1969,19 +1849,216 @@
     "RepeatingRacial": {
       "type": "array",
       "default": [],
-      "title": "The RepeatingRacial Schema",
-      "items": {},
+      "title": "The Repeating Racial Section",
+      "items": {
+        "type": "object",
+        "title": "Racial",
+        "required": [
+          "Idkey",
+          "Name",
+          "TraitLevel",
+          "ControlRating",
+          "Points",
+          "Ref",
+          "Notes"
+        ],
+        "properties": {
+          "Idkey": {
+            "type": "string",
+            "title": "The Idkey is the unique identifier, allowing the item to be easily re-imported.",
+            "examples": [
+              "12346",
+              "12347",
+              "12348",
+              "12349",
+              "12350",
+              "12351",
+              "12352",
+              "12353",
+              "12354",
+              "12355",
+              "12356",
+              "12357",
+              "12358",
+              "12359"
+            ]
+          },
+          "Name": {
+            "type": "string",
+            "title": "The Name of the racial trait.",
+            "examples": [
+              "Gargoyle (Dungeon Fantasy)",
+              "Stony",
+              "Claws (Blunt Claws)",
+              "Gargoyle Flight",
+              "Gargoyle Damage Resistance",
+              "Night Vision",
+              "Striker (Impaling; Gargoyle Tail)",
+              "Appearance",
+              "Gluttony",
+              "Odious Racial Habit (Dirty)",
+              "Torso armor isn't interchangeable with human torso armor."
+            ]
+          },
+          "TraitLevel": {
+            "type": "string",
+            "title": "The Level of the Trait.",
+            "examples": [
+              "1"
+            ]
+          },
+          "ControlRating": {
+            "type": "string",
+            "title": "The Control Rating of the trait, such as 9 for 9 or less.",
+            "examples": [
+              "9"
+            ]
+          },
+          "Points": {
+            "type": "number",
+            "title": "The Amount of Points entered for the racial trait.",
+            "examples": [
+              -11.0,
+              1.0,
+              3.0,
+              30.0,
+              10.0,
+              5.0
+            ]
+          },
+          "Ref": {
+            "type": "string",
+            "title": "The Book and Page Reference for a racial trait.",
+            "examples": [
+              "B176",
+              "B182"
+            ]
+          },
+          "Notes": {
+            "type": "string",
+            "title": "The Notes",
+            "examples": [
+              "**Features**:\nDungeon Fantasy\n\n**Description:**\nA gargoyle resembles nothing so much as an ugly stone man with wings.",
+              "**Features**:\nBlunt Claws\n",
+              "**Features**:\nWinged, -25%\n",
+              "**Features**:\nImpaling\nGargoyle Tail\nClumsy, -2, -40%\n",
+              "**Features**:\nUgly\n",
+              "**Features**:\n12 or less, *1\n"
+            ]
+          }
+        }
+      },
       "examples": [
-        []
+        [
+          {
+            "Idkey": "12346",
+            "Name": "Gargoyle (Dungeon Fantasy)",
+            "TraitLevel": "",
+            "ControlRating": "",
+            "Points": -11.0,
+            "Ref": "",
+            "Notes": "**Features**:\nDungeon Fantasy\n\n**Description:**\nA gargoyle resembles nothing so much as an ugly stone man with wings."
+          },
+          {
+            "Idkey": "12347",
+            "Name": "Stony",
+            "TraitLevel": "1",
+            "ControlRating": "",
+            "Points": 1.0,
+            "Ref": "",
+            "Notes": ""
+          },
+          {
+            "Idkey": "12348",
+            "Name": "Claws (Blunt Claws)",
+            "TraitLevel": "1",
+            "ControlRating": "",
+            "Points": 3.0,
+            "Ref": "",
+            "Notes": "**Features**:\nBlunt Claws\n"
+          },
+          {
+            "Idkey": "12349",
+            "Name": "Gargoyle Flight",
+            "TraitLevel": "1",
+            "ControlRating": "",
+            "Points": 30.0,
+            "Ref": "",
+            "Notes": "**Features**:\nWinged, -25%\n"
+          },
+          {
+            "Idkey": "12351",
+            "Name": "Gargoyle Damage Resistance",
+            "TraitLevel": "2",
+            "ControlRating": "",
+            "Points": 10.0,
+            "Ref": "",
+            "Notes": ""
+          },
+          {
+            "Idkey": "12352",
+            "Name": "Night Vision",
+            "TraitLevel": "5",
+            "ControlRating": "",
+            "Points": 5.0,
+            "Ref": "",
+            "Notes": ""
+          },
+          {
+            "Idkey": "12353",
+            "Name": "Striker (Impaling; Gargoyle Tail)",
+            "TraitLevel": "1",
+            "ControlRating": "",
+            "Points": 5.0,
+            "Ref": "",
+            "Notes": "**Features**:\nImpaling\nGargoyle Tail\nClumsy, -2, -40%\n"
+          },
+          {
+            "Idkey": "12355",
+            "Name": "Appearance",
+            "TraitLevel": "2",
+            "ControlRating": "",
+            "Points": -8.0,
+            "Ref": "",
+            "Notes": "**Features**:\nUgly\n"
+          },
+          {
+            "Idkey": "12356",
+            "Name": "Gluttony",
+            "TraitLevel": "1",
+            "ControlRating": "12",
+            "Points": -5.0,
+            "Ref": "",
+            "Notes": "**Features**:\n12 or less, *1\n"
+          },
+          {
+            "Idkey": "12358",
+            "Name": "Odious Racial Habit (Dirty)",
+            "TraitLevel": "1",
+            "ControlRating": "",
+            "Points": -5.0,
+            "Ref": "",
+            "Notes": "**Features**:\nDirty\n"
+          },
+          {
+            "Idkey": "12359",
+            "Name": "Torso armor isn't interchangeable with human torso armor.",
+            "TraitLevel": "1",
+            "ControlRating": "",
+            "Points": 0.0,
+            "Ref": "",
+            "Notes": ""
+          }
+        ]
       ]
     },
     "RepeatingSkills": {
       "type": "array",
       "default": [],
-      "title": "The RepeatingSkills Schema",
+      "title": "The Repeating Skills Section",
       "items": {
         "type": "object",
-        "title": "A Schema",
+        "title": "Skill",
         "required": [
           "Idkey",
           "Name",
@@ -2020,7 +2097,7 @@
           },
           "Name": {
             "type": "string",
-            "title": "The Name Schema",
+            "title": "The Name of the skill.",
             "examples": [
               "Area Knowledge (local)",
               "Brawling",
@@ -2042,7 +2119,7 @@
           },
           "Tl": {
             "type": "string",
-            "title": "The Tl Schema",
+            "title": "The Tech Level of the Skill.",
             "examples": [
               "",
               "8"
@@ -2050,26 +2127,31 @@
           },
           "Base": {
             "type": "string",
-            "title": "The Base Schema",
+            "title": "The Base Attribute of the Skill, see examples for available options.",
             "examples": [
-              "@{intelligence}",
+              "@{strength}",
               "@{dexterity}",
+              "@{intelligence}",
               "@{health}",
+              "@{willpower}",
+              "@{perception}",
               "10"
             ]
           },
           "Difficulty": {
             "type": "string",
-            "title": "The Difficulty Schema",
+            "title": "The Difficulty Level of the Skill, see examples for available options.",
             "examples": [
               "E",
               "A",
-              "H"
+              "H",
+              "VH",
+              "WC"
             ]
           },
           "Bonus": {
             "type": "number",
-            "title": "The Bonus Schema",
+            "title": "The Skill Modifier to apply to the skill, such as +1 from a talent.",
             "examples": [
               0.0,
               1.0,
@@ -2078,7 +2160,7 @@
           },
           "Points": {
             "type": "number",
-            "title": "The Points Schema",
+            "title": "The Amount of Points entered for the skill.",
             "examples": [
               2.0,
               4.0,
@@ -2090,7 +2172,7 @@
           },
           "Skill": {
             "type": "number",
-            "title": "The Skill Schema",
+            "title": "The Final Skill level of the skill. NOTE: this is used by the importer to check for modifiers that may need to get applied.",
             "examples": [
               11.0,
               14.0,
@@ -2102,7 +2184,7 @@
           },
           "Ref": {
             "type": "string",
-            "title": "The Ref Schema",
+            "title": "The Book and Page Reference for a skill.",
             "examples": [
               "B176",
               "B182",
@@ -2122,7 +2204,7 @@
           },
           "SkillModNotes": {
             "type": "string",
-            "title": "The SkillModNotes Schema",
+            "title": "The Skill Modifier Notes for the skill.",
             "examples": [
               "",
               "+1 from 'Body Control Talent 1 (Innate Attack (Projectile), +0)'",
@@ -2572,10 +2654,10 @@
     "RepeatingTechniquesrevised": {
       "type": "array",
       "default": [],
-      "title": "The RepeatingTechniquesrevised Schema",
+      "title": "The Repeating Techniques Section",
       "items": {
         "type": "object",
-        "title": "A Schema",
+        "title": "Technique",
         "required": [
           "Idkey",
           "Name",
@@ -2602,7 +2684,7 @@
           },
           "Name": {
             "type": "string",
-            "title": "The Name Schema",
+            "title": "The Name of the Technique.",
             "examples": [
               "Aggressive Parry (Brawling)",
               "Arm Lock (Wrestling)"
@@ -2610,7 +2692,7 @@
           },
           "Parent": {
             "type": "string",
-            "title": "The Parent Schema",
+            "title": "The name of the Parent Skill of the Technique.",
             "examples": [
               "Brawling",
               "Wrestling"
@@ -2618,7 +2700,7 @@
           },
           "BaseLevel": {
             "type": "string",
-            "title": "The BaseLevel Schema",
+            "title": "The Base Skill Level of the Technique, usually the same as the Parent Skill.",
             "examples": [
               "10",
               "11"
@@ -2626,16 +2708,15 @@
           },
           "Default": {
             "type": "number",
-            "title": "The Default Schema",
+            "title": "The Default Modifier of the Technique. Kicking is Brawaling-2, so the default modifier is -2.",
             "examples": [
-              "-",
-              1.0,
+              -1.0,
               0.0
             ]
           },
           "MaxModifier": {
             "type": "number",
-            "title": "The MaxModifier Schema",
+            "title": "The Maximum Modifier that can be applied to a technique.",
             "examples": [
               0.0,
               4.0
@@ -2643,29 +2724,29 @@
           },
           "Difficulty": {
             "type": "string",
-            "title": "The Difficulty Schema",
+            "title": "The Difficulty Level of the Technique, see examples for available options.",
             "examples": [
-              "H",
-              "A"
+              "A",
+              "H"
             ]
           },
           "SkillModifier": {
             "type": "number",
-            "title": "The SkillModifier Schema",
+            "title": "The Skill Modifier to apply to the Technique, such as +1 from a talent.",
             "examples": [
               0.0
             ]
           },
           "Points": {
             "type": "number",
-            "title": "The Points Schema",
+            "title": "The Amount of Points entered for the Technique",
             "examples": [
               2.0
             ]
           },
           "Skill": {
             "type": "number",
-            "title": "The Skill Schema",
+            "title": "The Skill Level of the Technique. NOTE: This will be used by the importer to verify the effective skill and adjust the modifier as needed.",
             "examples": [
               11.0,
               13.0
@@ -2673,7 +2754,7 @@
           },
           "Ref": {
             "type": "string",
-            "title": "The Ref Schema",
+            "title": "The Book and Page Reference of the technique.",
             "examples": [
               "MA65",
               "MA65, B230"
@@ -2681,7 +2762,7 @@
           },
           "SkillModNotes": {
             "type": "string",
-            "title": "The SkillModNotes Schema",
+            "title": "The Skill Modifier Notes for the technique.",
             "examples": [
               ""
             ]
@@ -2701,8 +2782,7 @@
             "Name": "Aggressive Parry (Brawling)",
             "Parent": "Brawling",
             "BaseLevel": "10",
-            "Default": "-",
-            1.0,
+            "Default": -1.0,
             "MaxModifier": 0.0,
             "Difficulty": "H",
             "SkillModifier": 0.0,
@@ -2736,8 +2816,7 @@
             "Name": "Aggressive Parry (Brawling)",
             "Parent": "Brawling",
             "BaseLevel": "10",
-            "Default": "-",
-            1.0,
+            "Default": -1.0,
             "MaxModifier": 0.0,
             "Difficulty": "H",
             "SkillModifier": 0.0,
@@ -2768,10 +2847,10 @@
     "RepeatingDefense": {
       "type": "array",
       "default": [],
-      "title": "The RepeatingDefense Schema",
+      "title": "The Repeating Defense Section",
       "items": {
         "type": "object",
-        "title": "A Schema",
+        "title": "Defense",
         "required": [
           "Idkey",
           "Name",
@@ -2797,7 +2876,7 @@
           },
           "Name": {
             "type": "string",
-            "title": "The Name Schema",
+            "title": "The Name of the Active Defense",
             "examples": [
               "Body Control Talent (Power Dodge)",
               "Body Control Talent (Power Block/Physical)",
@@ -2809,25 +2888,32 @@
           },
           "Type": {
             "type": "string",
-            "title": "The Type Schema",
+            "title": "The Type of Defense, see examples for available options.",
             "examples": [
+              "Dodge",
+              "Parry",
+              "Unarmed Parry",
+              "Block",
+              "Magic",
               "Power Dodge",
+              "Power Parry",
               "Power Block",
               "Power Block Mental",
-              "Unarmed Parry",
-              "Block"
+              "Other"
             ]
           },
           "Info": {
             "type": "string",
-            "title": "The Info Schema",
+            "title": "The Info field is used by the roll template. F = Fencing, U = Unbalanced. See examples.",
             "examples": [
-              ""
+              "",
+              "F",
+              "U"
             ]
           },
           "Skill": {
             "type": "number",
-            "title": "The Skill Schema",
+            "title": "The Skill Level of the Active Defense.",
             "examples": [
               9.0,
               11.0,
@@ -2836,21 +2922,14 @@
           },
           "SkillMod": {
             "type": "number",
-            "title": "The SkillMod Schema",
+            "title": "The Skill Modifier, such as +1 from a Talent.",
             "examples": [
               0.0
             ]
           },
           "DefenseModReason": {
             "type": "string",
-            "title": "The DefenseModReason Schema",
-            "examples": [
-              ""
-            ]
-          },
-          "InfoDescription": {
-            "type": "string",
-            "title": "The InfoDescription Schema",
+            "title": "The Defense Modifier Reason.",
             "examples": [
               ""
             ]
@@ -2864,8 +2943,7 @@
             "Info": "",
             "Skill": 9.0,
             "SkillMod": 0.0,
-            "DefenseModReason": "",
-            "InfoDescription": ""
+            "DefenseModReason": ""
           },
           {
             "Idkey": "10704_power_block",
@@ -2874,8 +2952,7 @@
             "Info": "",
             "Skill": 9.0,
             "SkillMod": 0.0,
-            "DefenseModReason": "",
-            "InfoDescription": ""
+            "DefenseModReason": ""
           },
           {
             "Idkey": "10704_power_block_mental",
@@ -2884,8 +2961,7 @@
             "Info": "",
             "Skill": 9.0,
             "SkillMod": 0.0,
-            "DefenseModReason": "",
-            "InfoDescription": ""
+            "DefenseModReason": ""
           },
           {
             "Idkey": "10753_unarmed_parry",
@@ -2894,8 +2970,7 @@
             "Info": "",
             "Skill": 11.0,
             "SkillMod": 0.0,
-            "DefenseModReason": "",
-            "InfoDescription": ""
+            "DefenseModReason": ""
           },
           {
             "Idkey": "10613_unarmed_parry",
@@ -2904,8 +2979,7 @@
             "Info": "",
             "Skill": 11.0,
             "SkillMod": 0.0,
-            "DefenseModReason": "",
-            "InfoDescription": ""
+            "DefenseModReason": ""
           },
           {
             "Idkey": "13175_block",
@@ -2914,8 +2988,7 @@
             "Info": "",
             "Skill": 10.0,
             "SkillMod": 0.0,
-            "DefenseModReason": "",
-            "InfoDescription": ""
+            "DefenseModReason": ""
           }
         ]
       },
@@ -2928,8 +3001,7 @@
             "Info": "",
             "Skill": 9.0,
             "SkillMod": 0.0,
-            "DefenseModReason": "",
-            "InfoDescription": ""
+            "DefenseModReason": ""
           },
           {
             "Idkey": "10704_power_block",
@@ -2938,8 +3010,7 @@
             "Info": "",
             "Skill": 9.0,
             "SkillMod": 0.0,
-            "DefenseModReason": "",
-            "InfoDescription": ""
+            "DefenseModReason": ""
           },
           {
             "Idkey": "10704_power_block_mental",
@@ -2948,8 +3019,7 @@
             "Info": "",
             "Skill": 9.0,
             "SkillMod": 0.0,
-            "DefenseModReason": "",
-            "InfoDescription": ""
+            "DefenseModReason": ""
           },
           {
             "Idkey": "10753_unarmed_parry",
@@ -2958,8 +3028,7 @@
             "Info": "",
             "Skill": 11.0,
             "SkillMod": 0.0,
-            "DefenseModReason": "",
-            "InfoDescription": ""
+            "DefenseModReason": ""
           },
           {
             "Idkey": "10613_unarmed_parry",
@@ -2968,8 +3037,7 @@
             "Info": "",
             "Skill": 11.0,
             "SkillMod": 0.0,
-            "DefenseModReason": "",
-            "InfoDescription": ""
+            "DefenseModReason": ""
           },
           {
             "Idkey": "13175_block",
@@ -2978,8 +3046,7 @@
             "Info": "",
             "Skill": 10.0,
             "SkillMod": 0.0,
-            "DefenseModReason": "",
-            "InfoDescription": ""
+            "DefenseModReason": ""
           }
         ]
       ]
@@ -2987,10 +3054,10 @@
     "RepeatingMelee": {
       "type": "array",
       "default": [],
-      "title": "The RepeatingMelee Schema",
+      "title": "The Repeating Melee Attack Section",
       "items": {
         "type": "object",
-        "title": "A Schema",
+        "title": "Melee",
         "required": [
           "Idkey",
           "Name",
@@ -3019,7 +3086,7 @@
           },
           "Name": {
             "type": "string",
-            "title": "The Name Schema",
+            "title": "The Name of the Melee Attack.",
             "examples": [
               "Aggressive Parry (Brawling)",
               "Bite",
@@ -3034,25 +3101,38 @@
           },
           "Damage": {
             "type": "string",
-            "title": "The Damage Schema",
+            "title": "The Damage Roll. If damage starts with ~, the importer will use a macro to allow user's to select the number of dice to roll.",
             "examples": [
               "2d6-2",
               "2d6+1",
               "2d6+2",
               "2d6",
-              "slam+3"
+              "slam+3",
+              "~1d6-1"
             ]
           },
           "Type": {
             "type": "string",
-            "title": "The Type Schema",
+            "title": "The Damage Type, see examples for available options.",
             "examples": [
-              "cr"
+              "aff",
+              "burn",
+              "cor",
+              "cr",
+              "cut",
+              "fat",
+              "imp",
+              "pi-",
+              "pi",
+              "pi+",
+              "knock",
+              "tox",
+              "spec"
             ]
           },
           "Reach": {
             "type": "string",
-            "title": "The Reach Schema",
+            "title": "The Reach of the melee attack.",
             "examples": [
               "C",
               "C,1",
@@ -3061,7 +3141,7 @@
           },
           "Skill": {
             "type": "number",
-            "title": "The Skill Schema",
+            "title": "The Skill Level of the melee attack.",
             "examples": [
               11.0,
               14.0,
@@ -3071,14 +3151,14 @@
           },
           "ArmorDivisor": {
             "type": "number",
-            "title": "The ArmorDivisor Schema",
+            "title": "The Armor Divisor to apply to melee attack.",
             "examples": [
               1.0
             ]
           },
           "Notes": {
             "type": "string",
-            "title": "The Notes Schema",
+            "title": "The Notes on the melee attack.",
             "examples": [
               "",
               "{Brawling (p. B182) increases all unarmed damage; Claws (p. B42) and Karate (p. B203) improve damage with punches and kicks (Claws don't affect damage with brass knuckles or boots); and Boxing (p. B182) improves punching damage.}",
@@ -3278,10 +3358,10 @@
     "RepeatingRanged": {
       "type": "array",
       "default": [],
-      "title": "The RepeatingRanged Schema",
+      "title": "The Repeating Ranged Attack Section.",
       "items": {
         "type": "object",
-        "title": "A Schema",
+        "title": "Ranged",
         "required": [
           "Idkey",
           "Name",
@@ -3312,7 +3392,7 @@
           },
           "Name": {
             "type": "string",
-            "title": "The Name Schema",
+            "title": "The Name of the Ranged Attack.",
             "examples": [
               "Crossbow (Armor Piercing) (Primary)",
               "Crossbow (Explosive) (Primary)",
@@ -3321,7 +3401,7 @@
           },
           "Damage": {
             "type": "string",
-            "title": "The Damage Schema",
+            "title": "The Damage Die. If damage starts with ~, the importer will use a macro to allow user's to select the number of dice to roll.",
             "examples": [
               "3d6",
               "3d6-1"
@@ -3329,23 +3409,33 @@
           },
           "Type": {
             "type": "string",
-            "title": "The Type Schema",
+            "title": "The Damage Type, see examples for available options.",
             "examples": [
+              "aff",
+              "burn",
+              "cor",
+              "cr",
+              "cut",
+              "fat",
               "imp",
-              "cr dkb ex/2",
-              "pi"
+              "pi-",
+              "pi",
+              "pi+",
+              "knock",
+              "tox",
+              "spec"
             ]
           },
           "Acc": {
             "type": "string",
-            "title": "The Acc Schema",
+            "title": "The Accuracy of the ranged attack.",
             "examples": [
               "2"
             ]
           },
           "Range": {
             "type": "string",
-            "title": "The Range Schema",
+            "title": "The Range of the attack.",
             "examples": [
               "100/200",
               "200",
@@ -3354,7 +3444,7 @@
           },
           "Rof": {
             "type": "string",
-            "title": "The Rof Schema",
+            "title": "The Rate of Fire of the attack.",
             "examples": [
               "1",
               "3"
@@ -3362,7 +3452,7 @@
           },
           "Shots": {
             "type": "string",
-            "title": "The Shots Schema",
+            "title": "The Shots (reload time) of the attack.",
             "examples": [
               "",
               "n/a",
@@ -3371,7 +3461,7 @@
           },
           "Bulk": {
             "type": "string",
-            "title": "The Bulk Schema",
+            "title": "The Bulk rating of the attack.",
             "examples": [
               "",
               "-2"
@@ -3379,7 +3469,7 @@
           },
           "Recoil": {
             "type": "string",
-            "title": "The Recoil Schema",
+            "title": "The Recoil of the attack.",
             "examples": [
               "1",
               "3"
@@ -3387,7 +3477,7 @@
           },
           "Skill": {
             "type": "number",
-            "title": "The Skill Schema",
+            "title": "The Skill Level of the attack.",
             "examples": [
               17.0,
               15.0
@@ -3395,7 +3485,7 @@
           },
           "Malfunction": {
             "type": "string",
-            "title": "The Malfunction Schema",
+            "title": "The Malfunction value of the attack.",
             "examples": [
               "",
               "17"
@@ -3403,21 +3493,21 @@
           },
           "MalfunctionVerify": {
             "type": "boolean",
-            "title": "The MalfunctionVerify Schema",
+            "title": "Should the Malfunction be Verified?",
             "examples": [
               false
             ]
           },
           "MalfunctionVeryReliable": {
             "type": "boolean",
-            "title": "The MalfunctionVeryReliable Schema",
+            "title": "Is the attack Very Reliable.",
             "examples": [
               false
             ]
           },
           "ArmorDivisor": {
             "type": "number",
-            "title": "The ArmorDivisor Schema",
+            "title": "The Armor Divisor of the attack.",
             "examples": [
               2.0,
               1.0
@@ -3425,7 +3515,7 @@
           },
           "Notes": {
             "type": "string",
-            "title": "The Notes Schema",
+            "title": "The Notes of the attack.",
             "examples": [
               ""
             ]
@@ -3550,10 +3640,10 @@
     "RepeatingItem": {
       "type": "array",
       "default": [],
-      "title": "The RepeatingItem Schema",
+      "title": "The Repeatingn Inventory Item Section.",
       "items": {
         "type": "object",
-        "title": "A Schema",
+        "title": "Item",
         "required": [
           "Idkey",
           "Name",
@@ -3583,7 +3673,7 @@
           },
           "Name": {
             "type": "string",
-            "title": "The Name Schema",
+            "title": "The Name of the item.",
             "examples": [
               "Advanced Body Armor",
               "Boots, Steel-Toed",
@@ -3598,7 +3688,7 @@
           },
           "Tl": {
             "type": "string",
-            "title": "The Tl Schema",
+            "title": "The Tech Level of the item.",
             "examples": [
               "8",
               "6",
@@ -3610,7 +3700,7 @@
           },
           "LegalityClass": {
             "type": "string",
-            "title": "The LegalityClass Schema",
+            "title": "The Legality Class.",
             "examples": [
               "2",
               "4",
@@ -3620,7 +3710,7 @@
           },
           "Ref": {
             "type": "string",
-            "title": "The Ref Schema",
+            "title": "The book and page Reference of the item.",
             "examples": [
               "HT66",
               "HT68",
@@ -3633,7 +3723,7 @@
           },
           "Count": {
             "type": "number",
-            "title": "The Count Schema",
+            "title": "The number of items.",
             "examples": [
               1.0,
               12.0
@@ -3641,7 +3731,7 @@
           },
           "Cost": {
             "type": "number",
-            "title": "The Cost Schema",
+            "title": "The individual cost of each item.",
             "examples": [
               4600.0,
               100.0,
@@ -3655,7 +3745,7 @@
           },
           "Weight": {
             "type": "number",
-            "title": "The Weight Schema",
+            "title": "The Weight of each item.",
             "examples": [
               17.0,
               4.0,
@@ -3669,7 +3759,7 @@
           },
           "Notes": {
             "type": "string",
-            "title": "The Notes Schema",
+            "title": "The Notes on the item.",
             "examples": [
               "Signature Gear, +0\nTL:8 LC:2 DR:35/5* Location:torso Notes:[1] Concealable as or under clothing. [5] Use the lower DR versus crushing attacks only.",
               "TL:6 LC:4 DR:6/2 Location:feet Notes:[1] Concealable as or under clothing. [2] Give +1 to kicking damage (p. B271). [4] Split DR: use the first, higher DR when - in the GM's opinion - the boot's steel toe box would protect (e. g. , dropping an item on the foot or crushing the toes in heavy machinery) or when an attack on the foot hits the toe (2/6 protection); use the second, lower DR against all other attacks.",
@@ -3892,8 +3982,402 @@
     "RepeatingSpells": {
       "type": "array",
       "default": [],
-      "title": "The RepeatingSpells Schema",
-      "items": {},
+      "title": "The Repeating Spells Section",
+      "items": {
+        "type": "object",
+        "title": "Skill",
+        "required": [
+          "Idkey",
+          "Name",
+          "Difficulty",
+          "SpellModifier",
+          "Points",
+          "SpellResistedBy",
+          "Duration",
+          "Cost",
+          "Skill",
+          "Ref",
+          "Casttime",
+          "Maintain",
+          "SpellClass",
+          "SpellCollege",
+          "SpellCollegeSecondary",
+          "SpellModNotes",
+          "SpellNotes"
+        ],
+        "properties": {
+          "Idkey": {
+            "type": "string",
+            "title": "The Idkey is the unique identifier, allowing the item to be easily re-imported.",
+            "examples": [
+              "18183",
+              "18184",
+              "18185"
+            ]
+          },
+          "Name": {
+            "type": "string",
+            "title": "The Name of the spell.",
+            "examples": [
+              "Cleansing (Clerical)",
+              "Final Rest (Clerical)",
+              "Lend Energy (Clerical)",
+              "Lend Vitality (Clerical)",
+              "Light (Clerical)"
+            ]
+          },
+          "Difficulty": {
+            "type": "string",
+            "title": "The Difficulty Level of the spell, see examples for available options. T/H is Technique hard.",
+            "examples": [
+              "A",
+              "H",
+              "VH",
+              "T/H"
+            ]
+          },
+          "SpellModifier": {
+            "type": "number",
+            "title": "The Spell Modifier to apply to the spell, such as +1 from a talent.",
+            "examples": [
+              0.0,
+              1.0
+            ]
+          },
+          "Points": {
+            "type": "number",
+            "title": "The Amount of Points entered for the spell.",
+            "examples": [
+              2.0,
+              4.0,
+              3.0,
+              1.0,
+              12.0,
+              8.0
+            ]
+          },
+          "SpellResistedBy": {
+            "type": "string",
+            "title": "Spell Resisted By notes.",
+            "examples": [
+              "R-Spec",
+              "R-Will"
+            ]
+          },
+          "Duration": {
+            "type": "string",
+            "title": "Duration notes of the spell.",
+            "examples": [
+              "Perm.",
+              "1 hr.",
+              "1 min."
+            ]
+          },
+          "Cost": {
+            "type": "string",
+            "title": "FP Cost notes of the spell.",
+            "examples": [
+              "Varies",
+              "20",
+              "1 per HP loaned",
+              "1/1"
+            ]
+          },
+          "Skill": {
+            "type": "number",
+            "title": "The Final Skill level of the spell. NOTE: this is used by the importer to check for modifiers that may need to get applied.",
+            "examples": [
+              11.0,
+              14.0,
+              13.0,
+              17.0,
+              12.0,
+              10.0
+            ]
+          },
+          "Ref": {
+            "type": "string",
+            "title": "The Book and Page Reference for a spell.",
+            "examples": [
+              "DFRPG:S36",
+              "DFRPG:S37"
+            ]
+          },
+          "Casttime": {
+            "type": "string",
+            "title": "The casting time for a spell.",
+            "examples": [
+              "1 sec.",
+              "3 sec."
+            ]
+          },
+          "Maintain": {
+            "type": "string",
+            "title": "The maintenance cost for a spell. Note: GCA5 doesn't have a separate maintenance cost field.",
+            "examples": [
+              ""
+            ]
+          },
+          "SpellClass": {
+            "type": "string",
+            "title": "The Spell Class",
+            "examples": [
+              "Regular",
+              "Area",
+              "Blocking",
+              "Missile",
+              "Melee"
+            ]
+          },
+          "SpellCollege": {
+            "type": "string",
+            "title": "The Spell College",
+            "examples": [
+              "Mind Control",
+              "Light & Darkness",
+              "Body Control",
+              "Fire",
+              "Communication & Empathy"
+            ]
+          },
+          "SpellCollegeSecondary": {
+            "type": "string",
+            "title": "The Secondary Spell College",
+            "examples": [
+              "~Clerical",
+              ""
+            ]
+          },
+          "SpellModNotes": {
+            "type": "string",
+            "title": "The Spell Modifier Notes for the spell.",
+            "examples": [
+              "",
+              "+1 from 'Magic! Talent 1'"
+            ]
+          },
+          "SpellNotes": {
+            "type": "string",
+            "title": "The Notes for the spell.",
+            "examples": [
+              "**Features**:\nClerical\n\n**Description:**\nPrereq: Power Investiture 2",
+              "**Features**:\nClerical\n\n**Description:**\nPrereq: Power Investiture 3",
+              ""
+            ]
+          }
+        },
+        "examples": [
+          {
+            "Idkey": "25987",
+            "Name": "Command (Clerical)",
+            "Difficulty": "H",
+            "SpellModifier": 0.0,
+            "Points": 4.0,
+            "SpellResistedBy": "R-Will",
+            "Duration": "Instant",
+            "Cost": "2",
+            "Skill": 15.0,
+            "Ref": "DFRPG:S53",
+            "Casttime": "1 sec.",
+            "Maintain": "",
+            "SpellClass": "Blocking",
+            "SpellCollege": "Mind Control",
+            "SpellCollegeSecondary": "~Clerical",
+            "SpellModNotes": "",
+            "SpellNotes": "**Features**:\nClerical\n\n**Description:**\nPrereq: Power Investiture 2"
+          },
+          {
+            "Idkey": "25986",
+            "Name": "Darkbolt (Clerical)",
+            "Difficulty": "H",
+            "SpellModifier": 0.0,
+            "Points": 4.0,
+            "SpellResistedBy": "",
+            "Duration": "Instant",
+            "Cost": "1 to Magery#",
+            "Skill": 15.0,
+            "Ref": "DFRPG:S48",
+            "Casttime": "1 to 3 sec.",
+            "Maintain": "",
+            "SpellClass": "Missile",
+            "SpellCollege": "Light & Darkness",
+            "SpellCollegeSecondary": "~Clerical",
+            "SpellModNotes": "",
+            "SpellNotes": "**Features**:\nClerical\n\n**Description:**\nPrereq: Power Investiture 3"
+          },
+          {
+            "Idkey": "25992",
+            "Name": "Deathtouch (Clerical)",
+            "Difficulty": "H",
+            "SpellModifier": 0.0,
+            "Points": 2.0,
+            "SpellResistedBy": "",
+            "Duration": "Instant",
+            "Cost": "1 to 3",
+            "Skill": 14.0,
+            "Ref": "DFRPG:S20",
+            "Casttime": "1 sec.",
+            "Maintain": "",
+            "SpellClass": "Melee",
+            "SpellCollege": "Body Control",
+            "SpellCollegeSecondary": "~Clerical",
+            "SpellModNotes": "",
+            "SpellNotes": "**Features**:\nClerical\n\n**Description:**\nPI 3\n"
+          },
+          {
+            "Idkey": "25979",
+            "Name": "Flaming Weapon (Clerical)",
+            "Difficulty": "H",
+            "SpellModifier": 0.0,
+            "Points": 4.0,
+            "SpellResistedBy": "",
+            "Duration": "1 min.",
+            "Cost": "4/1",
+            "Skill": 15.0,
+            "Ref": "DFRPG:S31",
+            "Casttime": "2 sec.",
+            "Maintain": "",
+            "SpellClass": "Regular",
+            "SpellCollege": "Fire",
+            "SpellCollegeSecondary": "~Clerical",
+            "SpellModNotes": "",
+            "SpellNotes": "**Features**:\nClerical\n\n**Description:**\nPrereq: Power Investiture 3"
+          },
+          {
+            "Idkey": "25989",
+            "Name": "Hide Thoughts (Clerical)",
+            "Difficulty": "H",
+            "SpellModifier": 0.0,
+            "Points": 1.0,
+            "SpellResistedBy": "",
+            "Duration": "10 min.",
+            "Cost": "3/1",
+            "Skill": 13.0,
+            "Ref": "DFRPG:S25",
+            "Casttime": "1 sec.",
+            "Maintain": "",
+            "SpellClass": "Regular",
+            "SpellCollege": "Communication & Empathy",
+            "SpellCollegeSecondary": "~Clerical",
+            "SpellModNotes": "",
+            "SpellNotes": "**Features**:\nClerical\n\n**Description:**\nPrereq: Power Investiture 2"
+          },
+          {
+            "Idkey": "26014",
+            "Name": "Magic Resistance (Clerical)",
+            "Difficulty": "H",
+            "SpellModifier": 0.0,
+            "Points": 1.0,
+            "SpellResistedBy": "R-Will+Magery",
+            "Duration": "1 min.",
+            "Cost": "1 to 5/S#",
+            "Skill": 13.0,
+            "Ref": "DFRPG:S51",
+            "Casttime": "3 sec.",
+            "Maintain": "",
+            "SpellClass": "Reg",
+            "SpellCollege": "Meta-Spells",
+            "SpellCollegeSecondary": "~Clerical",
+            "SpellModNotes": "",
+            "SpellNotes": "**Features**:\nClerical\n\n**Description:**\nPrereq: Power Investiture 3"
+          },
+          {
+            "Idkey": "26008",
+            "Name": "Resist Pain (Clerical)",
+            "Difficulty": "H",
+            "SpellModifier": 0.0,
+            "Points": 1.0,
+            "SpellResistedBy": "",
+            "Duration": "1 min.",
+            "Cost": "4/2",
+            "Skill": 13.0,
+            "Ref": "DFRPG:S22",
+            "Casttime": "1 sec.",
+            "Maintain": "",
+            "SpellClass": "Regular",
+            "SpellCollege": "Body Control",
+            "SpellCollegeSecondary": "~Clerical",
+            "SpellModNotes": "",
+            "SpellNotes": "**Features**:\nClerical\n\n**Description:**\nPrereq: Power Investiture 2"
+          },
+          {
+            "Idkey": "25984",
+            "Name": "See Secrets (Clerical)",
+            "Difficulty": "H",
+            "SpellModifier": 0.0,
+            "Points": 1.0,
+            "SpellResistedBy": "",
+            "Duration": "1 min.",
+            "Cost": "5/2",
+            "Skill": 13.0,
+            "Ref": "DFRPG:S44",
+            "Casttime": "5 sec.",
+            "Maintain": "",
+            "SpellClass": "Regular",
+            "SpellCollege": "Knowledge",
+            "SpellCollegeSecondary": "~Clerical",
+            "SpellModNotes": "",
+            "SpellNotes": "**Features**:\nClerical\n\n**Description:**\nPrereq: Power Investiture 3"
+          },
+          {
+            "Idkey": "25982",
+            "Name": "Shield (Clerical)",
+            "Difficulty": "H",
+            "SpellModifier": 0.0,
+            "Points": 4.0,
+            "SpellResistedBy": "",
+            "Duration": "1 min.",
+            "Cost": "Varies",
+            "Skill": 15.0,
+            "Ref": "DFRPG:S65",
+            "Casttime": "1 sec.",
+            "Maintain": "",
+            "SpellClass": "Regular",
+            "SpellCollege": "Protection & Warning",
+            "SpellCollegeSecondary": "~Clerical",
+            "SpellModNotes": "",
+            "SpellNotes": "**Features**:\nClerical\n\n**Description:**\nPrereq: Power Investiture 1"
+          },
+          {
+            "Idkey": "25985",
+            "Name": "Silver Tongue (Clerical)",
+            "Difficulty": "H",
+            "SpellModifier": 0.0,
+            "Points": 1.0,
+            "SpellResistedBy": "",
+            "Duration": "1 min.",
+            "Cost": "3/2",
+            "Skill": 13.0,
+            "Ref": "DFRPG:S67",
+            "Casttime": "1 sec.",
+            "Maintain": "",
+            "SpellClass": "Regular",
+            "SpellCollege": "Sound",
+            "SpellCollegeSecondary": "~Clerical",
+            "SpellModNotes": "",
+            "SpellNotes": "**Features**:\nClerical\n\n**Description:**\nPrereq: Power Investiture 3"
+          },
+          {
+            "Idkey": "25983",
+            "Name": "Watchdog (Clerical)",
+            "Difficulty": "H",
+            "SpellModifier": 0.0,
+            "Points": 1.0,
+            "SpellResistedBy": "",
+            "Duration": "10 hrs.",
+            "Cost": "1/1",
+            "Skill": 13.0,
+            "Ref": "DFRPG:S65",
+            "Casttime": "10 sec.",
+            "Maintain": "",
+            "SpellClass": "Area",
+            "SpellCollege": "Protection & Warning",
+            "SpellCollegeSecondary": "~Clerical",
+            "SpellModNotes": "",
+            "SpellNotes": "**Features**:\nClerical\n\n**Description:**\nPrereq: Power Investiture 1"
+          }
+        ]
+      },
       "examples": [
         []
       ]
@@ -4262,8 +4746,7 @@
           "Idkey": "10774",
           "Name": "Chauvinistic",
           "ControlRating": "",
-          "Points": "-",
-          1.0,
+          "Points": -1.0,
           "Ref": "B164",
           "Notes": ""
         },
@@ -4271,8 +4754,7 @@
           "Idkey": "10773",
           "Name": "wears chains",
           "ControlRating": "",
-          "Points": "-",
-          1.0,
+          "Points": -1.0,
           "Ref": "",
           "Notes": ""
         }
@@ -4283,8 +4765,7 @@
           "Name": "Bad Temper",
           "TraitLevel": "1",
           "ControlRating": "12",
-          "Points": "-",
-          10.0,
+          "Points": -10.0,
           "Ref": "B124",
           "Notes": "12 or less, *1"
         },
@@ -4293,8 +4774,7 @@
           "Name": "Enemy (Police)",
           "TraitLevel": "1",
           "ControlRating": "",
-          "Points": "-",
-          10.0,
+          "Points": -10.0,
           "Ref": "B135",
           "Notes": "Small group (3-5 people)\nPolice\n9 or less, *1\nHunter, *1"
         },
@@ -4303,8 +4783,7 @@
           "Name": "Greed",
           "TraitLevel": "1",
           "ControlRating": "12",
-          "Points": "-",
-          15.0,
+          "Points": -15.0,
           "Ref": "B137",
           "Notes": "12 or less, *1"
         },
@@ -4313,8 +4792,7 @@
           "Name": "Reputation (Gang Leader)",
           "TraitLevel": "2",
           "ControlRating": "",
-          "Points": "-",
-          1.0,
+          "Points": -1.0,
           "Ref": "B27",
           "Notes": "Gang Leader\n7 or less, *1/3\nLarge class, *1/2"
         }
@@ -4536,8 +5014,7 @@
           "Name": "Aggressive Parry (Brawling)",
           "Parent": "Brawling",
           "BaseLevel": "10",
-          "Default": "-",
-          1.0,
+          "Default": -1.0,
           "MaxModifier": 0.0,
           "Difficulty": "H",
           "SkillModifier": 0.0,
