@@ -570,14 +570,39 @@ namespace ExportToRoll20
             {
                 if (IsRacialTrait(item) == false)
                 {
-                    // this is a regual trait so add it.
+                    double traitPoints = item.Points;
+
+                    double parentId = GetParentId(item);
+
+                    string itemName = item.FullName;
+
+                    if (parentId > 0)
+                    {
+                        // get the parent trait
+                        GCATrait parentTrait = GetTraitByIdKey(myCharacter, parentId.ToString());
+
+                        if (parentTrait != null)
+                        {
+                            itemName =  "Parent " + parentTrait.FullName + ": " + itemName;
+
+                        }
+                    }
+
+                    // if it is a parent, set the points to zero
+                    var childIds = GetChildIds(item);
+
+                    if (childIds.Length > 0)
+                    {
+                        traitPoints = 0;
+                    }
+
                     var listItem = new RepeatingTrait
                     {
                         Idkey = item.IDKey.ToString(),
-                        Name = item.FullName,
+                        Name = itemName,
                         TraitLevel = item.Level.ToString(),
                         Foa = GetFrequencyOfAppearance(item),
-                        Points = item.Points,
+                        Points = traitPoints,
                         Ref = item.get_TagItem("page"),
                         Notes = GetTraitNotes(item)
                     };
@@ -588,6 +613,32 @@ namespace ExportToRoll20
             }
 
             return list;
+        }
+
+        protected double GetParentId(GCATrait item)
+        {
+            double parentId = 0;
+
+            string parentKey = item.get_TagItem("parentkey");
+
+            if ( string.IsNullOrEmpty(parentKey)) return parentId;
+
+            // remove the "k" from the beginning of the key
+            parentKey = parentKey.Substring(1);
+
+            // convert to double
+            parentId = Convert.ToDouble(parentKey);
+
+            return parentId;
+        }
+
+        protected string[] GetChildIds(GCATrait trait)
+        {
+            string[] seperators = { ", " };
+
+            var childIds = trait.get_TagItem("childkeylist").Split(seperators, StringSplitOptions.RemoveEmptyEntries);
+
+            return childIds;
         }
 
         public List<RepeatingPerk> GetRepeatingPerks(GCACharacter myCharacter)
@@ -1016,14 +1067,15 @@ namespace ExportToRoll20
             // loop through all items
             foreach (GCATrait trait in myCharacter.Items)
             {
-                // loop through the modes, (usually an attack mode)
-                // <attackmodes count="1">
-                foreach (Mode mode in trait.Modes)
-                {
-                    bool isMeleeWeapon = !string.IsNullOrEmpty(mode.get_TagItem("reach"));
+                ModeManager modeManager = trait.Modes.MeleeAttackModes();
 
-                    if (isMeleeWeapon)
+                if (modeManager != null)
+                {
+                    int num = modeManager.Count();
+                    for (int i = 1; i <= num; i = checked(i + 1))
                     {
+                        Mode mode = modeManager.Mode(i);
+
                         string idKeyTraitName = GetAlphaNumericCharacters(trait.Name.ToLower().Replace(" ", "_"));
 
                         string idKeyModeName = GetAlphaNumericCharacters(mode.Name.ToLower().Replace(" ", "_"));
@@ -1065,9 +1117,8 @@ namespace ExportToRoll20
                             Notes = mode.get_TagItem("itemnotes")
                         };
 
-                        list.Add(item);
+                        list.Add(item); 
                     }
-
                 }
 
             }
@@ -1082,14 +1133,15 @@ namespace ExportToRoll20
             // loop through all items
             foreach (GCATrait trait in myCharacter.Items)
             {
-                // loop through the modes, (usually an attack mode)
-                // <attackmodes count="1">
-                foreach (Mode mode in trait.Modes)
-                {
-                    bool isRanged = !string.IsNullOrEmpty(mode.get_TagItem("acc"));
+                ModeManager modeManager = trait.Modes.RangedAttackModes();
 
-                    if (isRanged)
+                if (modeManager != null)
+                {
+                    int num = modeManager.Count();
+                    for (int i = 1; i <= num; i = checked(i + 1))
                     {
+                        Mode mode = modeManager.Mode(i);
+
                         string idKeyTraitName = GetAlphaNumericCharacters(trait.Name.ToLower().Replace(" ", "_"));
 
                         string idKeyModeName = GetAlphaNumericCharacters(mode.Name.ToLower().Replace(" ", "_"));
@@ -1156,8 +1208,9 @@ namespace ExportToRoll20
                         };
 
                         list.Add(item);
-                    }
 
+
+                    }
                 }
 
             }

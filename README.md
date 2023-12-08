@@ -10,6 +10,12 @@ Initial source code provided by WoodmanX
 
 ## Versions
 
+### 1.0.1.20
+
+- Update GetRepeatingRanged to use ModeManager
+- Update GetRepeatingMelee to use ModeManager
+- Update GetRepeatingTrait to use check for parent/child relationship
+
 ### 1.0.1.10
 
 - Fix bug when checking base skill trait by capitalizing the value for `stepoff` value.
@@ -25,6 +31,14 @@ Initial source code provided by WoodmanX
 GCA5 Plugin Location: C:\ProgramData\Steve Jackson Games\GURPS Character Assistant 5\plugins\ExportToRoll20
 
 ## Development
+
+### Debugging
+
+This will send a message to the Log window of GCA5.
+
+```csharp
+modUIAssistance.Notify("parentKey: " + parentKey);
+```
 
 ### Deploying to GCA5
 
