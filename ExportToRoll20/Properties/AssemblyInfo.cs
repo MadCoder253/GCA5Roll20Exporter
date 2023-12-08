@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Export Character to Roll20")]
+[assembly: AssemblyTitle("Export to Roll20")]
 [assembly: AssemblyDescription("Will create a json file that can be used by the Roll20 GURPS Sheet on the Options Import Tab.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Wandering Monsters")]
-[assembly: AssemblyProduct("Export Character to Roll20")]
+[assembly: AssemblyProduct("Export to Roll20")]
 [assembly: AssemblyCopyright("Copyright ©  2023 Wandering Monsters")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
