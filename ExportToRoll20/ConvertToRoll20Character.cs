@@ -583,7 +583,7 @@ namespace ExportToRoll20
 
                         if (parentTrait != null)
                         {
-                            itemName =  "Parent " + parentTrait.FullName + ": " + itemName;
+                            itemName =  parentTrait.FullName + " (Parent): " + itemName;
 
                         }
                     }
