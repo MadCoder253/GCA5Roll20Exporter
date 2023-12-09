@@ -338,21 +338,23 @@ namespace ExportToRoll20
                 
                 if (isWritten)
                 {
-                    // skip this one, we'll attempt to find it later.
-                    continue;
+                    spokenPoints = 0;
+
+                    writtenPoints = item.Points;
 
                 }
                 else if (isSpoken)
                 {
                     spokenPoints = item.Points;
 
-                    writtenPoints = GetWrittenPoints(currentCharacter, item);
+                    writtenPoints = 0;
 
                 }
                 else
                 {
-                    spokenPoints = item.Points;
-                    writtenPoints = item.Points;
+                    spokenPoints = item.Points/2;
+
+                    writtenPoints = item.Points/2;
                 }
 
                 var language = new RepeatingLanguage

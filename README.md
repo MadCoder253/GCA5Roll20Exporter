@@ -15,6 +15,7 @@ Initial source code provided by WoodmanX
 - Update GetRepeatingRanged to use ModeManager
 - Update GetRepeatingMelee to use ModeManager
 - Update GetRepeatingTrait to use check for parent/child relationship
+- Fix bug with Getting language skills
 
 ### 1.0.1.10
 
