@@ -32,14 +32,21 @@ namespace ExportToRoll20
                 roll20Character.TemplateNames = SetTemplateMetaDataReturnTemplateNames(currentCharacter);
                 roll20Character.Gender = "";
 
-                GCATrait traitSizeMod = currentCharacter.ItemByNameAndExt("Size Modifier", (int)TraitTypes.Attributes);
-                roll20Character.Size = traitSizeMod.Score;
-                roll20Character.ApplySizeModifier = traitSizeMod.Score > 0;
+                if (currentCharacter.ItemByNameAndExt("Size Modifier", (int)TraitTypes.Attributes) is GCATrait traitSizeMod)
+                {
+                    roll20Character.Size = traitSizeMod.Score;
+                    roll20Character.ApplySizeModifier = traitSizeMod.Score > 0;
+                }
+                else
+                {
+                    // Handle null case
+                    roll20Character.Size = 0;
+                    roll20Character.ApplySizeModifier = false;
+                }
 
                 roll20Character.Reactions = GetReactions(currentCharacter);
 
-                int campaignTl;
-                bool result = int.TryParse(currentCharacter.Campaign.BaseTL, out campaignTl);
+                bool result = int.TryParse(currentCharacter.Campaign.BaseTL, out int campaignTl);
                 if (result)
                 {
                     roll20Character.CampaignTl = campaignTl;
@@ -51,8 +58,7 @@ namespace ExportToRoll20
 
                 roll20Character.TotalPoints = currentCharacter.Campaign.BasePoints;
 
-                int techLevel;
-                result = int.TryParse(currentCharacter.TL, out techLevel);
+                result = int.TryParse(currentCharacter.TL, out int techLevel);
                 if (result)
                 {
                     roll20Character.Tl = techLevel;
@@ -61,29 +67,39 @@ namespace ExportToRoll20
                 {
                     roll20Character.Tl = 0;
                 }
-                GCATrait traitTechLevel = currentCharacter.ItemByNameAndExt("Tech Level", (int)TraitTypes.Attributes);
 
-                roll20Character.TlPts = traitTechLevel.Points;
 
-                GCATrait traitStatus = currentCharacter.ItemByNameAndExt("Status", (int)TraitTypes.Attributes);
-                roll20Character.Status = traitStatus.Score.ToString();
+                if (currentCharacter.ItemByNameAndExt("Tech Level", (int)TraitTypes.Attributes) is GCATrait traitTechLevel)
+                {
+                    roll20Character.TlPts = traitTechLevel.Points;
+                }
+
+                if (currentCharacter.ItemByNameAndExt("Status", (int)TraitTypes.Attributes) is GCATrait traitStatus)
+                {
+                    roll20Character.Status = traitStatus.Score.ToString();
+                }
 
                 roll20Character.Wealth = GetWealthLevel(currentCharacter);
 
-                GCATrait traitMoney = currentCharacter.ItemByNameAndExt("Money", (int)TraitTypes.Attributes);
-                roll20Character.Stash = traitMoney.Score;
+                if (currentCharacter.ItemByNameAndExt("Money", (int)TraitTypes.Attributes) is GCATrait traitMoney)
+                {
+                    roll20Character.Stash = traitMoney.Score;
+                }
 
-                GCATrait traitMonthlyPay = currentCharacter.ItemByNameAndExt("Monthly Pay", (int)TraitTypes.Attributes);
-                roll20Character.Income = traitMonthlyPay.Score;
+                if (currentCharacter.ItemByNameAndExt("Monthly Pay", (int)TraitTypes.Attributes) is GCATrait traitMonthlyPay)
+                {
+                    roll20Character.Income = traitMonthlyPay.Score;
+                }
 
-                GCATrait traitCostOfLiving = currentCharacter.ItemByNameAndExt("Cost of Living", (int)TraitTypes.Attributes);
-                roll20Character.CostOfLiving = traitCostOfLiving.Score;
+                if (currentCharacter.ItemByNameAndExt("Cost of Living", (int)TraitTypes.Attributes) is GCATrait traitCostOfLiving)
+                {
+                    roll20Character.CostOfLiving = traitCostOfLiving.Score;
+                }
 
                 roll20Character.Age = currentCharacter.Age;
                 roll20Character.Height = currentCharacter.Height;
 
-                double weight;
-                result = double.TryParse(currentCharacter.Weight, out weight);
+                result = double.TryParse(currentCharacter.Weight, out double weight);
                 if (result)
                 {
                     roll20Character.Weight = weight;
@@ -96,146 +112,185 @@ namespace ExportToRoll20
                 roll20Character.Appearance = GetAppearanceScore(currentCharacter);
                 roll20Character.GeneralAppearance = currentCharacter.Appearance;
 
-                GCATrait traitStrength = currentCharacter.ItemByNameAndExt("ST", (int)TraitTypes.Attributes);
-                roll20Character.StrengthPoints = traitStrength.Points;
-                roll20Character.StrengthMod = GetTraitModifier(traitStrength);
+                if (currentCharacter.ItemByNameAndExt("ST", (int)TraitTypes.Attributes) is GCATrait traitStrength)
+                {
+                    roll20Character.StrengthPoints = traitStrength.Points;
+                    roll20Character.StrengthMod = GetTraitModifier(traitStrength);
+                }
 
-                GCATrait traitDex = currentCharacter.ItemByNameAndExt("DX", (int)TraitTypes.Attributes);
-                roll20Character.DexterityPoints = traitDex.Points;
-                roll20Character.DexterityMod = GetTraitModifier(traitDex);
+                if (currentCharacter.ItemByNameAndExt("DX", (int)TraitTypes.Attributes) is GCATrait traitDex)
+                {
+                    roll20Character.DexterityPoints = traitDex.Points;
+                    roll20Character.DexterityMod = GetTraitModifier(traitDex);
+                }
 
-                GCATrait traitIq = currentCharacter.ItemByNameAndExt("IQ", (int)TraitTypes.Attributes);
-                roll20Character.IntelligencePoints = traitIq.Points;
-                roll20Character.IntelligenceMod = GetTraitModifier(traitIq);
+                if (currentCharacter.ItemByNameAndExt("IQ", (int)TraitTypes.Attributes) is GCATrait traitIq)
+                {
+                    roll20Character.IntelligencePoints = traitIq.Points;
+                    roll20Character.IntelligenceMod = GetTraitModifier(traitIq);
+                }
 
-                GCATrait traitHealth = currentCharacter.ItemByNameAndExt("HT", (int)TraitTypes.Attributes);
-                roll20Character.HealthPoints = traitHealth.Points;
-                roll20Character.HealthMod = GetTraitModifier(traitHealth);
+                if (currentCharacter.ItemByNameAndExt("HT", (int)TraitTypes.Attributes) is GCATrait traitHealth)
+                {
+                    roll20Character.HealthPoints = traitHealth.Points;
+                    roll20Character.HealthMod = GetTraitModifier(traitHealth);
+                }
 
-                GCATrait traitPerception = currentCharacter.ItemByNameAndExt("Perception", (int)TraitTypes.Attributes);
-                roll20Character.PerceptionPoints = traitPerception.Points;
-                roll20Character.PerceptionMod = GetTraitModifier(traitPerception);
+                if (currentCharacter.ItemByNameAndExt("Perception", (int)TraitTypes.Attributes) is GCATrait traitPerception)
+                {
+                    roll20Character.PerceptionPoints = traitPerception.Points;
+                    roll20Character.PerceptionMod = GetTraitModifier(traitPerception);
+                }
 
-                GCATrait traitVision = currentCharacter.ItemByNameAndExt("Vision", (int)TraitTypes.Attributes);
-                roll20Character.VisionPoints = traitVision.Points;
-                roll20Character.VisionMod = GetTraitModifier(traitVision);
+                if (currentCharacter.ItemByNameAndExt("Vision", (int)TraitTypes.Attributes) is GCATrait traitVision)
+                {
+                    roll20Character.VisionPoints = traitVision.Points;
+                    roll20Character.VisionMod = GetTraitModifier(traitVision);
+                }
 
-                GCATrait traitHearing = currentCharacter.ItemByNameAndExt("Hearing", (int)TraitTypes.Attributes);
-                roll20Character.HearingPoints = traitHearing.Points;
-                roll20Character.HearingMod = GetTraitModifier(traitHearing);
+                if (currentCharacter.ItemByNameAndExt("Hearing", (int)TraitTypes.Attributes) is GCATrait traitHearing)
+                {
+                    roll20Character.HearingPoints = traitHearing.Points;
+                    roll20Character.HearingMod = GetTraitModifier(traitHearing);
+                }
 
-                GCATrait traitTasteSmell = currentCharacter.ItemByNameAndExt("Taste/Smell", (int)TraitTypes.Attributes);
-                roll20Character.TasteSmellPoints = traitTasteSmell.Points;
-                roll20Character.TasteSmellMod = GetTraitModifier(traitTasteSmell);
+                if (currentCharacter.ItemByNameAndExt("Taste/Smell", (int)TraitTypes.Attributes) is GCATrait traitTasteSmell)
+                {
+                    roll20Character.TasteSmellPoints = traitTasteSmell.Points;
+                    roll20Character.TasteSmellMod = GetTraitModifier(traitTasteSmell);
+                }
 
-                GCATrait traitTouch = currentCharacter.ItemByNameAndExt("Touch", (int)TraitTypes.Attributes);
-                roll20Character.TouchPoints = traitTouch.Points;
-                roll20Character.TouchMod = GetTraitModifier(traitTouch);
+                if (currentCharacter.ItemByNameAndExt("Touch", (int)TraitTypes.Attributes) is GCATrait traitTouch)
+                {
+                    roll20Character.TouchPoints = traitTouch.Points;
+                    roll20Character.TouchMod = GetTraitModifier(traitTouch);
+                }
 
-                GCATrait traitWill = currentCharacter.ItemByNameAndExt("Will", (int)TraitTypes.Attributes);
-                roll20Character.WillpowerPoints = traitWill.Points;
-                roll20Character.WillpowerMod = GetTraitModifier(traitWill);
+                if (currentCharacter.ItemByNameAndExt("Will", (int)TraitTypes.Attributes) is GCATrait traitWill)
+                {
+                    roll20Character.WillpowerPoints = traitWill.Points;
+                    roll20Character.WillpowerMod = GetTraitModifier(traitWill);
+                }
 
-                GCATrait traitFear = currentCharacter.ItemByNameAndExt("Fright Check", (int)TraitTypes.Attributes);
-                roll20Character.FearCheckPoints = traitFear.Points;
-                roll20Character.FearCheckMod = GetTraitModifier(traitFear);
+                if (currentCharacter.ItemByNameAndExt("Fright Check", (int)TraitTypes.Attributes) is GCATrait traitFear)
+                {
+                    roll20Character.FearCheckPoints = traitFear.Points;
+                    roll20Character.FearCheckMod = GetTraitModifier(traitFear);
+                }
 
                 // TODO: place holder determine if there's other modifiers
                 roll20Character.StunCheckMod = 0;
 
-                GCATrait traitConsciousnessCheck = currentCharacter.ItemByNameAndExt("Consciousness Check", (int)TraitTypes.Attributes);
-                roll20Character.UnconsciousCheckMod = GetTraitModifier(traitConsciousnessCheck);
+                if (currentCharacter.ItemByNameAndExt("Consciousness Check", (int)TraitTypes.Attributes) is GCATrait traitConsciousnessCheck)
+                {
+                    roll20Character.UnconsciousCheckMod = GetTraitModifier(traitConsciousnessCheck);
+                }
 
-                GCATrait traitDeathCheck = currentCharacter.ItemByNameAndExt("Death Check", (int)TraitTypes.Attributes);
-                roll20Character.DeathCheckMod = GetTraitModifier(traitDeathCheck);
+                if (currentCharacter.ItemByNameAndExt("Death Check", (int)TraitTypes.Attributes) is GCATrait traitDeathCheck)
+                {
+                    roll20Character.DeathCheckMod = GetTraitModifier(traitDeathCheck);
+                }
 
-                GCATrait traitBasicSpeed = currentCharacter.ItemByNameAndExt("Basic Speed", (int)TraitTypes.Attributes);
-                roll20Character.BasicSpeedPoints = traitBasicSpeed.Points;
-                roll20Character.BasicSpeedMod = GetTraitModifier(traitBasicSpeed);
+                if (currentCharacter.ItemByNameAndExt("Basic Speed", (int)TraitTypes.Attributes) is GCATrait traitBasicSpeed)
+                {
+                    roll20Character.BasicSpeedPoints = traitBasicSpeed.Points;
+                    roll20Character.BasicSpeedMod = GetTraitModifier(traitBasicSpeed);
+                }
 
-                GCATrait traitBasicMove = currentCharacter.ItemByNameAndExt("Basic Move", (int)TraitTypes.Attributes);
-                roll20Character.BasicMovePoints = traitBasicMove.Points;
-                roll20Character.BasicMoveMod = GetTraitModifier(traitBasicMove);
+                if (currentCharacter.ItemByNameAndExt("Basic Move", (int)TraitTypes.Attributes) is GCATrait traitBasicMove)
+                {
+                    roll20Character.BasicMovePoints = traitBasicMove.Points;
+                    roll20Character.BasicMoveMod = GetTraitModifier(traitBasicMove);
+                }
 
-                GCATrait traitEnhancedGround = currentCharacter.ItemByNameAndExt("Enhanced Ground Move", (int)TraitTypes.Attributes);
-                roll20Character.EnhancedGroundMoveMod = traitEnhancedGround.Score;
+                if (currentCharacter.ItemByNameAndExt("Enhanced Ground Move", (int)TraitTypes.Attributes) is GCATrait traitEnhancedGround)
+                {
+                    roll20Character.EnhancedGroundMoveMod = traitEnhancedGround.Score;
+                }
 
-                GCATrait traitDodge = currentCharacter.ItemByNameAndExt("Dodge", (int)TraitTypes.Attributes);
-                roll20Character.DodgeMod = GetTraitModifier(traitDodge);
+                if (currentCharacter.ItemByNameAndExt("Dodge", (int)TraitTypes.Attributes) is GCATrait traitDodge)
+                {
+                    roll20Character.DodgeMod = GetTraitModifier(traitDodge);
+                }
 
-                GCATrait traitLiftingST = currentCharacter.ItemByNameAndExt("Lifting ST", (int)TraitTypes.Attributes);
-                roll20Character.LiftStPoints = traitLiftingST.Points;
-                roll20Character.LiftStMod = GetTraitModifier(traitLiftingST);
+                if (currentCharacter.ItemByNameAndExt("Lifting ST", (int)TraitTypes.Attributes) is GCATrait traitLiftingST)
+                {
+                    roll20Character.LiftStPoints = traitLiftingST.Points;
+                    roll20Character.LiftStMod = GetTraitModifier(traitLiftingST);
+                }
 
-                GCATrait traitSrikingST = currentCharacter.ItemByNameAndExt("Striking ST", (int)TraitTypes.Attributes);
-                roll20Character.StrikingStPoints = traitSrikingST.Points;
-                roll20Character.StrikingStMod = GetTraitModifier(traitSrikingST);
+                if (currentCharacter.ItemByNameAndExt("Striking ST", (int)TraitTypes.Attributes) is GCATrait traitSrikingST)
+                {
+                    roll20Character.StrikingStPoints = traitSrikingST.Points;
+                    roll20Character.StrikingStMod = GetTraitModifier(traitSrikingST);
+                }
 
-                GCATrait traitHitPoints = currentCharacter.ItemByNameAndExt("Hit Points", (int)TraitTypes.Attributes);
-                roll20Character.HitPoints = traitHitPoints.Score;
-                roll20Character.HitPointsPoints = traitHitPoints.Points;
-                roll20Character.HitPointsMod = GetTraitModifier(traitHitPoints);
+                if (currentCharacter.ItemByNameAndExt("Hit Points", (int)TraitTypes.Attributes) is GCATrait traitHitPoints)
+                {
+                    roll20Character.HitPoints = traitHitPoints.Score;
+                    roll20Character.HitPointsPoints = traitHitPoints.Points;
+                    roll20Character.HitPointsMod = GetTraitModifier(traitHitPoints);
+                }
 
-                GCATrait traitFatigue = currentCharacter.ItemByNameAndExt("Fatigue Points", (int)TraitTypes.Attributes);
-                roll20Character.FatiguePoints = traitFatigue.Score;
-                roll20Character.FatiguePointsPoints = traitFatigue.Points;
-                roll20Character.FatiguePointsMod = GetTraitModifier(traitFatigue);
+                if (currentCharacter.ItemByNameAndExt("Fatigue Points", (int)TraitTypes.Attributes) is GCATrait traitFatigue)
+                {
+                    roll20Character.FatiguePoints = traitFatigue.Score;
+                    roll20Character.FatiguePointsPoints = traitFatigue.Points;
+                    roll20Character.FatiguePointsMod = GetTraitModifier(traitFatigue);
+                }
 
-                GCATrait traitFlight = currentCharacter.ItemByNameAndExt("Flight", (int)TraitTypes.Advantages);
-                if (traitFlight != null)
+                if (currentCharacter.ItemByNameAndExt("Flight", (int)TraitTypes.Advantages) is GCATrait traitFlight)
                 {
                     roll20Character.FlightChecked = true;
                 }
 
-                GCATrait traitBasicAirMove = currentCharacter.ItemByNameAndExt("Basic Air Move", (int)TraitTypes.Attributes);
-                if (traitBasicAirMove != null)
+                if (currentCharacter.ItemByNameAndExt("Basic Air Move", (int)TraitTypes.Attributes) is GCATrait traitBasicAirMove)
                 {
                     roll20Character.BasicAirMoveMod = GetTraitModifier(traitBasicAirMove);
                 }
 
-                GCATrait traitEnhancedAirMove = currentCharacter.ItemByNameAndExt("Enhanced Air Move", (int)TraitTypes.Attributes);
-                if (traitEnhancedAirMove != null)
+                if (currentCharacter.ItemByNameAndExt("Enhanced Air Move", (int)TraitTypes.Attributes) is GCATrait traitEnhancedAirMove)
                 {
                     roll20Character.EnhancedAirLevel = traitEnhancedAirMove.Score;
                 }
 
-                GCATrait traitAmphibous = currentCharacter.ItemByNameAndExt("Amphibious", (int)TraitTypes.Advantages);
-                if (traitAmphibous != null)
+                if (currentCharacter.ItemByNameAndExt("Amphibious", (int)TraitTypes.Advantages) is GCATrait traitAmphibous)
                 {
                     roll20Character.AmphibiousChecked = true;
                 }
 
-                GCATrait traitBasicWaterMove = currentCharacter.ItemByNameAndExt("Basic Water Move", (int)TraitTypes.Attributes);
-                roll20Character.BasicWaterMoveMod = GetTraitModifier(traitBasicWaterMove);
+                if (currentCharacter.ItemByNameAndExt("Basic Water Move", (int)TraitTypes.Attributes) is GCATrait traitBasicWaterMove)
+                {
+                    roll20Character.BasicWaterMoveMod = GetTraitModifier(traitBasicWaterMove);
+                }
 
-                GCATrait traitWaterMove = currentCharacter.ItemByNameAndExt("Water Move", (int)TraitTypes.Attributes);
-                if (traitWaterMove != null)
+                if (currentCharacter.ItemByNameAndExt("Water Move", (int)TraitTypes.Attributes) is GCATrait traitWaterMove)
                 {
                     roll20Character.BasicWaterMovePoints = traitWaterMove.Points;
                 }
 
-                GCATrait traitEnhancedWaterMove = currentCharacter.ItemByNameAndExt("Enhanced Water Move", (int)TraitTypes.Attributes);
-                if (traitEnhancedWaterMove != null)
+                if (currentCharacter.ItemByNameAndExt("Enhanced Water Move", (int)TraitTypes.Attributes) is GCATrait traitEnhancedWaterMove)
                 {
                     roll20Character.EnhancedWaterLevel = traitEnhancedWaterMove.Score;
                 }
 
-                GCATrait traitSuperJump = currentCharacter.ItemByNameAndExt("Super Jump", (int)TraitTypes.Attributes);
-                roll20Character.SuperJumpEnteredLevel = traitSuperJump.Score;
+                if (currentCharacter.ItemByNameAndExt("Super Jump", (int)TraitTypes.Attributes) is GCATrait traitSuperJump)
+                {
+                    roll20Character.SuperJumpEnteredLevel = traitSuperJump.Score;
+                }
 
-                GCATrait traitMagery = currentCharacter.ItemByNameAndExt("Magery", (int)TraitTypes.Attributes);
-                roll20Character.SpellBonus = traitMagery.Score;
+                if (currentCharacter.ItemByNameAndExt("Magery", (int)TraitTypes.Attributes) is GCATrait traitMagery)
+                {
+                    roll20Character.SpellBonus = traitMagery.Score;
+                }
 
-                // check for ritual magery
-                GCATrait traitRitualMagery = currentCharacter.ItemByNameAndExt("Ritual Magery", (int)TraitTypes.Advantages);
-                if (traitRitualMagery != null && traitRitualMagery.Level > roll20Character.SpellBonus)
+                if (currentCharacter.ItemByNameAndExt("Ritual Magery", (int)TraitTypes.Advantages) is GCATrait traitRitualMagery)
                 {
                     roll20Character.SpellBonus = traitRitualMagery.Level;
                 }
 
                 // get all the power investiture types. Determine if it's the highest score
                 var traitsPowerInvestitures = currentCharacter.ItemsByName("Power Investiture", (int)TraitTypes.Advantages);
-
                 if (traitsPowerInvestitures != null)
                 {
                     foreach (GCATrait trait in traitsPowerInvestitures)
@@ -294,6 +349,8 @@ namespace ExportToRoll20
         public string GetReactions(GCACharacter currentCharacter)
         {
             GCATrait traitReactions = currentCharacter.ItemByNameAndExt("Reaction", (int)TraitTypes.Attributes);
+
+            if (traitReactions == null) return string.Empty;
 
             string reactionBonusList = GetTraitModifiersList(traitReactions);
 

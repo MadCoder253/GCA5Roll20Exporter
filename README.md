@@ -17,6 +17,8 @@ Initial source code provided by WoodmanX
 - Update GetRepeatingTrait to use check for parent/child relationship
 - Fix bug with Getting language skills
 - Fix bug with Getting spells, if a spell is a parent, get the tag `basepoints` of the spell
+- Fix bug reported by @Ca7iburn by adding a check for `null` when calling the method `ItemByNameAndExt`
+  - [Export Error: Issue #6](https://github.com/MadCoder253/GCA5Roll20Exporter/issues/6)
 
 ### 1.0.1.10
 
