@@ -8,6 +8,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using GCA5.Interfaces;
 using GCA5Engine;
+using Microsoft.VisualBasic;
 
 namespace ExportToRoll20
 {
@@ -1333,7 +1334,7 @@ namespace ExportToRoll20
 
                 if (childIds.Length > 0)
                 {
-                    spellPoints = 0;
+                    spellPoints = Conversion.Val(trait.get_TagItem("basepoints"));
 
                 } else if (trait.SkillType.ToLower().StartsWith("tech"))
                 {

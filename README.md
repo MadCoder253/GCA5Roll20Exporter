@@ -16,6 +16,7 @@ Initial source code provided by WoodmanX
 - Update GetRepeatingMelee to use ModeManager
 - Update GetRepeatingTrait to use check for parent/child relationship
 - Fix bug with Getting language skills
+- Fix bug with Getting spells, if a spell is a parent, get the tag `basepoints` of the spell
 
 ### 1.0.1.10
 
