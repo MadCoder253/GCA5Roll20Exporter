@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Web;
 using GCA5.Interfaces;
 using GCA5Engine;
 using Microsoft.VisualBasic;
@@ -1746,6 +1747,7 @@ namespace ExportToRoll20
 
             if (trait.DisplayName.Length > 0 && trait.DisplayName.Contains("("))
             {
+                // trait.DisplayName example:
                 // Contact (Effective Skill 12; Rival Gang; 9 or less, *1; Somewhat Reliable, *1)
                 // Crossbow 3 (Armor Piercing) (Armor Divisor, 2, +50%; Increased Range, x2, +10%)
                 // we want the value inside the parenthesis 
@@ -1753,29 +1755,11 @@ namespace ExportToRoll20
                 // remove the name and nameext
                 string name = trait.DisplayName;
 
-                // try to remove name + level
-                name = name.Replace(trait.Name + " " + trait.Level.ToString() + " ", "");
-
-                // if previous didn't work, try remove the name
-                name = name.Replace(trait.Name + " ", "");
-
-                string nameExtension = "(" + trait.NameExt + ") ";
-
-                if (name.StartsWith(nameExtension))
-                {
-                    // remove the extension
-                    name = name.Replace(nameExtension, "");
-                }
-
-                // remove last parenthese 
-                name = name.Remove(name.Length - 1);
-
-                // remove first parenthese
-                name = name.Remove(0, 1);
+                var notesFromName = ExtractLastParenthesesContent(name);
 
                 string[] seperators = { "; " };
 
-                string[] nameParts = name.Split(seperators, System.StringSplitOptions.RemoveEmptyEntries);
+                string[] nameParts = notesFromName.Split(seperators, System.StringSplitOptions.RemoveEmptyEntries);
 
                 if (nameParts.Length > 0)
                 {
@@ -1818,6 +1802,23 @@ namespace ExportToRoll20
             string noteDescription = string.Join("\n", notes.ToArray());
 
             return noteDescription;
+        }
+
+        /// <summary>
+        /// Extracts the last parentheses content from a string
+        /// 
+        /// Copoilot: This function uses a regular expression to match any text enclosed in 
+        /// parentheses that does not have any opening parentheses after it ([^(]*$). 
+        /// This ensures that it matches the last set of parentheses in the string. 
+        /// The Groups[1].Value returns the content inside the parentheses.
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public string ExtractLastParenthesesContent(string input)
+        {
+
+            var match = Regex.Match(input, @"\(([^)]*)\)[^(]*$");
+            return match.Success ? match.Groups[1].Value : string.Empty;
         }
 
     }

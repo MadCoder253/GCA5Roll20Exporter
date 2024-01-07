@@ -10,6 +10,10 @@ Initial source code provided by WoodmanX
 
 ## Versions
 
+### 1.0.1.21
+
+- Convert `GetTraitNotes(GCATrait trait)` code for extracting notes to use regex.
+
 ### 1.0.1.20
 
 - Update GetRepeatingRanged to use ModeManager
