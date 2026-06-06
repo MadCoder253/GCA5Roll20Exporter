@@ -7,6 +7,8 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Web;
+using System.Xml;
+using ExtensionMethod;
 using GCA5.Interfaces;
 using GCA5Engine;
 using Microsoft.VisualBasic;
@@ -102,16 +104,19 @@ namespace ExportToRoll20
                 roll20Character.Age = currentCharacter.Age;
                 roll20Character.Height = currentCharacter.Height;
 
-                double weight = 0;
-                result = double.TryParse(currentCharacter.Weight, out weight);
-                if (result)
-                {
-                    roll20Character.Weight = weight;
-                }
-                else
-                {
-                    roll20Character.Weight = 0;
-                }
+                // biographical data
+                roll20Character.Gender = GetCharacterTagValue(currentCharacter, "bio_gender");
+                roll20Character.BirthDate = GetCharacterTagValue(currentCharacter, "bio_dob");
+                roll20Character.BirthPlace = GetCharacterTagValue(currentCharacter, "bio_pob");
+                roll20Character.HomeWorld = GetCharacterTagValue(currentCharacter, "bio_homeworld");
+                roll20Character.Gravity = ParseSanitizedNumber(GetCharacterTagValue(currentCharacter, "bio_homegravity"), 1);
+                roll20Character.Handedness = GetCharacterTagValue(currentCharacter, "bio_handedness");
+                roll20Character.Build = GetCharacterTagValue(currentCharacter, "bio_build");
+                roll20Character.HairColor = GetCharacterTagValue(currentCharacter, "bio_haircolor");
+                roll20Character.EyeColor = GetCharacterTagValue(currentCharacter, "bio_eyecolor");
+                roll20Character.Family = GetCharacterTagValue(currentCharacter, "bio_family");
+
+                roll20Character.Weight = ParseSanitizedNumber(currentCharacter.Weight, 1);
 
                 roll20Character.Appearance = GetAppearanceScore(currentCharacter);
                 roll20Character.GeneralAppearance = currentCharacter.Appearance;
@@ -379,6 +384,79 @@ namespace ExportToRoll20
 
             return roll20Character;
 
+        }
+
+        protected string GetCharacterTagValue(GCACharacter currentCharacter, string tagName)
+        {
+            string value = currentCharacter.get_TagItem(tagName);
+            if (!string.IsNullOrEmpty(value))
+            {
+                return value;
+            }
+
+            try
+            {
+                string characterXml = currentCharacter.ToXmlString();
+                if (string.IsNullOrEmpty(characterXml))
+                {
+                    return string.Empty;
+                }
+
+                XmlDocument doc = new XmlDocument();
+                doc.LoadXml(characterXml);
+
+                XmlNodeList extendedTags = doc.GetElementsByTagName("extendedtag");
+                foreach (XmlNode extendedTag in extendedTags)
+                {
+                    string name = string.Empty;
+                    string tagValue = string.Empty;
+
+                    foreach (XmlNode child in extendedTag.ChildNodes)
+                    {
+                        if (string.Equals(child.LocalName, "tagname", StringComparison.OrdinalIgnoreCase))
+                        {
+                            name = child.InnerText;
+                        }
+                        else if (string.Equals(child.LocalName, "tagvalue", StringComparison.OrdinalIgnoreCase))
+                        {
+                            tagValue = child.InnerText;
+                        }
+                    }
+
+                    if (string.Equals(name, tagName, StringComparison.OrdinalIgnoreCase))
+                    {
+                        return tagValue;
+                    }
+                }
+
+                return string.Empty;
+            }
+            catch
+            {
+                return string.Empty;
+            }
+        }
+
+        protected double ParseSanitizedNumber(string value, double defaultValue)
+        {
+            if (string.IsNullOrWhiteSpace(value))
+            {
+                return defaultValue;
+            }
+
+            string sanitizedValue = Regex.Replace(value, "[^0-9.]", "");
+            if (string.IsNullOrWhiteSpace(sanitizedValue))
+            {
+                return defaultValue;
+            }
+
+            double parsedValue;
+            if (!double.TryParse(sanitizedValue, out parsedValue))
+            {
+                return defaultValue;
+            }
+
+            return parsedValue;
         }
 
         public string GetReactions(GCACharacter currentCharacter)

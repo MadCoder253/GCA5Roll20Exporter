@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using System.Net.Sockets;
+using System.Reflection.Emit;
 
 namespace ExportToRoll20
 {
@@ -507,6 +509,19 @@ namespace ExportToRoll20
             Weight = 0;
             Appearance = 0;
             GeneralAppearance = "";
+
+            // background information
+            Gender = "";
+            BirthDate = "";
+            BirthPlace = "";
+            HomeWorld = "";
+            Gravity = 1.0;
+            Handedness = "";
+            Build = "";
+            HairColor = "";
+            EyeColor = "";
+            Family = "";
+
             StrengthMod = 0;
             StrengthPoints = 0;
             DexterityMod = 0;
@@ -631,6 +646,24 @@ namespace ExportToRoll20
         public double Appearance { get; set; } 
 
         public string GeneralAppearance { get; set; } 
+
+        public string BirthDate { get; set; }
+
+        public string BirthPlace { get; set; }
+
+        public string HomeWorld { get; set; }
+
+        public double Gravity { get; set; }
+
+        public string Handedness { get; set; }
+
+        public string Build { get; set; }
+
+        public string HairColor { get; set; }
+
+        public string EyeColor { get; set; }
+
+        public string Family { get; set; }
 
         public double StrengthMod { get; set; } 
 
