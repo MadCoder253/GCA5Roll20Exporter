@@ -491,7 +491,6 @@ namespace ExportToRoll20
             Race = "";
             RaceRef = "";
             TemplateNames = "";
-            Gender = "";
             Size = 0;
             ApplySizeModifier = false;
             Reactions = "";

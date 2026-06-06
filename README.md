@@ -25,7 +25,7 @@ Initial source code provided by WoodmanX
   - `HairColor` from Biographical Data
   - `EyeColor` from Biographical Data
   - `Family` from Biographical Data
-- Update weight import to strip out out string values and convert to a number.
+- Update weight import to strip out string values and convert to a number.
 
 ### 1.0.1.21
 
