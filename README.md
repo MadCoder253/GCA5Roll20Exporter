@@ -10,6 +10,23 @@ Initial source code provided by WoodmanX
 
 ## Versions
 
+### 1.1.0.0
+
+6/6/2026
+
+- Add new fields to the export for Roll20 character sheets, including:
+  - `HomeWorld` from Biographical Data
+  - `Gravity` from Biographical Data
+  - `BirthDate` from Biographical Data
+  - `BirthPlace` from Biographical Data
+  - `Gender` from Biographical Data
+  - `Handedness` from Biographical Data
+  - `Build` from Biographical Data
+  - `HairColor` from Biographical Data
+  - `EyeColor` from Biographical Data
+  - `Family` from Biographical Data
+- Update weight import to strip out out string values and convert to a number.
+
 ### 1.0.1.21
 
 - Convert `GetTraitNotes(GCATrait trait)` code for extracting notes to use regex.
