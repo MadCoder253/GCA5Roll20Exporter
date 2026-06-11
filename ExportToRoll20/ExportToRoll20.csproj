@@ -65,6 +65,7 @@
   <PropertyGroup>
     <PostBuildEvent>copy /Y "$(ProjectDir)\ExportToRoll20.cs" "C:\ProgramData\Steve Jackson Games\GURPS Character Assistant 5\plugins\ExportToRoll20\ExportToRoll20.cs"
 copy /Y "$(ProjectDir)\ConvertToRoll20Character.cs" "C:\ProgramData\Steve Jackson Games\GURPS Character Assistant 5\plugins\ExportToRoll20\ConvertToRoll20Character.cs"
-copy /Y "$(ProjectDir)\AssemblyInfo.cs" "C:\ProgramData\Steve Jackson Games\GURPS Character Assistant 5\plugins\ExportToRoll20\AssemblyInfo.cs"</PostBuildEvent>
+copy /Y "$(ProjectDir)\AssemblyInfo.cs" "C:\ProgramData\Steve Jackson Games\GURPS Character Assistant 5\plugins\ExportToRoll20\AssemblyInfo.cs"
+copy /Y "$(ProjectDir)\Roll20Character.cs" "C:\ProgramData\Steve Jackson Games\GURPS Character Assistant 5\plugins\ExportToRoll20\Roll20Character.cs"</PostBuildEvent>
   </PropertyGroup>
 </Project>

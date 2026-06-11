@@ -914,12 +914,14 @@ namespace ExportToRoll20
             {
                 var notes = GetTraitNotes(template);
 
+                var pageRef = template.get_TagItem("page");
+
                 var racialTrait = new RepeatingRacial
                 {
                     Idkey = template.IDKey.ToString(),
                     Name = template.FullName,
                     Points = template.PreModsPoints,
-                    Ref = template.get_TagItem("ref"),
+                    Ref = pageRef,
                     Notes = notes
                 };
 
@@ -954,7 +956,7 @@ namespace ExportToRoll20
 
                 if (trait != null)
                 {
-                    var refPage = trait.get_TagItem("ref");
+                    var refPage = trait.get_TagItem("page");
 
                     var traitNotes = GetTraitNotes(trait);
 
@@ -1226,6 +1228,13 @@ namespace ExportToRoll20
                             armorDivisor = 1;
                         }
 
+                        double weight;
+                        result = double.TryParse(trait.get_TagItem("weight"), out weight);
+                        if (!result)
+                        {
+                            weight = 0;
+                        }
+
                         var item = new RepeatingMelee()
                         {
                             Idkey = meleeIdKey,
@@ -1235,7 +1244,8 @@ namespace ExportToRoll20
                             Reach = mode.get_TagItem("reach"),
                             Skill = meleeSkill,
                             ArmorDivisor = armorDivisor,
-                            Notes = mode.get_TagItem("itemnotes")
+                            Notes = mode.get_TagItem("itemnotes"),
+                            Weight = weight
                         };
 
                         list.Add(item); 

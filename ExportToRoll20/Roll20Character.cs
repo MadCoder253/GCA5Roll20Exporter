@@ -152,6 +152,7 @@ namespace ExportToRoll20
             Skill = 10;
             ArmorDivisor = 1;
             Notes = "";
+            Weight = 0;
         }
 
         public string Idkey { get; set; }
@@ -169,6 +170,8 @@ namespace ExportToRoll20
         public double ArmorDivisor { get; set; }
 
         public string Notes { get; set; }
+
+        public double Weight { get; set; }
 
     }
 

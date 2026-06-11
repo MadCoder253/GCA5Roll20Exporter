@@ -10,6 +10,12 @@ Initial source code provided by WoodmanX
 
 ## Versions
 
+### 1.1.0.2
+
+6/10/2026
+
+- Update Racial Templates to get the correct book and page reference
+
 ### 1.1.0.0
 
 6/6/2026
@@ -26,6 +32,7 @@ Initial source code provided by WoodmanX
   - `EyeColor` from Biographical Data
   - `Family` from Biographical Data
 - Update weight import to strip out string values and convert to a number.
+- Update melee attacks to try to extract the melee weapon weight.
 
 ### 1.0.1.21
 
