@@ -10,6 +10,12 @@ Initial source code provided by WoodmanX
 
 ## Versions
 
+### 1.1.0.3
+
+7/8/2026
+
+- For inventory items use precountweight and precountcost to get the correct weight and cost for items instead of using the base values.
+
 ### 1.1.0.2
 
 6/10/2026
